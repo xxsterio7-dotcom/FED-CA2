@@ -18,11 +18,11 @@ body {
 }
 
 .text-primary {
-    color: var(--primary) !important;
+    color: var(--black) !important;
 }
 
-.text-black {
-    color: var(--black) !important;
+.text-red {
+    color: var(--red) !important;
 }
 
 /* Custom background colours */
