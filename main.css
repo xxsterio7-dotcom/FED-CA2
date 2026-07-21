@@ -53,3 +53,77 @@ body {
     border-color: var(--primary-dark);
     color: var(--white);
 }
+
+
+/*FOOTER SHI */ 
+
+
+
+
+/* --- 1. COLOR VARIABLES --- */
+:root {
+  --bg-color: #2D1012;       
+  --text-color: #f5ebe6;     
+  --border-color: #DDBA78;   
+  --hover-color: #3d1b1b;    
+}
+
+/* --- 2. FOOTER BASE STYLES --- */
+.site-footer {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  border-radius: 25px;
+  width: 99%;
+}
+
+/* --- 3. CUSTOM BORDER UTILITIES --- */
+.custom-border {
+  border-color: var(--border-color) !important;
+}
+
+.custom-border-dashed {
+  border-bottom: 1px dashed var(--border-color) !important;
+}
+
+/* --- 4. BUTTON STYLING --- */
+.custom-btn {
+  border: 2px solid var(--border-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease;
+}
+
+.custom-btn:hover {
+  background-color: var(--hover-color);
+  color: var(--text-color);
+}
+
+/* --- 5. NEWSLETTER LINK --- */
+.newsletter-link {
+  color: var(--text-color);
+  font-size: 0.9rem;
+  transition: opacity 0.3s ease;
+}
+
+.newsletter-link:hover {
+  color: var(--border-color);
+  opacity: 0.7;
+}
+
+/* --- 6. MICRO GRID (6 BOXES) --- */
+.icon-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+}
+
+.grid-box {
+  display: block;
+  width: 32px;
+  height: 32px;
+  border: 2px solid var(--border-color);
+  transition: background-color 0.2s ease;
+}
+
+.grid-box:hover {
+  background-color: var(--hover-color);
+}
