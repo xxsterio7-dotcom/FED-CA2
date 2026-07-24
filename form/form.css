@@ -1,0 +1,42 @@
+nav {
+  height: 10vh;
+}
+form {
+  padding: 10px;
+  border: solid;
+  height: 90vh;
+  width: 80%;
+  border-radius: 20px;
+}
+
+#form_Container {
+  display: flex;
+  justify-content: center;
+}
+form label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 20px;
+  font-weight: 500;
+}
+form input {
+  width: 80%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  border-radius: 20px;
+  padding-left: 10px;
+}
+form aside {
+  padding: 10px;
+}
+form button {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 80%;
+}
