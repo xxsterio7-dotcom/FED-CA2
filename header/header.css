@@ -1,0 +1,46 @@
+/* Music Vault Theme Variables */
+:root {
+    --black: #080b09;
+    --gold: #d5a94f;
+    --cream: #f1ead7;
+}
+
+/* Base resets needed for the navbar font */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, sans-serif;
+}
+
+/* =========================
+   Navbar Specific Styles 
+========================= */
+.navbar-custom {
+    background: rgba(8, 11, 9, 0.95);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(213, 169, 79, 0.25);
+}
+
+.brand-logo {
+    color: var(--cream) !important;
+    font-family: Georgia, serif;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.logo-symbol {
+    color: var(--gold);
+    margin-right: 8px;
+}
+
+.nav-link {
+    color: var(--cream) !important;
+    margin-left: 15px;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--gold) !important;
+}
