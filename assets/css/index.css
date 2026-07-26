@@ -1,3 +1,7 @@
+/* ==========================================================================
+   1. CSS VARIABLES & RESETS
+   ========================================================================== */
+
 :root {
     --black: #080b09;
     --black-soft: #101512;
@@ -17,7 +21,7 @@
 body {
     background-color: var(--black);
     color: var(--cream);
-    font-family: system-ui, sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     overflow-x: hidden;
 }
 
@@ -25,6 +29,7 @@ h1, h2, h3, h4, h5 {
     font-family: Georgia, "Times New Roman", serif;
 }
 
+/* Helper Utilities */
 .text-gold {
     color: var(--gold) !important;
 }
@@ -33,27 +38,55 @@ h1, h2, h3, h4, h5 {
     color: var(--gold-light) !important;
 }
 
-/* navbar */
+.section-space {
+    padding: 110px 0;
+}
+
+.section-label {
+    color: var(--gold);
+    font-size: 0.7rem;
+    letter-spacing: 3px;
+    font-weight: bold;
+    margin-bottom: 0.3rem !important;
+}
+
+.section-title {
+    font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.purpose-text {
+    line-height: 1.8;
+}
+
+/* ==========================================================================
+   2. NAVIGATION BAR
+   ========================================================================== */
+
 .navbar-custom {
-    background: rgba(8, 11, 9, 0.95);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(213, 169, 79, 0.25);
+    background-color: var(--black);
+    border-bottom: 1px solid var(--gold);
 }
 
 .brand-logo {
-    color: var(--cream) !important;
+    color: #f4f0ea !important;
     font-family: Georgia, serif;
     font-size: 1.5rem;
-    letter-spacing: 1px;
+}
+
+.logo-img {
+    width: 45px;
+    height: 45px;
+    margin-right: 10px;
+    border-radius: 4px;
+    object-fit: cover;
 }
 
 .logo-symbol {
     color: var(--gold);
-    margin-right: 8px;
 }
 
 .nav-link {
-    color: var(--cream) !important;
+    color: #f4f0ea !important;
     margin-left: 15px;
 }
 
@@ -62,7 +95,10 @@ h1, h2, h3, h4, h5 {
     color: var(--gold) !important;
 }
 
-/* hero */
+/* ==========================================================================
+   3. HERO SECTION & EQUALIZER
+   ========================================================================== */
+
 .hero {
     position: relative;
     min-height: calc(100vh - 75px);
@@ -91,14 +127,6 @@ h1, h2, h3, h4, h5 {
     z-index: 3;
 }
 
-.section-label {
-    color: var(--gold);
-    font-size: 0.7rem;
-    letter-spacing: 3px;
-    font-weight: bold;
-    margin-bottom: 0.3rem !important;
-}
-
 .hero-title {
     font-size: clamp(2.2rem, 5vw, 4.2rem);
     line-height: 1.05;
@@ -113,7 +141,6 @@ h1, h2, h3, h4, h5 {
     margin-bottom: 0.5rem !important;
 }
 
-/* hero right side: featured track card + equalizer */
 .hero-right-container {
     display: flex;
     flex-direction: column;
@@ -122,6 +149,7 @@ h1, h2, h3, h4, h5 {
     width: 100%;
 }
 
+/* Featured Track Card */
 .featured-card {
     width: 100%;
     background-image: linear-gradient(rgba(8, 11, 9, 0.78), rgba(8, 11, 9, 0.78)),
@@ -211,7 +239,7 @@ h1, h2, h3, h4, h5 {
     color: var(--gold-light);
 }
 
-/* equalizer bars on the hero */
+/* Equalizer Visualizer */
 .visualizer-container {
     display: flex;
     align-items: flex-end;
@@ -231,7 +259,6 @@ h1, h2, h3, h4, h5 {
     transform-origin: bottom;
 }
 
-/* stagger the bars in a repeating 8-step cycle so they don't all bounce in sync */
 .eq-bar:nth-child(8n + 1) { animation-delay: 0.10s; animation-duration: 0.85s; }
 .eq-bar:nth-child(8n + 2) { animation-delay: 0.45s; animation-duration: 1.15s; }
 .eq-bar:nth-child(8n + 3) { animation-delay: 0.20s; animation-duration: 1.40s; }
@@ -247,7 +274,10 @@ h1, h2, h3, h4, h5 {
     100% { height: 25%; }
 }
 
-/* buttons */
+/* ==========================================================================
+   4. BUTTONS
+   ========================================================================== */
+
 .btn-gold {
     background-color: var(--gold);
     color: var(--black);
@@ -255,6 +285,7 @@ h1, h2, h3, h4, h5 {
     border-radius: 30px;
     padding: 12px 25px;
     font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .btn-gold:hover {
@@ -267,6 +298,7 @@ h1, h2, h3, h4, h5 {
     color: var(--gold);
     border-radius: 30px;
     padding: 12px 25px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .btn-outline-gold:hover {
@@ -274,10 +306,15 @@ h1, h2, h3, h4, h5 {
     color: var(--black);
 }
 
-/* section spacing */
-.section-space {
-    padding: 110px 0;
+.my-button {
+    backface-visibility: hidden;
+    -webkit-font-smoothing: subpixel-antialiased;
+    transform: translateZ(0);
 }
+
+/* ==========================================================================
+   5. PAGE HEADERS & SECTIONS
+   ========================================================================== */
 
 .page-hero {
     padding: 120px 0 80px;
@@ -305,7 +342,10 @@ h1, h2, h3, h4, h5 {
     border-bottom: 1px solid rgba(213, 169, 79, 0.15);
 }
 
-/* cards */
+/* ==========================================================================
+   6. CARDS & GRID LAYOUT
+   ========================================================================== */
+
 .custom-card {
     position: relative;
     background-color: var(--black-soft);
@@ -332,32 +372,15 @@ h1, h2, h3, h4, h5 {
     text-shadow: 0 2px 6px rgba(0, 0, 0, 0.95), 0 0 4px rgba(0, 0, 0, 0.8);
 }
 
-.card-bg-1 { background-image: linear-gradient(rgba(8, 11, 9, 0.70), rgba(8, 11, 9, 0.70)), url("../images/About%20music%20CARD.jpg"); }
-.card-bg-2 { background-image: linear-gradient(rgba(8, 11, 9, 0.70), rgba(8, 11, 9, 0.70)), url("../images/genres%20CARD.jpg"); }
-.card-bg-3 { background-image: linear-gradient(rgba(8, 11, 9, 0.70), rgba(8, 11, 9, 0.70)), url("../images/history%20CARD%20.jpg"); }
-.card-bg-4 { background-image: linear-gradient(rgba(8, 11, 9, 0.70), rgba(8, 11, 9, 0.70)), url("../images/musicaroundtheworld.jpg"); }
-.card-bg-5 { background-image: linear-gradient(rgba(8, 11, 9, 0.70), rgba(8, 11, 9, 0.70)), url("../images/benefitsofmusic.jpg"); }
-.card-bg-6 { background-image: linear-gradient(rgba(8, 11, 9, 0.70), rgba(8, 11, 9, 0.70)), url("../images/musictech.jpg"); }
-
-.custom-card:hover {
-    transform: translateY(-8px);
-    border-color: var(--gold);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.9),
-                0 0 22px rgba(213, 169, 79, 0.35);
+.custom-card h3 {
+    color: var(--gold);
 }
 
-.my-button {
-    backface-visibility: hidden;
-    -webkit-font-smoothing: subpixel-antialiased;
-    transform: translateZ(0);
+.element-number {
+    color: var(--green-light);
+    font-size: 2rem;
+    font-weight: bold;
 }
-
-.card-bg-1:hover { background-image: linear-gradient(rgba(8, 11, 9, 0.55), rgba(8, 11, 9, 0.55)), url("../images/About%20music%20CARD.jpg"); }
-.card-bg-2:hover { background-image: linear-gradient(rgba(8, 11, 9, 0.55), rgba(8, 11, 9, 0.55)), url("../images/genres%20CARD.jpg"); }
-.card-bg-3:hover { background-image: linear-gradient(rgba(8, 11, 9, 0.55), rgba(8, 11, 9, 0.55)), url("../images/history%20CARD%20.jpg"); }
-.card-bg-4:hover { background-image: linear-gradient(rgba(8, 11, 9, 0.55), rgba(8, 11, 9, 0.55)), url("../images/musicaroundtheworld.jpg"); }
-.card-bg-5:hover { background-image: linear-gradient(rgba(8, 11, 9, 0.55), rgba(8, 11, 9, 0.55)), url("../images/benefitsofmusic.jpg"); }
-.card-bg-6:hover { background-image: linear-gradient(rgba(8, 11, 9, 0.55), rgba(8, 11, 9, 0.55)), url("../images/musictech.jpg"); }
 
 .custom-card a {
     display: inline-block;
@@ -376,17 +399,29 @@ h1, h2, h3, h4, h5 {
     border-color: var(--gold);
 }
 
-.custom-card h3 {
-    color: var(--gold);
+.custom-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--gold);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.9),
+                0 0 22px rgba(213, 169, 79, 0.35);
 }
 
-.element-number {
-    color: var(--green-light);
-    font-size: 2rem;
-    font-weight: bold;
-}
+/* Specific Card Background Images */
+.card-bg-1 { background-image: linear-gradient(rgba(8, 11, 9, 0.70), rgba(8, 11, 9, 0.70)), url("../images/About%20music%20CARD.jpg"); }
+.card-bg-2 { background-image: linear-gradient(rgba(8, 11, 9, 0.70), rgba(8, 11, 9, 0.70)), url("../images/genres%20CARD.jpg"); }
+.card-bg-3 { background-image: linear-gradient(rgba(8, 11, 9, 0.70), rgba(8, 11, 9, 0.70)), url("../images/history%20CARD%20.jpg"); }
+.card-bg-4 { background-image: linear-gradient(rgba(8, 11, 9, 0.70), rgba(8, 11, 9, 0.70)), url("../images/musicaroundtheworld.jpg"); }
+.card-bg-5 { background-image: linear-gradient(rgba(8, 11, 9, 0.70), rgba(8, 11, 9, 0.70)), url("../images/benefitsofmusic.jpg"); }
+.card-bg-6 { background-image: linear-gradient(rgba(8, 11, 9, 0.70), rgba(8, 11, 9, 0.70)), url("../images/musictech.jpg"); }
 
-/* featured audio card at the bottom */
+.card-bg-1:hover { background-image: linear-gradient(rgba(8, 11, 9, 0.55), rgba(8, 11, 9, 0.55)), url("../images/About%20music%20CARD.jpg"); }
+.card-bg-2:hover { background-image: linear-gradient(rgba(8, 11, 9, 0.55), rgba(8, 11, 9, 0.55)), url("../images/genres%20CARD.jpg"); }
+.card-bg-3:hover { background-image: linear-gradient(rgba(8, 11, 9, 0.55), rgba(8, 11, 9, 0.55)), url("../images/history%20CARD%20.jpg"); }
+.card-bg-4:hover { background-image: linear-gradient(rgba(8, 11, 9, 0.55), rgba(8, 11, 9, 0.55)), url("../images/musicaroundtheworld.jpg"); }
+.card-bg-5:hover { background-image: linear-gradient(rgba(8, 11, 9, 0.55), rgba(8, 11, 9, 0.55)), url("../images/benefitsofmusic.jpg"); }
+.card-bg-6:hover { background-image: linear-gradient(rgba(8, 11, 9, 0.55), rgba(8, 11, 9, 0.55)), url("../images/musictech.jpg"); }
+
+/* Audio Card */
 .audio-card-bg {
     background-image: linear-gradient(rgba(8, 11, 9, 0.78), rgba(8, 11, 9, 0.78)),
                       url('../images/Janebackgroundimg1.jpg');
@@ -414,7 +449,11 @@ h1, h2, h3, h4, h5 {
     font-weight: bold;
 }
 
-/* style mixer (about page) */
+/* ==========================================================================
+   7. INTERACTIVE COMPONENTS (MIXER, MARQUEE, MOOD, GENRES)
+   ========================================================================== */
+
+/* Style Mixer */
 .mixer-section {
     background: var(--black-soft);
 }
@@ -436,7 +475,7 @@ h1, h2, h3, h4, h5 {
     margin-right: auto;
 }
 
-/* scrolling album marquee */
+/* Scrolling Album Marquee */
 .album-marquee {
     background: var(--green-dark);
     color: var(--gold-light);
@@ -460,14 +499,14 @@ h1, h2, h3, h4, h5 {
     to { transform: translateX(-50%); }
 }
 
-/* mood selector (genres page) */
+/* Mood Selector */
 .mood-button {
     background: var(--black-soft);
     color: var(--cream);
     border: 1px solid var(--green-light);
     border-radius: 30px;
     padding: 15px;
-    transition: 0.3s;
+    transition: all 0.3s ease;
 }
 
 .mood-button:hover,
@@ -484,7 +523,7 @@ h1, h2, h3, h4, h5 {
     margin-right: auto;
 }
 
-/* genre carousel (genres page) */
+/* Genre Carousel & Table */
 .genre-carousel {
     background: var(--green-dark);
     border: 1px solid var(--gold);
@@ -502,7 +541,6 @@ h1, h2, h3, h4, h5 {
     letter-spacing: 2px;
 }
 
-/* genre table (genres page) */
 .genre-table {
     color: var(--cream);
     border-color: var(--green-light);
@@ -511,76 +549,10 @@ h1, h2, h3, h4, h5 {
 .genre-table th { color: var(--gold); }
 .genre-table td { color: var(--gold-light); }
 
-/* footer */
-.site-footer {
-    background-color: #121212 !important;
-    color: #f8f9fa;
-    border: 1px solid rgba(229, 185, 103, 0.3) !important;
-}
+/* ==========================================================================
+   8. TESTIMONIALS SECTION
+   ========================================================================== */
 
-.icon-grid {
-    display: grid;
-    grid-template-columns: repeat(3, auto);
-    gap: 12px;
-    font-size: 1.25rem;
-}
-
-.custom-btn {
-    background-color: #e5b96b;
-    color: #121212;
-    border: none;
-    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-    font-weight: 600;
-    transition: all 0.2s ease-in-out;
-}
-
-.custom-btn:hover {
-    background-color: #d4a759;
-    color: #121212;
-    transform: translateY(-1px);
-}
-
-.site-footer a {
-    transition: opacity 0.2s ease-in-out, color 0.2s ease-in-out;
-}
-
-.site-footer a:hover {
-    opacity: 0.85;
-    color: #fff !important;
-}
-
-/* scroll-in animation used across all pages */
-.scroll-animate {
-    opacity: 0;
-    transform: translateY(40px);
-    transition: opacity 0.7s ease, transform 0.7s ease;
-}
-
-.scroll-animate.is-visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.delay-1 { transition-delay: 0.15s; }
-.delay-2 { transition-delay: 0.3s; }
-.delay-3 { transition-delay: 0.45s; }
-
-/* mobile */
-@media (max-width: 991px) {
-    .hero-right-container {
-        align-items: center;
-        margin-top: 2rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .hero { min-height: 80vh; }
-    .section-space { padding: 75px 0; }
-    .carousel-content { padding: 70px 18%; }
-    .purpose-section { background-attachment: scroll; }
-}
-
-/* testimonials */
 .testimonials-section {
     background-color: #0c0b09;
     color: #ffffff;
@@ -644,4 +616,85 @@ h1, h2, h3, h4, h5 {
     color: #ffffff;
     line-height: 1.5;
     font-style: italic;
+}
+
+/* ==========================================================================
+   9. FOOTER
+   ========================================================================== */
+
+.site-footer {
+    background-color: #121212 !important;
+    color: #f8f9fa;
+    border: 1px solid rgba(229, 185, 103, 0.3) !important;
+}
+
+.footer-logo {
+    height: 65px;
+    width: 65px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.icon-grid {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 12px;
+    font-size: 1.25rem;
+}
+
+.custom-btn {
+    background-color: #e5b96b;
+    color: #121212;
+    border: none;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    font-weight: 600;
+    transition: all 0.2s ease-in-out;
+}
+
+.custom-btn:hover {
+    background-color: #d4a759;
+    color: #121212;
+    transform: translateY(-1px);
+}
+
+.site-footer a {
+    transition: opacity 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.site-footer a:hover {
+    opacity: 0.85;
+    color: #fff !important;
+}
+
+/* ==========================================================================
+   10. ANIMATIONS & RESPONSIVE BREAKPOINTS
+   ========================================================================== */
+
+.scroll-animate {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.scroll-animate.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.delay-1 { transition-delay: 0.15s; }
+.delay-2 { transition-delay: 0.3s; }
+.delay-3 { transition-delay: 0.45s; }
+
+@media (max-width: 991px) {
+    .hero-right-container {
+        align-items: center;
+        margin-top: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero { min-height: 80vh; }
+    .section-space { padding: 75px 0; }
+    .carousel-content { padding: 70px 18%; }
+    .purpose-section { background-attachment: scroll; }
 }
