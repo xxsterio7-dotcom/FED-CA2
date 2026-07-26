@@ -5,28 +5,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Music Vault | Discover Sound</title>
+    
+    <!-- Icons & Bootstrap CSS -->
     <script src="https://kit.fontawesome.com/b71d6a20e5.js" crossorigin="anonymous"></script>
-
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/index.css">
 </head>
 
 <body>
 
-    <!-- navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom sticky-top">
-        <div class="container">
+    <!-- Site Header & Navigation -->
+    <header class="site-header sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-dark navbar-custom container" aria-label="Main Navigation">
+            
+            <!-- Brand Logo & Name -->
             <a class="navbar-brand brand-logo d-flex align-items-center" href="index.html">
-                <img src="../assets/images/Logo.jpeg" alt="Logo" style="width: 45px; height: 45px; margin-right: 10px; border-radius: 4px; object-fit: cover;">
-                <span class="logo-symbol me-2">♪</span>
+                <img src="../assets/images/Logo.jpeg" alt="Music Vault Logo" class="logo-img">
+                <span class="logo-symbol me-2" aria-hidden="true">♪</span>
                 Music Vault
             </a>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <!-- Mobile Toggle Button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation menu">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="collapse navbar-collapse" id="navbarNav">
+            <!-- Navigation Collapsible Area -->
+            <section class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav me-auto ms-lg-4 mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="index.html">Home</a>
@@ -38,7 +43,7 @@
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Discover
                         </a>
-                        <ul class="dropdown-menu dropdown-menu-dark">
+                        <ul class="dropdown-menu dropdown-menu-dark shadow-sm">
                             <li><a class="dropdown-item" href="aboutmusic.html">About Music</a></li>
                             <li><a class="dropdown-item" href="#">Anatomy of Sound</a></li>
                         </ul>
@@ -48,7 +53,7 @@
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Genres
                         </a>
-                        <ul class="dropdown-menu dropdown-menu-dark">
+                        <ul class="dropdown-menu dropdown-menu-dark shadow-sm">
                             <li><a class="dropdown-item" href="genres.html">All Genres</a></li>
                             <li><a class="dropdown-item" href="#">Mood Mixer</a></li>
                         </ul>
@@ -58,309 +63,318 @@
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Community
                         </a>
-                        <ul class="dropdown-menu dropdown-menu-dark">
+                        <ul class="dropdown-menu dropdown-menu-dark shadow-sm">
                             <li><a class="dropdown-item" href="#">Featured Audio</a></li>
                             <li><a class="dropdown-item" href="#">Events</a></li>
                         </ul>
                     </li>
                 </ul>
-            </div>
-        </div>
-    </nav>
+            </section>
 
-    <!-- hero -->
-    <section class="hero position-relative overflow-hidden">
-        <div class="hero-overlay"></div>
+        </nav>
+    </header>
 
-        <div class="container position-relative" style="z-index: 3;">
-            <div class="row align-items-center g-5">
+    <!-- Main Site Content -->
+    <main>
 
-                <div class="col-lg-6">
-                    <div class="hero-content scroll-animate">
-                        <p class="section-label">WELCOME TO MUSIC VAULT</p>
-                        <h1 class="hero-title">
-                            Music is <span class="text-gold">so</span> much more than <span class="text-gold">background noise.</span>
-                        </h1>
-                        <p class="hero-description">
-                            Music connects, creates & inspires. Explore how one of the most prominent sources of joy connects us through emotion, culture, rhythm and memory.  
-                            Find out how sound was created, discover new genres, and learn something new. 
+        <!-- Hero Section -->
+        <section class="hero position-relative overflow-hidden">
+            <span class="hero-overlay"></span>
+
+            <section class="container position-relative z-3">
+                <section class="row align-items-center g-5">
+
+                    <article class="col-lg-6">
+                        <header class="hero-content scroll-animate">
+                            <p class="section-label">WELCOME TO MUSIC VAULT</p>
+                            <h1 class="hero-title">
+                                Music is <span class="text-gold">so</span> much more than <span class="text-gold">background noise.</span>
+                            </h1>
+                            <p class="hero-description">
+                                Music connects, creates & inspires. Explore how one of the most prominent sources of joy connects us through emotion, culture, rhythm and memory.  
+                                Find out how sound was created, discover new genres, and learn something new. 
+                            </p>
+                            <nav class="d-flex flex-wrap gap-3 mt-4" aria-label="Hero links">
+                                <a href="aboutmusic.html" class="btn btn-gold py-2 px-4">Explore Music</a>
+                                <a href="genres.html" class="btn btn-outline-gold py-2 px-4">Discover Genres</a>
+                            </nav>
+                        </header>
+                    </article>
+
+                    <!-- Featured Track Card & Equalizer -->
+                    <aside class="col-lg-5 offset-lg-1">
+                        <section class="hero-right-container scroll-animate delay-1">
+
+                            <article class="featured-card">
+                                <header class="card-header-custom">
+                                    <span class="badge-custom">Featured Track</span>
+                                    <span class="vinyl-disc" id="heroVinyl"></span>
+                                </header>
+
+                                <section class="card-body-custom">
+                                    <h3 class="track-heading">Earrings</h3>
+                                    <p class="track-title">Malcom Todd</p>
+                                </section>
+
+                                <audio id="heroAudioTrack" src="../assets/Music audious/Earrings.mp3"></audio>
+
+                                <button type="button" id="heroPlayBtn" class="card-action border-0 bg-transparent p-0 text-start">
+                                    <span id="heroPlayText">▶ Listen Now</span>
+                                </button>
+                            </article>
+
+                            <ul class="visualizer-container list-unstyled mb-0">
+                                <li class="eq-bar"></li>
+                                <li class="eq-bar"></li>
+                                <li class="eq-bar"></li>
+                                <li class="eq-bar"></li>
+                                <li class="eq-bar"></li>
+                                <li class="eq-bar"></li>
+                                <li class="eq-bar"></li>
+                                <li class="eq-bar"></li>
+                                <li class="eq-bar"></li>
+                                <li class="eq-bar"></li>
+                                <li class="eq-bar"></li>
+                                <li class="eq-bar"></li>
+                                <li class="eq-bar"></li>
+                                <li class="eq-bar"></li>
+                                <li class="eq-bar"></li>
+                                <li class="eq-bar"></li>
+                                <li class="eq-bar"></li>
+                                <li class="eq-bar"></li>
+                                <li class="eq-bar"></li>
+                                <li class="eq-bar"></li>
+                                <li class="eq-bar"></li>
+                                <li class="eq-bar"></li>
+                                <li class="eq-bar"></li>
+                                <li class="eq-bar"></li>
+                                <li class="eq-bar"></li>
+                                <li class="eq-bar"></li>
+                                <li class="eq-bar"></li>
+                                <li class="eq-bar"></li>
+                                <li class="eq-bar"></li>
+                                <li class="eq-bar"></li>
+                                <li class="eq-bar"></li>
+                                <li class="eq-bar"></li>
+                                <li class="eq-bar"></li>
+                                <li class="eq-bar"></li>
+                                <li class="eq-bar"></li>
+                                <li class="eq-bar"></li>
+                                <li class="eq-bar"></li>
+                                <li class="eq-bar"></li>
+                                <li class="eq-bar"></li>
+                                <li class="eq-bar"></li>
+                            </ul>
+
+                        </section>
+                    </aside>
+
+                </section>
+            </section>
+        </section>
+
+        <!-- Site Content Overview (6 Cards) -->
+        <section class="section-space">
+            <section class="container">
+                <header class="text-center scroll-animate">
+                    <p class="section-label">LEARNING? MAKE IT FUN</p>
+                    <h2 class="section-title">Here's what you will experience</h2>
+                </header>
+
+                <ul class="row g-4 mt-4 list-unstyled mb-0">
+                    <li class="col-md-4">
+                        <article class="custom-card card-bg-1 scroll-animate delay-1">
+                            <p class="element-number">01</p>
+                            <h3>About music</h3>
+                            <p class="text-gold-light">
+                                Learn how pitch, rhythm, timbre, dynamics & other elements combine and interact with one another to shape different yet distinct musical characteristics and styles.
+                            </p>
+                            <a href="aboutmusic.html" class="text-gold text-decoration-none">Explore →</a>
+                        </article>
+                    </li>
+
+                    <li class="col-md-4">
+                        <article class="custom-card card-bg-2 scroll-animate delay-2">
+                            <p class="element-number">02</p>
+                            <h3>Discover Genres</h3>
+                            <p class="text-gold-light">
+                                Explore the history, sounds and sub-genres that shaped music across generations & get a taste of each one.
+                            </p>
+                            <a href="genres.html" class="text-gold text-decoration-none">Explore genres →</a>
+                        </article>
+                    </li>
+
+                    <li class="col-md-4">
+                        <article class="custom-card card-bg-3 scroll-animate delay-3">
+                            <p class="element-number">03</p>
+                            <h3>History</h3>
+                            <p class="text-gold-light">
+                                Trace music from its earliest forms and roots, and follow the journey from timeless classics to modern hits while discovering how music became a recognized art form and a cultural force.
+                            </p>
+                            <a href="#" class="text-gold text-decoration-none">Music's History →</a>
+                        </article>
+                    </li>
+
+                    <li class="col-md-4">
+                        <article class="custom-card card-bg-4 scroll-animate delay-3">
+                            <p class="element-number">04</p>
+                            <h3>Music Around the World</h3>
+                            <p class="text-gold-light">
+                                Discover the different music around the world, exploring their cultural and musical significance, and find out how some of them shaped the music we listen to today.
+                            </p>
+                            <a href="#" class="text-gold text-decoration-none">Discover →</a>
+                        </article>
+                    </li>
+
+                    <li class="col-md-4">
+                        <article class="custom-card card-bg-5 scroll-animate delay-3">
+                            <p class="element-number">05</p>
+                            <h3>Benefits of Music</h3>
+                            <p class="text-gold-light">
+                                Learn how music benefits our lives by not only helping as a therapeutic tool, but also helping our mental health and healing, unifying communities and bringing color into an otherwise bland world.
+                            </p>
+                            <a href="#" class="text-gold text-decoration-none">Learn more →</a>
+                        </article>
+                    </li>
+
+                    <li class="col-md-4">
+                        <article class="custom-card card-bg-6 scroll-animate delay-3">
+                            <p class="element-number">06</p>
+                            <h3>Music Technology</h3>
+                            <p class="text-gold-light">
+                                See how technological innovations, such as synthesizers popularized by the Beatles & modern streaming platforms expanding global access for everyone, fundamentally transforming how we create and experience music.
+                            </p>
+                            <a href="#" class="text-gold text-decoration-none">Tech →</a>
+                        </article>
+                    </li>
+                </ul>
+            </section>
+        </section>
+
+        <!-- Purpose / Mission Section -->
+        <section class="section-space purpose-section">
+            <section class="container">
+                <header class="text-center mb-5 scroll-animate">
+                    <p class="section-label">BEHIND THE VAULT</p>
+                    <h2 class="section-title">Our Purpose</h2>
+                </header>
+
+                <ul class="row g-5 list-unstyled mb-0">
+                    <li class="col-md-4 scroll-animate delay-1">
+                        <article>
+                            <h3 class="text-gold mb-3">Our Mission</h3>
+                            <p class="text-gold-light purpose-text">
+                                Music is a defining part of youth lives, yet it is often treated as background noise. Our mission is to transform passive listeners to active appreciators by unpacking the structure, history and emotion behind music.
+                            </p>
+                        </article>
+                    </li>
+
+                    <li class="col-md-4 scroll-animate delay-2">
+                        <article>
+                            <h3 class="text-gold mb-3">Our Goal</h3>
+                            <p class="text-gold-light purpose-text">
+                                Our aim is to explore the beauty, history and cultural significance with our visitors. By demonstrating its true significance, we hope to prove that music is far more than just a casual pastime.
+                            </p>
+                        </article>
+                    </li>
+
+                    <li class="col-md-4 scroll-animate delay-3">
+                        <article>
+                            <h3 class="text-gold mb-3">Why This Topic?</h3>
+                            <p class="text-gold-light purpose-text">
+                                We chose this topic because music connects emotion, culture, rhythm, and memory across generations. Understanding the mechanics of sound enriches how we experience every single beat and melody in our lives.
+                            </p>
+                        </article>
+                    </li>
+                </ul>
+            </section>
+        </section>
+
+        <!-- Featured Audio Section -->
+        <section class="section-space" id="featured-audio">
+            <section class="container">
+                <section class="row align-items-center g-5">
+                    
+                    <header class="col-lg-7 scroll-animate">
+                        <p class="section-label">LISTEN CLOSELY</p>
+                        <h2 class="section-title mb-4">Every sound has a story.</h2>
+                        <p class="text-gold-light fs-5">
+                            Sometimes, all it takes is one song, to turn your mood around.
                         </p>
-                        <div class="d-flex flex-wrap gap-3 mt-4">
-                            <a href="aboutmusic.html" class="btn btn-gold py-2 px-4">Explore Music</a>
-                            <a href="genres.html" class="btn btn-outline-gold py-2 px-4">Discover Genres</a>
-                        </div>
-                    </div>
-                </div>
+                    </header>
 
-                <!-- featured track card + equalizer -->
-                <div class="col-lg-5 offset-lg-1">
-                    <div class="hero-right-container scroll-animate delay-1">
+                    <article class="col-lg-5 scroll-animate delay-1">
+                        <section class="custom-card audio-card-bg">
+                            <header class="d-flex align-items-center mb-4">
+                                <span class="audio-icon-box me-3">♪</span>
+                                <section>
+                                    <p class="section-label mb-0">FEATURED AUDIO</p>
+                                    <h3 class="text-gold mb-0">Jane!</h3>
+                                    <small class="text-gold-light">THE VAULT</small>
+                                </section>
+                            </header>
 
-                        <div class="featured-card">
-                            <div class="card-header-custom">
-                                <span class="badge-custom">Featured Track</span>
-                                <div class="vinyl-disc" id="heroVinyl"></div>
-                            </div>
+                            <audio id="myAudioTrack" src="../assets/Music audious/Jane!.mp3"></audio>
 
-                            <div class="card-body-custom">
-                                <h3 class="track-heading">Beat it</h3>
-                                <p class="track-title">Michael Jackson</p>
-                            </div>
-
-                            <audio id="heroAudioTrack" src="../assets/Music audious/Beat_It.mp3"></audio>
-
-                            <button type="button" id="heroPlayBtn" class="card-action border-0 bg-transparent p-0 text-start">
-                                <span id="heroPlayText">▶ Listen Now</span>
+                            <button id="audioButton" class="btn btn-gold w-100">
+                                ▶ Play Sound Sample
                             </button>
-                        </div>
+                        </section>
+                    </article>
 
-                        <div class="visualizer-container">
-                            <div class="eq-bar"></div>
-                            <div class="eq-bar"></div>
-                            <div class="eq-bar"></div>
-                            <div class="eq-bar"></div>
-                            <div class="eq-bar"></div>
-                            <div class="eq-bar"></div>
-                            <div class="eq-bar"></div>
-                            <div class="eq-bar"></div>
-                            <div class="eq-bar"></div>
-                            <div class="eq-bar"></div>
-                            <div class="eq-bar"></div>
-                            <div class="eq-bar"></div>
-                            <div class="eq-bar"></div>
-                            <div class="eq-bar"></div>
-                            <div class="eq-bar"></div>
-                            <div class="eq-bar"></div>
-                            <div class="eq-bar"></div>
-                            <div class="eq-bar"></div>
-                            <div class="eq-bar"></div>
-                            <div class="eq-bar"></div>
-                            <div class="eq-bar"></div>
-                            <div class="eq-bar"></div>
-                            <div class="eq-bar"></div>
-                            <div class="eq-bar"></div>
-                            <div class="eq-bar"></div>
-                            <div class="eq-bar"></div>
-                            <div class="eq-bar"></div>
-                            <div class="eq-bar"></div>
-                            <div class="eq-bar"></div>
-                            <div class="eq-bar"></div>
-                            <div class="eq-bar"></div>
-                            <div class="eq-bar"></div>
-                            <div class="eq-bar"></div>
-                            <div class="eq-bar"></div>
-                            <div class="eq-bar"></div>
-                            <div class="eq-bar"></div>
-                            <div class="eq-bar"></div>
-                            <div class="eq-bar"></div>
-                            <div class="eq-bar"></div>
-                            <div class="eq-bar"></div>
-                            <div class="eq-bar"></div>
-                            <div class="eq-bar"></div>
-                            <div class="eq-bar"></div>
-                        </div>
+                </section>
+            </section>
+        </section>
 
-                    </div>
-                </div>
+        <!-- Testimonials Section -->
+        <section class="testimonials-section">
+            <section class="container">
+                <h2 class="section-title">What our listeners say</h2>
 
-            </div>
-        </div>
-    </section>
+                <ul class="testimonials-grid list-unstyled mb-0">
+                    <li class="testimonial-card">
+                        <figure class="testimonial-img-wrapper mb-0">
+                            <img src="../assets/images/john doe.jpeg" alt="John Doe">
+                        </figure>
+                        <article class="testimonial-content">
+                            <h3>John Doe</h3>
+                            <p>"I put Jane! on loop during my final project crunch and powered through every single deadline. Absolute lifesaver!"</p>
+                        </article>
+                    </li>
 
-    <!-- 6 cards giving an overview of the site's content -->
-    <section class="section-space">
-        <div class="container">
-            <div class="text-center scroll-animate">
-                <p class="section-label">LEARNING? MAKE IT FUN</p>
-                <h2 class="section-title">Here's what you will experience</h2>
-            </div>
+                    <li class="testimonial-card">
+                        <figure class="testimonial-img-wrapper mb-0">
+                            <img src="../assets/images/marcus tan.jpeg" alt="Marcus Tan">
+                        </figure>
+                        <article class="testimonial-content">
+                            <h3>Marcus Tan</h3>
+                            <p>"Found my new favourite genre. Thanks @Music Vault!"</p>
+                        </article>
+                    </li>
 
-            <div class="row g-4 mt-4">
-                <div class="col-md-4">
-                    <div class="custom-card card-bg-1 scroll-animate delay-1">
-                        <p class="element-number">01</p>
-                        <h3>About music</h3>
-                        <p class="text-gold-light">
-                            Learn how pitch, rhythm, timbre, dynamics & other elements combine and interact with one another to shape different yet distinct musical characteristics and styles.
-                        </p>
-                        <a href="aboutmusic.html" class="text-gold text-decoration-none">Explore →</a>
-                    </div>
-                </div>
+                    <li class="testimonial-card">
+                        <figure class="testimonial-img-wrapper mb-0">
+                            <img src="../assets/images/jane juliet.jpg" alt="Jane Juliet">
+                        </figure>
+                        <article class="testimonial-content">
+                            <h3>Jane Juliet</h3>
+                            <p>"The music drew me in, and I do not ever want to come out!"</p>
+                        </article>
+                    </li>
+                </ul>
+            </section>
+        </section>
 
-                <div class="col-md-4">
-                    <div class="custom-card card-bg-2 scroll-animate delay-2">
-                        <p class="element-number">02</p>
-                        <h3>Discover Genres</h3>
-                        <p class="text-gold-light">
-                            Explore the history, sounds and sub-genres that shaped music across generations & get a taste of each one.
-                        </p>
-                        <a href="genres.html" class="text-gold text-decoration-none">Explore genres →</a>
-                    </div>
-                </div>
+    </main>
 
-                <div class="col-md-4">
-                    <div class="custom-card card-bg-3 scroll-animate delay-3">
-                        <p class="element-number">03</p>
-                        <h3>History</h3>
-                        <p class="text-gold-light">
-                            Trace music from its earliest forms and roots, and follow the journey from timeless classics to modern hits while discovering how music became a recognized art form and a cultural force.
-                        </p>
-                        <a href="#" class="text-gold text-decoration-none">Music's History →</a>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="custom-card card-bg-4 scroll-animate delay-3">
-                        <p class="element-number">04</p>
-                        <h3>Music Around the World</h3>
-                        <p class="text-gold-light">
-                            Discover the different music around the world, exploring their cultural and musical significance, and find out how some of them shaped the music we listen to today.
-                        </p>
-                        <a href="#" class="text-gold text-decoration-none">Discover →</a>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="custom-card card-bg-5 scroll-animate delay-3">
-                        <p class="element-number">05</p>
-                        <h3>Benefits of Music</h3>
-                        <p class="text-gold-light">
-                            Learn how music benefits our lives by not only helping as a therapeutic tool, but also helping our mental health and healing, unifying communities and bringing color into an otherwise bland world.
-                        </p>
-                        <a href="#" class="text-gold text-decoration-none">Learn more →</a>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="custom-card card-bg-6 scroll-animate delay-3">
-                        <p class="element-number">06</p>
-                        <h3>Music Technology</h3>
-                        <p class="text-gold-light">
-                            See how technological innovations, such as synthesizers popularized by the Beatles & modern streaming platforms expanding global access for everyone, fundamentally transforming how we create and experience music.
-                        </p>
-                        <a href="#" class="text-gold text-decoration-none">Tech →</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- purpose / mission section -->
-    <section class="section-space purpose-section">
-        <div class="container">
-            <div class="text-center mb-5 scroll-animate">
-                <p class="section-label">BEHIND THE VAULT</p>
-                <h2 class="section-title">Our Purpose</h2>
-            </div>
-
-            <div class="row g-5">
-                <div class="col-md-4 scroll-animate delay-1">
-                    <h3 class="text-gold mb-3">Our Mission</h3>
-                    <p class="text-gold-light" style="line-height: 1.8;">
-                        Music is a defining part of youth lives, yet it is often treated as background noise. Our mission is to transform passive listeners to active appreciators by unpacking the structure, history and emotion behind music.
-                    </p>
-                </div>
-
-                <div class="col-md-4 scroll-animate delay-2">
-                    <h3 class="text-gold mb-3">Our Goal</h3>
-                    <p class="text-gold-light" style="line-height: 1.8;">
-                        Our aim is to explore the beauty, history and cultural significance with our visitors. By demonstrating its true significance, we hope to prove that music is far more than just a casual pastime.
-                    </p>
-                </div>
-
-                <div class="col-md-4 scroll-animate delay-3">
-                    <h3 class="text-gold mb-3">Why This Topic?</h3>
-                    <p class="text-gold-light" style="line-height: 1.8;">
-                        We chose this topic because music connects emotion, culture, rhythm, and memory across generations. Understanding the mechanics of sound enriches how we experience every single beat and melody in our lives.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- featured audio -->
-    <section class="section-space" id="featured-audio">
-        <div class="container">
-            <div class="row align-items-center g-5">
-                <div class="col-lg-7 scroll-animate">
-                    <p class="section-label">LISTEN CLOSELY</p>
-                    <h2 class="section-title mb-4">Every sound has a story.</h2>
-                    <p class="text-gold-light fs-5">
-                        Sometimes, all it takes is one song, to turn your mood around.
-                    </p>
-                </div>
-
-                <div class="col-lg-5 scroll-animate delay-1">
-                    <div class="custom-card audio-card-bg">
-                        <div class="d-flex align-items-center mb-4">
-                            <div class="audio-icon-box me-3">♪</div>
-                            <div>
-                                <p class="section-label mb-0">FEATURED AUDIO</p>
-                                <h3 class="text-gold mb-0">Jane!</h3>
-                                <small class="text-gold-light">THE VAULT</small>
-                            </div>
-                        </div>
-
-                        <audio id="myAudioTrack" src="../assets/Music audious/Jane!.mp3"></audio>
-
-                        <button id="audioButton" class="btn btn-gold w-100">
-                            ▶ Play Sound Sample
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- testimonials -->
-    <section class="testimonials-section">
-        <div class="container">
-            <h2 class="section-title">What our listeners say</h2>
-            <div class="testimonials-grid">
-
-                <div class="testimonial-card">
-                    <div class="testimonial-img-wrapper">
-                        <img src="../assets/images/john doe.jpeg" alt="John Doe">
-                    </div>
-                    <div class="testimonial-content">
-                        <h3>John Doe</h3>
-                        <p>"I put Jane! on loop during my final project crunch and powered through every single deadline. Absolute lifesaver!"</p>
-                    </div>
-                </div>
-
-                <div class="testimonial-card">
-                    <div class="testimonial-img-wrapper">
-                        <img src="../assets/images/marcus tan.jpeg" alt="Marcus Tan">
-                    </div>
-                    <div class="testimonial-content">
-                        <h3>Marcus Tan</h3>
-                        <p>"Found my new favourite genre. Thanks @Music Vault!"</p>
-                    </div>
-                </div>
-
-                <div class="testimonial-card">
-                    <div class="testimonial-img-wrapper">
-                        <img src="../assets/images/jane juliet.jpg" alt="Jane Juliet">
-                    </div>
-                    <div class="testimonial-content">
-                        <h3>Jane Juliet</h3>
-                        <p>"The music drew me in, and I do not ever want to come out!"</p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- footer -->
+    <!-- Site Footer -->
     <footer class="site-footer container-fluid px-4 px-md-5 py-4 mt-auto mb-4 mx-auto rounded-4 text-light">
-
         <section class="row gy-4 align-items-center">
 
             <section class="col-12 col-md-4 d-flex justify-content-center justify-content-md-start align-items-center gap-3">
                 <a href="#" class="text-decoration-none d-flex align-items-center gap-2">
                     <span class="fs-4 text-warning">▼</span>
-                    <img src="../assets/images/Logo.jpeg" alt="Logo" style="height: 65px; width: 65px;" class="footer-logo">
+                    <img src="../assets/images/Logo.jpeg" alt="Music Vault Logo" class="footer-logo">
                 </a>
             </section>
 
@@ -389,6 +403,7 @@
         </section>
     </footer>
 
+    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../assets/js/index.js"></script>
 </body>
