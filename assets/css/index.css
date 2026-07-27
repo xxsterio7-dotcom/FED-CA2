@@ -1,6 +1,3 @@
-/* ==========================================================================
-   1. CSS VARIABLES & RESETS
-   ========================================================================== */
 
 :root {
     --black: #080b09;
@@ -29,7 +26,7 @@ h1, h2, h3, h4, h5 {
     font-family: Georgia, "Times New Roman", serif;
 }
 
-/* Helper Utilities */
+
 .text-gold {
     color: var(--gold) !important;
 }
@@ -58,9 +55,6 @@ h1, h2, h3, h4, h5 {
     line-height: 1.8;
 }
 
-/* ==========================================================================
-   2. NAVIGATION BAR
-   ========================================================================== */
 
 .navbar-custom {
     background-color: var(--black);
@@ -95,9 +89,7 @@ h1, h2, h3, h4, h5 {
     color: var(--gold) !important;
 }
 
-/* ==========================================================================
-   3. HERO SECTION & EQUALIZER
-   ========================================================================== */
+
 
 .hero {
     position: relative;
@@ -149,7 +141,7 @@ h1, h2, h3, h4, h5 {
     width: 100%;
 }
 
-/* Featured Track Card */
+
 .featured-card {
     width: 100%;
     background-image: linear-gradient(rgba(8, 11, 9, 0.78), rgba(8, 11, 9, 0.78)),
@@ -239,7 +231,6 @@ h1, h2, h3, h4, h5 {
     color: var(--gold-light);
 }
 
-/* Equalizer Visualizer */
 .visualizer-container {
     display: flex;
     align-items: flex-end;
@@ -274,9 +265,6 @@ h1, h2, h3, h4, h5 {
     100% { height: 25%; }
 }
 
-/* ==========================================================================
-   4. BUTTONS
-   ========================================================================== */
 
 .btn-gold {
     background-color: var(--gold);
@@ -312,9 +300,7 @@ h1, h2, h3, h4, h5 {
     transform: translateZ(0);
 }
 
-/* ==========================================================================
-   5. PAGE HEADERS & SECTIONS
-   ========================================================================== */
+
 
 .page-hero {
     padding: 120px 0 80px;
@@ -342,9 +328,7 @@ h1, h2, h3, h4, h5 {
     border-bottom: 1px solid rgba(213, 169, 79, 0.15);
 }
 
-/* ==========================================================================
-   6. CARDS & GRID LAYOUT
-   ========================================================================== */
+
 
 .custom-card {
     position: relative;
@@ -406,7 +390,7 @@ h1, h2, h3, h4, h5 {
                 0 0 22px rgba(213, 169, 79, 0.35);
 }
 
-/* Specific Card Background Images */
+
 .card-bg-1 { background-image: linear-gradient(rgba(8, 11, 9, 0.70), rgba(8, 11, 9, 0.70)), url("/assets/images/homepage/About music CARD.jpg"); }
 .card-bg-2 { background-image: linear-gradient(rgba(8, 11, 9, 0.70), rgba(8, 11, 9, 0.70)), url("/assets/images/homepage/genres CARD.jpg"); }
 .card-bg-3 { background-image: linear-gradient(rgba(8, 11, 9, 0.70), rgba(8, 11, 9, 0.70)), url("/assets/images/homepage/history CARD .jpg"); }
@@ -421,7 +405,7 @@ h1, h2, h3, h4, h5 {
 .card-bg-5:hover { background-image: linear-gradient(rgba(8, 11, 9, 0.55), rgba(8, 11, 9, 0.55)), url("/assets/images/homepage/benefitsofmusic.jpg"); }
 .card-bg-6:hover { background-image: linear-gradient(rgba(8, 11, 9, 0.55), rgba(8, 11, 9, 0.55)), url("/assets/images/homepage/musictech.jpg"); }
 
-/* Audio Card */
+
 .audio-card-bg {
     background-image: linear-gradient(rgba(8, 11, 9, 0.78), rgba(8, 11, 9, 0.78)),
                       url('/assets/images/homepage/Janebackgroundimg1.jpg');
@@ -449,11 +433,8 @@ h1, h2, h3, h4, h5 {
     font-weight: bold;
 }
 
-/* ==========================================================================
-   7. INTERACTIVE COMPONENTS (MIXER, MARQUEE, MOOD, GENRES)
-   ========================================================================== */
 
-/* Style Mixer */
+
 .mixer-section {
     background: var(--black-soft);
 }
@@ -475,7 +456,7 @@ h1, h2, h3, h4, h5 {
     margin-right: auto;
 }
 
-/* Scrolling Album Marquee */
+
 .album-marquee {
     background: var(--green-dark);
     color: var(--gold-light);
@@ -499,7 +480,7 @@ h1, h2, h3, h4, h5 {
     to { transform: translateX(-50%); }
 }
 
-/* Mood Selector */
+
 .mood-button {
     background: var(--black-soft);
     color: var(--cream);
@@ -523,7 +504,7 @@ h1, h2, h3, h4, h5 {
     margin-right: auto;
 }
 
-/* Genre Carousel & Table */
+
 .genre-carousel {
     background: var(--green-dark);
     border: 1px solid var(--gold);
@@ -549,9 +530,6 @@ h1, h2, h3, h4, h5 {
 .genre-table th { color: var(--gold); }
 .genre-table td { color: var(--gold-light); }
 
-/* ==========================================================================
-   8. TESTIMONIALS SECTION
-   ========================================================================== */
 
 .testimonials-section {
     background-color: #0c0b09;
@@ -618,9 +596,7 @@ h1, h2, h3, h4, h5 {
     font-style: italic;
 }
 
-/* ==========================================================================
-   9. FOOTER
-   ========================================================================== */
+
 
 .site-footer {
     background-color: #121212 !important;
@@ -666,9 +642,6 @@ h1, h2, h3, h4, h5 {
     color: #fff !important;
 }
 
-/* ==========================================================================
-   10. ANIMATIONS & RESPONSIVE BREAKPOINTS
-   ========================================================================== */
 
 .scroll-animate {
     opacity: 0;
