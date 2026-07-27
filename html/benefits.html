@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Vault</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="main.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light p-3" style="background-color: var(--black-soft);">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="filter: invert(1);">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active navbar-brand mb-0 h1 fs-4" aria-current="page" href="#" style="color: var(--cream) !important;">
+                                <img src="https://i.imgur.com/V5YSKrI.png" alt="Music Vault logo">
+                            </a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle mb-0 h1 fs-5" href="#" id="navbarDropdown1" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: var(--cream) !important;">
+                                Dropdown
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle mb-0 h1 fs-5" href="#" id="navbarDropdown2" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: var(--cream) !important;">
+                                Dropdown
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle mb-0 h1 fs-5" href="#" id="navbarDropdown3" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: var(--cream) !important;">
+                                Dropdown
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown3">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!--Intro Banner-->
+    <!--Planning to shift inline styles to main.css-->
+    <section style="background-image: linear-gradient(
+                to bottom,
+                rgba(8, 11, 9, 0.15) 55%,
+                rgba(8, 11, 9, 0.15) 70%,
+                rgba(8, 11, 9, 1) 100%),
+                url(https://upload.wikimedia.org/wikipedia/commons/3/32/4th_Australian_Jazz_Convention_-_Melbourne_1949_Rex_Stewart_%26_Graeme_Bell_Jazz_Band.jpg?_=20250220132633);"
+                class="w-100 d-flex flex-column justify-content-center align-items-center" id="benefitsHero">
+        <h1 class="display-1 fw-medium">Benefits of Music</h1>
+        <h2 class="py-4">How music benefits us physically, mentally, and as a society</h2>
+    </section>
+    <section class="m-5 d-flex justify-content-center">
+        <div id="benefitsIntro">
+            <h2>Listening with your body</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent non euismod est, sed tincidunt nisl. Duis eu diam at nibh suscipit aliquet. Nunc nec sapien nec nisl imperdiet tincidunt ut ac tellus. Donec molestie aliquam aliquet. Aliquam ultricies sapien sed vestibulum cursus. Suspendisse sagittis nibh et mi auctor imperdiet. Aliquam erat volutpat. Pellentesque molestie, odio cursus ultrices sollicitudin, purus lectus lobortis est, ut mollis risus ante sed magna. Ut tincidunt ante in nisl iaculis convallis. Vestibulum laoreet, tellus eget interdum porttitor, elit massa aliquam orci, eget porttitor tellus erat sed arcu.
+            </p>
+        </div>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/s19Fr-_WaXo?si=FwddZ-olDNa--GNQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </section>
+    <main class="container-fluid min-vh-100 py-4 ">
+        <section class="row g-4">
+            <h1 class="text-center display-3 mt-5">Families of instruments</h1>
+            <article class="col-12 col-md-3">
+                <button class="benefitsCard w-100 h-100 border-0 p-0" type="button">
+                    <article class="position-relative d-block w-100 h-100 benefitsCard-inner" style="color: var(--cream);">
+                        <h2 class="benefitsCard-front" 
+                        style="background-image: linear-gradient(rgba(29, 77, 54, 0.45), rgba(29, 77, 54, 0.45)), 
+                        url(https://images.pexels.com/photos/15096222/pexels-photo-15096222.jpeg);
+                        width: 100%;
+                        background-repeat: no-repeat; 
+                        background-size: cover;
+                        background-position: center;
+                        color: var(--cream);">Strings</h2>
+
+                        <span class="benefitsCard-back" style="color: var(--cream);">
+                            <a target="_blank" href="https://icons8.com/icon/K4oUzt50ROd5/violin"><img width=17% height=22% src="https://img.icons8.com/pieces/64/violin.png" alt="violin"/></a>
+                            <h1>String benefitsuments</h1>
+                            <p class="p-5 pb-3 pt-2 fs-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent non euismod est, sed tincidunt nisl. Duis eu diam at nibh suscipit aliquet.</p>
+                            <h1>Examples</h1>
+                            <p class="p-5 pt-2 pb-0 fs-4">Violins, Harps, Guitars</p>
+                        </span>
+                    </article>
+                </button>
+            </article>
+
+            <article class="col-12 col-md-3">
+                <button class="benefitsCard w-100 h-100 border-0 p-0" type="button">
+                    <article class="position-relative d-block w-100 h-100 benefitsCard-inner" style="color: var(--cream);">
+                        //Planning to move inline styles to main.css
+                        <h2 class="benefitsCard-front" 
+                        style="background-image: linear-gradient(rgba(29, 77, 54, 0.45), rgba(29, 77, 54, 0.45)),
+                        url(https://images.pexels.com/photos/6449867/pexels-photo-6449867.jpeg);
+                        width: 100%;
+                        background-repeat: no-repeat; 
+                        background-size: cover;
+                        background-position: center;
+                        color: var(--cream);">Percussion</h2>
+
+                        <span class="benefitsCard-back p-4"> <!--Find replacement for span tag-->
+                            <a target="_blank" href="https://icons8.com/icon/wbBDdYcGUPnm/tabla"><img width=18% height=22% src="https://img.icons8.com/pieces/64/tabal.png" alt="tabal"/></a> 
+                            <h1>Percussion</h1>
+                            <p class="p-5 pb-3 pt-2 fs-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent non euismod est, sed tincidunt nisl. Duis eu diam at nibh suscipit aliquet.</p>
+                            <h1>Examples</h1>
+                            <p class="p-1 pt-2 pb-0 fs-4">Drums, Cymbals, Maracas</p>
+                        </span>
+                    </article>
+                </button>
+            </article>
+
+            <article class="col-12 col-md-3">
+                <button class="benefitsCard w-100 h-100 border-0 p-0" type="button">
+                    <article class="position-relative d-block w-100 h-100 benefitsCard-inner">
+                        <h2 class="benefitsCard-front" 
+                        style="background-image: linear-gradient(rgba(29, 77, 54, 0.45), rgba(29, 77, 54, 0.45)), 
+                        url(https://images.pexels.com/photos/18860920/pexels-photo-18860920.jpeg);
+                        width: 100%;
+                        background-repeat: no-repeat; 
+                        background-size: cover;
+                        background-position: center;
+                        color: var(--cream);">Woodwind</h2>
+
+                        <span class="benefitsCard-back" style="color: var(--cream);">
+                            <a target="_blank" href="https://icons8.com/icon/15p9BikO32T4/bassoon"><img width=17% height=21% src="https://img.icons8.com/pieces/64/bassoon.png" alt="bassoon"/></a> 
+                            <h1>Woodwinds</h1>
+                            <p class="p-5 pb-3 pt-2 fs-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent non euismod est, sed tincidunt nisl. Duis eu diam at nibh suscipit aliquet.</p>
+                            <h1>Examples</h1>
+                            <p class="p-5 pt-2 pb-0 fs-4">Oboe, Bassoon, Flute</p>
+                        </span>
+                    </article>
+                </button>
+            </article>
+
+            <article class="col-12 col-md-3">
+                <button class="benefitsCard w-100 h-100 border-0 p-0" type="button">
+                    <article class="position-relative d-block w-100 h-100 benefitsCard-inner">
+                        <h2 class="benefitsCard-front" 
+                        style="background-image: linear-gradient(rgba(29, 77, 54, 0.45), rgba(29, 77, 54, 0.45)), 
+                        url(https://images.pexels.com/photos/8884257/pexels-photo-8884257.jpeg);
+                        width: 100%;
+                        background-repeat: no-repeat; 
+                        background-size: cover;
+                        background-position: center;
+                        color: var(--cream);">Brass</h2>
+
+                        <span class="benefitsCard-back" style="color: var(--cream);">
+                            <a target="_blank" href="https://icons8.com/icon/cehlV2NqUbmZ/sax"><img width=16% height=21% src="https://img.icons8.com/pieces/64/alto-saxophone.png" alt="alto-saxophone"/></a> 
+                            <h1>Brass</h1>
+                            <p class="p-5 pb-3 pt-2 fs-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent non euismod est, sed tincidunt nisl. Duis eu diam at nibh suscipit aliquet.</p>
+                            <h1>Examples</h1>
+                            <p class="p-5 pt-2 pb-0 fs-4">Trumpet, Saxophone, Tuba, Trombone</p>
+                        </span>
+                    </article>
+                </button>
+            </article>
+
+        </section>
+    </main>
+
+    <!--Evolution for carousel section-->
+    <section id="benefitsEvolution" class="carousel slide" data-bs-wrap="false" style="background-color: var(--green-dark);">
+        <h1 class="text-center pt-5">Evolution</h1>
+
+        <section class="carousel-inner" id="luteEvol">
+
+            <article class="carousel-item active align-content-center">
+                <section class="d-flex align-items-center w-75 mx-auto">
+                    <img src="/Images/lute.png" alt="Lute" style="width:25%" class="">
+                    <section>
+                        <h1>Lute</h1>
+                        <p class="fs-4"> Earliest form of a guitar, with a pear-shaped body, round back and curved neck. Popular in europe during reneissance and Baroque eras.</p>
+                    </section>
+                </section>
+            </article>
+
+            <article class="carousel-item align-content-center">
+                <section class="d-flex align-items-center w-75 mx-auto">
+                    <img src="/Images/Vihuela.png" alt="Lute" style="width:25%" class="">
+                    <section>
+                        <h1>Vihuela</h1>
+                        <p class="fs-4"> Earliest form of a guitar, with a pear-shaped body, round back and curved neck. Popular in europe during reneissance and Baroque eras.</p>
+                    </section>
+                </section>
+            </article>
+
+            <article class="carousel-item align-content-center">
+                <section class="d-flex align-items-center w-75 mx-auto">
+                    <img src="/Images/classical-guitar.png" alt="Lute" style="width:25%" class="">
+                    <section>
+                        <h1>Classical Guitar</h1>
+                        <p class="fs-4"> Earliest form of a guitar, with a pear-shaped body, round back and curved neck. Popular in europe during reneissance and Baroque eras.</p>
+                    </section>
+                </section>
+            </article>
+
+            <article class="carousel-item align-content-center">
+                <section class="d-flex align-items-center w-75 mx-auto">
+                    <img src="/Images/electric-guitar.png" alt="Lute" style="width:25%" class="">
+                    <section>
+                        <h1>Electric Guitar</h1>
+                        <p class="fs-4"> Earliest form of a guitar, with a pear-shaped body, round back and curved neck. Popular in europe during reneissance and Baroque eras.</p>
+                    </section>
+                </section>
+            </article>
+
+        </section>
+        
+        <!--Arrows for carousel-->
+        <button class="carousel-control-prev top-50 translate-middle-y"
+                type="button"
+                data-bs-target="#benefitsEvolution"
+                data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+
+        <button class="carousel-control-next top-50 translate-middle-y"
+                type="button"
+                data-bs-target="#benefitsEvolution"
+                data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
