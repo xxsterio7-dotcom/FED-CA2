@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Javascript Interactive tasks</h1>
+    <h2>Changing background colours</h2>
+    <div id="box">Click the button to change the colour</div>
+    <button id="colourChange">Change Colour</button>
+    <hr>
+    <h2>Toggle image visibility</h2>
+    <img id="myImage" src="" alt="Sample Image">
+    <br>
+    <button id="toggleButton">Hide / Show Image</button>
+    <hr>
+    <h2>Console input trigger</h2>
+    <input id="userInput" type="text" placeholder="typeSomething">
+    <button id="sumbitButton">Sumbit</button>
+
+    <script src ='script.js'></script>
+</body>
+</html>
