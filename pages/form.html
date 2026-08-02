@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newsletter — Music Vault</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet" href="../assets/css/form.css">
+    <link rel="stylesheet" href="../assets/css/global.css">
+</head>
+
+<body>
+
+<header class="header">
+
+    <nav class="navbar">
+
+        <a href="index.html" class="navbar__logo">
+            <img src="../assets/image/logo.jpeg" alt="Music Vault Logo">
+        </a>
+
+        <ul class="navbar__menu">
+            <li class="navbar__item">
+                <a href="#home">Home</a>
+            </li>
+
+            <li class="navbar__item">
+
+                <button class="navbar__link">
+                    History
+                </button>
+
+                <ul class="navbar__dropdown">
+                    <li><a href="#">Benefits of Music</a></li>
+                    <li><a href="#">Music Around the World</a></li>
+                    <li><a href="#">History of Music</a></li>
+                </ul>
+
+            </li>
+
+            <li class="navbar__item">
+
+                <button class="navbar__link">
+                    Genres
+                </button>
+
+                <ul class="navbar__dropdown">
+                    <li><a href="#overview">Music Genres</a></li>
+                    <li><a href="#timeline">Famous Artists</a></li>
+                </ul>
+
+            </li>
+
+            <li class="navbar__item">
+
+                <button class="navbar__link">
+                    Life of Music
+                </button>
+
+                <ul class="navbar__dropdown">
+                    <li><a href="#map">Musical Instruments</a></li>
+                    <li><a href="#gallery">Live Music & Concerts</a></li>
+                </ul>
+
+            </li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+<main>
+
+
+    <section class="newsletter" id="newsletter">
+
+        <header class="newsletter__header">
+
+            <p class="newsletter__tag">STAY IN THE ARCHIVE</p>
+
+            <h1 class="newsletter__title">Join The Vault Newsletter</h1>
+
+            <p class="newsletter__subtitle">
+            Get a curated monthly roundup of new live music histories, platform updates, and insider stories you won't want to miss!
+            </p>
+
+        </header>
+
+        <section class="newsletter__grid">
+
+            <!-- Form -->
+
+            <form class="newsletter__form" id="newsletterForm" novalidate>
+
+                <h2 class="newsletter__form-title">Subscribe</h2>
+
+                <section class="form-row">
+
+                    <label class="form-field">
+                        <span>First name <em>*</em></span>
+                        <input type="text" name="firstName" id="firstName" placeholder="James" required>
+                    </label>
+
+                    <label class="form-field">
+                        <span>Last name <em>*</em></span>
+                        <input type="text" name="lastName" id="lastName" placeholder="Cook" required>
+                    </label>
+
+                </section>
+
+                <label class="form-field">
+                    <span>Email <em>*</em></span>
+                    <input type="email" name="email" id="email" placeholder="you@example.com" required>
+                </label>
+
+                <hr class="form-divider">
+
+                <h3 class="newsletter__survey-title">Quick feedback</h3>
+                <p class="newsletter__survey-hint">Optional — helps us shape what we send.</p>
+
+                <fieldset class="form-field form-field--fieldset">
+                    <legend>What music topics excite you most?</legend>
+
+                    <section class="radio-group">
+
+                        <label class="radio-option">
+                            <input type="radio" name="interest" value="music_history">
+                            <span>🎸 Music History & Famous Artists</span>
+                        </label>
+
+                        <label class="radio-option">
+                            <input type="radio" name="interest" value="genres">
+                            <span>🎹 Genres, Instruments & Gear</span>
+                        </label>
+
+                        <label class="radio-option">
+                            <input type="radio" name="interest" value="cultures">
+                            <span>🌐 Global Soundscapes & Cultures</span>
+                        </label>
+
+                        <label class="radio-option">
+                            <input type="radio" name="interest" value="all">
+                            <span>Everything!</span>
+                        </label>
+
+                    </section>
+
+                </fieldset>
+
+                <label class="form-field">
+                    <span>Anything specific you'd like us to cover?</span>
+                    <textarea name="feedback" id="feedback" rows="4" placeholder="e.g., Synth history, Jazz pioneers, home studio setups..."></textarea>
+                </label>
+
+                <button type="submit" class="newsletter__submit">Subscribe</button>
+
+                <p class="newsletter__confirm" id="formConfirm" role="status"></p>
+
+            </form>
+
+            <!-- Info panel -->
+
+            <aside class="newsletter__info">
+
+                <p class="newsletter__info-tag">WHAT YOU'LL GET</p>
+
+                <ul class="newsletter__info-list">
+
+                    <li>
+                        <i class="fa-solid fa-record-vinyl"></i>
+                        <section>
+                            <h4>Archive Drops</h4>
+                            <p>Rare photos, vintage concert footage, and newly digitized history from the world of live music.</p>
+                        </section>
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-ticket"></i>
+                        <section>
+                            <h4>Curated Guides</h4>
+                            <p>Deep dives into iconic genres, legendary artists, top-rated albums, and global music traditions.</p>
+                        </section>
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-map-location-dot"></i>
+                        <section>
+                            <h4>Tech & Trends</h4>
+                            <p>Fresh updates on music production, AI tools, instruments, and early heads-up on live tours.</p>
+                        </section>
+                    </li>
+
+                </ul>
+
+                <p class="newsletter__info-note">
+                    Sent monthly. Unsubscribe anytime — no hard feelings.
+                </p>
+
+            </aside>
+
+        </section>
+
+    </section>
+
+</main>
+
+<footer class="footer">
+
+    <section class="footer__container">
+
+
+
+        <section class="footer__left">
+
+            <span class="footer__arrow">▼</span>
+
+            <a href="index.html#home" class="footer__logo">
+
+                <img src="../assets/image/logo.jpeg" alt="Music Vault Logo">
+
+            </a>
+
+        </section>
+
+
+        <section class="footer__center">
+
+            <blockquote class="footer__quote">
+                "Music is beautiful, expressive and inherently timeless."
+            </blockquote>
+
+            <button class="footer__top" id="backToTop">
+                Back to Top
+            </button>
+
+        </section>
+
+ 
+
+        <aside class="footer__right">
+
+            <nav class="footer__social">
+
+                <a href="#" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="#" aria-label="Facebook">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+
+                <a href="#" aria-label="YouTube">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+
+                <a href="#" aria-label="Spotify">
+                    <i class="fa-brands fa-spotify"></i>
+                </a>
+
+                <a href="#" aria-label="X">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </a>
+
+                <a href="#" aria-label="TikTok">
+                    <i class="fa-brands fa-tiktok"></i>
+                </a>
+
+            </nav>
+
+            <a href="form.html" class="footer__newsletter">
+                Newsletter
+            </a>
+
+        </aside>
+
+    </section>
+
+</footer>
+
+<script src="../assets/js/form.js"></script>
+
+</body>
+</html>
