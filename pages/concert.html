@@ -1,229 +1,488 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Music Vault — Where Music Lives Forever</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Vault</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
-<link href="main.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet" href="../assets/css/layout.css">
+    <link rel="stylesheet" href="../assets/css/theme.css">
+    <link rel="stylesheet" href="../assets/css/global.css">
 </head>
+
 <body>
 
-<header class="site-nav">
-  <nav class="nav-inner">
-    <a class="brand" href="#top">MUSIC<span>VAULT</span></a>
+<header class="header">
 
-    <nav class="nav-links" id="navLinks">
-      <a href="#top" class="nav-link">Home</a>
+    <nav class="navbar">
 
-      <nav class="nav-dropdown">
-        <button class="nav-link dropdown-btn">Genres <i class="fa-solid fa-caret-down"></i></button>
-        <menu class="dropdown-panel">
-          <a href="#">Electronic</a>
-          <a href="#">Rock &amp; Alternative</a>
-          <a href="#">Pop &amp; Hip-Hop</a>
-          <a href="#">World &amp; Indie</a>
-        </menu>
-      </nav>
+        <a href="index.html" class="navbar__logo">
+            <img src="../assets/image/logo.jpeg" alt="Music Vault Logo">
+        </a>
 
-      <nav class="nav-dropdown">
-        <button class="nav-link dropdown-btn">Regions <i class="fa-solid fa-caret-down"></i></button>
-        <menu class="dropdown-panel">
-          <a href="#">Europe</a>
-          <a href="#">North America</a>
-          <a href="#">Asia Pacific</a>
-          <a href="#">South America</a>
-        </menu>
-      </nav>
+        <ul class="navbar__menu">
 
-      <nav class="nav-dropdown">
-        <button class="nav-link dropdown-btn">Resources <i class="fa-solid fa-caret-down"></i></button>
-        <menu class="dropdown-panel">
-          <a href="#">Festival Guides</a>
-          <a href="#">Travel Tips</a>
-          <a href="#">Ticket Alerts</a>
-          <a href="#">Contact Us</a>
-        </menu>
-      </nav>
+            <li class="navbar__item">
+                <a href="#home">Home</a>
+            </li>
+
+            <li class="navbar__item">
+
+                <button class="navbar__link">
+                    History
+                </button>
+
+                <ul class="navbar__dropdown">
+                    <li><a href="#">Benefits of Music</a></li>
+                    <li><a href="#">Music Around the World</a></li>
+                    <li><a href="#">History of Music</a></li>
+                </ul>
+
+            </li>
+
+            <li class="navbar__item">
+
+                <button class="navbar__link">
+                    Genres
+                </button>
+
+                <ul class="navbar__dropdown">
+                    <li><a href="#overview">Music Genres</a></li>
+                    <li><a href="#timeline">Famous Artists</a></li>
+                </ul>
+
+            </li>
+
+            <li class="navbar__item">
+
+                <button class="navbar__link">
+                    Life of Music
+                </button>
+
+                <ul class="navbar__dropdown">
+                    <li><a href="#map">Musical Instruments</a></li>
+                    <li><a href="#gallery">Live Music & Concerts</a></li>
+                </ul>
+
+            </li>
+            
+
+        </ul>
+
     </nav>
 
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
-      <i class="fa-solid fa-bars"></i>
-    </button>
-  </nav>
 </header>
 
 <main>
-  <section class="hero" id="top">
-    <section class="hero-bg"></section>
-    <section class="hero-veil"></section>
-    <section  class="hero-content">
-      <span class="eyebrow">The Global Festival Archive</span>
-      <h1>Where Music<br>Lives Forever</h1>
-      <p>A living vault of the world's most legendary festivals — their history, their sound, their stages.</p>
-      <a href="#map" class="btn-gold">Explore the Vault <i class="fa-solid fa-arrow-down"></i></a>
+
+    <!-- Hero -->
+
+    <section class="hero" id="home">
+
+        <figure class="hero__banner">
+            <img src="../assets/image/hero.jpg" alt="Music festival crowd">
+        </figure>
+
+        <article class="hero__content">
+
+            <p class="hero__tag">
+            Every Crowd. Every Era. Every Beat.
+            </p>
+
+            <h1 class="hero__title">
+                Where Music Lives Forever
+            </h1>
+
+            <p class="hero__description">
+            Search thousands of historic sets, rare footage, and fan memories from festivals across the globe.
+            </p>
+
+            <a href="#overview" class="hero__button">
+                Explore The Vault
+            </a>
+
+        </article>
+
     </section>
-  </section>
 
-  <section class="overview">
-    <article class="overview-box">
-      <span class="eyebrow">Overview</span>
-      <h2>One Vault, Every Stage on Earth</h2>
-      <p>Music Vault catalogues the festivals that defined generations — from a single farm in upstate New York
-      to a purpose-built city of sound in Belgium. Every entry is preserved with its lineup history, its founding
-      story, and its place on the map, so the culture behind the music is never lost to time.</p>
-      </article>
-  </section>
+    <!-- Overview -->
 
-  <section class="timeline">
-    <span class="eyebrow center">Timeline</span>
-    <h2 class="center">Milestones in Festival History</h2>
+    <section class="overview" id="overview">
 
-    <section class="timeline-track">
+        <header class="overview__header">
 
-      <article class="t-row">
-        <section class="t-block t-text">
-          <time class="t-year" datetime="1969">1969</time>
-          <h3>Woodstock</h3>
-          <p>Three days of peace and music on a dairy farm in Bethel, New York — the moment the modern
-          music festival was born.</p>
-          </section>
-        <figure class="t-block t-image">
-          <img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=700&q=80" alt="Crowd at a vintage outdoor festival">
-        </figure>
-        <span class="t-dot" aria-hidden="true"></span>
-      </article>
+            <p class="overview__tag">
+                OVERVIEW
+            </p>
 
-      <article class="t-row">
-        <figure class="t-block t-image">
-          <img src="https://images.unsplash.com/photo-1493676304819-0d7a8d026dcf?w=700&q=80" alt="Festival crowd under stage lights">
-        </figure>
-        <div class="t-block t-text">
-          <time class="t-year" datetime="1985">1985</time>
-          <h3>Live Aid</h3>
-          <p>Two stages, sixteen hours, one broadcast — proving a festival could move the world beyond
-          the field it stood on.</p>
-        </div>
-        <span class="t-dot" aria-hidden="true"></span>
-      </article>
+            <h2 class="overview__title">
+                One Vault, Every Stage On Earth
+            </h2>
 
-      <article class="t-row">
-        <div class="t-block t-text">
-          <time class="t-year" datetime="1997">1997</time>
-          <h3>Tomorrowland's Roots</h3>
-          <p>What began as a small electronic gathering in Belgium would grow into a temporary city built
-          entirely around a stage.</p>
-        </div>
-        <figure class="t-block t-image">
-          <img src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=700&q=80" alt="Festival stage lights at night">
-        </figure>
-        <span class="t-dot" aria-hidden="true"></span>
-      </article>
+        </header>
 
-      <article class="t-row">
-        <figure class="t-block t-image">
-          <img src="https://images.unsplash.com/photo-1506157786151-b8491531f063?w=700&q=80" alt="Sunset over a festival field">
-        </figure>
-        <div class="t-block t-text">
-          <time class="t-year" datetime="2026">2026</time>
-          <h3>The Vault Goes Live</h3>
-          <p>Today, every festival on this timeline — and dozens more — lives on one interactive map,
-          open for anyone to explore.</p>
-        </div>
-        <span class="t-dot" aria-hidden="true"></span>
-      </article>
+        <article class="overview__card">
 
-    </div>
-  </section>
+            <p>
+                Music Vault is a digital archive dedicated to preserving the world's most iconic music festivals. Every event tells a unique story through music, culture and unforgettable performances.
+            </p>
 
-  <section class="interactive" id="map">
-    <span class="eyebrow center">Interactive Features</span>
-    <h2 class="center">Find a Festival, Anywhere on Earth</h2>
-    <p class="center sub">Click a marker to open its record in the vault.</p>
+            <p>
+                Browse festival histories, discover legendary artists and explore locations through interactive experiences designed for music lovers around the world.
+            </p>
 
-    <div class="map-wrap">
-      <figure class="map-container" id="mapContainer">
-        <img src="map.jpeg" alt="World map displaying festival locations">
-      </figure>
-    </div>
+        </article>
 
-    <p class="placeholder-msg" id="placeholderMsg">Select a marker above to open its record.</p>
+    </section>
 
-    <article class="detail-card" id="detailCard">
-      <header class="banner">
-        <img id="bannerImg" src="" alt="">
-        <h2 id="festName"></h2>
-      </header>
-      
-      <div class="details">
-        <div class="detail-row">
-          <div class="icon" aria-hidden="true"><i class="fa-solid fa-location-dot"></i></div>
-          <div>
-            <strong class="label">Location &amp; Genre</strong>
-            <span class="value" id="festLocationGenre"></span>
-          </div>
-        </div>
-        <div class="detail-row">
-          <div class="icon" aria-hidden="true"><i class="fa-solid fa-calendar-days"></i></div>
-          <div>
-            <strong class="label">Date</strong>
-            <span class="value" id="festDate"></span>
-          </div>
-        </div>
-        <div class="detail-row">
-          <div class="icon" aria-hidden="true"><i class="fa-solid fa-microphone"></i></div>
-          <div>
-            <strong class="label">Featured Artists</strong>
-            <span class="value" id="festArtists"></span>
-          </div>
-        </div>
-
-        <figure class="trailer-wrap">
-          <iframe id="festTrailer" src="" title="Festival trailer" allowfullscreen></iframe>
-        </figure>
-
-        <a class="website-btn" id="festWebsite" href="#" target="_blank" rel="noopener">Visit Official Website <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-      </div>
-    </article>
-  </section>
 </main>
+<!--Timeline-->
 
-<footer class="site-footer">
-  <div class="footer-inner">
+<section class="timeline" id="timeline">
 
-    <div class="footer-logo">
-      <i class="fa-solid fa-caret-down"></i>
-      <strong>MUSIC VAULT</strong>
-    </div>
+    <header class="timeline__header">
+        <p class="timeline__tag">FESTIVAL ARCHIVE</p>
+        <h2 class="timeline__title">The Evolution of Music Festivals</h2>
+        <p class="timeline__subtitle">
+            Explore the world's most influential music festivals through time.
+        </p>
+    </header>
 
-    <div class="footer-center">
-      <blockquote>"Music is beautiful, expressive, and inherently timeless." — Jason Lim</blockquote>
-      <button onclick="scrollToTop()" class="btn-outline-gold">Back to top</button>
-    </div>
+    <section class="timeline__container">
+        
 
-    <div class="footer-right">
-      <section class="footer-box">
-        <strong class="label">Social Media</strong>
-        <nav class="icon-grid" aria-label="Social Media Links">
-          <a href="#" class="grid-box" aria-label="Instagram"><i class="fa-brands fa-square-instagram"></i></a>
-          <a href="#" class="grid-box" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
-          <a href="#" class="grid-box" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
-          <a href="#" class="grid-box" aria-label="Email"><i class="fa-solid fa-envelopes-bulk"></i></a>
-          <a href="#" class="grid-box" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
-          <a href="#" class="grid-box" aria-label="Reddit"><i class="fa-brands fa-square-reddit"></i></a>
-        </nav>
-      </section>
-      <a href="#newsletter" class="footer-box newsletter-box">Newsletter</a>
-    </div>
+        <!-- Woodstock -->
 
-  </div>
+        <article class="timeline__item timeline__item--left">
+
+            <figure class="timeline__card">
+
+                <img src="../assets/image/woodstock.png" alt="Woodstock Festival">
+
+                <figcaption class="timeline__content">
+
+                    <span class="timeline__year">1969</span>
+
+                    <h3>Woodstock</h3>
+
+                    <p>
+                        A defining moment in music history, Woodstock became a global symbol of peace, freedom and artistic expression.
+                    </p>
+
+                    <a href="#">Explore Festival →</a>
+
+                </figcaption>
+
+            </figure>
+
+        </article>
+
+        <!-- Coachella -->
+
+        <article class="timeline__item timeline__item--right">
+
+            <figure class="timeline__card">
+
+                <img src="images/coachella.jpg" alt="Coachella Festival">
+
+                <figcaption class="timeline__content">
+
+                    <span class="timeline__year">1999</span>
+
+                    <h3>Coachella</h3>
+
+                    <p>
+                        Known for its iconic desert stages, fashion culture and unforgettable performances from global artists.
+                    </p>
+
+                    <a href="#">Explore Festival →</a>
+
+                </figcaption>
+
+            </figure>
+
+        </article>
+
+        <!-- Tomorrowland -->
+
+        <article class="timeline__item timeline__item--left">
+
+            <figure class="timeline__card">
+
+                <img src="images/tomorrowland.jpg" alt="Tomorrowland Festival">
+
+                <figcaption class="timeline__content">
+
+                    <span class="timeline__year">2005</span>
+
+                    <h3>Tomorrowland</h3>
+
+                    <p>
+                        One of the world's largest EDM festivals, famous for its fantasy-inspired stages and immersive experience.
+                    </p>
+
+                    <a href="#">Explore Festival →</a>
+
+                </figcaption>
+
+            </figure>
+
+        </article>
+
+        <!-- Ultra -->
+
+        <article class="timeline__item timeline__item--right">
+
+            <figure class="timeline__card">
+
+                <img src="images/ultra.jpg" alt="Ultra Music Festival">
+
+                <figcaption class="timeline__content">
+
+                    <span class="timeline__year">1999</span>
+
+                    <h3>Ultra Music Festival</h3>
+
+                    <p>
+                        A global electronic music festival that brings together world-renowned DJs and spectacular stage productions.
+                    </p>
+
+                    <a href="#">Explore Festival →</a>
+
+                </figcaption>
+
+            </figure>
+
+        </article>
+
+    </section>
+
+</section>
+
+<!--World Map-->
+<section class="map" id="map">
+
+    <header class="map__header">
+
+        <p class="map__tag">
+            GLOBAL ARCHIVE
+        </p>
+
+        <h2 class="map__title">
+            Explore Festivals Around The World
+        </h2>
+
+        <p class="map__subtitle">
+            Click a location to unlock its archive.
+        </p>
+
+    </header>
+
+    <section class="map__container">
+
+        <figure class="map__world" id="mapContainer">
+
+            <img src="../assets/image/worldmap.jpeg" alt="World Map">
+
+            <!-- Tomorrowland -->
+
+            <button class="map__marker"
+                    style="top:33%; left:49%;"
+                    data-festival="tomorrowland"
+                    aria-label="Tomorrowland">
+                ●
+            </button>
+
+            <!-- Coachella -->
+
+            <button class="map__marker"
+                    style="top:40%; left:18%;"
+                    data-festival="coachella"
+                    aria-label="Coachella">
+                ●
+            </button>
+
+            <!-- Ultra -->
+
+            <button class="map__marker"
+                    style="top:43%; left:26%;"
+                    data-festival="ultra"
+                    aria-label="Ultra Music Festival">
+                ●
+            </button>
+
+            <!-- Woodstock -->
+
+            <button class="map__marker"
+                    style="top:34%; left:22%;"
+                    data-festival="woodstock"
+                    aria-label="Woodstock">
+                ●
+            </button>
+
+        </figure>
+
+    </section>
+
+    <!-- Festival Record -->
+
+    <article class="record" id="record">
+
+        <header class="record__banner">
+
+            <img id="recordImage"
+                 src=""
+                 alt="Festival Banner">
+
+            <section class="record__title">
+
+                <p id="recordYear"></p>
+
+                <h3 id="recordName">
+                    Select a Festival
+                </h3>
+
+            </section>
+
+        </header>
+
+        <section class="record__details">
+
+            <article class="record__info">
+
+                <h4>Location</h4>
+
+                <p id="recordLocation"></p>
+
+            </article>
+
+            <article class="record__info">
+
+                <h4>Genre</h4>
+
+                <p id="recordGenre"></p>
+
+            </article>
+
+            <article class="record__info">
+
+                <h4>Date</h4>
+
+                <p id="recordDate"></p>
+
+            </article>
+
+            <article class="record__info">
+
+                <h4>Featured Artists</h4>
+
+                <p id="recordArtists"></p>
+
+            </article>
+
+        </section>
+
+        <figure class="record__video">
+
+            <iframe id="recordTrailer"
+                    src=""
+                    title="Festival Trailer"
+                    allowfullscreen>
+            </iframe>
+
+        </figure>
+
+        <footer class="record__footer">
+
+            <a id="recordWebsite"
+               href="#"
+               target="_blank">
+               Visit Official Website →
+            </a>
+
+        </footer>
+
+    </article>
+
+</section>
+<!--Footer-->
+<footer class="footer">
+
+    <section class="footer__container">
+
+
+        <section class="footer__left">
+
+            <span class="footer__arrow">▼</span>
+
+            <a href="#home" class="footer__logo">
+
+                <img src="../assets/image/logo.jpeg" alt="Music Vault Logo">
+
+            </a>
+
+        </section>
+
+
+        <section class="footer__center">
+
+            <blockquote class="footer__quote">
+                "Music is beautiful, expressive and inherently timeless."
+            </blockquote>
+
+            <button class="footer__top" id="backToTop">
+                Back to Top
+            </button>
+
+        </section>
+
+        <aside class="footer__right">
+
+            <nav class="footer__social">
+
+                <a href="#" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="#" aria-label="Facebook">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+
+                <a href="#" aria-label="YouTube">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+
+                <a href="#" aria-label="Spotify">
+                    <i class="fa-brands fa-spotify"></i>
+                </a>
+
+                <a href="#" aria-label="X">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </a>
+
+                <a href="#" aria-label="TikTok">
+                    <i class="fa-brands fa-tiktok"></i>
+                </a>
+
+            </nav>
+
+            <a href="../pages/form.html" class="footer__newsletter">
+                Newsletter
+            </a>
+
+        </aside>
+
+    </section>
+
 </footer>
 
-<script src="script.js"></script>
+<script src="../assets/js/script.js"></script>
+
 </body>
 </html>
