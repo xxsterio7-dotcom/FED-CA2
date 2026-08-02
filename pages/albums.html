@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Albums &amp; Songs — Music Vault</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet" href="../assets/css/albumlayout.css">
+    <link rel="stylesheet" href="../assets/css/albumcolour.css">
+    <link rel="stylesheet" href="../assets/css/global.css">
+</head>
+
+<body>
+
+<header class="header">
+
+    <nav class="navbar">
+
+        <a href="index.html" class="navbar__logo">
+            <img src="../assets/image/logo.jpeg" alt="Music Vault Logo">
+        </a>
+
+        <button class="navbar__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <ul class="navbar__menu" id="navMenu">
+            <li class="navbar__item">
+                <a href="#home">Home</a>
+            </li>
+
+            <li class="navbar__item">
+
+                <button class="navbar__link">
+                    History
+                </button>
+
+                <ul class="navbar__dropdown">
+                    <li><a href="#">Benefits of Music</a></li>
+                    <li><a href="#">Music Around the World</a></li>
+                    <li><a href="#">History of Music</a></li>
+                </ul>
+
+            </li>
+
+            <li class="navbar__item">
+
+                <button class="navbar__link">
+                    Genres
+                </button>
+
+                <ul class="navbar__dropdown">
+                    <li><a href="#overview">Music Genres</a></li>
+                    <li><a href="#timeline">Famous Artists</a></li>
+                </ul>
+
+            </li>
+
+            <li class="navbar__item">
+
+                <button class="navbar__link">
+                    Life of Music
+                </button>
+
+                <ul class="navbar__dropdown">
+                    <li><a href="#map">Musical Instruments</a></li>
+                    <li><a href="#gallery">Live Music & Concerts</a></li>
+                </ul>
+
+            </li>
+        </ul>
+
+    </nav>
+
+</header>
+
+<main>
+
+    <!-- ================= HERO ================= -->
+
+    <section class="albums-hero" id="top">
+
+        <p class="albums-hero__tag">THE DEFINITIVE CHART</p>
+
+        <h1 class="albums-hero__title">Albums &amp; Songs That Shaped Music</h1>
+
+        <p class="albums-hero__subtitle">
+            A running archive of the records and singles that changed how the world listens. Filter by genre or decade, search for a favourite, or build your own shortlist.
+        </p>
+
+    </section>
+
+    <!-- ================= CONTROLS ================= -->
+
+    <section class="albums-controls" id="albumsControls">
+
+        <label class="albums-search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" id="albumsSearch" placeholder="Search an album, song or artist...">
+        </label>
+
+        <section class="albums-genres" id="albumsGenres">
+            <button class="albums-genre active" data-genre="all">All</button>
+            <button class="albums-genre" data-genre="rock">Rock</button>
+            <button class="albums-genre" data-genre="pop">Pop</button>
+            <button class="albums-genre" data-genre="hip-hop">Hip-Hop</button>
+            <button class="albums-genre" data-genre="electronic">Electronic</button>
+            <button class="albums-genre" data-genre="soul">Soul</button>
+        </section>
+
+        <section class="albums-secondary">
+
+            <label class="albums-select">
+                <span>Decade</span>
+                <select id="decadeSelect">
+                    <option value="all">All decades</option>
+                    <option value="60s">1960s</option>
+                    <option value="70s">1970s</option>
+                    <option value="80s">1980s</option>
+                    <option value="90s">1990s</option>
+                    <option value="2000s">2000s</option>
+                    <option value="2010s">2010s</option>
+                </select>
+            </label>
+
+            <label class="albums-select">
+                <span>Sort by</span>
+                <select id="sortSelect">
+                    <option value="rank">Chart rank</option>
+                    <option value="newest">Year: newest</option>
+                    <option value="oldest">Year: oldest</option>
+                    <option value="az">Title: A–Z</option>
+                </select>
+            </label>
+
+            <button class="albums-picks" id="picksToggle">
+                <i class="fa-solid fa-heart"></i>
+                My Picks
+                <span class="albums-picks__count" id="picksCount">0</span>
+            </button>
+
+        </section>
+
+    </section>
+
+    <!-- ================= ALBUM GRID ================= -->
+
+    <section class="albums-grid" id="albumsGrid">
+
+        <article class="album-card" data-title="Abbey Road" data-artist="The Beatles" data-year="1969" data-decade="60s" data-genre="rock">
+            <button class="album-card__fav" aria-label="Add to My Picks"><i class="fa-solid fa-heart"></i></button>
+            <figure class="album-card__cover" data-hue="1">
+                <span class="album-card__disc"></span>
+                <span class="album-card__initials">TB</span>
+            </figure>
+            <p class="album-card__rank">01</p>
+            <h3 class="album-card__title">Abbey Road</h3>
+            <p class="album-card__artist">The Beatles · 1969</p>
+            <span class="album-card__tag">Rock</span>
+            <button class="album-card__view">View Album</button>
+        </article>
+
+        <article class="album-card" data-title="The Dark Side of the Moon" data-artist="Pink Floyd" data-year="1973" data-decade="70s" data-genre="rock">
+            <button class="album-card__fav" aria-label="Add to My Picks"><i class="fa-solid fa-heart"></i></button>
+            <figure class="album-card__cover" data-hue="2">
+                <span class="album-card__disc"></span>
+                <span class="album-card__initials">PF</span>
+            </figure>
+            <p class="album-card__rank">02</p>
+            <h3 class="album-card__title">The Dark Side of the Moon</h3>
+            <p class="album-card__artist">Pink Floyd · 1973</p>
+            <span class="album-card__tag">Rock</span>
+            <button class="album-card__view">View Album</button>
+        </article>
+
+        <article class="album-card" data-title="Rumours" data-artist="Fleetwood Mac" data-year="1977" data-decade="70s" data-genre="rock">
+            <button class="album-card__fav" aria-label="Add to My Picks"><i class="fa-solid fa-heart"></i></button>
+            <figure class="album-card__cover" data-hue="3">
+                <span class="album-card__disc"></span>
+                <span class="album-card__initials">FM</span>
+            </figure>
+            <p class="album-card__rank">03</p>
+            <h3 class="album-card__title">Rumours</h3>
+            <p class="album-card__artist">Fleetwood Mac · 1977</p>
+            <span class="album-card__tag">Rock</span>
+            <button class="album-card__view">View Album</button>
+        </article>
+
+        <article class="album-card" data-title="Thriller" data-artist="Michael Jackson" data-year="1982" data-decade="80s" data-genre="pop">
+            <button class="album-card__fav" aria-label="Add to My Picks"><i class="fa-solid fa-heart"></i></button>
+            <figure class="album-card__cover" data-hue="4">
+                <span class="album-card__disc"></span>
+                <span class="album-card__initials">MJ</span>
+            </figure>
+            <p class="album-card__rank">04</p>
+            <h3 class="album-card__title">Thriller</h3>
+            <p class="album-card__artist">Michael Jackson · 1982</p>
+            <span class="album-card__tag">Pop</span>
+            <button class="album-card__view">View Album</button>
+        </article>
+
+        <article class="album-card" data-title="Nevermind" data-artist="Nirvana" data-year="1991" data-decade="90s" data-genre="rock">
+            <button class="album-card__fav" aria-label="Add to My Picks"><i class="fa-solid fa-heart"></i></button>
+            <figure class="album-card__cover" data-hue="5">
+                <span class="album-card__disc"></span>
+                <span class="album-card__initials">NV</span>
+            </figure>
+            <p class="album-card__rank">05</p>
+            <h3 class="album-card__title">Nevermind</h3>
+            <p class="album-card__artist">Nirvana · 1991</p>
+            <span class="album-card__tag">Rock</span>
+            <button class="album-card__view">View Album</button>
+        </article>
+
+        <article class="album-card" data-title="Back to Black" data-artist="Amy Winehouse" data-year="2006" data-decade="2000s" data-genre="soul">
+            <button class="album-card__fav" aria-label="Add to My Picks"><i class="fa-solid fa-heart"></i></button>
+            <figure class="album-card__cover" data-hue="6">
+                <span class="album-card__disc"></span>
+                <span class="album-card__initials">AW</span>
+            </figure>
+            <p class="album-card__rank">06</p>
+            <h3 class="album-card__title">Back to Black</h3>
+            <p class="album-card__artist">Amy Winehouse · 2006</p>
+            <span class="album-card__tag">Soul</span>
+            <button class="album-card__view">View Album</button>
+        </article>
+
+        <article class="album-card" data-title="Random Access Memories" data-artist="Daft Punk" data-year="2013" data-decade="2010s" data-genre="electronic">
+            <button class="album-card__fav" aria-label="Add to My Picks"><i class="fa-solid fa-heart"></i></button>
+            <figure class="album-card__cover" data-hue="7">
+                <span class="album-card__disc"></span>
+                <span class="album-card__initials">DP</span>
+            </figure>
+            <p class="album-card__rank">07</p>
+            <h3 class="album-card__title">Random Access Memories</h3>
+            <p class="album-card__artist">Daft Punk · 2013</p>
+            <span class="album-card__tag">Electronic</span>
+            <button class="album-card__view">View Album</button>
+        </article>
+
+        <article class="album-card" data-title="good kid, m.A.A.d city" data-artist="Kendrick Lamar" data-year="2012" data-decade="2010s" data-genre="hip-hop">
+            <button class="album-card__fav" aria-label="Add to My Picks"><i class="fa-solid fa-heart"></i></button>
+            <figure class="album-card__cover" data-hue="8">
+                <span class="album-card__disc"></span>
+                <span class="album-card__initials">KL</span>
+            </figure>
+            <p class="album-card__rank">08</p>
+            <h3 class="album-card__title">good kid, m.A.A.d city</h3>
+            <p class="album-card__artist">Kendrick Lamar · 2012</p>
+            <span class="album-card__tag">Hip-Hop</span>
+            <button class="album-card__view">View Album</button>
+        </article>
+
+        <article class="album-card" data-title="21" data-artist="Adele" data-year="2011" data-decade="2010s" data-genre="pop">
+            <button class="album-card__fav" aria-label="Add to My Picks"><i class="fa-solid fa-heart"></i></button>
+            <figure class="album-card__cover" data-hue="9">
+                <span class="album-card__disc"></span>
+                <span class="album-card__initials">AD</span>
+            </figure>
+            <p class="album-card__rank">09</p>
+            <h3 class="album-card__title">21</h3>
+            <p class="album-card__artist">Adele · 2011</p>
+            <span class="album-card__tag">Pop</span>
+            <button class="album-card__view">View Album</button>
+        </article>
+
+        <article class="album-card" data-title="Discovery" data-artist="Daft Punk" data-year="2001" data-decade="2000s" data-genre="electronic">
+            <button class="album-card__fav" aria-label="Add to My Picks"><i class="fa-solid fa-heart"></i></button>
+            <figure class="album-card__cover" data-hue="10">
+                <span class="album-card__disc"></span>
+                <span class="album-card__initials">DP</span>
+            </figure>
+            <p class="album-card__rank">10</p>
+            <h3 class="album-card__title">Discovery</h3>
+            <p class="album-card__artist">Daft Punk · 2001</p>
+            <span class="album-card__tag">Electronic</span>
+            <button class="album-card__view">View Album</button>
+        </article>
+
+    </section>
+
+    <p class="albums-empty" id="albumsEmpty" hidden>No albums match your filters — try clearing a genre or decade.</p>
+
+    <!-- ================= ICONIC TRACKS TABLE ================= -->
+
+    <section class="tracks" id="tracks">
+
+        <header class="tracks__header">
+            <p class="tracks__tag">ICONIC TRACKS</p>
+            <h2 class="tracks__title">Songs Everyone Should Hear</h2>
+            <p class="tracks__subtitle">Click a column to sort. Your search above filters this list too.</p>
+        </header>
+
+        <section class="tracks__table-wrap">
+
+            <table class="tracks__table" id="tracksTable">
+
+                <thead>
+                    <tr>
+                        <th data-sort="title">Title <i class="fa-solid fa-sort"></i></th>
+                        <th data-sort="artist">Artist <i class="fa-solid fa-sort"></i></th>
+                        <th data-sort="year">Year <i class="fa-solid fa-sort"></i></th>
+                        <th>Genre</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr data-title="Bohemian Rhapsody" data-artist="Queen" data-year="1975">
+                        <td>Bohemian Rhapsody</td><td>Queen</td><td>1975</td><td>Rock</td>
+                    </tr>
+                    <tr data-title="Billie Jean" data-artist="Michael Jackson" data-year="1983">
+                        <td>Billie Jean</td><td>Michael Jackson</td><td>1983</td><td>Pop</td>
+                    </tr>
+                    <tr data-title="Hey Jude" data-artist="The Beatles" data-year="1968">
+                        <td>Hey Jude</td><td>The Beatles</td><td>1968</td><td>Rock</td>
+                    </tr>
+                    <tr data-title="Dreams" data-artist="Fleetwood Mac" data-year="1977">
+                        <td>Dreams</td><td>Fleetwood Mac</td><td>1977</td><td>Rock</td>
+                    </tr>
+                    <tr data-title="Hotel California" data-artist="Eagles" data-year="1976">
+                        <td>Hotel California</td><td>Eagles</td><td>1976</td><td>Rock</td>
+                    </tr>
+                    <tr data-title="Smells Like Teen Spirit" data-artist="Nirvana" data-year="1991">
+                        <td>Smells Like Teen Spirit</td><td>Nirvana</td><td>1991</td><td>Rock</td>
+                    </tr>
+                    <tr data-title="Rehab" data-artist="Amy Winehouse" data-year="2006">
+                        <td>Rehab</td><td>Amy Winehouse</td><td>2006</td><td>Soul</td>
+                    </tr>
+                    <tr data-title="One More Time" data-artist="Daft Punk" data-year="2000">
+                        <td>One More Time</td><td>Daft Punk</td><td>2000</td><td>Electronic</td>
+                    </tr>
+                    <tr data-title="Rolling in the Deep" data-artist="Adele" data-year="2011">
+                        <td>Rolling in the Deep</td><td>Adele</td><td>2011</td><td>Pop</td>
+                    </tr>
+                    <tr data-title="HUMBLE." data-artist="Kendrick Lamar" data-year="2017">
+                        <td>HUMBLE.</td><td>Kendrick Lamar</td><td>2017</td><td>Hip-Hop</td>
+                    </tr>
+                </tbody>
+
+            </table>
+
+        </section>
+
+    </section>
+
+</main>
+
+<!-- ================= ALBUM MODAL ================= -->
+
+<div class="album-modal" id="albumModal">
+
+    <div class="album-modal__panel">
+
+        <button class="album-modal__close" id="albumModalClose" aria-label="Close">&times;</button>
+
+        <figure class="album-modal__cover" id="modalCover">
+            <span class="album-modal__disc"></span>
+            <span class="album-modal__initials" id="modalInitials"></span>
+        </figure>
+
+        <section class="album-modal__body">
+
+            <span class="album-modal__tag" id="modalGenre"></span>
+            <h3 class="album-modal__title" id="modalTitle"></h3>
+            <p class="album-modal__artist" id="modalArtist"></p>
+            <p class="album-modal__blurb" id="modalBlurb"></p>
+
+            <button class="album-modal__accordion" id="modalAccordionBtn" aria-expanded="false">
+                <span>Tracklist</span>
+                <i class="fa-solid fa-plus"></i>
+            </button>
+
+            <ol class="album-modal__tracklist" id="modalTracklist"></ol>
+
+        </section>
+
+    </div>
+
+</div>
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+    <section class="footer__container">
+
+        <!-- Left -->
+
+        <section class="footer__left">
+
+            <span class="footer__arrow">▼</span>
+
+            <a href="index.html#home" class="footer__logo">
+
+                <img src="../assets/image/logo.jpeg" alt="Music Vault Logo">
+
+            </a>
+
+        </section>
+
+        <!-- Centre -->
+
+        <section class="footer__center">
+
+            <blockquote class="footer__quote">
+                "Music is beautiful, expressive and inherently timeless."
+            </blockquote>
+
+            <button class="footer__top" id="backToTop">
+                Back to Top
+            </button>
+
+        </section>
+
+        <!-- Right -->
+
+        <aside class="footer__right">
+
+            <nav class="footer__social">
+
+                <a href="#" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="#" aria-label="Facebook">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+
+                <a href="#" aria-label="YouTube">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+
+                <a href="#" aria-label="Spotify">
+                    <i class="fa-brands fa-spotify"></i>
+                </a>
+
+                <a href="#" aria-label="X">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </a>
+
+                <a href="#" aria-label="TikTok">
+                    <i class="fa-brands fa-tiktok"></i>
+                </a>
+
+            </nav>
+
+            <a href="form.html" class="footer__newsletter">
+                Newsletter
+            </a>
+
+        </aside>
+
+    </section>
+
+</footer>
+
+<script src="../assets/js/albums.js"></script>
+
+</body>
+</html>
