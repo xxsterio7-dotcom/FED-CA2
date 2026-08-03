@@ -15,22 +15,25 @@
 }
 
 body {
-    background-color: var(--black);
-    color: var(--cream);
-    font-family: system-ui, sans-serif;
+    background-color: var(--cream);
+    color: var(--black);
+    font-family: "Inter", system-ui, sans-serif;
+    font-weight: 300;
     overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5 {
-    font-family: Georgia, "Times New Roman", serif;
+    font-family: "Cinzel", Georgia, "Times New Roman", serif;
+    font-weight: 600;
+    letter-spacing: 0.5px;
 }
 
 .text-gold {
-    color: var(--gold);
+    color: var(--gold) !important;
 }
 
 .text-gold-light {
-    color: var(--gold-light);
+    color: var(--gold-light) !important;
 }
 
 /* Technology in Music page */
