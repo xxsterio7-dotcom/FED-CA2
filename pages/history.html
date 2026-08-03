@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>History of Music</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+:root {
+    --black: #080b09;
+    --black-soft: #101512;
+    --green-dark: #12251c;
+    --gold: #d5a94f;
+    --gold-light: #e5c979;
+    --cream: #f1ead7;
+}
+
+body {
+    background-color: var(--black);
+    color: var(--cream);
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+.navbar-custom {
+    background-color: var(--black);
+    border-bottom: 1px solid var(--gold);
+}
+
+.brand-logo {
+    color: #f4f0ea !important;
+    font-family: Georgia, serif;
+    font-size: 1.5rem;
+}
+
+.logo-symbol { color: var(--gold); }
+
+.logo-img {
+    width: 45px;
+    height: 45px;
+    border-radius: 4px;
+    object-fit: cover;
+}
+
+.nav-link { color: #f4f0ea !important; margin-left: 15px; }
+.nav-link:hover, .nav-link.active { color: var(--gold) !important; }
+
+.dropdown-menu {
+    background-color: var(--black-soft);
+    border: 1px solid rgba(213, 169, 79, 0.3);
+}
+
+.dropdown-item { color: var(--cream); }
+.dropdown-item:hover, .dropdown-item:focus {
+    background-color: var(--green-dark);
+    color: var(--gold-light);
+}
+
+.year-carousel-section {
+    background-color: var(--black-soft);
+    padding: 0;
+    margin: 0;
+}
+
+.year-carousel {
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    background: var(--green-dark);
+}
+
+.carousel-item {
+    min-height: 100vh;
+    text-align: center;
+    position: relative;
+    display: none;
+}
+
+.carousel-item.active {
+    display: block;
+    animation: fadeSlideIn 0.8s ease forwards;
+}
+
+@keyframes fadeSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.slide-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+}
+
+.year-slide-year {
+    font-size: clamp(2.4rem, 5vw, 3.5rem);
+    color: var(--gold);
+    margin-bottom: 0.5rem;
+    font-family: Georgia, serif;
+}
+
+.year-slide-era {
+    color: var(--gold-light);
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.year-slide-text {
+    color: var(--cream);
+    line-height: 1.8;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.year-carousel .carousel-control-prev,
+.year-carousel .carousel-control-next {
+    width: 60px;
+    height: 60px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: 1px solid var(--gold);
+    border-radius: 50%;
+    opacity: 0.85;
+    transition: background-color 0.3s ease;
+}
+
+.year-carousel .carousel-control-prev { left: 20px; }
+.year-carousel .carousel-control-next { right: 20px; }
+
+.year-carousel .carousel-control-prev:hover,
+.year-carousel .carousel-control-next:hover {
+    background-color: var(--gold);
+    opacity: 1;
+}
+
+.year-carousel .carousel-control-prev:hover .carousel-control-prev-icon,
+.year-carousel .carousel-control-next:hover .carousel-control-next-icon {
+    filter: invert(0) brightness(0);
+}
+
+.year-carousel .carousel-indicators [data-bs-target] {
+    background-color: var(--gold);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    opacity: 0.4;
+}
+
+.year-carousel .carousel-indicators .active { opacity: 1; }
+
+.purpose-section { background-color: var(--black-soft); }
+
+.section-title { font-size: clamp(2rem, 4vw, 3rem); }
+
+.site-footer {
+    background-color: #121212 !important;
+    color: #f8f9fa;
+    border-top: 1px solid rgba(229, 185, 103, 0.3) !important;
+}
+
+.footer-logo {
+    height: 65px;
+    width: 65px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.icon-grid {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 12px;
+    font-size: 1.25rem;
+}
+
+.site-footer a { color: var(--cream); transition: opacity 0.2s ease-in-out, color 0.2s ease-in-out; }
+.site-footer a:hover { opacity: 0.85; color: #fff !important; }
+
+@media (max-width: 768px) {
+    .slide-content { width: 90%; }
+    .year-carousel .carousel-control-prev { left: 5px; }
+    .year-carousel .carousel-control-next { right: 5px; }
+}
+</style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-custom">
+  <div class="container">
+    <a class="navbar-brand brand-logo" href="index.html">
+      <span class="logo-symbol">&#9834;</span> Site Name
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Explore</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Link one</a></li>
+            <li><a class="dropdown-item" href="#">Link two</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Genres</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Link one</a></li>
+            <li><a class="dropdown-item" href="#">Link two</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">More</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Link one</a></li>
+            <li><a class="dropdown-item" href="#">Link two</a></li>
+          </ul>
+        </li>
+      </ul>
+      <img src="images/logo.png" alt="Logo" class="logo-img">
+    </div>
+  </div>
+</nav>
+
+<section class="year-carousel-section">
+  <article id="yearCarousel" class="carousel year-carousel" data-bs-ride="carousel">
+
+    
+
+    <section class="carousel-inner">
+
+      <section class="carousel-item active" style="background-image: url('../docs/medieval.png'); background-size: cover; background-position: center;">
+        <section class="slide-content">
+          <p class="year-slide-year">Medieval Era</p>
+          <p class="year-slide-era">c. 500–1400</p>
+          <p class="year-slide-text">The Medieval Era marked the beginning of written Western music. Most music was created for churches and consisted of simple vocal chants, although instruments gradually became more common. Music during this period focused on religious worship and storytelling.</p>
+        </section>
+      </section>
+
+      <section class="carousel-item active" style="background-image: url('../docs/Renaissance.png'); background-size: cover; background-position: center;">
+        <section class="slide-content">
+          <p class="year-slide-year">Renaissance Era</p>
+          <p class="year-slide-era">c. 1400–1600</p>
+          <p class="year-slide-text">The Renaissance Era brought greater creativity and harmony to music. Composers wrote more complex pieces with multiple vocal parts, and instruments became increasingly important. Music expanded beyond churches into royal courts and public celebrations.</p>
+        </section>
+      </section>
+
+      <section class="carousel-item" style="background-image: url('../docs/barouqe.png'); background-size: cover; background-position: center;">
+        <section class="slide-content">
+          <p class="year-slide-year">Baroque Era</p>
+          <p class="year-slide-era">c. 1600–1750</p>
+          <p class="year-slide-text">The Baroque Era was known for its dramatic style and rich ornamentation. This period saw the birth of opera, concerto, and many orchestral forms. Famous composers such as Johann Sebastian Bach and George Frideric Handel created works that are still widely performed today.</p>
+        </section>
+      </section>
+
+
+      <section class="carousel-item" style="background-image: url('../docs/Classical.png'); background-size: cover; background-position: center;">
+        <section class="slide-content">
+          <p class="year-slide-year">Classical Era</p>
+          <p class="year-slide-era">c. 1750–1820</p>
+          <p class="year-slide-text">The Classical Era emphasized balance, clarity, and structure. Music became more elegant and easier to follow, with the piano becoming a popular instrument. Composers like Wolfgang Amadeus Mozart and Joseph Haydn shaped many of the musical forms still used today.</p>
+        </section>
+      </section>
+
+
+    </section>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#yearCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#yearCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+
+  </article>
+</section>
+
+<section class="purpose-section py-5">
+  <div class="container">
+    <h2 class="section-title mb-4">Music Through the Decades</h2>
+    <p class="text-muted lh-lg">
+      This is a brief overview of the evolution of music through different decades.
+    </p>
+  </div>
+</section>
+
+<footer class="site-footer py-4">
+  <div class="container d-flex flex-wrap align-items-center justify-content-between gap-3">
+    <img src="images/logo.png" alt="Logo" class="footer-logo">
+    <p class="mb-0">&copy; 2026 Site Name. All rights reserved.</p>
+    <section class="icon-grid">
+      <a href="#" aria-label="Facebook">FB</a>
+      <a href="#" aria-label="Instagram">IG</a>
+      <a href="#" aria-label="Twitter">TW</a>
+    </section>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
