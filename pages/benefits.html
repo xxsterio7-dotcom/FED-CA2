@@ -63,29 +63,52 @@
             </div>
         </nav>
     </header>
+
     <!--Intro Banner-->
     <!--Planning to shift inline styles to main.css-->
     <section style="background-image: linear-gradient(
                 to bottom,
                 rgba(8, 11, 9, 0.15) 55%,
                 rgba(8, 11, 9, 0.15) 70%,
-                rgba(8, 11, 9, 1) 100%),
+                var(--green-dark) 100%),
                 url(https://upload.wikimedia.org/wikipedia/commons/3/32/4th_Australian_Jazz_Convention_-_Melbourne_1949_Rex_Stewart_%26_Graeme_Bell_Jazz_Band.jpg?_=20250220132633);"
                 class="w-100 d-flex flex-column justify-content-center align-items-center" id="benefitsHero">
         <h1 class="display-1 fw-medium">Benefits of Music</h1>
         <h2 class="py-4">How music benefits us physically, mentally, and as a society</h2>
     </section>
-    <section class="m-5 d-flex justify-content-center">
-        <div id="benefitsIntro">
-            <h2>Listening with your body</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent non euismod est, sed tincidunt nisl. Duis eu diam at nibh suscipit aliquet. Nunc nec sapien nec nisl imperdiet tincidunt ut ac tellus. Donec molestie aliquam aliquet. Aliquam ultricies sapien sed vestibulum cursus. Suspendisse sagittis nibh et mi auctor imperdiet. Aliquam erat volutpat. Pellentesque molestie, odio cursus ultrices sollicitudin, purus lectus lobortis est, ut mollis risus ante sed magna. Ut tincidunt ante in nisl iaculis convallis. Vestibulum laoreet, tellus eget interdum porttitor, elit massa aliquam orci, eget porttitor tellus erat sed arcu.
-            </p>
-        </div>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/s19Fr-_WaXo?si=FwddZ-olDNa--GNQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </section>
+
+    <section class="p-5 d-flex justify-content-center flex-column flex-md-row"
+         id="benefitsIntro"
+         style="background-color: var(--green-dark);">
+
+    <div id="benefitsIntroText" class="col-12 col-md-5">
+        <h2 class="text-gold">Listening with your body</h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Praesent non euismod est, sed tincidunt nisl. Duis eu diam
+            at nibh suscipit aliquet. Nunc nec sapien nec nisl imperdiet
+            tincidunt ut ac tellus. Donec molestie aliquam aliquet.
+            Aliquam ultricies sapien sed vestibulum cursus. Suspendisse
+            sagittis nibh et mi auctor imperdiet. Aliquam erat volutpat.
+        </p>
+    </div>
+
+    <iframe
+        id="benefitsVideo"
+        src="https://www.youtube.com/embed/s19Fr-_WaXo?si=FwddZ-olDNa--GNQ"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen>
+    </iframe>
+
+</section>
+
     <main class="container-fluid min-vh-100 py-4 ">
-        <section class="row g-4">
-            <h1 class="text-center display-3 mt-5">Families of instruments</h1>
+        <section class="row g-4 p-5 ">
+            <h1 class="text-center display-3 mt-5 text-gold">Benefits to the body</h1>
+
             <article class="col-12 col-md-3">
                 <button class="benefitsCard w-100 h-100 border-0 p-0" type="button">
                     <article class="position-relative d-block w-100 h-100 benefitsCard-inner" style="color: var(--cream);">
@@ -182,78 +205,36 @@
         </section>
     </main>
 
-    <!--Evolution for carousel section-->
-    <section id="benefitsEvolution" class="carousel slide" data-bs-wrap="false" style="background-color: var(--green-dark);">
-        <h1 class="text-center pt-5">Evolution</h1>
-
-        <section class="carousel-inner" id="luteEvol">
-
-            <article class="carousel-item active align-content-center">
-                <section class="d-flex align-items-center w-75 mx-auto">
-                    <img src="/Images/lute.png" alt="Lute" style="width:25%" class="">
-                    <section>
-                        <h1>Lute</h1>
-                        <p class="fs-4"> Earliest form of a guitar, with a pear-shaped body, round back and curved neck. Popular in europe during reneissance and Baroque eras.</p>
-                    </section>
-                </section>
-            </article>
-
-            <article class="carousel-item align-content-center">
-                <section class="d-flex align-items-center w-75 mx-auto">
-                    <img src="/Images/Vihuela.png" alt="Lute" style="width:25%" class="">
-                    <section>
-                        <h1>Vihuela</h1>
-                        <p class="fs-4"> Earliest form of a guitar, with a pear-shaped body, round back and curved neck. Popular in europe during reneissance and Baroque eras.</p>
-                    </section>
-                </section>
-            </article>
-
-            <article class="carousel-item align-content-center">
-                <section class="d-flex align-items-center w-75 mx-auto">
-                    <img src="/Images/classical-guitar.png" alt="Lute" style="width:25%" class="">
-                    <section>
-                        <h1>Classical Guitar</h1>
-                        <p class="fs-4"> Earliest form of a guitar, with a pear-shaped body, round back and curved neck. Popular in europe during reneissance and Baroque eras.</p>
-                    </section>
-                </section>
-            </article>
-
-            <article class="carousel-item align-content-center">
-                <section class="d-flex align-items-center w-75 mx-auto">
-                    <img src="/Images/electric-guitar.png" alt="Lute" style="width:25%" class="">
-                    <section>
-                        <h1>Electric Guitar</h1>
-                        <p class="fs-4"> Earliest form of a guitar, with a pear-shaped body, round back and curved neck. Popular in europe during reneissance and Baroque eras.</p>
-                    </section>
-                </section>
-            </article>
-
-        </section>
-        
-        <!--Arrows for carousel-->
-        <button class="carousel-control-prev top-50 translate-middle-y"
-                type="button"
-                data-bs-target="#benefitsEvolution"
-                data-bs-slide="prev">
-            <span class="carousel-control-prev-icon"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-
-        <button class="carousel-control-next top-50 translate-middle-y"
-                type="button"
-                data-bs-target="#benefitsEvolution"
-                data-bs-slide="next">
-            <span class="carousel-control-next-icon"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-
+    <section id="quizIntro" class="text-center"> 
+        <h1 class="display-4 text-gold"> Benefits of Music Quiz </h1> 
+        <p class="fs-5"> Test your knowledge on how music affects the mind and body. </p> 
+        <button id="startBtn" type="button" class="btn btn-light mt-3 px-4 py-2"> Start Quiz </button> 
     </section>
 
-    <script src="script.js"></script>
-</body>
-</html>
+    <section class="quiz-container mx-auto p-5" id="quiz"> 
+        <p id="QnNo" class="fw-bold text-center"></p> 
+        <h2 id="question" class="mb-4 text-center"></h2> 
+        <section id="choices" class="row g-3 fs-5 justify-content-center"> </section> 
+        <h2 id="result" class="fw-bold mt-4 text-center"></h2> 
+        <button id="nextBtn" class="btn btn-light mt-3 px-4 py-2" type="button"> Next Question </button> 
+    </section>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <section id="quizEnd" class="text-center py-5 my-auto">
+        <h2 class="display-6">Your score is:</h2>
+        <h1 id="scoreText" class="display-1 fw-bold"></h1>
+        <button id="retryBtn" class="justify-items-center mt-5">Retry quiz?</button>
+    </section>
+
+    <!--<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+</svg>
+ wrong sign-->
+
+ <!--<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+</svg>
+ correct sign-->
+
+    <script src="benefits.js"></script>   
 </body>
 </html>
-<h1>HELLO</h1>
