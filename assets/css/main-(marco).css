@@ -1,0 +1,275 @@
+
+:root {
+    --black: #080b09;
+    --black-soft: #101512;
+    --green-dark: #12251c;
+    --green: #1d4d36;
+    --green-light: #347653;
+    --gold: #d5a94f;
+    --gold-light: #e5c979;
+    --cream: #f1ead7;
+    --text-muted: #a9b1a9;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--black);
+    color: var(--cream);
+    font-family: system-ui, sans-serif;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+.text-gold {
+    color: var(--gold);
+}
+
+.text-gold-light {
+    color: var(--gold-light);
+}
+
+/* navbar */
+.navbar-custom {
+    background: rgba(8, 11, 9, 0.95);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(213, 169, 79, 0.25);
+}
+
+.brand-logo {
+    color: var(--cream);
+    font-family: Georgia, serif;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.logo-symbol {
+    color: var(--gold);
+    margin-right: 8px;
+}
+
+.nav-link {
+    color: var(--cream);
+    margin-left: 15px;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--gold);
+}
+
+
+/* instrument cards */
+article {
+    min-height: 40vh;
+}
+
+.instrCard {
+    background: none;
+    perspective: 1700px;
+    cursor: pointer;
+}
+
+.instrCard-inner {
+    aspect-ratio: 4/3;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.instrCard.flipped .instrCard-inner {
+    transform: rotateY(180deg);
+}
+
+#instrHero{
+    width: 100%;
+    background-repeat: no-repeat; 
+    background-size: 105%;
+    background-position: center 5%;
+    height: 70vh;
+    color: var(--cream);
+    
+}
+
+.instrCard-front {
+    background-color: var(--green-dark);
+    color: var(--cream);
+    border: 1px solid var(--gold);
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.5rem;
+    backface-visibility: hidden;
+}
+
+.instrCard-back {
+    background-color: var(--green);
+    color: var(--cream);
+    border: 1px solid var(--gold);
+    transform: rotateY(180deg);
+    position: absolute;
+    inset: 0;
+    justify-content: center;
+    align-content: center;
+    border-radius: 0.5rem;
+    backface-visibility: hidden;
+}
+
+article {
+    min-height: 70vh;
+}
+
+#benefitsIntro{
+    padding-top:7%;
+    padding-bottom:7%
+}
+
+#benefitsIntroText {
+    padding-right: 7%
+}
+
+#benefitsIntroText > p{
+    font-size: xx-large;
+}
+
+#benefitsIntroText > h2{
+    font-size: 3.5rem;
+}
+
+#benefitsVideo {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    height: auto;
+}
+
+@media (min-width: 768px) {
+    #benefitsVideo {
+        width: 41.66666667%;
+    }
+}
+
+.benefitsCard {
+    background: none;
+    perspective: 1700px;
+    cursor: pointer;
+}
+
+.benefitsCard-inner {
+    aspect-ratio: 4/3;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.benefitsCard.flipped .benefitsCard-inner {
+    transform: rotateY(180deg);
+}
+
+#benefitsHero {
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: 105%;
+    background-position: center 5%;
+    height: 70vh;
+    color: var(--cream);
+}
+
+.benefitsCard-front {
+    background-color: var(--green-dark);
+    color: var(--cream);
+    border: 1px solid var(--gold);
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.5rem;
+    backface-visibility: hidden;
+}
+
+.benefitsCard-back {
+    background-color: var(--green);
+    color: var(--cream);
+    border: 1px solid var(--gold);
+    transform: rotateY(180deg);
+    position: absolute;
+    inset: 0;
+    justify-content: center;
+    align-content: center;
+    border-radius: 0.5rem;
+    backface-visibility: hidden;
+}
+
+/* Quiz for benefits of music */
+#quiz{
+    min-height: 80vh;
+    background-color: var(--green);
+}
+
+#choices{
+    min-height: 18rem;
+}
+
+
+#quizIntro,
+#quiz,
+#quizEnd {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 0;
+    padding: 3rem;
+
+    background-color: var(--green-dark);
+}
+
+#quizIntro, #quizEnd{
+    min-height: 70vh;
+}
+#QnNo {
+    font-size: 3.5rem;
+}
+
+#question {
+    font-size: 3.3rem;
+    min-height: 8rem;
+}
+
+#choices {
+    width: 100%;
+}
+
+#choices > button,
+#nextBtn,
+#startBtn, #retryBtn {
+    background-color: var(--green);
+    color: var(--cream);
+    border: 2px solid var(--gold);
+    border-radius: 8px;
+    padding: 0.75rem 1.25rem;
+    font-size: 2.5rem;
+}
+
+#choices > button:hover,
+#nextBtn:hover,
+#startBtn:hover,
+#retryBtn:hover {
+    background-color: #1d4d36;
+}
+
+#choices > button {
+    width: 70%;
+}
+
+#result {
+    font-size: 3.4rem;
+    min-height: 5rem;
+}
