@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technology &amp; the Music Industry — Music Vault</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="main - Copy.css" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light p-3" style="background-color: var(--black-soft);">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="filter: invert(1);">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link navbar-brand mb-0 h1 fs-4" href="index.html" style="color: var(--cream) !important;">
+                                <img src="https://i.imgur.com/V5YSKrI.png" alt="Music Vault logo">
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link mb-0 h1 fs-5" href="benefits.html" style="color: var(--cream) !important;">
+                                Benefits of Music
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link mb-0 h1 fs-5" href="albums.html" style="color: var(--cream) !important;">
+                                Top Albums &amp; Songs
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link active mb-0 h1 fs-5" aria-current="page" href="technology.html" style="color: var(--gold) !important;">
+                                Technology in Music
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section id="techHero">
+        <h1 class="display-2 fw-medium">How Technology Changed Music</h1>
+        <p class="fs-4 py-3">From the synthesiser to the streaming platform — how innovation reshaped the way music is made, sold, and heard.</p>
+    </section>
+
+    <!-- Intro -->
+    <section class="p-5 d-flex justify-content-center flex-column flex-md-row" id="techIntro">
+
+        <div id="techIntroText" class="col-12 col-md-6">
+            <h2>An industry rebuilt by its tools</h2>
+            <p>
+                Every era of music has been shaped by the technology available to it.
+                Synthesisers gave artists entirely new sounds to work with, digital
+                production software put a studio on every laptop, and streaming
+                platforms rewrote how audiences discover and pay for music. This page
+                traces that shift — the instruments, the software, and the platforms
+                that changed the industry.
+            </p>
+        </div>
+
+        <div class="col-12 col-md-6 d-flex flex-column justify-content-center gap-4">
+            <div class="tech-stat">
+                <h3>1980s</h3>
+                <p>Affordable synthesisers like the Yamaha DX7 bring electronic sound into the mainstream.</p>
+            </div>
+            <div class="tech-stat">
+                <h3>2008</h3>
+                <p>Spotify launches, kicking off the shift from ownership to on-demand streaming.</p>
+            </div>
+            <div class="tech-stat">
+                <h3>Today</h3>
+                <p>AI-assisted production tools are changing how songs are written, mixed, and mastered.</p>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Topic cards -->
+    <main id="techCards" class="py-5">
+        <section class="row g-4 p-5">
+            <h1 class="text-center display-4 mb-4">Key Shifts in the Industry</h1>
+
+            <article class="col-12 col-md-3">
+                <button class="benefitsCard w-100 h-100 border-0 p-0" type="button">
+                    <article class="position-relative d-block w-100 h-100 benefitsCard-inner">
+                        <h2 class="benefitsCard-front d-flex flex-column">
+                            <i class="fa-solid fa-headphones techCard-icon"></i>
+                            Streaming Platforms
+                        </h2>
+                        <span class="benefitsCard-back p-4">
+                            <h1>Streaming Platforms</h1>
+                            <p class="p-4 pb-3 pt-2 fs-5">Services like Spotify, Apple Music, and YouTube Music replaced physical sales and downloads with instant, on-demand access — changing how artists earn money and how listeners discover new music.</p>
+                            <h1>Examples</h1>
+                            <p class="p-4 pt-2 pb-0 fs-5">Spotify, Apple Music, YouTube Music</p>
+                        </span>
+                    </article>
+                </button>
+            </article>
+
+            <article class="col-12 col-md-3">
+                <button class="benefitsCard w-100 h-100 border-0 p-0" type="button">
+                    <article class="position-relative d-block w-100 h-100 benefitsCard-inner">
+                        <h2 class="benefitsCard-front d-flex flex-column">
+                            <i class="fa-solid fa-wave-square techCard-icon"></i>
+                            Synthesisers
+                        </h2>
+                        <span class="benefitsCard-back p-4">
+                            <h1>Synthesisers</h1>
+                            <p class="p-4 pb-3 pt-2 fs-5">Electronic instruments that generate and shape sound gave musicians access to entirely new timbres, defining genres from disco to synth-pop to modern electronic music.</p>
+                            <h1>Examples</h1>
+                            <p class="p-4 pt-2 pb-0 fs-5">Moog, Yamaha DX7, Roland Juno</p>
+                        </span>
+                    </article>
+                </button>
+            </article>
+
+            <article class="col-12 col-md-3">
+                <button class="benefitsCard w-100 h-100 border-0 p-0" type="button">
+                    <article class="position-relative d-block w-100 h-100 benefitsCard-inner">
+                        <h2 class="benefitsCard-front d-flex flex-column">
+                            <i class="fa-solid fa-sliders techCard-icon"></i>
+                            Production Software
+                        </h2>
+                        <span class="benefitsCard-back p-4">
+                            <h1>Production Software</h1>
+                            <p class="p-4 pb-3 pt-2 fs-5">Digital Audio Workstations turned professional recording studios into software anyone can run on a laptop, lowering the barrier to producing and releasing music.</p>
+                            <h1>Examples</h1>
+                            <p class="p-4 pt-2 pb-0 fs-5">Ableton Live, Logic Pro, FL Studio</p>
+                        </span>
+                    </article>
+                </button>
+            </article>
+
+            <article class="col-12 col-md-3">
+                <button class="benefitsCard w-100 h-100 border-0 p-0" type="button">
+                    <article class="position-relative d-block w-100 h-100 benefitsCard-inner">
+                        <h2 class="benefitsCard-front d-flex flex-column">
+                            <i class="fa-solid fa-robot techCard-icon"></i>
+                            AI &amp; Machine Learning
+                        </h2>
+                        <span class="benefitsCard-back p-4">
+                            <h1>AI &amp; Machine Learning</h1>
+                            <p class="p-4 pb-3 pt-2 fs-5">AI tools now assist with mastering, mixing, stem separation, and even composition — raising new questions about authorship and creativity in music.</p>
+                            <h1>Examples</h1>
+                            <p class="p-4 pt-2 pb-0 fs-5">LANDR, Suno, iZotope Ozone</p>
+                        </span>
+                    </article>
+                </button>
+            </article>
+
+        </section>
+    </main>
+
+    <!-- Timeline -->
+    <section class="py-5" style="background-color: var(--cream);">
+        <h1 class="text-center display-5 mb-5" style="color: var(--black);">A Timeline of Change</h1>
+
+        <div class="tech-timeline">
+
+            <div class="tech-timeline__item">
+                <div class="tech-timeline__marker"></div>
+                <p class="tech-timeline__year">1970s</p>
+                <div class="tech-timeline__content">
+                    <p class="mb-0">Analog synthesisers become widely available, giving rise to entirely new genres.</p>
+                </div>
+            </div>
+
+            <div class="tech-timeline__item">
+                <div class="tech-timeline__marker"></div>
+                <p class="tech-timeline__year">1990s</p>
+                <div class="tech-timeline__content">
+                    <p class="mb-0">The MP3 format compresses audio files small enough to share online, laying the groundwork for digital music.</p>
+                </div>
+            </div>
+
+            <div class="tech-timeline__item">
+                <div class="tech-timeline__marker"></div>
+                <p class="tech-timeline__year">2001</p>
+                <div class="tech-timeline__content">
+                    <p class="mb-0">iTunes launches, offering legal digital downloads and reshaping music retail.</p>
+                </div>
+            </div>
+
+            <div class="tech-timeline__item">
+                <div class="tech-timeline__marker"></div>
+                <p class="tech-timeline__year">2008</p>
+                <div class="tech-timeline__content">
+                    <p class="mb-0">Spotify brings streaming to the mainstream, shifting the industry from ownership to access.</p>
+                </div>
+            </div>
+
+            <div class="tech-timeline__item">
+                <div class="tech-timeline__marker"></div>
+                <p class="tech-timeline__year">2020s</p>
+                <div class="tech-timeline__content">
+                    <p class="mb-0">AI-powered tools enter production workflows, from mastering to full track generation.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="text-center py-4" style="background-color: var(--black-soft); color: var(--cream);">
+        <p class="mb-0">&copy; 2026 Music Vault</p>
+    </footer>
+
+    <script src="technology.js"></script>
+</body>
+</html>
