@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Famous Artists</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+:root {
+    --black: #080b09;
+    --black-soft: #101512;
+    --green-dark: #12251c;
+    --gold: #d5a94f;
+    --gold-light: #e5c979;
+    --cream: #f1ead7;
+}
+
+body {
+    background-color: var(--black);
+    color: var(--cream);
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+.navbar-custom {
+    background-color: var(--black);
+    border-bottom: 1px solid var(--gold);
+}
+
+.brand-logo {
+    color: #f4f0ea !important;
+    font-family: Georgia, serif;
+    font-size: 1.5rem;
+}
+
+.logo-symbol { color: var(--gold); }
+
+.logo-img {
+    width: 45px;
+    height: 45px;
+    border-radius: 4px;
+    object-fit: cover;
+}
+
+.nav-link { color: #f4f0ea !important; margin-left: 15px; }
+.nav-link:hover, .nav-link.active { color: var(--gold) !important; }
+
+.dropdown-menu {
+    background-color: var(--black-soft);
+    border: 1px solid rgba(213, 169, 79, 0.3);
+}
+
+.dropdown-item { color: var(--cream); }
+.dropdown-item:hover, .dropdown-item:focus {
+    background-color: var(--green-dark);
+    color: var(--gold-light);
+}
+
+.year-carousel-section {
+    background-color: var(--black-soft);
+    padding: 0;
+    margin: 0;
+}
+
+.year-carousel {
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    background: var(--green-dark);
+}
+
+.carousel-item {
+    min-height: 100vh;
+    text-align: center;
+    position: relative;
+    display: none;
+}
+
+.carousel-item.active {
+    display: block;
+    animation: fadeSlideIn 0.8s ease forwards;
+}
+
+@keyframes fadeSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.slide-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+}
+
+.year-slide-year {
+    font-size: clamp(2.4rem, 5vw, 3.5rem);
+    color: var(--gold);
+    margin-bottom: 0.5rem;
+    font-family: Georgia, serif;
+}
+
+.year-slide-era {
+    color: var(--gold-light);
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.year-slide-text {
+    color: var(--cream);
+    line-height: 1.8;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.year-carousel .carousel-control-prev,
+.year-carousel .carousel-control-next {
+    width: 60px;
+    height: 60px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: 1px solid var(--gold);
+    border-radius: 50%;
+    opacity: 0.85;
+    transition: background-color 0.3s ease;
+}
+
+.year-carousel .carousel-control-prev { left: 20px; }
+.year-carousel .carousel-control-next { right: 20px; }
+
+.year-carousel .carousel-control-prev:hover,
+.year-carousel .carousel-control-next:hover {
+    background-color: var(--gold);
+    opacity: 1;
+}
+
+.year-carousel .carousel-control-prev:hover .carousel-control-prev-icon,
+.year-carousel .carousel-control-next:hover .carousel-control-next-icon {
+    filter: invert(0) brightness(0);
+}
+
+.purpose-section { background-color: var(--black-soft); }
+
+.section-title { font-size: clamp(2rem, 4vw, 3rem); }
+
+.site-footer {
+    background-color: #121212 !important;
+    color: #f8f9fa;
+    border-top: 1px solid rgba(229, 185, 103, 0.3) !important;
+}
+
+.footer-logo {
+    height: 65px;
+    width: 65px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.icon-grid {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 12px;
+    font-size: 1.25rem;
+}
+
+.site-footer a { color: var(--cream); transition: opacity 0.2s ease-in-out, color 0.2s ease-in-out; }
+.site-footer a:hover { opacity: 0.85; color: #fff !important; }
+
+@media (max-width: 768px) {
+    .slide-content { width: 90%; }
+    .year-carousel .carousel-control-prev { left: 5px; }
+    .year-carousel .carousel-control-next { right: 5px; }
+}
+</style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-custom">
+  <div class="container">
+    <a class="navbar-brand brand-logo" href="index.html">
+      <span class="logo-symbol">&#9834;</span> Site Name
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Explore</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Link one</a></li>
+            <li><a class="dropdown-item" href="#">Link two</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown">Genres</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Link one</a></li>
+            <li><a class="dropdown-item" href="#">Link two</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">More</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Link one</a></li>
+            <li><a class="dropdown-item" href="#">Link two</a></li>
+          </ul>
+        </li>
+      </ul>
+      <img src="images/logo.png" alt="Logo" class="logo-img">
+    </div>
+  </div>
+</nav>
+
+<section class="year-carousel-section">
+  <article id="artistCarousel" class="carousel year-carousel" data-bs-ride="carousel">
+
+    <section class="carousel-inner">
+
+      <section class="carousel-item active" style="background-image: url('artist1bg.png'); background-size: cover; background-position: center;">
+        <section class="slide-content">
+          <p class="year-slide-year">Elvis Presley</p>
+          <p class="year-slide-era">The King of Rock &amp; Roll</p>
+          <p class="year-slide-text">Add your write-up about Elvis Presley here.</p>
+        </section>
+      </section>
+
+      <section class="carousel-item" style="background-image: url('artist2bg.png'); background-size: cover; background-position: center;">
+        <section class="slide-content">
+          <p class="year-slide-year">The Beatles</p>
+          <p class="year-slide-era">The Fab Four</p>
+          <p class="year-slide-text">Add your write-up about The Beatles here.</p>
+        </section>
+      </section>
+
+      <section class="carousel-item" style="background-image: url('artist3bg.png'); background-size: cover; background-position: center;">
+        <section class="slide-content">
+          <p class="year-slide-year">Michael Jackson</p>
+          <p class="year-slide-era">The King of Pop</p>
+          <p class="year-slide-text">Add your write-up about Michael Jackson here.</p>
+        </section>
+      </section>
+
+    </section>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#artistCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#artistCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+
+  </article>
+</section>
+
+<section class="purpose-section py-5">
+  <div class="container">
+    <h2 class="section-title mb-4">Famous Artists</h2>
+    <p class="text-muted lh-lg">
+      Explore the lives and legacies of the most iconic musicians who shaped the history of music.
+    </p>
+  </div>
+</section>
+
+<footer class="site-footer py-4">
+  <div class="container d-flex flex-wrap align-items-center justify-content-between gap-3">
+    <img src="images/logo.png" alt="Logo" class="footer-logo">
+    <p class="mb-0">&copy; 2026 Site Name. All rights reserved.</p>
+    <section class="icon-grid">
+      <a href="#" aria-label="Facebook">FB</a>
+      <a href="#" aria-label="Instagram">IG</a>
+      <a href="#" aria-label="Twitter">TW</a>
+    </section>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
