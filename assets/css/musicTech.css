@@ -1,3 +1,38 @@
+:root {
+    --black: #080b09;
+    --black-soft: #101512;
+    --green-dark: #12251c;
+    --green: #1d4d36;
+    --green-light: #347653;
+    --gold: #d5a94f;
+    --gold-light: #e5c979;
+    --cream: #f1ead7;
+    --text-muted: #a9b1a9;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--black);
+    color: var(--cream);
+    font-family: system-ui, sans-serif;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+.text-gold {
+    color: var(--gold);
+}
+
+.text-gold-light {
+    color: var(--gold-light);
+}
+
 /* Technology in Music page */
 #techHero {
     width: 100%;
