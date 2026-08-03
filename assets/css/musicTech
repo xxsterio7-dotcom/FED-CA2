@@ -1,0 +1,166 @@
+/* Technology in Music page */
+#techHero {
+    width: 100%;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(160deg, var(--black) 0%, var(--green-dark) 55%, var(--green) 100%);
+    color: var(--cream);
+    padding: 4rem 1.5rem;
+}
+
+#techHero h1 {
+    color: var(--gold-light);
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+#techHero p {
+    color: var(--cream);
+    max-width: 700px;
+}
+
+#techIntro {
+    padding-top: 6%;
+    padding-bottom: 6%;
+    background-color: var(--cream);
+}
+
+#techIntroText {
+    padding-right: 7%;
+}
+
+#techIntroText > h2 {
+    color: var(--black);
+}
+
+#techIntroText > p {
+    font-size: xx-large;
+    font-weight: 300;
+    color: var(--green-dark);
+}
+
+.tech-stat {
+    border-left: 3px solid var(--gold);
+    padding-left: 1.2rem;
+}
+
+.tech-stat h3 {
+    color: var(--gold);
+    font-size: 2.5rem;
+    margin-bottom: 0.2rem;
+}
+
+.tech-stat p {
+    color: var(--green-dark);
+    font-size: 1rem;
+    margin-bottom: 0;
+}
+
+#techCards {
+    background-color: var(--black);
+}
+
+#techCards h1 {
+    color: var(--gold-light);
+}
+
+.techCard-icon {
+    font-size: 2.5rem;
+    color: var(--gold);
+    margin-bottom: 0.75rem;
+}
+
+/* Timeline */
+.tech-timeline {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+.tech-timeline::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: var(--gold);
+    transform: translateX(-50%);
+}
+
+.tech-timeline__item {
+    position: relative;
+    width: 50%;
+    padding: 1rem 2.5rem;
+}
+
+.tech-timeline__item:nth-child(odd) {
+    left: 0;
+    text-align: right;
+}
+
+.tech-timeline__item:nth-child(even) {
+    left: 50%;
+    text-align: left;
+}
+
+.tech-timeline__marker {
+    position: absolute;
+    top: 1.3rem;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: var(--gold);
+    border: 3px solid var(--cream);
+}
+
+.tech-timeline__item:nth-child(odd) .tech-timeline__marker {
+    right: -8px;
+}
+
+.tech-timeline__item:nth-child(even) .tech-timeline__marker {
+    left: -8px;
+}
+
+.tech-timeline__year {
+    color: var(--gold);
+    font-family: "Cinzel", serif;
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+
+.tech-timeline__content {
+    background-color: var(--green-dark);
+    color: var(--cream);
+    border: 1px solid rgba(213, 169, 79, 0.35);
+    border-radius: 0.75rem;
+    padding: 1.2rem 1.5rem;
+    margin-top: 0.5rem;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+}
+
+@media (max-width: 768px) {
+    .tech-timeline::before {
+        left: 20px;
+    }
+
+    .tech-timeline__item,
+    .tech-timeline__item:nth-child(odd),
+    .tech-timeline__item:nth-child(even) {
+        width: 100%;
+        left: 0;
+        text-align: left;
+        padding-left: 3.5rem;
+        padding-right: 0.5rem;
+    }
+
+    .tech-timeline__item:nth-child(odd) .tech-timeline__marker,
+    .tech-timeline__item:nth-child(even) .tech-timeline__marker {
+        left: 12px;
+        right: auto;
+    }
+}
