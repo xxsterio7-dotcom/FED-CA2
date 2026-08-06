@@ -1,6 +1,4 @@
-/* ==========================================================================
-   1. VARIABLES & GLOBAL STYLES
-   ========================================================================== */
+/* CSS FILE */
 :root {
     --black: #080b09;
     --black-soft: #101512;
@@ -30,9 +28,7 @@ h1, h2, h3, h4, h5 {
     font-family: Georgia, serif;
 }
 
-/* ==========================================================================
-   2. UTILITY CLASSES & KEYFRAME ANIMATIONS
-   ========================================================================== */
+
 .text-gold { color: var(--gold) !important; }
 .text-gold-light { color: var(--gold-light) !important; }
 .section-space { padding: 110px 0; }
@@ -82,9 +78,9 @@ h1, h2, h3, h4, h5 {
     100% { transform: translateY(6px) rotate(-6deg); }
 }
 
-/* ==========================================================================
-   3. NAVIGATION & HEADER
-   ========================================================================== */
+/*navbar*/
+
+
 .site-header {
     background: var(--black);
     z-index: 1000;
@@ -145,9 +141,7 @@ h1, h2, h3, h4, h5 {
     color: var(--gold);
 }
 
-/* ==========================================================================
-   4. BUTTONS
-   ========================================================================== */
+
 .btn-gold, 
 .custom-btn {
     background: var(--gold);
@@ -176,9 +170,7 @@ h1, h2, h3, h4, h5 {
     color: var(--black);
 }
 
-/* ==========================================================================
-   5. HOME PAGE - HERO & PURPOSE CARDS
-   ========================================================================== */
+/*home page hero */
 .hero {
     min-height: 100vh;
     display: flex;
@@ -194,10 +186,14 @@ h1, h2, h3, h4, h5 {
 
 .hero-description {
     max-width: 520px;
-    color: var(--gold-light);
     line-height: 1.6;
+    font-size: 20px;   
 }
 
+.purpose-text {
+    font-size: 22px;
+    line-height: 1.6; 
+}
 .purpose-section {
     background: linear-gradient(rgba(8,11,9,.88), rgba(8,11,9,.88)), url("../images/homepage/sound waves.jpg") center/cover no-repeat;
     border-block: 1px solid rgba(213,169,79,.15);
@@ -238,7 +234,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .element-number {
-    color: var(--green-light);
+    color: var(--cream);
     font-size: 32px;
     font-weight: bold;
 }
@@ -262,7 +258,16 @@ h1, h2, h3, h4, h5 {
     border-color: var(--gold);
 }
 
-/* Purpose Card Backgrounds */
+.text-gold{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.text-gold-light{
+    font-size: 18px;
+    line-height: 1.6;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
 .card-bg-1 { background-image: linear-gradient(rgba(8,11,9,.45), rgba(8,11,9,.45)), url("../images/homepage/About music CARD.jpg"); }
 .card-bg-2 { background-image: linear-gradient(rgba(8,11,9,.45), rgba(8,11,9,.45)), url("../images/homepage/genres CARD.jpg"); }
 .card-bg-3 { background-image: linear-gradient(rgba(8,11,9,.45), rgba(8,11,9,.45)), url("../images/homepage/history CARD .jpg"); }
@@ -270,39 +275,40 @@ h1, h2, h3, h4, h5 {
 .card-bg-5 { background-image: linear-gradient(rgba(8,11,9,.45), rgba(8,11,9,.45)), url("../images/homepage/benefitsofmusic.jpg"); }
 .card-bg-6 { background-image: linear-gradient(rgba(8,11,9,.45), rgba(8,11,9,.45)), url("../images/homepage/musictech.jpg"); }
 
-/* ==========================================================================
-   6. FEATURED AUDIO & EQUALIZER
-   ========================================================================== */
+
 #featured-audio {
     padding: 100px 0 80px;
 }
 
 .audio-card-bg {
-    background: linear-gradient(rgba(8,11,9,.75), rgba(8,11,9,.75)), url("../images/homepage/Janebackgroundimg1.jpg") center/cover no-repeat;
+    background: linear-gradient(rgba(8,11,9,.8), rgba(8,11,9,.8)), url("../images/homepage/Janebackgroundimg1.jpg") center/cover no-repeat;
+    border: 1px solid var(--gold);
+    border-radius: 16px;
     min-height: 190px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 20px;
-    transition: transform .3s, background .3s, box-shadow .3s;
+    padding: 24px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.5);
+    transition: transform .3s ease, background-image .3s ease, box-shadow .3s ease;
 }
 
 .audio-card-bg:hover {
     transform: translateY(-6px);
-    background-image: linear-gradient(rgba(8,11,9,.5), rgba(8,11,9,.5)), url("../images/homepage/Janebackgroundimg1.jpg");
-    box-shadow: 0 15px 40px rgba(0,0,0,.55);
+    background-image: linear-gradient(rgba(8,11,9,.65), rgba(8,11,9,.65)), url("../images/homepage/Janebackgroundimg1.jpg");
+    box-shadow: 0 15px 40px rgba(0,0,0,.75), 0 0 15px rgba(213,169,79,.2);
 }
 
 .audio-icon-box {
-    width: 45px;
-    height: 45px;
+    width: 52px;
+    height: 52px;
     border-radius: 50%;
     background: var(--gold);
     color: var(--black);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 22px;
+    font-size: 24px;
     font-weight: bold;
 }
 
@@ -327,15 +333,14 @@ h1, h2, h3, h4, h5 {
 .eq-bar:nth-child(3n) { animation-delay: .2s; }
 .eq-bar:nth-child(4n) { animation-delay: .4s; }
 
-.golden-audio,
-.golden-audio::-webkit-media-controls-panel {
-    background-color: #d4af37 !important;
-    border-radius: 50px;
+.golden-audio {
+    width: 100%;
+    margin: 15px 0;
+    accent-color: var(--gold);
+    outline: none;
 }
 
-/* ==========================================================================
-   7. TESTIMONIALS SECTION
-   ========================================================================== */
+/*testimonals */
 .testimonials {
     background: var(--black);
 }
@@ -393,9 +398,7 @@ h1, h2, h3, h4, h5 {
     margin: 0;
 }
 
-/* ==========================================================================
-   8. GENRES PAGE & MARQUEE
-   ========================================================================== */
+/* genres + albums floating thing  */
 .genres-hero {
     position: relative;
     overflow: hidden;
@@ -548,9 +551,7 @@ h1, h2, h3, h4, h5 {
     padding: 14px 16px;
 }
 
-/* ==========================================================================
-   9. ABOUT MUSIC PAGE & CAKE LAYERS
-   ========================================================================== */
+/*about music */
 .about-hero {
     position: relative;
     overflow: hidden;
@@ -622,6 +623,8 @@ h1, h2, h3, h4, h5 {
 .note-6 { top: 80%; right: 12%; animation-delay: 1.9s; }
 
 /* Cake Section */
+
+
 .cake-section {
     position: relative;
     background-color: var(--black-soft);
@@ -712,9 +715,7 @@ h1, h2, h3, h4, h5 {
     transform: scale(1.2) rotate(8deg);
 }
 
-/* ==========================================================================
-   10. INTERACTIVE COMPONENTS & MODALS
-   ========================================================================== */
+/* responsive part */
 /* Modals */
 .modal-dialog {
     display: flex;
@@ -1018,9 +1019,7 @@ h1, h2, h3, h4, h5 {
     margin: 0 auto;
 }
 
-/* ==========================================================================
-   11. FOOTERS
-   ========================================================================== */
+/* FOOTERS */
 .footer {
     display: flex;
     flex-wrap: wrap;
@@ -1031,17 +1030,9 @@ h1, h2, h3, h4, h5 {
 }
 
 .site-footer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-    padding: 24px 36px;
-    margin: 20px auto;
     background: #121212 !important;
-    color: #f8f9fa;
-    border: 1px solid rgba(229,185,103,.3) !important;
-    border-radius: 16px;
+    border: 1px solid rgba(229, 185, 103, 0.3) !important;
+    margin-bottom: 0 !important; 
 }
 
 .footer-logo-link {
@@ -1145,9 +1136,7 @@ h1, h2, h3, h4, h5 {
     color: #fff !important;
 }
 
-/* ==========================================================================
-   12. RESPONSIVE DESIGN (MEDIA QUERIES)
-   ========================================================================== */
+/*Responsive */
 @media (max-width: 768px) {
     .site-footer {
         flex-direction: column;

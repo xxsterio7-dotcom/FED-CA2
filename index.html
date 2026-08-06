@@ -11,11 +11,11 @@
     <link rel="stylesheet" href="./assets/css/MAINCSS.css">
 </head>
 
-<body>
+<body id="top">
 
-<!-- Header & Navigation -->
+<!-- Header -->
 <header class="site-header sticky-top">
-    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom container-fluid px-4 px-lg-5">
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom container-fluid px-3 px-md-4 px-lg-5">
         <a class="navbar-brand brand-logo d-flex align-items-center" href="../index.html">
             <img src="./assets/images/Logo.jpeg" alt="Logo" class="logo-img">
             <span class="logo-symbol me-2">♪</span>
@@ -40,7 +40,8 @@
                     </a>
 
                     <ul class="dropdown-menu dropdown-menu-dark shadow-sm">
-                        <li><a class="dropdown-item active" href="aboutmusic.html">About Music</a></li>
+                        <li><a class="dropdown-item active" href="./pages/About Music.html">About Music</a></li>
+                        <li><a class="dropdown-item" href="#">Anatomy of Sound</a></li>
                         <li><a class="dropdown-item" href="#">Anatomy of Sound</a></li>
                     </ul>
                 </li>
@@ -51,7 +52,8 @@
                     </a>
 
                     <ul class="dropdown-menu dropdown-menu-dark shadow-sm">
-                        <li><a class="dropdown-item" href="genres.html">All Genres</a></li>
+                        <li><a class="dropdown-item" href="./pages/genres.html">All Genres</a></li>
+                        <li><a class="dropdown-item" href="#">Mood Mixer</a></li>
                         <li><a class="dropdown-item" href="#">Mood Mixer</a></li>
                     </ul>
                 </li>
@@ -64,72 +66,79 @@
                     <ul class="dropdown-menu dropdown-menu-dark shadow-sm">
                         <li><a class="dropdown-item" href="#">Featured Audio</a></li>
                         <li><a class="dropdown-item" href="#">Events</a></li>
+                        <li><a class="dropdown-item" href="#">Events</a></li>
+                        <li><a class="dropdown-item" href="#">Events</a></li>
                     </ul>
                 </li>
             </ul>
         </section>
     </nav>
 </header>
+
+<main>
 <!-- Hero Section -->
-    <section class="hero position-relative overflow-hidden py-5">
-        <span class="hero-overlay"></span>
+<section class="hero position-relative overflow-hidden py-4 py-md-5">
+    <span class="hero-overlay"></span>
 
-        <section class="container position-relative z-3">
-            <section class="row align-items-center g-5">
+    <section class="container position-relative z-3">
+        <section class="row align-items-center g-4 g-lg-5">
 
-                <article class="col-lg-6 scroll-animate">
-                    <p class="section-label">WELCOME TO MUSIC VAULT</p>
+            <!-- Hero Left Text -->
+            <article class="col-12 col-lg-6 text-center text-lg-start">
+                <p class="section-label">WELCOME TO MUSIC VAULT</p>
 
-                    <h1 class="hero-title">
-                        Music is <span class="text-gold">so</span> much more than
-                        <span class="text-gold">background noise.</span>
-                    </h1>
+                <h1 class="hero-title text-white">
+                    Music is <span class="text-gold">so</span> much more than
+                    <span class="text-gold">background noise.</span>
+                </h1>
 
-                    <p class="hero-description">
-                        Music connects, creates & inspires. Explore how one of the most prominent sources of joy connects us through emotion, culture, rhythm and memory. Find out how sound was created, discover new genres, and learn something new.
-                    </p>
+                <p class="hero-description text-light opacity-75 mx-auto mx-lg-0">
+                    Music connects, creates & inspires. Explore how one of the most prominent sources of joy connects us through emotion, culture, rhythm and memory. Find out how sound was created, discover new genres, and learn something new.
+                </p>
 
-                    <nav class="d-flex flex-wrap gap-3 mt-4">
-                        <a href="./pages/About Music.html" class="btn btn-gold rounded-pill px-4 py-2">Explore Music</a>
-                        <a href="./pages/genres.html" class="btn btn-outline-gold rounded-pill px-4 py-2">Discover Genres</a>
-                    </nav>
+                <nav class="d-flex flex-wrap justify-content-center justify-content-lg-start gap-3 mt-4">
+                    <a href="./pages/About Music.html" class="btn btn-gold rounded-pill px-4 py-2">Explore Music</a>
+                    <a href="./pages/genres.html" class="btn btn-outline-gold rounded-pill px-4 py-2">Discover Genres</a>
+                </nav>
+            </article>
+
+            <!-- Hero Right Player -->
+            <aside class="col-12 col-md-8 offset-md-2 col-lg-5 offset-lg-1 d-flex flex-column gap-4 mt-4 mt-lg-0">
+                <article class="audio-card-bg p-4">
+                    <header class="d-flex align-items-center gap-3 mb-4">
+                        <span class="audio-icon-box flex-shrink-0">&#9834;</span>
+                        <hgroup>
+                            <p class="section-label mb-0">FEATURED AUDIO</p>
+                            <h3 class="text-gold mb-1">Mr. Loverman</h3>
+                            <small class="text-gold-light">Ricky Montgomery</small>
+                        </hgroup>
+                    </header>
+
+                    <audio id="heroAudioTrack" src="./assets/music/Mr. Loverman.mp3"></audio>
+
+                    <button id="heroPlayBtn" class="btn btn-gold w-100 py-2 rounded-3 fw-semibold">
+                        &#9654; Listen Now
+                    </button>
                 </article>
 
-                <aside class="col-lg-5 offset-lg-1 d-flex flex-column gap-4">
-                    <article class="panel panel-audio">
-                        <header class="d-flex align-items-center mb-4">
-                            <hgroup>
-                                <p class="section-label mb-0">FEATURED TRACK</p>
-                                <h3 class="text-gold mb-0">Mr. Loverman</h3>
-                                <small class="text-gold-light">Ricky Montgomery</small>
-                            </hgroup>
-                        </header>
+                <ul class="equalizer list-unstyled mb-0 d-flex justify-content-between">
+                    <li class="eq-bar"></li><li class="eq-bar"></li><li class="eq-bar"></li>
+                    <li class="eq-bar"></li><li class="eq-bar"></li><li class="eq-bar"></li>
+                    <li class="eq-bar"></li><li class="eq-bar"></li><li class="eq-bar"></li>
+                    <li class="eq-bar"></li><li class="eq-bar"></li><li class="eq-bar"></li>
+                    <li class="eq-bar"></li><li class="eq-bar"></li><li class="eq-bar"></li>
+                    <li class="eq-bar"></li><li class="eq-bar"></li><li class="eq-bar"></li>
+                    <li class="eq-bar"></li><li class="eq-bar"></li><li class="eq-bar"></li>
+                    <li class="eq-bar"></li><li class="eq-bar"></li><li class="eq-bar"></li>
+                    <li class="eq-bar"></li><li class="eq-bar"></li><li class="eq-bar"></li>
+                </ul>
+            </aside>
 
-                        <audio id="heroAudioTrack" src="./assets/music/Mr. Loverman.mp3"></audio>
-
-                        <button id="heroPlayBtn" class="btn btn-gold w-100 py-2">
-                            ▶ Listen Now
-                        </button>
-                    </article>
-
-                    <ul class="equalizer list-unstyled mb-0">
-                        <li class="eq-bar"></li><li class="eq-bar"></li><li class="eq-bar"></li>
-                        <li class="eq-bar"></li><li class="eq-bar"></li><li class="eq-bar"></li>
-                        <li class="eq-bar"></li><li class="eq-bar"></li><li class="eq-bar"></li>
-                        <li class="eq-bar"></li><li class="eq-bar"></li><li class="eq-bar"></li>
-                        <li class="eq-bar"></li><li class="eq-bar"></li><li class="eq-bar"></li>
-                        <li class="eq-bar"></li><li class="eq-bar"></li><li class="eq-bar"></li>
-                        <li class="eq-bar"></li><li class="eq-bar"></li><li class="eq-bar"></li>
-                        <li class="eq-bar"></li><li class="eq-bar"></li><li class="eq-bar"></li>
-                        <li class="eq-bar"></li><li class="eq-bar"></li><li class="eq-bar"></li>
-                        <li class="eq-bar"></li><li class="eq-bar"></li><li class="eq-bar"></li>
-                    </ul>
-                </aside>
-
-            </section>
         </section>
     </section>
-    <!-- Experience Cards -->
+</section>
+
+<!-- Experience Cards -->
 <section class="section-space py-5">
     <section class="container">
         <header class="text-center scroll-animate">
@@ -137,9 +146,10 @@
             <h2 class="section-title">Here's what you will experience</h2>
         </header>
 
+        <!-- Responsive Grid: 1 col on Phone (col-12), 2 cols on iPad (col-md-6), 3 cols on Laptop (col-lg-4) -->
         <section class="row g-4 mt-4">
 
-            <article class="col-md-4">
+            <article class="col-12 col-md-6 col-lg-4">
                 <section class="custom-card card-bg-1 scroll-animate h-100 d-flex flex-column">
                     <p class="element-number">01</p>
                     <h3>About Music</h3>
@@ -150,7 +160,7 @@
                 </section>
             </article>
 
-            <article class="col-md-4">
+            <article class="col-12 col-md-6 col-lg-4">
                 <section class="custom-card card-bg-2 scroll-animate h-100 d-flex flex-column">
                     <p class="element-number">02</p>
                     <h3>Discover Genres</h3>
@@ -161,7 +171,7 @@
                 </section>
             </article>
 
-            <article class="col-md-4">
+            <article class="col-12 col-md-6 col-lg-4">
                 <section class="custom-card card-bg-3 scroll-animate h-100 d-flex flex-column">
                     <p class="element-number">03</p>
                     <h3>History</h3>
@@ -172,7 +182,7 @@
                 </section>
             </article>
 
-            <article class="col-md-4">
+            <article class="col-12 col-md-6 col-lg-4">
                 <section class="custom-card card-bg-4 scroll-animate h-100 d-flex flex-column">
                     <p class="element-number">04</p>
                     <h3>Music Around the World</h3>
@@ -183,7 +193,7 @@
                 </section>
             </article>
 
-            <article class="col-md-4">
+            <article class="col-12 col-md-6 col-lg-4">
                 <section class="custom-card card-bg-5 scroll-animate h-100 d-flex flex-column">
                     <p class="element-number">05</p>
                     <h3>Benefits of Music</h3>
@@ -194,7 +204,7 @@
                 </section>
             </article>
 
-            <article class="col-md-4">
+            <article class="col-12 col-md-6 col-lg-4">
                 <section class="custom-card card-bg-6 scroll-animate h-100 d-flex flex-column">
                     <p class="element-number">06</p>
                     <h3>Music Technology</h3>
@@ -209,7 +219,7 @@
     </section>
 </section>
 
-    <!-- Purpose Section -->
+<!-- Purpose -->
 <section class="section-space purpose-section py-5">
     <section class="container">
         <header class="text-center mb-5 scroll-animate">
@@ -217,22 +227,23 @@
             <h2 class="section-title">Our Purpose</h2>
         </header>
 
-        <section class="row g-5">
-            <article class="col-md-4 scroll-animate">
+        <!-- Responsive Grid: 1 col on Phone (col-12), 3 cols on iPad & Laptop (col-md-4) -->
+        <section class="row g-4 g-lg-5">
+            <article class="col-12 col-md-4 scroll-animate">
                 <h3 class="text-gold mb-3">Our Mission</h3>
                 <p class="text-gold-light purpose-text">
                     We want people to appreciate music beyond simply listening to it. By understanding its structure, history and emotions, listeners can experience music in a whole new way.
                 </p>
             </article>
 
-            <article class="col-md-4 scroll-animate">
+            <article class="col-12 col-md-4 scroll-animate">
                 <h3 class="text-gold mb-3">Our Goal</h3>
                 <p class="text-gold-light purpose-text">
                     Our goal is to educate visitors about music while showing its cultural importance and why it has remained meaningful throughout history.
                 </p>
             </article>
 
-            <article class="col-md-4 scroll-animate">
+            <article class="col-12 col-md-4 scroll-animate">
                 <h3 class="text-gold mb-3">Why Music?</h3>
                 <p class="text-gold-light purpose-text">
                     Music connects people through emotion, memories and culture. Understanding how it works helps us appreciate every beat and melody even more.
@@ -246,7 +257,7 @@
 <section class="section-space py-5" id="featured-audio">
     <section class="container">
         <section class="row align-items-center g-4">
-            <header class="col-lg-6 scroll-animate">
+            <header class="col-12 col-lg-6 text-center text-lg-start scroll-animate">
                 <p class="section-label">LISTEN CLOSELY</p>
                 <h2 class="section-title mb-4">Every sound has a story.</h2>
                 <p class="text-gold-light fs-5">
@@ -254,7 +265,7 @@
                 </p>
             </header>
 
-            <aside class="col-lg-5 offset-lg-1 scroll-animate">
+            <aside class="col-12 col-md-8 offset-md-2 col-lg-5 offset-lg-1 scroll-animate">
                 <article class="custom-card audio-card-bg h-100">
                     <header class="d-flex align-items-center mb-4">
                         <span class="audio-icon-box me-3">♪</span>
@@ -285,22 +296,23 @@
             <h2 class="section-title">What Our Listeners Say</h2>
         </header>
 
+        <!-- Responsive Grid: 1 col on Phone (col-12), 2 cols on iPad (col-md-6), 4 cols on Laptop (col-lg-3) -->
         <section class="row g-4">
 
-            <article class="col-lg-4 col-md-6">
+            <article class="col-12 col-md-6 col-lg-3">
                 <section class="testimonial h-100">
                     <figure class="testimonial-img mb-0">
-                        <img src="./assets/images/homepage/john doe.jpeg" alt="John Doe" class="img-fluid w-100">
+                        <img src="./assets/images/homepage/John Doe.jpeg" alt="John Doe" class="img-fluid w-100">
                     </figure>
 
                     <section class="testimonial-body">
-                        <h3>John Doe</h3>
-                        <p>"I put Jane! on loop during my final project crunch and powered through every deadline. Absolute lifesaver!"</p>
+                        <h3>John and Mary Doe</h3>
+                        <p>"Everything is better with music, thanks @Music Vault"</p>
                     </section>
                 </section>
             </article>
 
-            <article class="col-lg-4 col-md-6">
+            <article class="col-12 col-md-6 col-lg-3">
                 <section class="testimonial h-100">
                     <figure class="testimonial-img mb-0">
                         <img src="./assets/images/homepage/marcus tan.jpeg" alt="Marcus Tan" class="img-fluid w-100">
@@ -313,15 +325,28 @@
                 </section>
             </article>
 
-            <article class="col-lg-4 col-md-6">
+            <article class="col-12 col-md-6 col-lg-3">
                 <section class="testimonial h-100">
                     <figure class="testimonial-img mb-0">
-                        <img src="./assets/images/homepage/jane juliet.jpg" alt="Jane Juliet" class="img-fluid w-100">
+                        <img src="./assets/images/homepage/Mac. Ds.jpeg" alt="Mac D." class="img-fluid w-100">
                     </figure>
 
                     <section class="testimonial-body">
-                        <h3>Jane Juliet</h3>
-                        <p>"The music drew me in and I never wanted to leave!"</p>
+                        <h3>Mac D.</h3>
+                        <p>"Had a great time finding out more about where Music came from!"</p>
+                    </section>
+                </section>
+            </article>
+
+            <article class="col-12 col-md-6 col-lg-3">
+                <section class="testimonial h-100">
+                    <figure class="testimonial-img mb-0">
+                        <img src="./assets/images/homepage/Recce smth.jpeg" alt="Ryan Carter" class="img-fluid w-100">
+                    </figure>
+
+                    <section class="testimonial-body">
+                        <h3>Ryan Carter</h3>
+                        <p>"I found my new favourite artists here, I love them!"</p>
                     </section>
                 </section>
             </article>
@@ -331,37 +356,74 @@
 </section>
 </main>
 
-
 <!-- Footer -->
-<footer class="footer container my-4 py-4 px-4">
-    <a href="#" class="text-decoration-none">
-        <img src="./assets/images/Logo.jpeg" alt="Music Vault Logo" class="footer-logo">
-    </a>
+<footer class="site-footer overflow-hidden py-4 px-3 px-md-5">
+    <section class="container-fluid">
+        
 
-    <section class="d-flex flex-column align-items-center text-center gap-3">
-        <blockquote class="footer-quote mb-0">
-            "Music is beautiful, expressive, and inherently timeless."
-            — Jason Lim
-        </blockquote>
+        <section class="row align-items-center gy-4 text-center text-md-start">
+            
+    
+            <article class="col-12 col-md-3 d-flex justify-content-center justify-content-md-start">
+                <a href="#top" class="footer-logo-link d-flex flex-column align-items-center gap-1 text-decoration-none">
+                    <span class="arrow text-gold fs-6">▼</span>
+                    <img src="./assets/images/Logo.jpeg" alt="Music Vault Logo" class="footer-logo">
+                </a>
+            </article>
 
-        <button class="top-btn" onclick="scrollToTop()">
-            Back to Top
-        </button>
-    </section>
 
-    <section class="d-flex flex-column align-items-center gap-3">
-        <ul class="social-grid list-unstyled mb-0">
-            <li><a href="#"><i class="fa-brands fa-square-instagram"></i></a></li>
-            <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
-            <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
-            <li><a href="#"><i class="fa-solid fa-envelopes-bulk"></i></a></li>
-            <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
-            <li><a href="#"><i class="fa-brands fa-square-reddit"></i></a></li>
-        </ul>
+            <article class="col-12 col-md-6 text-center">
+                
 
-        <a href="#" class="newsletter-link text-decoration-none">
-            Newsletter
-        </a>
+                <nav class="footer-nav d-flex flex-wrap justify-content-center gap-3 gap-md-4 mb-3">
+                    <a href="../index.html" class="text-light text-decoration-none opacity-75 hover-gold small">Home</a>
+                    <a href="./pages/aboutmusic.html" class="text-light text-decoration-none opacity-75 hover-gold small">About Music</a>
+                    <a href="./pages/genres.html" class="text-light text-decoration-none opacity-75 hover-gold small">Genres</a>
+                    <a href="#featured-audio" class="text-light text-decoration-none opacity-75 hover-gold small">Featured</a>
+                </nav>
+
+
+                <blockquote class="footer-quote mb-3 italic">
+                    "Expressive, calming and beautiful, that's what music is." — Mark Y.
+                </blockquote>
+
+                <button class="top-btn btn" onclick="scrollToTop()">
+                    Back to Top
+                </button>
+            </article>
+
+  
+            <article class="col-12 col-md-3 d-flex flex-column align-items-center align-items-md-end">
+                
+    
+                <ul class="social-grid list-unstyled m-0 p-0 mb-2">
+                    <li><a href="#" aria-label="Instagram"><i class="fa-brands fa-square-instagram"></i></a></li>
+                    <li><a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a></li>
+                    <li><a href="#" aria-label="Email"><i class="fa-solid fa-envelopes-bulk"></i></a></li>
+                    <li><a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a></li>
+                    <li><a href="#" aria-label="Reddit"><i class="fa-brands fa-square-reddit"></i></a></li>
+                </ul>
+
+      
+                <a href="#" class="newsletter-link text-gold text-center text-md-end w-100">
+                    Newsletter
+                </a>
+            </article>
+
+        </section>
+
+  
+        <hr class="border-secondary opacity-25 my-4">
+
+        <section class="row">
+            <footer class="col-12 text-center">
+                <p class="text-light opacity-50 small mb-0">
+                    &copy; 2026 Music Vault. All rights reserved. Property of Singapore Polytechnic. 
+                </p>
+            </footer>
+        </section>
+
     </section>
 </footer>
 

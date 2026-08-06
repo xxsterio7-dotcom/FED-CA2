@@ -4,33 +4,57 @@ function initMoodSelector() {
     const moodGenre = document.getElementById("moodGenre");
     const moodDescription = document.getElementById("moodDescription");
 
-    if (moodButtons.length === 0 || !moodTitle || !moodGenre || !moodDescription) return;
+    if (!moodTitle || !moodGenre || !moodDescription) return;
 
-    const moodData = {
-        happy: { title: "Happy? ☀️", genre: "Pop", description: "Positive energy, and vibes all around!" },
-        sad: { title: "Sad? 🌧️", genre: "Emo", description: "Sad? Express your emotions in this genre!" },
-        energetic: { title: "Energetic? ⚡", genre: "Rock", description: "Powerful guitar riffs & beautiful emotions!" },
-        relaxed: { title: "Relaxed? 🌙", genre: "Lo-Fi", description: "Soft & mellow textures, relax dude!" },
-        angry: { title: "Angry? 🔥", genre: "Heavy Metal", description: "Intense drums, powerful bass, MAKE IT ROCK!" },
-        nostalgic: { title: "Nostalgic? 📻", genre: "Synthwave", description: "Retro synthesizers and cinematic music, enjoy!" },
-        focused: { title: "Focused? 🎧", genre: "Ambient", description: "Atomospheric sounds, making you feel the vibes!" }
-    };
+    moodButtons.forEach(function(button) {
+        button.addEventListener("click", function() {
+            const mood = button.dataset.mood;
 
-    moodButtons.forEach((button) => {
-        button.addEventListener("click", () => {
-            const data = moodData[button.dataset.mood];
-            if (!data) return;
+            if (mood === "happy") {
+                moodTitle.textContent = "Happy? ☀️";
+                moodGenre.textContent = "Pop";
+                moodDescription.textContent = "Positive energy, and vibes all around!";
+            } else if (mood === "sad") {
+                moodTitle.textContent = "Sad? 🌧️";
+                moodGenre.textContent = "Emo";
+                moodDescription.textContent = "Sad? Express your emotions in this genre!";
+            } else if (mood === "energetic") {
+                moodTitle.textContent = "Energetic? ⚡";
+                moodGenre.textContent = "Rock";
+                moodDescription.textContent = "Powerful guitar riffs & beautiful emotions!";
+            } else if (mood === "relaxed") {
+                moodTitle.textContent = "Relaxed? 🌙";
+                moodGenre.textContent = "Lo-Fi";
+                moodDescription.textContent = "Soft & mellow textures, relax dude!";
+            } else if (mood === "angry") {
+                moodTitle.textContent = "Angry? 🔥";
+                moodGenre.textContent = "Heavy Metal";
+                moodDescription.textContent = "Intense drums, powerful bass, MAKE IT ROCK!";
+            } else if (mood === "nostalgic") {
+                moodTitle.textContent = "Nostalgic? 📻";
+                moodGenre.textContent = "Synthwave";
+                moodDescription.textContent = "Retro synthesizers and cinematic music, enjoy!";
+            } else if (mood === "focused") {
+                moodTitle.textContent = "Focused? 🎧";
+                moodGenre.textContent = "Ambient";
+                moodDescription.textContent = "Atomospheric sounds, making you feel the vibes!";
+            }
 
-            moodTitle.textContent = data.title;
-            moodGenre.textContent = data.genre;
-            moodDescription.textContent = data.description;
-
-
-            document.querySelector(".mood-button.active")?.classList.remove("active");
+            const currentActive = document.querySelector(".mood-button.active");
+            if (currentActive) {
+                currentActive.classList.remove("active");
+            }
             button.classList.add("active");
         });
     });
 }
+
+function scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth' 
+        });
+    }
 
 
 document.addEventListener("DOMContentLoaded", () => {

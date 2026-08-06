@@ -5,17 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Music Vault | Music Genres</title>
-
     <script src="https://kit.fontawesome.com/b71d6a20e5.js" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/MAINCSS.css">
 </head>
 
-<body>
 
-  <!-- Header & Navigation -->
+<body class="d-flex flex-column min-vh-100 bg-black text-light">
+
+<!-- Header -->
 <header class="site-header sticky-top">
-    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom container-fluid px-4 px-lg-5">
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom container-fluid px-3 px-md-4 px-lg-5">
         <a class="navbar-brand brand-logo d-flex align-items-center" href="../index.html">
             <img src="../assets/images/Logo.jpeg" alt="Logo" class="logo-img">
             <span class="logo-symbol me-2">♪</span>
@@ -35,25 +35,38 @@
 
             <ul class="navbar-nav gap-2 gap-lg-4">
                 <li class="nav-item dropdown">
-                    <a class="nav-link nav-drop" href="#" role="button" data-bs-toggle="dropdown">Discover</a>
-                    <ul class="dropdown-menu dropdown-menu-dark shadow-sm border-0">
-                        <li><a class="dropdown-item" href="About Music.html">About Music</a></li>
+                    <a class="nav-drop active" href="#" role="button" data-bs-toggle="dropdown">
+                        Discover
+                    </a>
+
+                    <ul class="dropdown-menu dropdown-menu-dark shadow-sm">
+                        <li><a class="dropdown-item active" href="About Music.html">About Music</a></li>
+                        <li><a class="dropdown-item" href="#">Anatomy of Sound</a></li>
                         <li><a class="dropdown-item" href="#">Anatomy of Sound</a></li>
                     </ul>
                 </li>
 
                 <li class="nav-item dropdown">
-                    <a class="nav-link nav-drop active" href="#" role="button" data-bs-toggle="dropdown">Genres</a>
-                    <ul class="dropdown-menu dropdown-menu-dark shadow-sm border-0">
-                        <li><a class="dropdown-item active" href="genres.html">All Genres</a></li>
-                        <li><a class="dropdown-item" href="#mood-section">Mood Mixer</a></li>
+                    <a class="nav-drop" href="#" role="button" data-bs-toggle="dropdown">
+                        Genres
+                    </a>
+
+                    <ul class="dropdown-menu dropdown-menu-dark shadow-sm">
+                        <li><a class="dropdown-item" href="genres.html">All Genres</a></li>
+                        <li><a class="dropdown-item" href="#">Mood Mixer</a></li>
+                        <li><a class="dropdown-item" href="#">Mood Mixer</a></li>
                     </ul>
                 </li>
 
                 <li class="nav-item dropdown">
-                    <a class="nav-link nav-drop" href="#" role="button" data-bs-toggle="dropdown">Community</a>
-                    <ul class="dropdown-menu dropdown-menu-dark shadow-sm border-0">
-                        <li><a class="dropdown-item" href="../index.html#featured-audio">Featured Audio</a></li>
+                    <a class="nav-drop" href="#" role="button" data-bs-toggle="dropdown">
+                        Community
+                    </a>
+
+                    <ul class="dropdown-menu dropdown-menu-dark shadow-sm">
+                        <li><a class="dropdown-item" href="#">Featured Audio</a></li>
+                        <li><a class="dropdown-item" href="#">Events</a></li>
+                        <li><a class="dropdown-item" href="#">Events</a></li>
                         <li><a class="dropdown-item" href="#">Events</a></li>
                     </ul>
                 </li>
@@ -62,523 +75,430 @@
     </nav>
 </header>
 
-    <!-- Album Marquee -->
+
 <aside class="album-marquee overflow-hidden w-100 py-3 bg-black-soft border-top border-bottom border-secondary border-opacity-25">
     <section class="marquee-content d-flex align-items-center gap-3 text-nowrap">
-
         <span class="marquee-item d-inline-flex align-items-center gap-2 px-3 py-1 rounded-pill bg-dark border border-secondary text-gold fw-semibold">
             <img src="https://upload.wikimedia.org/wikipedia/en/5/55/Michael_Jackson_-_Thriller.png" alt="Thriller" class="rounded-circle object-fit-cover border border-warning" width="30" height="30" referrerpolicy="no-referrer">
             Michael Jackson — Thriller
         </span>
-
         <span class="marquee-item d-inline-flex align-items-center gap-2 px-3 py-1 rounded-pill bg-dark border border-secondary text-gold fw-semibold">
             <img src="https://upload.wikimedia.org/wikipedia/en/7/70/Graduation_%28album%29.jpg" alt="Graduation" class="rounded-circle object-fit-cover border border-warning" width="30" height="30" referrerpolicy="no-referrer">
             Kanye West — Graduation
         </span>
-
         <span class="marquee-item d-inline-flex align-items-center gap-2 px-3 py-1 rounded-pill bg-dark border border-secondary text-gold fw-semibold">
             <img src="https://upload.wikimedia.org/wikipedia/en/4/45/Divide_cover.png" alt="Divide" class="rounded-circle object-fit-cover border border-warning" width="30" height="30" referrerpolicy="no-referrer">
             Ed Sheeran — Divide
         </span>
-
         <span class="marquee-item d-inline-flex align-items-center gap-2 px-3 py-1 rounded-pill bg-dark border border-secondary text-gold fw-semibold">
             <img src="https://upload.wikimedia.org/wikipedia/en/c/c1/The_Weeknd_-_After_Hours.png" alt="After Hours" class="rounded-circle object-fit-cover border border-warning" width="30" height="30" referrerpolicy="no-referrer">
             The Weeknd — After Hours
         </span>
-
         <span class="marquee-item d-inline-flex align-items-center gap-2 px-3 py-1 rounded-pill bg-dark border border-secondary text-gold fw-semibold">
             <img src="https://upload.wikimedia.org/wikipedia/en/b/b7/NirvanaNevermindalbumcover.jpg" alt="Nevermind" class="rounded-circle object-fit-cover border border-warning" width="30" height="30" referrerpolicy="no-referrer">
             Nirvana — Nevermind
         </span>
-
         <span class="marquee-item d-inline-flex align-items-center gap-2 px-3 py-1 rounded-pill bg-dark border border-secondary text-gold fw-semibold">
             <img src="https://upload.wikimedia.org/wikipedia/en/0/04/Arctic_Monkeys_-_AM.png" alt="AM" class="rounded-circle object-fit-cover border border-warning" width="30" height="30" referrerpolicy="no-referrer">
             Arctic Monkeys — AM
         </span>
-
-        <!-- Duplicate for infinite scroll -->
-        <span class="marquee-item d-inline-flex align-items-center gap-2 px-3 py-1 rounded-pill bg-dark border border-secondary text-gold fw-semibold" aria-hidden="true">
-            <img src="https://upload.wikimedia.org/wikipedia/en/5/55/Michael_Jackson_-_Thriller.png" alt="Thriller" class="rounded-circle object-fit-cover border border-warning" width="30" height="30" referrerpolicy="no-referrer">
-            Michael Jackson — Thriller
-        </span>
-
-        <span class="marquee-item d-inline-flex align-items-center gap-2 px-3 py-1 rounded-pill bg-dark border border-secondary text-gold fw-semibold" aria-hidden="true">
-            <img src="https://upload.wikimedia.org/wikipedia/en/7/70/Graduation_%28album%29.jpg" alt="Graduation" class="rounded-circle object-fit-cover border border-warning" width="30" height="30" referrerpolicy="no-referrer">
-            Kanye West — Graduation
-        </span>
-
-        <span class="marquee-item d-inline-flex align-items-center gap-2 px-3 py-1 rounded-pill bg-dark border border-secondary text-gold fw-semibold" aria-hidden="true">
-            <img src="https://upload.wikimedia.org/wikipedia/en/4/45/Divide_cover.png" alt="Divide" class="rounded-circle object-fit-cover border border-warning" width="30" height="30" referrerpolicy="no-referrer">
-            Ed Sheeran — Divide
-        </span>
-
-        <span class="marquee-item d-inline-flex align-items-center gap-2 px-3 py-1 rounded-pill bg-dark border border-secondary text-gold fw-semibold" aria-hidden="true">
-            <img src="https://upload.wikimedia.org/wikipedia/en/c/c1/The_Weeknd_-_After_Hours.png" alt="After Hours" class="rounded-circle object-fit-cover border border-warning" width="30" height="30" referrerpolicy="no-referrer">
-            The Weeknd — After Hours
-        </span>
-
-        <span class="marquee-item d-inline-flex align-items-center gap-2 px-3 py-1 rounded-pill bg-dark border border-secondary text-gold fw-semibold" aria-hidden="true">
-            <img src="https://upload.wikimedia.org/wikipedia/en/b/b7/NirvanaNevermindalbumcover.jpg" alt="Nevermind" class="rounded-circle object-fit-cover border border-warning" width="30" height="30" referrerpolicy="no-referrer">
-            Nirvana — Nevermind
-        </span>
-
-        <span class="marquee-item d-inline-flex align-items-center gap-2 px-3 py-1 rounded-pill bg-dark border border-secondary text-gold fw-semibold" aria-hidden="true">
-            <img src="https://upload.wikimedia.org/wikipedia/en/0/04/Arctic_Monkeys_-_AM.png" alt="AM" class="rounded-circle object-fit-cover border border-warning" width="30" height="30" referrerpolicy="no-referrer">
-            Arctic Monkeys — AM
-        </span>
-
     </section>
 </aside>
 
-<main>
+<main class="flex-grow-1">
         
-<!-- Genres Page Hero -->
-<section class="genres-hero text-center">
-    <header class="container hero-header">
-        <p class="section-label mb-2">FIND YOUR SOUND</p>
-        <h1 class="page-title mb-3">Find a new <span class="text-gold">Genre</span></h1>
-        <p class="text-gold-light mx-auto page-introduction">
-            Explore the variety of genres<br>
-            The genres of the world, the beauty of the world.<br>
-            Find one that matches your taste.
-        </p>
-    </header>
-</section>
 
-<!-- Mood Section -->
-<section id="mood-section" class="section-space position-relative overflow-hidden">
-
-    <img src="../assets/images/genres/moodselector.jpg"
-         alt="Mood Section Background"
-         class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover opacity-25">
-
-    <section class="container position-relative">
-
-        <header class="text-center">
-            <p class="section-label">MOOD TO MUSIC</p>
-            <h2 class="section-title">
-                How are you feeling <span class="text-gold">today?</span>
-            </h2>
+    <section class="genres-hero text-center">
+        <header class="container hero-header">
+            <p class="section-label mb-2">FIND YOUR SOUND</p>
+            <h1 class="page-title mb-3">Find a new <span class="text-gold">Genre</span></h1>
+            <p class="text-gold-light mx-auto page-introduction">
+                Explore the variety of genres<br>
+                The genres of the world, the beauty of the world.<br>
+                Find one that matches your taste.
+            </p>
         </header>
-
-        <ul class="row g-3 justify-content-center mt-4 list-unstyled">
-
-            <li class="col-6 col-md-3">
-                <button class="mood-button w-100" data-mood="happy">☀️ Happy</button>
-            </li>
-
-            <li class="col-6 col-md-3">
-                <button class="mood-button w-100" data-mood="sad">🌧️ Sad</button>
-            </li>
-
-            <li class="col-6 col-md-3">
-                <button class="mood-button w-100" data-mood="energetic">⚡ Energetic</button>
-            </li>
-
-            <li class="col-6 col-md-3">
-                <button class="mood-button w-100" data-mood="relaxed">🌙 Relaxed</button>
-            </li>
-
-            <li class="col-6 col-md-3">
-                <button class="mood-button w-100" data-mood="angry">🔥 Angry</button>
-            </li>
-
-            <li class="col-6 col-md-3">
-                <button class="mood-button w-100" data-mood="nostalgic">📻 Nostalgic</button>
-            </li>
-
-            <li class="col-6 col-md-3">
-                <button class="mood-button w-100" data-mood="focused">🎧 Focused</button>
-            </li>
-
-        </ul>
-
-        <article id="moodResult" class="custom-card text-center mt-5">
-            <p class="section-label">Here's a genre for you:</p>
-            <h3 id="moodTitle">Choose a mood above</h3>
-            <h2 id="moodGenre" class="text-gold">—</h2>
-            <p id="moodDescription" class="text-gold-light">Try this out!</p>
-        </article>
-
     </section>
-</section>
 
 
-<!-- Genre Carousel Section -->
-<section class="section-space position-relative overflow-hidden py-5">
+    <section id="mood-section" class="section-space position-relative overflow-hidden">
+        <img src="../assets/images/genres/moodselector.jpg" alt="Mood Section Background" class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover opacity-25">
+        <section class="container position-relative">
+            <header class="text-center">
+                <p class="section-label">MOOD TO MUSIC</p>
+                <h2 class="section-title">How are you feeling <span class="text-gold">today?</span></h2>
+            </header>
 
-    <img src="../assets/images/genres/carouselbackground.jpg"
-         alt="Section Background"
-         class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover">
+            <ul class="row g-3 justify-content-center mt-4 list-unstyled">
+                <li class="col-6 col-md-3"><button class="mood-button w-100" data-mood="happy">☀️ Happy</button></li>
+                <li class="col-6 col-md-3"><button class="mood-button w-100" data-mood="sad">🌧️ Sad</button></li>
+                <li class="col-6 col-md-3"><button class="mood-button w-100" data-mood="energetic">⚡ Energetic</button></li>
+                <li class="col-6 col-md-3"><button class="mood-button w-100" data-mood="relaxed">🌙 Relaxed</button></li>
+                <li class="col-6 col-md-3"><button class="mood-button w-100" data-mood="angry">🔥 Angry</button></li>
+                <li class="col-6 col-md-3"><button class="mood-button w-100" data-mood="nostalgic">📻 Nostalgic</button></li>
+                <li class="col-6 col-md-3"><button class="mood-button w-100" data-mood="focused">🎧 Focused</button></li>
+            </ul>
 
-    <section class="position-absolute top-0 start-0 w-100 h-100 bg-black bg-opacity-75"></section>
+            <article id="moodResult" class="custom-card text-center mt-5">
+                <p class="section-label">Here's a genre for you:</p>
+                <h3 id="moodTitle">Choose a mood above</h3>
+                <h2 id="moodGenre" class="text-gold">—</h2>
+                <p id="moodDescription" class="text-gold-light">Try this out!</p>
+            </article>
+        </section>
+    </section>
 
-    <section class="container position-relative">
 
-        <header class="text-center">
-            <p class="section-label">THE SOUND SPECTRUM</p>
-            <h2 class="section-title">
-                Explore the <span class="text-gold">classics</span>
-            </h2>
-        </header>
+    <section class="section-space position-relative overflow-hidden py-5">
+        <img src="../assets/images/genres/carouselbackground.jpg" alt="Section Background" class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover">
+        <section class="position-absolute top-0 start-0 w-100 h-100 bg-black bg-opacity-75"></section>
 
-        <section id="genreCarousel" class="carousel slide genre-carousel mt-5" data-bs-ride="carousel">
+        <section class="container position-relative">
+            <header class="text-center">
+                <p class="section-label">THE SOUND SPECTRUM</p>
+                <h2 class="section-title">Explore the <span class="text-gold">classics</span></h2>
+            </header>
 
-            <section class="carousel-inner">
-
-                <article class="carousel-item active p-3 p-md-4">
-                    <section class="col-11 col-md-9 col-lg-8 mx-auto position-relative overflow-hidden rounded-4 shadow-lg">
-
-                        <img src="../assets/images/genres/carouseljazz.jpg"
-                             alt="Jazz Background"
-                             class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover">
-
-                        <section class="position-absolute top-0 start-0 w-100 h-100 bg-black bg-opacity-75"></section>
-
-                        <section class="carousel-content d-flex flex-column align-items-center justify-content-center text-center p-4 p-md-5 position-relative z-1">
-
-                            <i class="bi bi-music-note-beamed display-3 text-gold mb-3"></i>
-
-                            <span class="genre-badge d-inline-block">
-                                ORIGIN: NEW ORLEANS
-                            </span>
-
-                            <h2 class="text-gold mt-2">Jazz</h2>
-
-                            <p class="mb-1 text-white">
-                                Born from ragtime, driven by rich swing and improvisation.
-                            </p>
-
-                            <p class="text-gold-light mb-3">
-                                Key traits: Brass and live improvisation.
-                            </p>
-
-                            <p class="mb-2 text-gold small">
-                                <i class="bi bi-disc-fill me-2"></i>
-                                Recommended Track:
-                                <strong>Grover Washington – "Just the Two of Us"</strong>
-                            </p>
-
-                            <audio controls class="w-100 rounded-pill shadow golden-audio">
-                                <source src="../assets/music/Just the two of us.mp3" type="audio/mpeg">
-                                Your browser does not support the audio element.
-                            </audio>
-
+            <section id="genreCarousel" class="carousel slide genre-carousel mt-5" data-bs-ride="carousel">
+                <section class="carousel-inner">
+                    <article class="carousel-item active p-3 p-md-4">
+                        <section class="col-11 col-md-9 col-lg-8 mx-auto position-relative overflow-hidden rounded-4 shadow-lg">
+                            <img src="../assets/images/genres/carouseljazz.jpg" alt="Jazz Background" class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover">
+                            <section class="position-absolute top-0 start-0 w-100 h-100 bg-black bg-opacity-75"></section>
+                            <section class="carousel-content d-flex flex-column align-items-center justify-content-center text-center p-4 p-md-5 position-relative z-1">
+                                <i class="bi bi-music-note-beamed display-3 text-gold mb-3"></i>
+                                <span class="genre-badge d-inline-block">ORIGIN: NEW ORLEANS</span>
+                                <h2 class="text-gold mt-2">Jazz</h2>
+                                <p class="mb-1 text-white">Born from ragtime, driven by rich swing and improvisation.</p>
+                                <p class="text-gold-light mb-3">Key traits: Brass and live improvisation.</p>
+                                <p class="mb-2 text-gold small">
+                                    <i class="bi bi-disc-fill me-2"></i>Recommended Track: <strong>Grover Washington – "Just the Two of Us"</strong>
+                                </p>
+                                <audio controls class="w-100 rounded-pill shadow golden-audio">
+                                    <source src="../assets/music/Just the two of us.mp3" type="audio/mpeg">
+                                </audio>
+                            </section>
                         </section>
+                    </article>
+
+                    <article class="carousel-item p-3 p-md-4">
+                        <section class="col-11 col-md-9 col-lg-8 mx-auto position-relative overflow-hidden rounded-4 shadow-lg">
+                            <img src="../assets/images/genres/carouselrock.jpg" alt="Rock Background" class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover">
+                            <section class="position-absolute top-0 start-0 w-100 h-100 bg-black bg-opacity-75"></section>
+                            <section class="carousel-content d-flex flex-column align-items-center justify-content-center text-center p-4 p-md-5 position-relative z-1">
+                                <i class="bi bi-lightning-charge-fill display-3 text-gold mb-3"></i>
+                                <span class="genre-badge d-inline-block">ORIGIN: UNITED STATES / UK</span>
+                                <h2 class="text-gold mt-2">Rock</h2>
+                                <p class="mb-1 text-white">Electric guitars, heavy rhythms, GET READY TO ROCK!</p>
+                                <p class="text-gold-light mb-3">Powerful vocals, insane audiences and amazing control.</p>
+                                <p class="mb-2 text-gold small"><i class="bi bi-disc-fill me-2"></i>Recommended Track: <strong>"Everlong - Foo Fighters"</strong></p>
+                                <audio controls class="w-100 rounded-pill shadow golden-audio">
+                                    <source src="../assets/music/Everlong.mp3" type="audio/mpeg">
+                                </audio>
+                            </section>
+                        </section>
+                    </article>
+
+                    <article class="carousel-item p-3 p-md-4">
+                        <section class="col-11 col-md-9 col-lg-8 mx-auto position-relative overflow-hidden rounded-4 shadow-lg">
+                            <img src="../assets/images/genres/citypop.jpg" alt="City Pop Background" class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover">
+                            <section class="position-absolute top-0 start-0 w-100 h-100 bg-black bg-opacity-75"></section>
+                            <section class="carousel-content d-flex flex-column align-items-center justify-content-center text-center p-4 p-md-5 position-relative z-1">
+                                <i class="bi bi-sunset-fill display-3 text-gold mb-3"></i>
+                                <span class="genre-badge d-inline-block">ORIGIN: JAPAN</span>
+                                <h2 class="text-gold mt-2">City Pop</h2>
+                                <p class="mb-1 text-white">funk, disco and nostalgia all in one.</p>
+                                <p class="text-gold-light mb-3">Groovy basslines, and bright melodies.</p>
+                                <p class="mb-2 text-gold small"><i class="bi bi-disc-fill me-2"></i>Recommended Track: <strong>Miki Matsubara – "Mayonaka no Door / Stay With Me"</strong></p>
+                                <audio controls class="w-100 rounded-pill shadow golden-audio">
+                                    <source src="../assets/music/Mayonaka no Door~stay wit....mp3" type="audio/mpeg">
+                                </audio>
+                            </section>
+                        </section>
+                    </article>
+
+                    <article class="carousel-item p-3 p-md-4">
+                        <section class="col-11 col-md-9 col-lg-8 mx-auto position-relative overflow-hidden rounded-4 shadow-lg">
+                            <img src="../assets/images/genres/carouselelectronic.jpg" alt="Electronic Background" class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover">
+                            <section class="position-absolute top-0 start-0 w-100 h-100 bg-black bg-opacity-75"></section>
+                            <section class="carousel-content d-flex flex-column align-items-center justify-content-center text-center p-4 p-md-5 position-relative z-1">
+                                <i class="bi bi-sliders display-3 text-gold mb-3"></i>
+                                <span class="genre-badge d-inline-block">ORIGIN: EUROPE / UNITED STATES</span>
+                                <h2 class="text-gold mt-2">Electronic</h2>
+                                <p class="mb-1 text-white">Hypnotic rhythms, amazing tunes.</p>
+                                <p class="text-gold-light mb-3">Dynamic drops, and insane tunes.</p>
+                                <p class="mb-2 text-gold small"><i class="bi bi-disc-fill me-2"></i>Recommended Track: <strong>"Nightcall - Kavinsky"</strong></p>
+                                <audio controls class="w-100 rounded-pill shadow golden-audio">
+                                    <source src="../assets/music/Nightcall.mp3" type="audio/mpeg">
+                                </audio>
+                            </section>
+                        </section>
+                    </article>
+
+                    <article class="carousel-item p-3 p-md-4">
+                        <section class="col-11 col-md-9 col-lg-8 mx-auto position-relative overflow-hidden rounded-4 shadow-lg">
+                            <img src="../assets/images/genres/carouselclassical.jpg" alt="Classical Background" class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover">
+                            <section class="position-absolute top-0 start-0 w-100 h-100 bg-black bg-opacity-75"></section>
+                            <section class="carousel-content d-flex flex-column align-items-center justify-content-center text-center p-4 p-md-5 position-relative z-1">
+                                <i class="bi bi-music-note-list display-3 text-gold mb-3"></i>
+                                <span class="genre-badge d-inline-block">ORIGIN: EUROPE</span>
+                                <h2 class="text-gold mt-2">Classical</h2>
+                                <p class="mb-1 text-white">There's a reason its called classical, its beautiful and light.</p>
+                                <p class="text-gold-light mb-3">Orchestras and instrumental perfection, nothing less.</p>
+                                <p class="mb-2 text-gold small"><i class="bi bi-disc-fill me-2"></i>Recommended Track: <strong>"Frédéric Chopin – Ballade No. 1 in G minor, Op. 23"</strong></p>
+                                <audio controls class="w-100 rounded-pill shadow golden-audio">
+                                    <source src="../assets/music/Ballade No. 1 in G Minor,....mp3" type="audio/mpeg">
+                                </audio>
+                            </section>
+                        </section>
+                    </article>
+
+                    <article class="carousel-item p-3 p-md-4">
+                        <section class="col-11 col-md-9 col-lg-8 mx-auto position-relative overflow-hidden rounded-4 shadow-lg">
+                            <img src="../assets/images/genres/coarouselblues.jpg" alt="Blues Background" class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover">
+                            <section class="position-absolute top-0 start-0 w-100 h-100 bg-black bg-opacity-75"></section>
+                            <section class="carousel-content d-flex flex-column align-items-center justify-content-center text-center p-4 p-md-5 position-relative z-1">
+                                <i class="bi bi-mic-fill display-3 text-gold mb-3"></i>
+                                <span class="genre-badge d-inline-block">ORIGIN: DEEP SOUTH, USA</span>
+                                <h2 class="text-gold mt-2">Blues</h2>
+                                <p class="mb-1 text-white">Deep emotion in each song, with meaning behind each word.</p>
+                                <p class="text-gold-light mb-3">raw vocals, and amazing guitar strums.</p>
+                                <p class="mb-2 text-gold small"><i class="bi bi-disc-fill me-2"></i>Recommended Track: <strong>Elvis Presley - "Hound Dog"</strong></p>
+                                <audio controls class="w-100 rounded-pill shadow golden-audio">
+                                    <source src="../assets/music/Hound Dog.mp3" type="audio/mpeg">
+                                </audio>
+                            </section>
+                        </section>
+                    </article>
+                </section>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#genreCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#genreCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </section>
+        </section>
+    </section>
+
+
+    <section class="section-space py-5">
+        <section class="container">
+            <header class="text-center mb-5">
+                <p class="section-label">GO DEEPER</p>
+                <h2 class="section-title">Sub-Genre <span class="text-gold">Spotlight</span></h2>
+            </header>
+
+            <section class="row g-4 mt-2">
+                <article class="col-md-6 col-lg-4">
+                    <section class="custom-card p-5 rounded-4 text-center d-flex flex-column align-items-center justify-content-center h-100 border border-warning border-opacity-25" style="min-height: 260px; background: linear-gradient(rgba(10,10,10,.85),rgba(10,10,10,.85)), url('../assets/images/genres/lofibeats.jpg') center/cover no-repeat;">
+                        <header>
+                            <h3 class="text-gold mb-3 fs-2">Lo-Fi Beats</h3>
+                            <p class="text-gold-light fs-5 mb-0">Chill, mellow beats.</p>
+                        </header>
                     </section>
                 </article>
 
-                <!-- Remaining carousel items keep the same structure -->
+                <article class="col-md-6 col-lg-4">
+                    <section class="custom-card p-5 rounded-4 text-center d-flex flex-column align-items-center justify-content-center h-100 border border-warning border-opacity-25" style="min-height: 260px; background: linear-gradient(rgba(10,10,10,.85),rgba(10,10,10,.85)), url('../assets/images/genres/synthwavebgk.jpg') center/cover no-repeat;">
+                        <header>
+                            <h3 class="text-gold mb-3 fs-2">Synthwave</h3>
+                            <p class="text-gold-light fs-5 mb-0">Nostalgia riding, with hard bars.</p>
+                        </header>
+                    </section>
+                </article>
 
+                <article class="col-md-6 col-lg-4">
+                    <section class="custom-card p-5 rounded-4 text-center d-flex flex-column align-items-center justify-content-center h-100 border border-warning border-opacity-25" style="min-height: 260px; background: linear-gradient(rgba(10,10,10,.85),rgba(10,10,10,.85)), url('../assets/images/genres/bebop.jpg') center/cover no-repeat;">
+                        <header>
+                            <h3 class="text-gold mb-3 fs-2">Bebop</h3>
+                            <p class="text-gold-light fs-5 mb-0">Fast tempos and complex harmonies.</p>
+                        </header>
+                    </section>
+                </article>
+
+                <article class="col-md-6 col-lg-4">
+                    <section class="custom-card p-5 rounded-4 text-center d-flex flex-column align-items-center justify-content-center h-100 border border-warning border-opacity-25" style="min-height: 260px; background: linear-gradient(rgba(10,10,10,.85),rgba(10,10,10,.85)), url('../assets/images/genres/shoegaze.jpg') center/cover no-repeat;">
+                        <header>
+                            <h3 class="text-gold mb-3 fs-2">Shoegaze</h3>
+                            <p class="text-gold-light fs-5 mb-0">Ethereal vocals, hazy distorted tunes.</p>
+                        </header>
+                    </section>
+                </article>
+
+                <article class="col-md-6 col-lg-4">
+                    <section class="custom-card p-5 rounded-4 text-center d-flex flex-column align-items-center justify-content-center h-100 border border-warning border-opacity-25" style="min-height: 260px; background: linear-gradient(rgba(10,10,10,.85),rgba(10,10,10,.85)), url('../assets/images/genres/Neo-soul.jpg') center/cover no-repeat;">
+                        <header>
+                            <h3 class="text-gold mb-3 fs-2">Neo-Soul</h3>
+                            <p class="text-gold-light fs-5 mb-0">Think modern R&B, just with jazz!</p>
+                        </header>
+                    </section>
+                </article>
+
+                <article class="col-md-6 col-lg-4">
+                    <section class="custom-card p-5 rounded-4 text-center d-flex flex-column align-items-center justify-content-center h-100 border border-warning border-opacity-25" style="min-height: 260px; background: linear-gradient(rgba(10,10,10,.85),rgba(10,10,10,.85)), url('../assets/images/genres/triphop.jpg') center/cover no-repeat;">
+                        <header>
+                            <h3 class="text-gold mb-3 fs-2">Trip-Hop</h3>
+                            <p class="text-gold-light fs-5 mb-0">slowed-down electronic beats for dark,soulful moods!</p>
+                        </header>
+                    </section>
+                </article>
             </section>
-
-            <button class="carousel-control-prev" type="button" data-bs-target="#genreCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
-            </button>
-
-            <button class="carousel-control-next" type="button" data-bs-target="#genreCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon"></span>
-            </button>
-
         </section>
-
     </section>
-</section>
 
 
-<!-- Sub-Genre Spotlight -->
-<section class="section-space">
-    <section class="container">
+    <section class="section-space">
+        <section class="container">
+            <header class="text-center">
+                <p class="section-label">COMPARE THE SOUNDS</p>
+                <h2 class="section-title">Genre Breakdown</h2>
+            </header>
 
-        <header class="text-center">
-            <p class="section-label">GO DEEPER</p>
-            <h2 class="section-title">
-                Sub-Genre <span class="text-gold">Spotlight</span>
-            </h2>
+            <section class="table-responsive mt-5">
+                <table class="table table-dark table-hover align-middle genre-table border-0 rounded-3 overflow-hidden">
+                    <thead>
+                        <tr class="text-gold border-bottom border-secondary">
+                            <th scope="col" class="py-3 px-4">Genre</th>
+                            <th scope="col" class="py-3 px-4">Tempo</th>
+                            <th scope="col" class="py-3 px-4">Core Instruments</th>
+                            <th scope="col" class="py-3 px-4">Primary Vibe</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-gold-light">
+                        <tr>
+                            <td class="py-3 px-4 text-gold fw-bold">Jazz</td>
+                            <td class="py-3 px-4">80–240 BPM</td>
+                            <td class="py-3 px-4">Saxophone, Piano, Bass</td>
+                            <td class="py-3 px-4">Expressive</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4 text-gold fw-bold">Rock</td>
+                            <td class="py-3 px-4">110–140 BPM</td>
+                            <td class="py-3 px-4">Electric Guitar, Drums</td>
+                            <td class="py-3 px-4">Energetic</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4 text-gold fw-bold">Hip-Hop</td>
+                            <td class="py-3 px-4">80–105 BPM</td>
+                            <td class="py-3 px-4">Sampler, Drum Machine</td>
+                            <td class="py-3 px-4">Story-driven</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4 text-gold fw-bold">Pop</td>
+                            <td class="py-3 px-4">110–130 BPM</td>
+                            <td class="py-3 px-4">Synthesizer, Vocals</td>
+                            <td class="py-3 px-4">Catchy</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4 text-gold fw-bold">Electronic</td>
+                            <td class="py-3 px-4">120–130 BPM</td>
+                            <td class="py-3 px-4">Synthesizers, Sequencer</td>
+                            <td class="py-3 px-4">Hypnotic</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4 text-gold fw-bold">Blues</td>
+                            <td class="py-3 px-4">60–120 BPM</td>
+                            <td class="py-3 px-4">Guitar, Harmonica, Piano</td>
+                            <td class="py-3 px-4">Soulful</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </section>
+    </section>
+
+
+    <section class="my-5 py-5">
+        <header class="text-center mb-5">
+            <p class="section-label">COMMUNITY CHOICE</p>
+            <h2 class="section-title">Our users favourite <span class="text-gold">genre</span></h2>
         </header>
 
-        <section class="row g-4 mt-4">
+        <article class="col-11 col-md-9 col-lg-8 mx-auto position-relative overflow-hidden rounded-4 shadow-lg p-3 p-md-4">
+            <img src="../assets/images/genres/shoegaze.jpg" alt="Shoegaze Background" class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover">
+            <section class="position-absolute top-0 start-0 w-100 h-100 bg-black bg-opacity-75"></section>
+            <section class="carousel-content d-flex flex-column align-items-center justify-content-center text-center p-4 p-md-5 position-relative z-1">
+                <i class="bi bi-soundwave display-3 text-gold mb-3"></i>
+                <span class="genre-badge d-inline-block">ORIGIN: UNITED KINGDOM</span>
+                <h2 class="text-gold mt-2">Shoegaze</h2>
+                <p class="mb-1 text-white">Ethereal vocals, more instrument-heavy.</p>
+                <p class="text-gold-light mb-3">Key traits: Heavy reverb and fuzz.</p>
+                <p class="mb-2 text-gold small">
+                    <i class="bi bi-disc-fill me-2"></i>Recommended Track: <strong>my dead girlfriend – "hades in the dead of the winter" (Japanese)</strong>
+                </p>
+                <audio controls class="w-100 rounded-pill shadow golden-audio">
+                    <source src="../assets/music/hades in the dead of wint....mp3" type="audio/mpeg">
+                </audio>
+            </section>
+        </article>
+    </section>
 
-            <article class="col-md-4">
-                <section class="custom-card p-4 rounded-4 text-center d-flex flex-column align-items-center justify-content-center h-100 border border-warning border-opacity-25"
-                    style="background: linear-gradient(rgba(10,10,10,.85),rgba(10,10,10,.85)), url('../assets/images/genres/lofibeats.jpg') center/cover no-repeat;">
-                    <header>
-                        <h3 class="text-gold mb-2">Lo-Fi Beats</h3>
-                        <p class="text-gold-light small mb-0">
-                            Mellow beats, dusty crackles, chill ambient textures.
-                        </p>
-                    </header>
-                </section>
+
+</main>
+
+<footer class="site-footer overflow-hidden py-4 px-3 px-md-5 mb-0 mt-auto">
+    <section class="container-fluid">
+
+        <section class="row align-items-center gy-4 text-center text-md-start">
+            
+            <article class="col-12 col-md-3 d-flex justify-content-center justify-content-md-start">
+                <a href="#top" class="footer-logo-link d-flex flex-column align-items-center gap-1 text-decoration-none">
+                    <span class="arrow text-gold fs-6">▼</span>
+                    <img src="../assets/images/Logo.jpeg" alt="Music Vault Logo" class="footer-logo">
+                </a>
             </article>
 
-            <article class="col-md-4">
-                <section class="custom-card p-4 rounded-4 text-center d-flex flex-column align-items-center justify-content-center h-100 border border-warning border-opacity-25"
-                    style="background: linear-gradient(rgba(10,10,10,.85),rgba(10,10,10,.85)), url('../assets/images/genres/synthwavebgk.jpg') center/cover no-repeat;">
-                    <header>
-                        <h3 class="text-gold mb-2">Synthwave</h3>
-                        <p class="text-gold-light small mb-0">
-                            Nostalgic 1980s soundtrack vibes paired with retro synths.
-                        </p>
-                    </header>
-                </section>
+            <article class="col-12 col-md-6 text-center">
+                <nav class="footer-nav d-flex flex-wrap justify-content-center gap-3 gap-md-4 mb-3">
+                    <a href="../index.html" class="text-light text-decoration-none opacity-75 hover-gold small">Home</a>
+                    <a href="./aboutmusic.html" class="text-light text-decoration-none opacity-75 hover-gold small">About Music</a>
+                    <a href="./genres.html" class="text-light text-decoration-none opacity-75 hover-gold small">Genres</a>
+                    <a href="#featured-audio" class="text-light text-decoration-none opacity-75 hover-gold small">Featured</a>
+                </nav>
+
+                <blockquote class="footer-quote mb-3 italic">
+                    "Found my new favourite genre!" — Jason Todd
+                </blockquote>
+
+                <button class="top-btn btn" onclick="scrollToTop()">
+                    Back to Top
+                </button>
             </article>
 
-            <article class="col-md-4">
-                <section class="custom-card p-4 rounded-4 text-center d-flex flex-column align-items-center justify-content-center h-100 border border-warning border-opacity-25"
-                    style="background: linear-gradient(rgba(10,10,10,.85),rgba(10,10,10,.85)), url('../assets/images/genres/bebop.jpg') center/cover no-repeat;">
-                    <header>
-                        <h3 class="text-gold mb-2">Bebop</h3>
-                        <p class="text-gold-light small mb-0">
-                            Fast tempos, complex harmonies, and rapid chord changes.
-                        </p>
-                    </header>
-                </section>
-            </article>
+            <article class="col-12 col-md-3 d-flex flex-column align-items-center align-items-md-end">
+                <ul class="social-grid list-unstyled m-0 p-0 mb-2">
+                    <li><a href="#" aria-label="Instagram"><i class="fa-brands fa-square-instagram"></i></a></li>
+                    <li><a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a></li>
+                    <li><a href="#" aria-label="Email"><i class="fa-solid fa-envelopes-bulk"></i></a></li>
+                    <li><a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a></li>
+                    <li><a href="#" aria-label="Reddit"><i class="fa-brands fa-square-reddit"></i></a></li>
+                </ul>
 
-            <article class="col-md-4">
-                <section class="custom-card p-4 rounded-4 text-center d-flex flex-column align-items-center justify-content-center h-100 border border-warning border-opacity-25"
-                    style="background: linear-gradient(rgba(10,10,10,.85),rgba(10,10,10,.85)), url('../assets/images/genres/shoegaze.jpg') center/cover no-repeat;">
-                    <header>
-                        <h3 class="text-gold mb-2">Shoegaze</h3>
-                        <p class="text-gold-light small mb-0">
-                            Walls of hazy guitar distortion paired with ethereal vocals.
-                        </p>
-                    </header>
-                </section>
-            </article>
-
-            <article class="col-md-4">
-                <section class="custom-card p-4 rounded-4 text-center d-flex flex-column align-items-center justify-content-center h-100 border border-warning border-opacity-25"
-                    style="background: linear-gradient(rgba(10,10,10,.85),rgba(10,10,10,.85)), url('../assets/images/genres/Neo-soul.jpg') center/cover no-repeat;">
-                    <header>
-                        <h3 class="text-gold mb-2">Neo-Soul</h3>
-                        <p class="text-gold-light small mb-0">
-                            Smooth modern R&B laced with deep jazz grooves and funk.
-                        </p>
-                    </header>
-                </section>
-            </article>
-
-            <article class="col-md-4">
-                <section class="custom-card p-4 rounded-4 text-center d-flex flex-column align-items-center justify-content-center h-100 border border-warning border-opacity-25"
-                    style="background: linear-gradient(rgba(10,10,10,.85),rgba(10,10,10,.85)), url('../assets/images/genres/citypop.jpg') center/cover no-repeat;">
-                    <header>
-                        <h3 class="text-gold mb-2">City Pop</h3>
-                        <p class="text-gold-light small mb-0">
-                            Glossy 80s funk basslines, catchy pop, and urban nostalgia.
-                        </p>
-                    </header>
-                </section>
+                <a href="#" class="newsletter-link text-gold text-center text-md-end w-100">
+                    Newsletter
+                </a>
             </article>
 
         </section>
 
-    </section>
-</section>
+        <hr class="border-secondary opacity-25 my-4">
 
-
-<!-- Genre Breakdown Table -->
-<section class="section-space">
-    <section class="container">
-
-        <header class="text-center">
-            <p class="section-label">COMPARE THE SOUNDS</p>
-            <h2 class="section-title">Genre Breakdown</h2>
-        </header>
-
-        <section class="table-responsive mt-5">
-
-            <table class="table table-dark table-hover align-middle genre-table border-0 rounded-3 overflow-hidden">
-
-                <thead>
-                    <tr class="text-gold border-bottom border-secondary">
-                        <th scope="col" class="py-3 px-4">Genre</th>
-                        <th scope="col" class="py-3 px-4">Tempo</th>
-                        <th scope="col" class="py-3 px-4">Core Instruments</th>
-                        <th scope="col" class="py-3 px-4">Primary Vibe</th>
-                    </tr>
-                </thead>
-
-                <tbody class="text-gold-light">
-
-                    <tr>
-                        <td class="py-3 px-4 text-gold fw-bold">Jazz</td>
-                        <td class="py-3 px-4">80–240 BPM</td>
-                        <td class="py-3 px-4">Saxophone, Piano, Bass</td>
-                        <td class="py-3 px-4">Expressive</td>
-                    </tr>
-
-                    <tr>
-                        <td class="py-3 px-4 text-gold fw-bold">Rock</td>
-                        <td class="py-3 px-4">110–140 BPM</td>
-                        <td class="py-3 px-4">Electric Guitar, Drums</td>
-                        <td class="py-3 px-4">Energetic</td>
-                    </tr>
-
-                    <tr>
-                        <td class="py-3 px-4 text-gold fw-bold">Hip-Hop</td>
-                        <td class="py-3 px-4">80–105 BPM</td>
-                        <td class="py-3 px-4">Sampler, Drum Machine</td>
-                        <td class="py-3 px-4">Story-driven</td>
-                    </tr>
-
-                    <tr>
-                        <td class="py-3 px-4 text-gold fw-bold">Pop</td>
-                        <td class="py-3 px-4">110–130 BPM</td>
-                        <td class="py-3 px-4">Synthesizer, Vocals</td>
-                        <td class="py-3 px-4">Catchy</td>
-                    </tr>
-
-                    <tr>
-                        <td class="py-3 px-4 text-gold fw-bold">Electronic</td>
-                        <td class="py-3 px-4">120–130 BPM</td>
-                        <td class="py-3 px-4">Synthesizers, Sequencer</td>
-                        <td class="py-3 px-4">Hypnotic</td>
-                    </tr>
-
-                    <tr>
-                        <td class="py-3 px-4 text-gold fw-bold">Blues</td>
-                        <td class="py-3 px-4">60–120 BPM</td>
-                        <td class="py-3 px-4">Guitar, Harmonica, Piano</td>
-                        <td class="py-3 px-4">Soulful</td>
-                    </tr>
-
-                </tbody>
-
-            </table>
-
+        <section class="row">
+            <div class="col-12 text-center">
+                <p class="text-light opacity-50 small mb-0">
+                    &copy; 2026 Music Vault. All rights reserved. Property of Singapore Polytechnic. 
+                </p>
+            </div>
         </section>
 
     </section>
-</section>
-
-      <!-- Community Choice -->
-<section class="mt-5 pt-5">
-
-    <header class="text-center mb-5">
-        <p class="section-label">COMMUNITY CHOICE</p>
-        <h2 class="section-title">
-            Our users favourite <span class="text-gold">genre</span>
-        </h2>
-    </header>
-
-    <article class="col-11 col-md-9 col-lg-8 mx-auto position-relative overflow-hidden rounded-4 shadow-lg p-3 p-md-4">
-
-        <img src="../assets/images/genres/shoegaze.jpg"
-             alt="Shoegaze Background"
-             class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover">
-
-        <section class="position-absolute top-0 start-0 w-100 h-100 bg-black bg-opacity-75"></section>
-
-        <section class="carousel-content d-flex flex-column align-items-center justify-content-center text-center p-4 p-md-5 position-relative z-1">
-
-            <i class="bi bi-soundwave display-3 text-gold mb-3"></i>
-
-            <span class="genre-badge d-inline-block">
-                ORIGIN: UNITED KINGDOM
-            </span>
-
-            <h2 class="text-gold mt-2">Shoegaze</h2>
-
-            <p class="mb-1 text-white">
-                Ethereal vocals, more instrument-heavy.
-            </p>
-
-            <p class="text-gold-light mb-3">
-                Key traits: Heavy reverb and fuzz.
-            </p>
-
-            <p class="mb-2 text-gold small">
-                <i class="bi bi-disc-fill me-2"></i>
-                Recommended Track:
-                <strong>my dead girlfriend – "hades in the dead of the winter" (Japanese)</strong>
-            </p>
-
-            <audio controls class="w-100 rounded-pill shadow golden-audio">
-                <source src="../assets/music/hades in the dead of wint....mp3" type="audio/mpeg">
-                Your browser does not support the audio element.
-            </audio>
-
-        </section>
-
-    </article>
-
-</section>
-
-
-<!-- Footer -->
-<footer class="site-footer">
-
-    <a href="#" class="footer-logo-link">
-        <span class="arrow">▼</span>
-        <img src="../assets/images/Logo.jpeg" alt="Music Vault Logo" class="footer-logo">
-    </a>
-
-
-    <section class="footer-center">
-
-        <blockquote class="footer-quote">
-            "Found my new favourite genre!" — Jason Todd
-        </blockquote>
-
-        <button class="top-btn" onclick="scrollToTop()">
-            Back to Top
-        </button>
-
-    </section>
-
-
-    <section class="footer-right">
-
-        <ul class="social-grid">
-            <li>
-                <a href="#">
-                    <i class="fa-brands fa-square-instagram"></i>
-                </a>
-            </li>
-
-            <li>
-                <a href="#">
-                    <i class="fa-brands fa-facebook"></i>
-                </a>
-            </li>
-
-            <li>
-                <a href="#">
-                    <i class="fa-brands fa-twitter"></i>
-                </a>
-            </li>
-
-            <li>
-                <a href="#">
-                    <i class="fa-solid fa-envelopes-bulk"></i>
-                </a>
-            </li>
-
-            <li>
-                <a href="#">
-                    <i class="fa-brands fa-youtube"></i>
-                </a>
-            </li>
-
-            <li>
-                <a href="#">
-                    <i class="fa-brands fa-square-reddit"></i>
-                </a>
-            </li>
-        </ul>
-
-        <a href="#" class="newsletter-link">
-            Newsletter
-        </a>
-
-    </section>
-
 </footer>
 
-
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"></script>
 <script src="../assets/js/genres.js"></script>
 </body>
-
 </html>
