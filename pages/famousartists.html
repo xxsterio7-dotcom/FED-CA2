@@ -4,296 +4,709 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Famous Artists</title>
-
+ 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
+ 
 <style>
-:root {
-    --black: #080b09;
-    --black-soft: #101512;
-    --green-dark: #12251c;
-    --gold: #d5a94f;
-    --gold-light: #e5c979;
-    --cream: #f1ead7;
-}
 
-body {
-    background-color: var(--black);
-    color: var(--cream);
+.mv-page {
+    --mv-black: #080b09;
+    --mv-black-soft: #101512;
+    --mv-green-dark: #12251c;
+    --mv-gold: #d5a94f;
+    --mv-gold-light: #e5c979;
+    --mv-cream: #f1ead7;
+ 
+    background-color: var(--mv-black);
+    color: var(--mv-cream);
     overflow-x: hidden;
 }
-
-h1, h2, h3, h4, h5 {
+ 
+.mv-page h1, .mv-page h2, .mv-page h3, .mv-page h4, .mv-page h5 {
     font-family: Georgia, "Times New Roman", serif;
 }
-
-.navbar-custom {
-    background-color: var(--black);
-    border-bottom: 1px solid var(--gold);
+ 
+.mv-navbar {
+    background-color: var(--mv-black);
+    border-bottom: 1px solid var(--mv-gold);
 }
-
-.brand-logo {
+ 
+.mv-brand-logo {
     color: #f4f0ea !important;
     font-family: Georgia, serif;
     font-size: 1.5rem;
 }
-
-.logo-symbol { color: var(--gold); }
-
-.logo-img {
+ 
+.mv-logo-symbol { color: var(--mv-gold); }
+ 
+.mv-logo-img {
     width: 45px;
     height: 45px;
     border-radius: 4px;
     object-fit: cover;
 }
-
-.nav-link { color: #f4f0ea !important; margin-left: 15px; }
-.nav-link:hover, .nav-link.active { color: var(--gold) !important; }
-
-.dropdown-menu {
-    background-color: var(--black-soft);
+ 
+.mv-nav-link { color: #f4f0ea !important; margin-left: 15px; }
+.mv-nav-link:hover, .mv-nav-link.active { color: var(--mv-gold) !important; }
+ 
+.mv-dropdown-menu {
+    background-color: var(--mv-black-soft);
     border: 1px solid rgba(213, 169, 79, 0.3);
 }
-
-.dropdown-item { color: var(--cream); }
-.dropdown-item:hover, .dropdown-item:focus {
-    background-color: var(--green-dark);
-    color: var(--gold-light);
+ 
+.mv-dropdown-item { color: var(--mv-cream); }
+.mv-dropdown-item:hover, .mv-dropdown-item:focus {
+    background-color: var(--mv-green-dark);
+    color: var(--mv-gold-light);
 }
-
-.year-carousel-section {
-    background-color: var(--black-soft);
-    padding: 0;
-    margin: 0;
-}
-
-.year-carousel {
-    width: 100vw;
-    margin: 0;
-    padding: 0;
-    border: none;
-    border-radius: 0;
-    background: var(--green-dark);
-}
-
-.carousel-item {
-    min-height: 100vh;
+ 
+/* Hero */
+.mv-hero {
+    background-color: var(--mv-green-dark);
+    background-image:
+        linear-gradient(rgba(18, 37, 28, 0.85), rgba(18, 37, 28, 0.85)),
+        url('../docs/HeaderTimeline.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 40px 0;
     text-align: center;
-    position: relative;
-    display: none;
+    border-bottom: 1px solid var(--mv-gold);
 }
-
-.carousel-item.active {
-    display: block;
-    animation: fadeSlideIn 0.8s ease forwards;
-}
-
-@keyframes fadeSlideIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.slide-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 70%;
-}
-
-.year-slide-year {
-    font-size: clamp(2.4rem, 5vw, 3.5rem);
-    color: var(--gold);
+ 
+.mv-hero h1 {
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    color: var(--mv-gold);
     margin-bottom: 0.5rem;
-    font-family: Georgia, serif;
 }
-
-.year-slide-era {
-    color: var(--gold-light);
-    font-size: 0.8rem;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    margin-bottom: 1rem;
-}
-
-.year-slide-text {
-    color: var(--cream);
-    line-height: 1.8;
+ 
+.mv-hero p {
+    color: var(--mv-cream);
+    font-size: 0.95rem;
     max-width: 600px;
     margin: 0 auto;
-}
-
-.year-carousel .carousel-control-prev,
-.year-carousel .carousel-control-next {
-    width: 60px;
-    height: 60px;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: transparent;
-    border: 1px solid var(--gold);
-    border-radius: 50%;
+    line-height: 1.8;
     opacity: 0.85;
-    transition: background-color 0.3s ease;
 }
-
-.year-carousel .carousel-control-prev { left: 20px; }
-.year-carousel .carousel-control-next { right: 20px; }
-
-.year-carousel .carousel-control-prev:hover,
-.year-carousel .carousel-control-next:hover {
-    background-color: var(--gold);
-    opacity: 1;
+ 
+/* Artist Grid */
+.mv-artists-section {
+    background-color: var(--mv-black);
+    padding: 80px 0;
 }
-
-.year-carousel .carousel-control-prev:hover .carousel-control-prev-icon,
-.year-carousel .carousel-control-next:hover .carousel-control-next-icon {
-    filter: invert(0) brightness(0);
+ 
+.mv-artist-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
-
-.purpose-section { background-color: var(--black-soft); }
-
-.section-title { font-size: clamp(2rem, 4vw, 3rem); }
-
-.site-footer {
+ 
+.mv-artist-card {
+    position: relative;
+    cursor: pointer;
+    border-radius: 12px;
+    overflow: hidden;
+    aspect-ratio: 3/4;
+    background-color: var(--mv-green-dark);
+}
+ 
+.mv-artist-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+    display: block;
+}
+ 
+.mv-artist-card:hover img {
+    transform: scale(1.05);
+}
+ 
+.mv-artist-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        transparent 40%,
+        rgba(0, 0, 0, 0.85) 100%
+    );
+    border-radius: 12px;
+    z-index: 1;
+}
+ 
+.mv-artist-card-overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: linear-gradient(transparent, rgba(0,0,0,0.9));
+    padding: 40px 20px 20px;
+    transition: opacity 0.3s ease;
+    z-index: 2;    /* add this so text sits above the overlay */
+}     
+ 
+.mv-artist-card-overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: linear-gradient(transparent, rgba(0,0,0,0.9));
+    padding: 40px 20px 20px;
+    transition: opacity 0.3s ease;
+}
+ 
+.mv-artist-card-overlay h3 {
+    color: var(--mv-gold);
+    font-size: 1.3rem;
+    margin: 0 0 4px;
+}
+ 
+.mv-artist-card-overlay p {
+    color: var(--mv-cream);
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin: 0 0 8px;
+    opacity: 0.7;
+}
+ 
+.mv-artist-card-overlay span {
+    color: var(--mv-gold-light);
+    font-size: 0.75rem;
+    opacity: 0.8;
+}
+ 
+/* Lightbox */
+.mv-lightbox-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.92);
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+    animation: mv-fadeIn 0.3s ease;
+}
+ 
+.mv-lightbox-overlay.active {
+    display: flex;
+}
+ 
+@keyframes mv-fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+ 
+.mv-lightbox-box {
+    display: flex;
+    flex-direction: row;
+    width: 85%;
+    max-width: 1000px;
+    max-height: 85vh;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid var(--mv-gold);
+    animation: mv-slideUp 0.4s ease;
+}
+ 
+@keyframes mv-slideUp {
+    from { transform: translateY(30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+ 
+.mv-lightbox-image {
+    width: 50%;
+    object-fit: cover;
+    display: block;
+}
+ 
+.mv-lightbox-info {
+    width: 50%;
+    background-color: var(--mv-green-dark);
+    padding: 40px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+ 
+.mv-lightbox-info h2 {
+    color: var(--mv-gold);
+    font-size: 2rem;
+    margin-bottom: 6px;
+}
+ 
+.mv-lightbox-era {
+    color: var(--mv-gold-light);
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+ 
+.mv-lightbox-info p {
+    color: var(--mv-cream);
+    line-height: 1.8;
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+}
+ 
+.mv-lightbox-songs {
+    background-color: rgba(213, 169, 79, 0.1);
+    border: 1px solid var(--mv-gold);
+    border-radius: 8px;
+    padding: 14px 18px;
+    color: var(--mv-gold-light);
+    font-size: 0.85rem;
+    line-height: 1.8;
+}
+ 
+.mv-lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    color: var(--mv-cream);
+    font-size: 2rem;
+    cursor: pointer;
+    background: none;
+    border: none;
+    line-height: 1;
+    transition: color 0.2s ease;
+}
+ 
+.mv-lightbox-close:hover {
+    color: var(--mv-gold);
+}
+ 
+/* Life Stories */
+.mv-stories-section {
+    background-color: var(--mv-black-soft);
+    padding: 80px 0;
+}
+ 
+.mv-stories-section h2 {
+    color: var(--mv-gold);
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    margin-bottom: 10px;
+    text-align: center;
+}
+ 
+.mv-stories-section .mv-section-subtitle {
+    text-align: center;
+    color: var(--mv-cream);
+    opacity: 0.7;
+    margin-bottom: 50px;
+    font-size: 0.95rem;
+}
+ 
+.mv-story-card {
+    background-color: var(--mv-green-dark);
+    border: 1px solid rgba(213, 169, 79, 0.2);
+    border-radius: 12px;
+    padding: 35px;
+    margin-bottom: 30px;
+}
+ 
+.mv-story-card h3 {
+    color: var(--mv-gold);
+    font-size: 1.4rem;
+    margin-bottom: 6px;
+}
+ 
+.mv-story-card .mv-story-era {
+    color: var(--mv-gold-light);
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    display: block;
+}
+ 
+.mv-story-card p {
+    color: var(--mv-cream);
+    line-height: 1.9;
+    opacity: 0.85;
+    margin: 0;
+}
+ 
+/* Footer */
+.mv-site-footer {
     background-color: #121212 !important;
     color: #f8f9fa;
     border-top: 1px solid rgba(229, 185, 103, 0.3) !important;
 }
-
-.footer-logo {
+ 
+.mv-footer-logo {
     height: 65px;
     width: 65px;
     object-fit: cover;
     border-radius: 4px;
 }
-
-.icon-grid {
+ 
+.mv-icon-grid {
     display: grid;
     grid-template-columns: repeat(3, auto);
     gap: 12px;
     font-size: 1.25rem;
 }
-
-.site-footer a { color: var(--cream); transition: opacity 0.2s ease-in-out, color 0.2s ease-in-out; }
-.site-footer a:hover { opacity: 0.85; color: #fff !important; }
-
+ 
+.mv-site-footer a { color: var(--mv-cream); transition: opacity 0.2s ease-in-out, color 0.2s ease-in-out; }
+.mv-site-footer a:hover { opacity: 0.85; color: #fff !important; }
+ 
 @media (max-width: 768px) {
-    .slide-content { width: 90%; }
-    .year-carousel .carousel-control-prev { left: 5px; }
-    .year-carousel .carousel-control-next { right: 5px; }
+    .mv-artist-grid { grid-template-columns: repeat(2, 1fr); }
+    .mv-lightbox-box { flex-direction: column; width: 95%; max-height: 90vh; }
+    .mv-lightbox-image { width: 100%; height: 250px; }
+    .mv-lightbox-info { width: 100%; padding: 24px; }
+}
+ 
+@media (max-width: 480px) {
+    .mv-artist-grid { grid-template-columns: 1fr; }
 }
 </style>
 </head>
-<body>
-
-<nav class="navbar navbar-expand-lg navbar-custom">
-  <div class="container">
-    <a class="navbar-brand brand-logo" href="index.html">
-      <span class="logo-symbol">&#9834;</span> Site Name
+<body class="mv-page">
+ 
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg mv-navbar">
+  <section class="container">
+    <a class="navbar-brand mv-brand-logo d-flex align-items-center" href="index.html">
+      <img src="../docs/Logo.jpeg" alt="Logo" class="mv-logo-img me-2">
+      <span class="mv-logo-symbol me-2">♪</span>
+      Music Vault
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navMenu">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+    <section class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav me-auto ms-lg-4 mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link mv-nav-link" href="index.html">Home</a></li>
+      </ul>
+      <ul class="navbar-nav gap-2 gap-lg-4">
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Explore</a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Link one</a></li>
-            <li><a class="dropdown-item" href="#">Link two</a></li>
+          <a class="nav-link mv-nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Discover</a>
+          <ul class="dropdown-menu mv-dropdown-menu">
+            <li><a class="dropdown-item mv-dropdown-item" href="#">About Music</a></li>
+            <li><a class="dropdown-item mv-dropdown-item" href="#">Anatomy of Sound</a></li>
           </ul>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown">Genres</a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Link one</a></li>
-            <li><a class="dropdown-item" href="#">Link two</a></li>
+          <a class="nav-link mv-nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Genres</a>
+          <ul class="dropdown-menu mv-dropdown-menu">
+            <li><a class="dropdown-item mv-dropdown-item" href="#">All Genres</a></li>
+            <li><a class="dropdown-item mv-dropdown-item" href="#">Mood Mixer</a></li>
           </ul>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">More</a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Link one</a></li>
-            <li><a class="dropdown-item" href="#">Link two</a></li>
+          <a class="nav-link mv-nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown">Artists</a>
+          <ul class="dropdown-menu mv-dropdown-menu">
+            <li><a class="dropdown-item mv-dropdown-item" href="#">Famous Artists</a></li>
           </ul>
         </li>
       </ul>
-      <img src="images/logo.png" alt="Logo" class="logo-img">
-    </div>
-  </div>
-</nav>
-
-<section class="year-carousel-section">
-  <article id="artistCarousel" class="carousel year-carousel" data-bs-ride="carousel">
-
-    <section class="carousel-inner">
-
-      <section class="carousel-item active" style="background-image: url('artist1bg.png'); background-size: cover; background-position: center;">
-        <section class="slide-content">
-          <p class="year-slide-year">Elvis Presley</p>
-          <p class="year-slide-era">The King of Rock &amp; Roll</p>
-          <p class="year-slide-text">Add your write-up about Elvis Presley here.</p>
-        </section>
-      </section>
-
-      <section class="carousel-item" style="background-image: url('artist2bg.png'); background-size: cover; background-position: center;">
-        <section class="slide-content">
-          <p class="year-slide-year">The Beatles</p>
-          <p class="year-slide-era">The Fab Four</p>
-          <p class="year-slide-text">Add your write-up about The Beatles here.</p>
-        </section>
-      </section>
-
-      <section class="carousel-item" style="background-image: url('artist3bg.png'); background-size: cover; background-position: center;">
-        <section class="slide-content">
-          <p class="year-slide-year">Michael Jackson</p>
-          <p class="year-slide-era">The King of Pop</p>
-          <p class="year-slide-text">Add your write-up about Michael Jackson here.</p>
-        </section>
-      </section>
-
     </section>
-
-    <button class="carousel-control-prev" type="button" data-bs-target="#artistCarousel" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#artistCarousel" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-
-  </article>
+  </section>
+</nav>
+ 
+<!-- HERO -->
+<section class="mv-hero">
+  <section class="container">
+    <h1>Famous Artists</h1>
+    <p>Click on any artist to discover their story, era, and legacy in the world of music.</p>
+  </section>
 </section>
-
-<section class="purpose-section py-5">
-  <div class="container">
-    <h2 class="section-title mb-4">Famous Artists</h2>
-    <p class="text-muted lh-lg">
-      Explore the lives and legacies of the most iconic musicians who shaped the history of music.
-    </p>
-  </div>
+ 
+<!-- ARTIST GRID -->
+<section class="mv-artists-section">
+  <section class="mv-artist-grid">
+ 
+    <!-- Artist 1 -->
+    <section class="mv-artist-card" onclick="openLightbox(
+      '../docs/AG.jpg',
+      'Artist Name',
+      'Era — Genre',
+      'Write your biography about this artist here.',
+      '🎵 Famous Songs: Song 1, Song 2, Song 3'
+    )">
+      <img src="../docs/AG.jpg" alt="Artist Name">
+      <section class="mv-artist-card-overlay">
+        <h3>Ariana Grande</h3>
+        <p>2010s — Pop</p>
+        <span>Click to learn more</span>
+      </section>
+    </section>
+ 
+    <!-- Artist 2 -->
+    <section class="mv-artist-card" onclick="openLightbox(
+      '../docs/mj.jpg',
+      'Artist Name',
+      'Era — Genre',
+      'Write your biography about this artist here.',
+      '🎵 Famous Songs: Song 1, Song 2, Song 3'
+    )">
+      <img src="../docs/mj.jpg" alt="Artist Name">
+      <section class="mv-artist-card-overlay">
+        <h3>Michael Jackson</h3>
+        <p>1970s — Pop</p>
+        <span>Click to learn more</span>
+      </section>
+    </section>
+ 
+    <!-- Artist 3 -->
+    <section class="mv-artist-card" onclick="openLightbox(
+      '../docs/tupac.jpg',
+      'Artist Name',
+      'Era — Genre',
+      'Write your biography about this artist here.',
+      '🎵 Famous Songs: Song 1, Song 2, Song 3'
+    )">
+      <img src="../docs/tupac.jpg" alt="Artist Name">
+      <section class="mv-artist-card-overlay">
+        <h3>Tupac Shakur</h3>
+        <p>1990s — Hip-Hop</p>
+        <span>Click to learn more</span>
+      </section>
+    </section>
+ 
+    <!-- Artist 4 -->
+    <section class="mv-artist-card" onclick="openLightbox(
+      'your-image-url-here.jpg',
+      'Artist Name',
+      'Era — Genre',
+      'Write your biography about this artist here.',
+      '🎵 Famous Songs: Song 1, Song 2, Song 3'
+    )">
+      <img src="your-image-url-here.jpg" alt="Artist Name">
+      <section class="mv-artist-card-overlay">
+        <h3>Artist Name</h3>
+        <p>Era — Genre</p>
+        <span>Click to learn more</span>
+      </section>
+    </section>
+ 
+    <!-- Artist 5 -->
+    <section class="mv-artist-card" onclick="openLightbox(
+      'your-image-url-here.jpg',
+      'Artist Name',
+      'Era — Genre',
+      'Write your biography about this artist here.',
+      '🎵 Famous Songs: Song 1, Song 2, Song 3'
+    )">
+      <img src="your-image-url-here.jpg" alt="Artist Name">
+      <section class="mv-artist-card-overlay">
+        <h3>Artist Name</h3>
+        <p>Era — Genre</p>
+        <span>Click to learn more</span>
+      </section>
+    </section>
+ 
+    <!-- Artist 6 -->
+    <section class="mv-artist-card" onclick="openLightbox(
+      'your-image-url-here.jpg',
+      'Artist Name',
+      'Era — Genre',
+      'Write your biography about this artist here.',
+      '🎵 Famous Songs: Song 1, Song 2, Song 3'
+    )">
+      <img src="your-image-url-here.jpg" alt="Artist Name">
+      <section class="mv-artist-card-overlay">
+        <h3>Artist Name</h3>
+        <p>Era — Genre</p>
+        <span>Click to learn more</span>
+      </section>
+    </section>
+ 
+    <!-- Artist 7 -->
+    <section class="mv-artist-card" onclick="openLightbox(
+      'your-image-url-here.jpg',
+      'Artist Name',
+      'Era — Genre',
+      'Write your biography about this artist here.',
+      '🎵 Famous Songs: Song 1, Song 2, Song 3'
+    )">
+      <img src="your-image-url-here.jpg" alt="Artist Name">
+      <section class="mv-artist-card-overlay">
+        <h3>Artist Name</h3>
+        <p>Era — Genre</p>
+        <span>Click to learn more</span>
+      </section>
+    </section>
+ 
+    <!-- Artist 8 -->
+    <section class="mv-artist-card" onclick="openLightbox(
+      'your-image-url-here.jpg',
+      'Artist Name',
+      'Era — Genre',
+      'Write your biography about this artist here.',
+      '🎵 Famous Songs: Song 1, Song 2, Song 3'
+    )">
+      <img src="your-image-url-here.jpg" alt="Artist Name">
+      <section class="mv-artist-card-overlay">
+        <h3>Artist Name</h3>
+        <p>Era — Genre</p>
+        <span>Click to learn more</span>
+      </section>
+    </section>
+ 
+    <!-- Artist 9 -->
+    <section class="mv-artist-card" onclick="openLightbox(
+      'your-image-url-here.jpg',
+      'Artist Name',
+      'Era — Genre',
+      'Write your biography about this artist here.',
+      '🎵 Famous Songs: Song 1, Song 2, Song 3'
+    )">
+      <img src="your-image-url-here.jpg" alt="Artist Name">
+      <section class="mv-artist-card-overlay">
+        <h3>Artist Name</h3>
+        <p>Era — Genre</p>
+        <span>Click to learn more</span>
+      </section>
+    </section>
+ 
+    <!-- Artist 10 -->
+    <section class="mv-artist-card" onclick="openLightbox(
+      'your-image-url-here.jpg',
+      'Artist Name',
+      'Era — Genre',
+      'Write your biography about this artist here.',
+      '🎵 Famous Songs: Song 1, Song 2, Song 3'
+    )">
+      <img src="your-image-url-here.jpg" alt="Artist Name">
+      <section class="mv-artist-card-overlay">
+        <h3>Artist Name</h3>
+        <p>Era — Genre</p>
+        <span>Click to learn more</span>
+      </section>
+    </section>
+ 
+    <!-- Artist 11 -->
+    <section class="mv-artist-card" onclick="openLightbox(
+      'your-image-url-here.jpg',
+      'Artist Name',
+      'Era — Genre',
+      'Write your biography about this artist here.',
+      '🎵 Famous Songs: Song 1, Song 2, Song 3'
+    )">
+      <img src="your-image-url-here.jpg" alt="Artist Name">
+      <section class="mv-artist-card-overlay">
+        <h3>Artist Name</h3>
+        <p>Era — Genre</p>
+        <span>Click to learn more</span>
+      </section>
+    </section>
+ 
+    <!-- Artist 12 -->
+    <section class="mv-artist-card" onclick="openLightbox(
+      'your-image-url-here.jpg',
+      'Artist Name',
+      'Era — Genre',
+      'Write your biography about this artist here.',
+      '🎵 Famous Songs: Song 1, Song 2, Song 3'
+    )">
+      <img src="your-image-url-here.jpg" alt="Artist Name">
+      <section class="mv-artist-card-overlay">
+        <h3>Artist Name</h3>
+        <p>Era — Genre</p>
+        <span>Click to learn more</span>
+      </section>
+    </section>
+ 
+  </section>
 </section>
-
-<footer class="site-footer py-4">
-  <div class="container d-flex flex-wrap align-items-center justify-content-between gap-3">
-    <img src="images/logo.png" alt="Logo" class="footer-logo">
-    <p class="mb-0">&copy; 2026 Site Name. All rights reserved.</p>
-    <section class="icon-grid">
+ 
+<!-- LIGHTBOX -->
+<section class="mv-lightbox-overlay" id="lightbox" onclick="closeLightbox(event)">
+  <button class="mv-lightbox-close" onclick="closeLightbox()">&times;</button>
+  <section class="mv-lightbox-box">
+    <img class="mv-lightbox-image" id="lightbox-img" src="" alt="">
+    <section class="mv-lightbox-info">
+      <h2 id="lightbox-name"></h2>
+      <p class="mv-lightbox-era" id="lightbox-era"></p>
+      <p id="lightbox-bio"></p>
+      <section class="mv-lightbox-songs" id="lightbox-songs"></section>
+    </section>
+  </section>
+</section>
+ 
+<!-- LIFE STORIES -->
+<section class="mv-stories-section">
+  <section class="container">
+    <h2>Life Stories</h2>
+    <p class="mv-section-subtitle">The journeys behind the music</p>
+ 
+    <!-- Story 1 -->
+    <section class="mv-story-card">
+      <h3>Artist Name</h3>
+      <span class="mv-story-era">Era — Genre</span>
+      <p>Write the life story of this artist here. Talk about where they grew up, how they got into music, their struggles, their rise to fame, and their lasting legacy.</p>
+    </section>
+ 
+    <!-- Story 2 -->
+    <section class="mv-story-card">
+      <h3>Artist Name</h3>
+      <span class="mv-story-era">Era — Genre</span>
+      <p>Write the life story of this artist here. Talk about where they grew up, how they got into music, their struggles, their rise to fame, and their lasting legacy.</p>
+    </section>
+ 
+    <!-- Story 3 -->
+    <section class="mv-story-card">
+      <h3>Artist Name</h3>
+      <span class="mv-story-era">Era — Genre</span>
+      <p>Write the life story of this artist here. Talk about where they grew up, how they got into music, their struggles, their rise to fame, and their lasting legacy.</p>
+    </section>
+ 
+    <!-- Story 4 -->
+    <section class="mv-story-card">
+      <h3>Artist Name</h3>
+      <span class="mv-story-era">Era — Genre</span>
+      <p>Write the life story of this artist here. Talk about where they grew up, how they got into music, their struggles, their rise to fame, and their lasting legacy.</p>
+    </section>
+ 
+  </section>
+</section>
+ 
+<!-- FOOTER -->
+<footer class="mv-site-footer py-4">
+  <section class="container d-flex flex-wrap align-items-center justify-content-between gap-3">
+    <img src="../docs/Logo.jpeg" alt="Logo" class="mv-footer-logo">
+    <p class="mb-0">&copy; 2026 Music Vault. All rights reserved.</p>
+    <section class="mv-icon-grid">
       <a href="#" aria-label="Facebook">FB</a>
       <a href="#" aria-label="Instagram">IG</a>
       <a href="#" aria-label="Twitter">TW</a>
     </section>
-  </div>
+  </section>
 </footer>
-
+ 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  function openLightbox(img, name, era, bio, songs) {
+    document.getElementById('lightbox-img').src = img;
+    document.getElementById('lightbox-name').textContent = name;
+    document.getElementById('lightbox-era').textContent = era;
+    document.getElementById('lightbox-bio').textContent = bio;
+    document.getElementById('lightbox-songs').textContent = songs;
+    document.getElementById('lightbox').classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+ 
+  function closeLightbox(event) {
+    if (!event || event.target === document.getElementById('lightbox') || event.target.classList.contains('mv-lightbox-close')) {
+      document.getElementById('lightbox').classList.remove('active');
+      document.body.style.overflow = '';
+    }
+  }
+ 
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeLightbox();
+  });
+</script>
 </body>
 </html>
