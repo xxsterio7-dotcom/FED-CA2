@@ -2554,3 +2554,1602 @@ h1, h2, h3, h4, h5 {
 @media (max-width: 480px) {
     .mv-artist-grid { grid-template-columns: 1fr; }
 }
+/* Mun Yu concert page css*/
+/*Hero section*/
+.zv-hero{
+    position:relative;
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    overflow:hidden;
+}
+
+.zv-hero::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.55);
+    z-index:1;
+}
+
+.zv-hero__banner{
+    position:absolute;
+    inset:0;
+}
+
+.zv-hero__banner img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.zv-hero__content{
+    position:relative;
+    z-index:2;
+
+    max-width:700px;
+
+    text-align:center;
+
+    padding:2rem;
+
+    color:var(--cream);
+}
+
+.zv-hero::before{
+    margin-bottom:1rem;
+    color:var(--gold);
+    text-transform:uppercase;
+    letter-spacing:4px;
+    font-size:.9rem;
+    font-weight:600;
+}
+
+.zv-hero__title{
+    margin-bottom:1.5rem;
+    color:var(--cream);
+    font-size:4.5rem;
+}
+
+.zv-hero__description{
+    max-width:650px;
+    margin:0 auto 2.5rem;
+    line-height:1.8;
+    color:rgba(241,234,215,.85);
+    font-size:1.1rem;
+}
+
+.zv-hero__button{
+    display:inline-block;
+
+    padding:1rem 2.4rem;
+
+    border-radius:999px;
+
+    transition:.3s;
+
+    background:var(--gold);
+    color:var(--black);
+    font-weight:600;
+}
+
+.zv-hero__button:hover{
+    background:var(--gold-light);
+    color:var(--black);
+    transform:translateY(-3px);
+}
+
+/*Overview section*/
+.overview{
+    max-width:1100px;
+    margin:0 auto;
+
+    padding:7rem 2rem;
+
+    background:var(--black);
+}
+
+.overview__header{
+    text-align:center;
+
+    margin-bottom:3rem;
+}
+
+.overview__tag{
+    margin-bottom:.8rem;
+    color:var(--gold);
+    text-transform:uppercase;
+    letter-spacing:3px;
+    font-weight:600;
+    font-size:1.2rem;
+}
+
+.overview__title{
+    color:var(--cream);
+    font-size:3rem;
+}
+
+.overview__card{
+    max-width:850px;
+
+    margin:0 auto;
+
+    padding:3rem;
+
+    background:var(--green-dark);
+    border:1px solid rgba(213,169,79,.35);
+    border-radius:18px;
+    box-shadow:0 15px 35px rgba(0,0,0,.35);
+}
+
+.overview__card p{
+    line-height:1.8;
+    color:var(--cream);
+    font-size:1.2rem;
+}
+
+.overview__card p:not(:last-child){
+    margin-bottom:1.5rem;
+    font-size:1.2rem;
+}
+/* Cards */
+.live-cards {
+    max-width: 1100px;
+    margin: 40px auto 80px;
+}
+
+.live-card {
+    background: #0f2a20;
+    border: 1px solid #8c6d2f;
+    border-radius: 16px;
+    color: #eee;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.live-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.live-card__icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.live-card h3 {
+    color: #d9a441;
+    font-family: "Cinzel", serif;
+    margin-bottom: 15px;
+    font-size:1.4rem;
+}
+
+.live-card p {
+    line-height: 1.7;
+    margin-bottom: 0;
+    font-size:1.05rem;
+}
+
+/*Timeline section*/
+.timeline{
+    padding:7rem 2rem;
+    background:var(--black);
+}
+
+.timeline__header{
+    max-width:700px;
+    margin:0 auto 5rem;
+    text-align:center;
+}
+
+.timeline__tag{
+    color:var(--gold);
+    letter-spacing:3px;
+    text-transform:uppercase;
+    font-weight:600;
+}
+
+.timeline__title{
+    color:var(--cream);
+    font-size:2.8rem;
+    margin:.8rem 0;
+}
+
+.timeline__subtitle{
+    color:var(--text-muted);
+}
+
+.timeline__container{
+    position:relative;
+    max-width:1200px;
+    margin:0 auto;
+}
+
+.timeline__container::before{
+    content:"";
+    position:absolute;
+    left:50%;
+    top:0;
+    transform:translateX(-50%);
+    width:4px;
+    height:100%;
+    background:var(--gold);
+}
+
+.timeline__progress{
+    position:absolute;
+    left:50%;
+    top:0;
+    transform:translateX(-50%);
+    width:4px;
+    height:0;
+    background:var(--gold);
+    transition:height .1s linear;
+}
+
+.timeline__item{
+    position:relative;
+    display:flex;
+    width:100%;
+    margin-bottom:2rem;
+}
+
+.timeline__item--left{
+    justify-content:flex-start;
+}
+
+.timeline__item--right{
+    justify-content:flex-end;
+}
+
+.timeline__item::before{
+    content:"";
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width:20px;
+    height:20px;
+    border-radius:50%;
+    z-index:5;
+    background:var(--green-dark);
+    border:5px solid var(--gold);
+    box-shadow:0 0 18px rgba(213,169,79,.3);
+}
+
+.timeline__card{
+    width:44%;
+    overflow:hidden;
+    border-radius:18px;
+    transition:.35s;
+
+    background:var(--green-dark);
+    border:1px solid rgba(213,169,79,.35);
+    box-shadow:0 15px 30px rgba(0,0,0,.35);
+}
+
+.timeline__card img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    display:block;
+    transition:.35s;
+}
+
+.timeline__content{
+    padding:2rem;
+}
+
+.timeline__year{
+    display:inline-block;
+    padding:.35rem .9rem;
+    margin-bottom:1rem;
+    border-radius:999px;
+    font-size:.85rem;
+    font-weight:700;
+
+    background:var(--gold);
+    color:var(--black);
+}
+
+.timeline__content h3{
+    margin-bottom:1rem;
+    color:var(--cream);
+    font-size: clamp(1.3rem, 4vw, 2.2rem);
+    word-break: break-word;
+    overflow-wrap: break-word;
+}
+
+.timeline__content p{
+    line-height:1.8;
+    margin-bottom:2rem;
+    color:rgba(241,234,215,.9);
+}
+
+.timeline__content a{
+    display:inline-flex;
+    align-items:center;
+    gap:.5rem;
+    font-weight:600;
+    transition:.3s;
+    color:var(--gold);
+}
+
+.timeline__content a:hover{
+    color:var(--gold-light);
+}
+
+.timeline__card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 20px 45px rgba(0,0,0,.45);
+}
+
+.timeline__card:hover img{
+    transform:scale(1.05);
+}
+
+/*World Map section*/
+.map{
+    max-width:1200px;
+    margin:0 auto;
+    padding:7rem 2rem;
+    background:var(--black);
+}
+
+.map__header{
+    max-width:700px;
+    margin:0 auto 4rem;
+    text-align:center;
+}
+
+.map__tag{
+    margin-bottom:.8rem;
+    color:var(--gold);
+    text-transform:uppercase;
+    letter-spacing:3px;
+    font-weight:600;
+}
+
+.map__title{
+    margin-bottom:1rem;
+    color:var(--cream);
+    font-size:2.8rem;
+}
+
+.map__subtitle{
+    line-height:1.8;
+    color:var(--text-muted);
+}
+
+.map__container{
+    margin-bottom:3rem;
+}
+
+.map__world{
+    position:relative;
+    width:100%;
+    aspect-ratio:16/9;
+    overflow:hidden;
+
+    background:linear-gradient(180deg,var(--green-light),var(--green-dark));
+    border:2px solid rgba(213,169,79,.35);
+    border-radius:18px;
+    box-shadow:0 20px 45px rgba(0,0,0,.35);
+    padding:2rem;
+}
+
+.map__world img{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+    display:block;
+
+    filter:
+        brightness(.88)
+        contrast(1.08)
+        saturate(.85);
+}
+
+/*Markers*/
+.map__marker{
+    position:absolute;
+    transform:translate(-50%,-50%);
+    cursor:pointer;
+    transition:.3s;
+    background:none;
+    border:none;
+    font-size:1.8rem;
+
+    color:var(--gold);
+    text-shadow:0 0 10px rgba(213,169,79,.4);
+}
+
+.map__marker:hover{
+    transform:translate(-50%,-50%) scale(1.2);
+    color:var(--gold-light);
+    text-shadow:
+        0 0 15px rgba(213,169,79,.8),
+        0 0 30px rgba(213,169,79,.4);
+}
+
+.map__marker.active{
+    transform:translate(-50%,-50%) scale(1.35);
+    color:var(--gold-light);
+    text-shadow:
+        0 0 18px rgba(213,169,79,.8),
+        0 0 35px rgba(213,169,79,.6);
+}
+
+/*Record section*/
+.record{
+    max-width:850px;
+    margin:0 auto;
+    max-height:0;
+    overflow:hidden;
+
+    opacity:0;
+    transform:translateY(30px);
+    transition:max-height .5s ease, margin-top .5s ease, opacity .4s ease, transform .4s ease;
+
+    background:var(--green-dark);
+    border:1px solid rgba(213,169,79,.35);
+    border-radius:18px;
+    box-shadow:0 15px 35px rgba(0,0,0,.4);
+}
+
+.record.show{
+    max-height:1400px;
+    margin-top:3rem;
+    opacity:1;
+    transform:translateY(0);
+    animation:fadeUp .5s ease;
+}
+
+.record__placeholder{
+    min-height:300px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+
+    padding:3rem;
+
+    color:var(--cream);
+}
+
+.record__placeholder i{
+    font-size:4rem;
+    color:var(--gold);
+    margin-bottom:1rem;
+}
+
+.record__placeholder h3{
+    margin:1rem 0;
+    color:var(--gold);
+}
+
+.record__placeholder p{
+    color:rgba(241,234,215,.8);
+}
+
+.record__banner{
+    position:relative;
+}
+
+.record__banner::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+        to top,
+        rgba(0,0,0,.65),
+        rgba(0,0,0,.1)
+    );
+}
+
+.record__banner img{
+    width:100%;
+    height:320px;
+    object-fit:cover;
+    display:block;
+}
+
+.record__title{
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    z-index:2;
+    padding:2rem;
+}
+
+.record__title p{
+    color:var(--gold);
+    font-weight:600;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+
+.record__title h3{
+    color:var(--cream);
+    font-size:2.4rem;
+}
+
+.record__details{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:2rem;
+
+    padding:0 2rem 2rem;
+
+    background:var(--green-dark);
+}
+
+.record__info h4{
+    margin-bottom:.5rem;
+    color:var(--gold);
+}
+
+.record__info p{
+    color:var(--cream);
+}
+
+.record__video {
+    width: auto;
+    margin: 0 32px;
+}
+
+.record__video video {
+    width: 100%;
+    display: block;
+    border-radius: 12px;
+}
+
+.record__footer{
+    padding:0 2rem 2rem;
+}
+
+.record__footer a{
+    display:inline-flex;
+    align-items:center;
+    gap:.5rem;
+
+    padding:1rem 2rem;
+    background:var(--gold);
+    color:var(--black);
+    border-radius:999px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.record__footer a:hover{
+    background:var(--gold-light);
+    color:var(--black);
+    transform:translateY(-3px);
+}
+@media(max-width:900px){
+
+.footer__container{
+    grid-template-columns:1fr;
+    text-align:center;
+    gap:35px;
+}
+
+.footer__left{
+    justify-content:center;
+}
+
+.footer__right{
+    align-items:center;
+}
+
+.footer__social{
+    justify-content:center;
+}
+
+}
+/* Mun Yu albums page css*/
+
+.featured{
+    max-width:1200px;
+    margin:0 auto;
+    padding:0 2rem 3rem;
+
+    background:var(--black);
+}
+
+.featured__grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(320px, 1fr));
+    gap:1.5rem;
+}
+
+.featured__card{
+    position:relative;
+    padding:2.5rem;
+    border-radius:20px;
+
+    background:var(--green-dark);
+    border:1px solid rgba(213,169,79,.35);
+    box-shadow:0 20px 45px rgba(0,0,0,.4);
+}
+
+.featured__tag{
+    display:inline-flex;
+    align-items:center;
+    gap:.5rem;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    font-weight:700;
+    font-size:.78rem;
+    margin-bottom:1.4rem;
+
+    color:var(--gold);
+}
+
+.featured__tag i{
+    font-size:.85rem;
+}
+
+.featured__headline{
+    font-size:2rem;
+    line-height:1.3;
+    margin-bottom:2rem;
+
+    color:var(--cream);
+}
+
+.featured__album{
+    display:flex;
+    align-items:center;
+    gap:2rem;
+}
+
+.featured__cover{
+    position:relative;
+    width:150px;
+    height:150px;
+    flex-shrink:0;
+    border-radius:14px;
+    overflow:hidden;
+    margin:0;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    background:linear-gradient(135deg, var(--black), var(--black-soft));
+}
+.featured__cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  
+}
+
+.featured__initials{
+    position:relative;
+    z-index:2;
+    font-family:"Georgia",serif;
+    font-weight:700;
+    font-size:1.6rem;
+
+    color:var(--gold-light);
+}
+
+.featured__info{
+    display:flex;
+    flex-direction:column;
+    gap:.2rem;
+}
+
+.featured__title{
+    font-size:1.5rem;
+    font-weight:700;
+    margin:0;
+
+    color:var(--cream);
+}
+
+.featured__artist{
+    font-size:1rem;
+    margin:0;
+
+    color:rgba(241,234,215,.75);
+}
+
+.featured__year{
+    font-size:.9rem;
+    margin:0 0 1rem;
+
+    color:var(--text-muted);
+}
+
+.featured__link{
+    display:inline-flex;
+    align-items:center;
+    gap:.5rem;
+    width:fit-content;
+
+    font-weight:600;
+    font-size:.92rem;
+    text-decoration:none;
+    transition:.25s;
+
+    color:var(--gold);
+}
+
+.featured__link:hover{
+    color:var(--gold-light);
+    gap:.75rem;
+}
+
+
+/*Hero*/
+
+.albums-hero{
+    max-width:800px;
+    margin:0 auto;
+    padding:6rem 2rem 3rem;
+    text-align:center;
+
+    background:var(--black);
+}
+
+.albums-hero__tag{
+    letter-spacing:3px;
+    text-transform:uppercase;
+    font-weight:600;
+    font-size:.85rem;
+    margin-bottom:1rem;
+
+    color:var(--gold);
+}
+
+.albums-hero__title{
+    font-size:2.9rem;
+    margin-bottom:1.2rem;
+
+    color:var(--cream);
+}
+
+.albums-hero__subtitle{
+    line-height:1.8;
+    font-size:1.05rem;
+
+    color:var(--text-muted);
+}
+
+.albums-controls{
+    max-width:1200px;
+    margin:0 auto;
+    padding:0 2rem 3rem;
+
+    display:flex;
+    flex-direction:column;
+    gap:1.5rem;
+
+    background:var(--black);
+}
+
+.albums-search{
+    display:flex;
+    align-items:center;
+    gap:.8rem;
+    padding:.9rem 1.3rem;
+    border-radius:999px;
+    max-width:480px;
+
+    background:var(--green-dark);
+    border:1px solid rgba(213,169,79,.35);
+}
+
+.albums-search i{
+    color:var(--gold);
+}
+
+.albums-search input{
+    flex:1;
+    border:none;
+    outline:none;
+    background:none;
+    font:inherit;
+    font-size:.95rem;
+
+    color:var(--cream);
+}
+
+.albums-search input::placeholder{
+    color:rgba(241,234,215,.5);
+}
+
+.albums-genres{
+    display:flex;
+    flex-wrap:wrap;
+    gap:.8rem;
+}
+
+.albums-genre{
+    padding:.55rem 1.3rem;
+    border-radius:999px;
+    cursor:pointer;
+    font:inherit;
+    font-size:.88rem;
+    font-weight:600;
+    transition:.25s;
+
+    background:var(--green-dark);
+    color:var(--cream);
+    border:1px solid rgba(213,169,79,.35);
+}
+
+.albums-genre:hover{
+    background:var(--green-light);
+}
+
+.albums-genre.active{
+    background:var(--gold);
+    color:var(--black);
+    border-color:var(--gold);
+}
+
+.albums-secondary{
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    gap:1.5rem;
+}
+
+.albums-select{
+    display:flex;
+    flex-direction:column;
+    gap:.35rem;
+    font-size:.8rem;
+    font-weight:600;
+}
+
+.albums-select span{
+    color:var(--gold);
+}
+
+.albums-select select{
+    padding:.6rem .9rem;
+    border-radius:8px;
+    font:inherit;
+    font-size:.9rem;
+    cursor:pointer;
+
+    background:var(--green-dark);
+    color:var(--cream);
+    border:1px solid rgba(213,169,79,.35);
+}
+
+.albums-picks{
+    display:flex;
+    align-items:center;
+    gap:.6rem;
+    padding:.6rem 1.2rem;
+    border-radius:999px;
+    cursor:pointer;
+    font:inherit;
+    font-weight:600;
+    font-size:.9rem;
+    margin-left:auto;
+    transition:.25s;
+
+    background:transparent;
+    color:var(--gold);
+    border:2px solid var(--gold);
+}
+
+.albums-picks i{
+    color:var(--gold);
+    transition:.25s;
+}
+
+.albums-picks.active{
+    background:var(--gold);
+    color:var(--black);
+}
+
+.albums-picks.active i{
+    color:var(--black);
+    transform:scale(1.15);
+}
+
+.albums-picks__count{
+    min-width:20px;
+    height:20px;
+    padding:0 .35rem;
+    border-radius:999px;
+    font-size:.75rem;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    background:var(--gold);
+    color:var(--black);
+}
+
+.albums-picks.active .albums-picks__count{
+    background:var(--black);
+    color:var(--gold);
+}
+
+/*Grid*/
+.albums-grid{
+    max-width:1200px;
+    margin:0 auto;
+    padding:0 2rem 2rem;
+
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(230px,1fr));
+    gap:2rem;
+
+    background:var(--black);
+}
+
+.album-card{
+    position:relative;
+    border-radius:16px;
+    padding:1.5rem 1.5rem 1.8rem;
+    display:flex;
+    flex-direction:column;
+    transition:.3s;
+
+    background:var(--green-dark);
+    border:1px solid rgba(213,169,79,.35);
+    box-shadow:0 15px 30px rgba(0,0,0,.35);
+}
+.album-card img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    display: block;
+}
+
+.album-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 20px 40px rgba(0,0,0,.45);
+}
+
+.album-card.hide{
+    display:none;
+}
+
+.album-card__fav{
+    position:absolute;
+    top:1.2rem;
+    right:1.2rem;
+    border:none;
+    background:none;
+    cursor:pointer;
+    font-size:1.1rem;
+    z-index:2;
+    transition:.25s;
+
+    color:rgba(241,234,215,.55);
+}
+
+.album-card__fav:hover{
+    color:var(--gold-light);
+}
+
+.album-card__fav.active{
+    color:var(--gold);
+}
+.album-card__initials{
+    position:relative;
+    z-index:2;
+    font-family:"Georgia",serif;
+    font-weight:700;
+    font-size:1.6rem;
+
+    color:var(--gold-light);
+}
+
+.album-card__rank{
+    font-family:"Georgia",serif;
+    font-weight:700;
+    font-size:1.4rem;
+    margin-bottom:.4rem;
+
+    color:var(--gold);
+}
+
+.album-card__title{
+    font-size:1.15rem;
+    margin-bottom:.3rem;
+    line-height:1.3;
+
+    color:var(--cream);
+}
+
+.album-card__artist{
+    font-size:.88rem;
+    margin-bottom:.9rem;
+
+    color:rgba(241,234,215,.7);
+}
+
+.album-card__tag{
+    align-self:flex-start;
+    padding:.3rem .8rem;
+    border-radius:999px;
+    font-size:.75rem;
+    font-weight:700;
+    margin-bottom:1.2rem;
+
+    background:rgba(213,169,79,.15);
+    color:var(--gold-light);
+    border:1px solid rgba(213,169,79,.4);
+}
+
+.album-card__view{
+    margin-top:auto;
+    padding:.7rem;
+    border-radius:999px;
+    border:none;
+    cursor:pointer;
+    font:inherit;
+    font-weight:600;
+    font-size:.88rem;
+    transition:.3s;
+
+    background:var(--gold);
+    color:var(--black);
+}
+
+.album-card__view:hover{
+    background:var(--gold-light);
+    color:var(--black);
+}
+
+.albums-empty{
+    max-width:1200px;
+    margin:0 auto;
+    padding:0 2rem 4rem;
+    text-align:center;
+    font-size:.95rem;
+
+    color:var(--text-muted);
+}
+/*Tracks*/
+.tracks{
+    max-width:1000px;
+    margin:0 auto;
+    padding:5rem 2rem 7rem;
+
+    background:var(--black);
+}
+
+.tracks__header{
+    text-align:center;
+    margin-bottom:2.5rem;
+}
+
+.tracks__tag{
+    letter-spacing:3px;
+    text-transform:uppercase;
+    font-weight:600;
+    font-size:.8rem;
+    margin-bottom:.8rem;
+
+    color:var(--gold);
+}
+
+.tracks__title{
+    font-size:2.2rem;
+    margin-bottom:.8rem;
+
+    color:var(--cream);
+}
+
+.tracks__subtitle{
+    font-size:.92rem;
+
+    color:var(--text-muted);
+}
+
+.tracks__table-wrap{
+    overflow-x:auto;
+    border-radius:16px;
+
+    background:var(--green-dark);
+    border:1px solid rgba(213,169,79,.35);
+    box-shadow:0 15px 30px rgba(0,0,0,.35);
+}
+
+.tracks__table{
+    width:100%;
+    border-collapse:collapse;
+    min-width:520px;
+}
+
+.tracks__table th,
+.tracks__table td{
+    text-align:left;
+    padding:1rem 1.3rem;
+    font-size:.92rem;
+}
+
+.tracks__table th{
+    cursor:pointer;
+    font-weight:700;
+    white-space:nowrap;
+    user-select:none;
+
+    background:rgba(0,0,0,.2);
+    color:var(--gold-light);
+    border-bottom:1px solid rgba(213,169,79,.35);
+}
+
+.tracks__table th:hover{
+    color:var(--gold);
+}
+
+.tracks__table th i{
+    font-size:.7rem;
+    margin-left:.4rem;
+}
+
+.tracks__table td{
+    color:rgba(241,234,215,.9);
+    border-bottom:1px solid rgba(213,169,79,.12);
+}
+
+.tracks__table tr:last-child td{
+    border-bottom:none;
+}
+
+.tracks__table tr:hover td{
+    background:rgba(213,169,79,.06);
+}
+
+.tracks__table tr.hide{
+    display:none;
+}
+/*Modal*/
+.album-modal{
+    position:fixed;
+    inset:0;
+    z-index:2000;
+    display:none;
+    align-items:center;
+    justify-content:center;
+    padding:2rem;
+
+    background:rgba(8,11,9,.85);
+}
+
+.album-modal.show{
+    display:flex;
+}
+
+.album-modal__panel{
+    width:100%;
+    max-width:640px;
+    max-height:85vh;
+    overflow-y:auto;
+    border-radius:20px;
+    position:relative;
+    display:grid;
+    grid-template-columns:200px 1fr;
+    gap:2rem;
+    padding:2.5rem;
+
+    background:var(--green-dark);
+    border:1px solid rgba(213,169,79,.4);
+    box-shadow:0 25px 60px rgba(0,0,0,.5);
+}
+
+.album-modal__close{
+    position:absolute;
+    top:1.2rem;
+    right:1.4rem;
+    background:none;
+    border:none;
+    font-size:1.8rem;
+    cursor:pointer;
+    line-height:1;
+
+    color:var(--gold);
+}
+
+.album-modal__close:hover{
+    color:var(--gold-light);
+}
+
+.album-modal__cover{
+    position:relative;
+    width:100%;
+    aspect-ratio:1/1;
+    border-radius:14px;
+    overflow:hidden;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    height:fit-content;
+
+    background:linear-gradient(135deg, var(--black), var(--black-soft));
+}
+.album-modal__cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.album-modal__disc{
+    position:absolute;
+    right:-30%;
+    width:70%;
+    aspect-ratio:1/1;
+    border-radius:50%;
+
+    background:radial-gradient(circle at 35% 35%, var(--gold-light), var(--gold) 70%);
+    box-shadow:0 0 25px rgba(213,169,79,.35);
+}
+
+.album-modal__disc::after{
+    content:"";
+    position:absolute;
+    top:50%;
+    left:50%;
+    width:16%;
+    height:16%;
+    transform:translate(-50%,-50%);
+    border-radius:50%;
+
+    background:var(--black);
+}
+
+.album-modal__initials{
+    position:relative;
+    z-index:2;
+    font-family:"Georgia",serif;
+    font-weight:700;
+    font-size:1.6rem;
+
+    color:var(--gold-light);
+}
+
+.album-modal__tag{
+    display:inline-block;
+    padding:.3rem .9rem;
+    border-radius:999px;
+    font-size:.75rem;
+    font-weight:700;
+    margin-bottom:1rem;
+
+    background:rgba(213,169,79,.15);
+    color:var(--gold-light);
+    border:1px solid rgba(213,169,79,.4);
+}
+
+.album-modal__title{
+    font-size:1.6rem;
+    margin-bottom:.4rem;
+
+    color:var(--cream);
+}
+
+.album-modal__artist{
+    font-size:.92rem;
+    margin-bottom:1.2rem;
+
+    color:rgba(241,234,215,.7);
+}
+
+.album-modal__blurb{
+    font-size:.92rem;
+    line-height:1.75;
+    margin-bottom:1.6rem;
+
+    color:rgba(241,234,215,.85);
+}
+
+.album-modal__accordion{
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:.9rem 1.1rem;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    font:inherit;
+    font-weight:600;
+    font-size:.92rem;
+
+    background:rgba(0,0,0,.2);
+    color:var(--gold-light);
+}
+
+.album-modal__accordion:hover{
+    background:rgba(0,0,0,.3);
+}
+
+.album-modal__accordion i{
+    transition:.3s;
+    color:var(--gold);
+}
+
+.album-modal__accordion.open i{
+    transform:rotate(45deg);
+}
+
+.album-modal__tracklist{
+    max-height:0;
+    overflow:hidden;
+    transition:max-height .35s ease;
+    padding-left:1.3rem;
+}
+
+.album-modal__tracklist.open{
+    max-height:400px;
+    padding-top:.9rem;
+}
+
+.album-modal__tracklist li{
+    padding:.4rem 0;
+    font-size:.9rem;
+
+    color:rgba(241,234,215,.85);
+    border-bottom:1px dashed rgba(213,169,79,.2);
+}
+@media(max-width:600px){
+
+    .featured__card{
+        padding:1.8rem;
+    }
+
+    .featured__headline{
+        font-size:1.6rem;
+    }
+
+    .featured__album{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:1.2rem;
+    }
+        .albums-hero__title{
+        font-size:2.1rem;
+    }
+
+
+}
+/*Responsive*/
+
+@media(max-width:900px){
+
+    .albums-picks{
+        margin-left:0;
+    }
+
+    .album-modal__panel{
+        grid-template-columns:1fr;
+    }
+
+    .album-modal__cover{
+        max-width:200px;
+        margin:0 auto;
+    }
+
+    .footer{
+        flex-direction:column;
+        text-align:center;
+        gap:35px;
+    }
+
+    .footer-right{
+        align-items:center;
+    }
+
+}
+
+@media(max-width:600px){
+
+    .albums-hero__title{
+        font-size:2.1rem;
+    }
+
+}
+/* Mun Yu whoarewe page css*/
+/* Who We Are section*/
+.team {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 7rem 2rem 2rem;
+}
+
+.team__header {
+    max-width: 700px;
+    margin: 0 auto 3.5rem;
+    text-align: center;
+}
+
+.team__subtitle {
+    color: var(--text-muted);
+    line-height: 1.8;
+    font-size: 1.05rem;
+}
+
+.team__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.8rem;
+}
+
+.team-card {
+    background: var(--green-dark);
+    border: 1px solid rgba(213,169,79,.3);
+    border-radius: 18px;
+    padding: 1.6rem;
+    text-align: center;
+    transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(0,0,0,.4);
+    border-color: var(--gold);
+}
+
+.team-card__photo {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 14px;
+    overflow: hidden;
+    margin: 0 0 1.2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: linear-gradient(150deg, var(--black-soft), var(--green-accent));
+}
+
+.team-card__photo img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.team-card__placeholder {
+    position: relative;
+    font-size: 2.4rem;
+    color: rgba(241,234,215,.35);
+}
+
+.team-card__name {
+    font-size: 1.15rem;
+    color: var(--cream);
+    margin-bottom: .2rem;
+}
+
+.team-card__role {
+    font-size: .82rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: .9rem;
+}
+
+.team-card__desc {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: rgba(241,234,215,.75);
+    margin: 0;
+}
+
+/* Purpose Section*/
+.zv-purpose {
+    max-width: 800px;
+    margin: 0 auto 7rem;
+    padding: 3.5rem 2.5rem;
+    text-align: center;
+
+    background: linear-gradient(150deg, var(--green-dark), var(--black));
+    border: 1px solid var(--gold);
+    border-radius: 22px;
+    box-shadow: 0 20px 50px rgba(0,0,0,.4);
+    
+}
+
+.zv-purpose__title {
+    font-size: 2.3rem;
+    color: var(--cream);
+    margin: .6rem 0 1.2rem;
+}
+
+.zv-purpose__text {
+    color: rgba(241,234,215,.85);
+    line-height: 1.85;
+    font-size: 1.3rem;
+}
+.zv-purpose__details {
+    margin-top: 2.5rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(213, 169, 79, 0.25);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    text-align: left;
+}
+
+.purpose__item {
+    background: rgba(8, 11, 9, 0.4);
+    padding: 1.25rem 1.5rem;
+    border-radius: 12px;
+    border: 1px solid rgba(213, 169, 79, 0.15);
+}
+
+.zv-purpose__subtitle {
+    font-size: 2rem;
+    color: var(--gold);
+    margin-bottom: 0.5rem;
+}
+
+.zv-purpose__subtext {
+    color: rgba(241, 234, 215, 0.8);
+    font-size: 1.3rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/*Responsive*/
+@media (max-width: 900px) {
+
+    .team__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer__container{
+    grid-template-columns:1fr;
+    text-align:center;
+    gap:35px;
+    }
+
+    .footer__left{
+    justify-content:center;
+    }
+
+    .footer__right{
+    align-items:center;
+    }
+
+    .footer__social{
+    justify-content:center;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .team__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .zv-purpose__title {
+        font-size: 1.7rem;
+    }
+
+}
+@media (max-width: 768px) {
+    .zv-purpose__details {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+    }
+}
+
