@@ -1,94 +1,102 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>History of Music</title>
-
+ 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
+ 
 <style>
-:root {
-    --black: #080b09;
-    --black-soft: #101512;
-    --green-dark: #12251c;
-    --gold: #d5a94f;
-    --gold-light: #e5c979;
-    --cream: #f1ead7;
-}
-
-body {
-    background-color: var(--black);
-    color: var(--cream);
+/* ============================================
+   Music Vault page styles
+   All custom rules are prefixed "mv-" and/or
+   scoped under .mv-page so they can be merged
+   into a shared main.css without colliding with
+   teammates' rules.
+   ============================================ */
+ 
+.mv-page {
+    --mv-black: #080b09;
+    --mv-black-soft: #101512;
+    --mv-green-dark: #12251c;
+    --mv-gold: #d5a94f;
+    --mv-gold-light: #e5c979;
+    --mv-cream: #f1ead7;
+ 
+    background-color: var(--mv-black);
+    color: var(--mv-cream);
     overflow-x: hidden;
 }
-
-h1, h2, h3, h4, h5 {
+ 
+.mv-page h1, .mv-page h2, .mv-page h3, .mv-page h4, .mv-page h5 {
     font-family: Georgia, "Times New Roman", serif;
 }
-
-.navbar-custom {
-    background-color: var(--black);
-    border-bottom: 1px solid var(--gold);
+ 
+.mv-navbar {
+    background-color: var(--mv-black);
+    border-bottom: 1px solid var(--mv-gold);
 }
-
-.brand-logo {
+ 
+.mv-brand-logo {
     color: #f4f0ea !important;
     font-family: Georgia, serif;
     font-size: 1.5rem;
 }
-
-.logo-symbol { color: var(--gold); }
-
-.logo-img {
+ 
+.mv-logo-symbol { color: var(--mv-gold); }
+ 
+.mv-logo-img {
     width: 45px;
     height: 45px;
     border-radius: 4px;
     object-fit: cover;
 }
-
-.nav-link { color: #f4f0ea !important; margin-left: 15px; }
-.nav-link:hover, .nav-link.active { color: var(--gold) !important; }
-
-.dropdown-menu {
-    background-color: var(--black-soft);
+ 
+.mv-nav-link { color: #f4f0ea !important; margin-left: 15px; }
+.mv-nav-link:hover, .mv-nav-link.active { color: var(--mv-gold) !important; }
+ 
+.mv-dropdown-menu {
+    background-color: var(--mv-black-soft);
     border: 1px solid rgba(213, 169, 79, 0.3);
 }
-
-.dropdown-item { color: var(--cream); }
-.dropdown-item:hover, .dropdown-item:focus {
-    background-color: var(--green-dark);
-    color: var(--gold-light);
+ 
+.mv-dropdown-item { color: var(--mv-cream); }
+.mv-dropdown-item:hover, .mv-dropdown-item:focus {
+    background-color: var(--mv-green-dark);
+    color: var(--mv-gold-light);
 }
-
-.year-carousel-section {
-    background-color: var(--black-soft);
+ 
+.mv-year-carousel-section {
+    background-color: var(--mv-black-soft);
     padding: 0;
     margin: 0;
 }
-
-.year-carousel {
+ 
+.mv-year-carousel {
     width: 100vw;
     margin: 0;
     padding: 0;
     border: none;
     border-radius: 0;
-    background: var(--green-dark);
+    background: var(--mv-green-dark);
 }
-
-.carousel-item {
+ 
+/* Scoped so this doesn't override every .carousel-item on the shared site */
+.mv-year-carousel .carousel-item {
     min-height: 100vh;
     text-align: center;
     position: relative;
     display: none;
 }
-
-.carousel-item.active {
+ 
+.mv-year-carousel .carousel-item.active {
     display: block;
-    animation: fadeSlideIn 0.8s ease forwards;
+    animation: mv-fadeSlideIn 0.8s ease forwards;
 }
-
-@keyframes fadeSlideIn {
+ 
+@keyframes mv-fadeSlideIn {
     from {
         opacity: 0;
         transform: translateY(20px);
@@ -98,284 +106,785 @@ h1, h2, h3, h4, h5 {
         transform: translateY(0);
     }
 }
-
-.slide-content {
+ 
+.mv-slide-content {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 70%;
 }
-
-.year-slide-year {
+ 
+.mv-year-slide-year {
     font-size: clamp(2.4rem, 5vw, 3.5rem);
-    color: var(--gold);
+    color: var(--mv-gold);
     margin-bottom: 0.5rem;
     font-family: Georgia, serif;
 }
-
-.year-slide-era {
-    color: var(--gold-light);
+ 
+.mv-year-slide-era {
+    color: var(--mv-gold-light);
     font-size: 0.8rem;
     letter-spacing: 2px;
     text-transform: uppercase;
     margin-bottom: 1rem;
 }
-
-.year-slide-text {
-    color: var(--cream);
+ 
+.mv-year-slide-text {
+    color: var(--mv-cream);
     line-height: 1.8;
     max-width: 600px;
     margin: 0 auto;
 }
-
-.year-carousel .carousel-control-prev,
-.year-carousel .carousel-control-next {
+ 
+.mv-year-carousel .carousel-control-prev,
+.mv-year-carousel .carousel-control-next {
     width: 60px;
     height: 60px;
     top: 50%;
     transform: translateY(-50%);
     background-color: transparent;
-    border: 1px solid var(--gold);
+    border: 1px solid var(--mv-gold);
     border-radius: 50%;
     opacity: 0.85;
     transition: background-color 0.3s ease;
 }
-
-.year-carousel .carousel-control-prev { left: 20px; }
-.year-carousel .carousel-control-next { right: 20px; }
-
-.year-carousel .carousel-control-prev:hover,
-.year-carousel .carousel-control-next:hover {
-    background-color: var(--gold);
+ 
+.mv-year-carousel .carousel-control-prev { left: 20px; }
+.mv-year-carousel .carousel-control-next { right: 20px; }
+ 
+.mv-year-carousel .carousel-control-prev:hover,
+.mv-year-carousel .carousel-control-next:hover {
+    background-color: var(--mv-gold);
     opacity: 1;
 }
-
-.year-carousel .carousel-control-prev:hover .carousel-control-prev-icon,
-.year-carousel .carousel-control-next:hover .carousel-control-next-icon {
+ 
+.mv-year-carousel .carousel-control-prev:hover .carousel-control-prev-icon,
+.mv-year-carousel .carousel-control-next:hover .carousel-control-next-icon {
     filter: invert(0) brightness(0);
 }
-
-.year-carousel .carousel-indicators [data-bs-target] {
-    background-color: var(--gold);
+ 
+.mv-year-carousel .carousel-indicators [data-bs-target] {
+    background-color: var(--mv-gold);
     width: 8px;
     height: 8px;
     border-radius: 50%;
     opacity: 0.4;
 }
-
-.year-carousel .carousel-indicators .active { opacity: 1; }
-
-.purpose-section { background-color: var(--black-soft); }
-
-.section-title { font-size: clamp(2rem, 4vw, 3rem); }
-
-.site-footer {
+ 
+.mv-year-carousel .carousel-indicators .active { opacity: 1; }
+ 
+/* ============================================
+   Evolution of Sound
+   Text-only flow of instruments. Each item is
+   clickable and jumps the instrument carousel
+   below straight to that slide.
+   ============================================ */
+ 
+.mv-evolution-section {
+    background-color: var(--mv-black);
+    padding: 50px 20px;
+}
+ 
+.mv-evolution-card {
+    max-width: 950px;
+    margin: 0 auto;
+    background-color: var(--mv-green-dark);
+    background-image:
+        linear-gradient(rgba(18, 37, 28, 0.88), rgba(18, 37, 28, 0.88)),
+        url('../docs/HeaderTimeline.jpg');
+    background-size: cover;
+    background-position: center;
+    border: 1px solid var(--mv-gold);
+    border-radius: 14px;
+    padding: 40px 30px;
+}
+ 
+.mv-evolution-card h3 {
+    text-align: center;
+    color: var(--mv-gold);
+    font-size: clamp(1.3rem, 3vw, 1.8rem);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+ 
+.mv-evolution-flow {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+ 
+.mv-evolution-item {
+    color: var(--mv-gold-light);
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+    padding: 8px 16px;
+    border: 1px solid var(--mv-gold);
+    border-radius: 20px;
+    background-color: rgba(213, 169, 79, 0.06);
+    white-space: nowrap;
+    cursor: pointer;
+    transition: background-color 0.25s ease, color 0.25s ease, transform 0.25s ease;
+}
+ 
+.mv-evolution-item:hover {
+    background-color: rgba(213, 169, 79, 0.15);
+    transform: translateY(-2px);
+}
+ 
+.mv-evolution-item.active {
+    background-color: var(--mv-gold);
+    color: var(--mv-black);
+    font-weight: 600;
+}
+ 
+.mv-evolution-arrow {
+    color: var(--mv-gold);
+    opacity: 0.6;
+    font-size: 1rem;
+}
+ 
+/* ============================================
+   Instrument Carousel
+   Half text / half photo, auto-transitions
+   every 7 seconds. Scoped under
+   .mv-instrument-carousel so nothing here
+   touches the era carousel or any other
+   carousel on the shared site.
+   ============================================ */
+ 
+.mv-instrument-carousel-section {
+    background-color: var(--mv-black);
+    padding: 0;
+    margin: 0;
+    border-bottom: 1px solid rgba(213, 169, 79, 0.3);
+}
+ 
+.mv-instrument-carousel {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 70px 60px;
+    position: relative;
+}
+ 
+.mv-instrument-carousel .carousel-item {
+    display: none;
+}
+ 
+.mv-instrument-carousel .carousel-item.active {
+    display: block;
+    animation: mv-fadeSlideIn 0.8s ease forwards;
+}
+ 
+.mv-instrument-slide {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    min-height: 380px;
+}
+ 
+.mv-instrument-text {
+    flex: 1;
+}
+ 
+.mv-instrument-era-label {
+    color: var(--mv-gold-light);
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+ 
+.mv-instrument-title {
+    color: var(--mv-gold);
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    margin-bottom: 16px;
+}
+ 
+.mv-instrument-desc {
+    color: var(--mv-cream);
+    line-height: 1.8;
+    font-size: 0.95rem;
+    opacity: 0.9;
+}
+ 
+.mv-instrument-photo {
+    flex: 1;
+}
+ 
+.mv-instrument-photo img {
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 1px solid var(--mv-gold);
+    display: block;
+}
+ 
+.mv-instrument-carousel .carousel-control-prev,
+.mv-instrument-carousel .carousel-control-next {
+    width: 46px;
+    height: 46px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: 1px solid var(--mv-gold);
+    border-radius: 50%;
+    opacity: 0.85;
+    transition: background-color 0.3s ease;
+}
+ 
+.mv-instrument-carousel .carousel-control-prev { left: -40px; }
+.mv-instrument-carousel .carousel-control-next { right: -40px; }
+ 
+.mv-instrument-carousel .carousel-control-prev:hover,
+.mv-instrument-carousel .carousel-control-next:hover {
+    background-color: var(--mv-gold);
+    opacity: 1;
+}
+ 
+.mv-instrument-carousel .carousel-control-prev:hover .carousel-control-prev-icon,
+.mv-instrument-carousel .carousel-control-next:hover .carousel-control-next-icon {
+    filter: invert(0) brightness(0);
+}
+ 
+@media (max-width: 900px) {
+    .mv-instrument-carousel { padding: 60px 40px; }
+    .mv-instrument-slide { flex-direction: column; min-height: auto; text-align: center; }
+    .mv-instrument-photo img { height: 240px; }
+    .mv-instrument-carousel .carousel-control-prev { left: -18px; }
+    .mv-instrument-carousel .carousel-control-next { right: -18px; }
+}
+ 
+/* ============================================
+   Life Stories
+   One notable figure per era, with a photo slot.
+   Sits below the instrument carousel and above
+   the "Music Through the Decades" section.
+   ============================================ */
+ 
+.mv-stories-section {
+    background-color: var(--mv-black-soft);
+    padding: 80px 20px;
+}
+ 
+.mv-stories-section h2 {
+    text-align: center;
+    color: var(--mv-gold);
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    margin-bottom: 10px;
+}
+ 
+.mv-stories-subtitle {
+    text-align: center;
+    color: var(--mv-cream);
+    opacity: 0.7;
+    font-size: 0.95rem;
+    margin-bottom: 50px;
+}
+ 
+.mv-stories-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+ 
+.mv-story-card {
+    display: flex;
+    gap: 20px;
+    background-color: var(--mv-green-dark);
+    border: 1px solid rgba(213, 169, 79, 0.25);
+    border-radius: 12px;
+    padding: 24px;
+}
+ 
+.mv-story-photo {
+    flex-shrink: 0;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid var(--mv-gold);
+    background-color: var(--mv-black);
+}
+ 
+.mv-story-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+ 
+.mv-story-info {
+    flex: 1;
+}
+ 
+.mv-story-era-label {
+    color: var(--mv-gold-light);
+    font-size: 0.7rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+ 
+.mv-story-name {
+    color: var(--mv-gold);
+    font-size: 1.15rem;
+    margin-bottom: 6px;
+}
+ 
+.mv-story-years {
+    color: var(--mv-cream);
+    opacity: 0.6;
+    font-size: 0.75rem;
+    margin-bottom: 10px;
+}
+ 
+.mv-story-bio {
+    color: var(--mv-cream);
+    line-height: 1.7;
+    font-size: 0.85rem;
+    opacity: 0.9;
+    margin: 0;
+}
+ 
+@media (max-width: 900px) {
+    .mv-stories-grid { grid-template-columns: 1fr; }
+}
+ 
+@media (max-width: 480px) {
+    .mv-story-card { flex-direction: column; align-items: center; text-align: center; }
+}
+ 
+.mv-purpose-section { background-color: var(--mv-black-soft); }
+ 
+.mv-section-title { font-size: clamp(2rem, 4vw, 3rem); }
+ 
+.mv-site-footer {
     background-color: #121212 !important;
     color: #f8f9fa;
     border-top: 1px solid rgba(229, 185, 103, 0.3) !important;
 }
-
-.footer-logo {
+ 
+.mv-footer-logo {
     height: 65px;
     width: 65px;
     object-fit: cover;
     border-radius: 4px;
 }
-
-.icon-grid {
+ 
+.mv-icon-grid {
     display: grid;
     grid-template-columns: repeat(3, auto);
     gap: 12px;
     font-size: 1.25rem;
 }
-
-.site-footer a { color: var(--cream); transition: opacity 0.2s ease-in-out, color 0.2s ease-in-out; }
-.site-footer a:hover { opacity: 0.85; color: #fff !important; }
-
+ 
+.mv-site-footer a { color: var(--mv-cream); transition: opacity 0.2s ease-in-out, color 0.2s ease-in-out; }
+.mv-site-footer a:hover { opacity: 0.85; color: #fff !important; }
+ 
 @media (max-width: 768px) {
-    .slide-content { width: 90%; }
-    .year-carousel .carousel-control-prev { left: 5px; }
-    .year-carousel .carousel-control-next { right: 5px; }
+    .mv-slide-content { width: 90%; }
+    .mv-year-carousel .carousel-control-prev { left: 5px; }
+    .mv-year-carousel .carousel-control-next { right: 5px; }
 }
-
+ 
 @media (max-width: 768px) {
-    .carousel-control-prev,
-    .carousel-control-next {
+    .mv-year-carousel .carousel-control-prev,
+    .mv-year-carousel .carousel-control-next {
         display: none !important;
     }
 }
-
+ 
 </style>
 </head>
-<body>
-
+<body class="mv-page">
+ 
 <header class="site-header sticky-top">
-    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom container-fluid px-4 px-lg-5" aria-label="Main Navigation">
+    <nav class="navbar navbar-expand-lg navbar-dark mv-navbar container-fluid px-4 px-lg-5" aria-label="Main Navigation">
         
-        <a class="navbar-brand brand-logo d-flex align-items-center" href="index.html">
-            <img src="../docs/Logo.jpeg" alt="Music Vault Logo" class="logo-img me-2">
-            <span class="logo-symbol me-2" aria-hidden="true">♪</span>
+        <a class="navbar-brand mv-brand-logo d-flex align-items-center" href="index.html">
+            <img src="../docs/Logo.jpeg" alt="Music Vault Logo" class="mv-logo-img me-2">
+            <span class="mv-logo-symbol me-2" aria-hidden="true">♪</span>
             Music Vault
         </a>
-
+ 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation menu">
             <span class="navbar-toggler-icon"></span>
         </button>
-
+ 
         <section class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav me-auto ms-lg-4 mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    <a class="nav-link mv-nav-link active" aria-current="page" href="index.html">Home</a>
                 </li>
             </ul>
-
+ 
             <ul class="navbar-nav gap-2 gap-lg-4">
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link mv-nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Discover
                     </a>
-                    <ul class="dropdown-menu dropdown-menu-dark shadow-sm">
-                        <li><a class="dropdown-item" href="./pages/About%20Music.html">About Music</a></li>
-                        <li><a class="dropdown-item" href="#">Anatomy of Sound</a></li>
+                    <ul class="dropdown-menu dropdown-menu-dark mv-dropdown-menu shadow-sm">
+                        <li><a class="dropdown-item mv-dropdown-item" href="./pages/About%20Music.html">About Music</a></li>
+                        <li><a class="dropdown-item mv-dropdown-item" href="#">Anatomy of Sound</a></li>
                     </ul>
                 </li>
-
+ 
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link mv-nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Genres
                     </a>
-                    <ul class="dropdown-menu dropdown-menu-dark shadow-sm">
-                        <li><a class="dropdown-item" href="./pages/genres.html">All Genres</a></li>
-                        <li><a class="dropdown-item" href="#">Mood Mixer</a></li>
+                    <ul class="dropdown-menu dropdown-menu-dark mv-dropdown-menu shadow-sm">
+                        <li><a class="dropdown-item mv-dropdown-item" href="./pages/genres.html">All Genres</a></li>
+                        <li><a class="dropdown-item mv-dropdown-item" href="#">Mood Mixer</a></li>
                     </ul>
                 </li>
-
+ 
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link mv-nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Community
                     </a>
-                    <ul class="dropdown-menu dropdown-menu-dark shadow-sm">
-                        <li><a class="dropdown-item" href="#">Featured Audio</a></li>
-                        <li><a class="dropdown-item" href="#">Events</a></li>
+                    <ul class="dropdown-menu dropdown-menu-dark mv-dropdown-menu shadow-sm">
+                        <li><a class="dropdown-item mv-dropdown-item" href="#">Featured Audio</a></li>
+                        <li><a class="dropdown-item mv-dropdown-item" href="#">Events</a></li>
                     </ul>
                 </li>
             </ul>
         </section>
-
+ 
     </nav>
 </header>
-
-<section class="year-carousel-section">
-  <article id="yearCarousel" class="carousel year-carousel" data-bs-ride="carousel" data-bs-interval="4000" data-bs-wrap="true">
-
+ 
+<section class="mv-year-carousel-section">
+  <article id="mvYearCarousel" class="carousel mv-year-carousel" data-bs-ride="carousel" data-bs-interval="4000" data-bs-wrap="true">
+ 
     <section class="carousel-inner">
-
+ 
       <section class="carousel-item active" style="background-image: url('../docs/medieval.png'); background-size: cover; background-position: center;">
-        <section class="slide-content">
-          <p class="year-slide-year">Medieval Era</p>
-          <p class="year-slide-era">c. 500–1400</p>
-          <p class="year-slide-text">The Medieval Era marked the beginning of written Western music. Most music was created for churches and consisted of simple vocal chants, although instruments gradually became more common. Music during this period focused on religious worship and storytelling.</p>
+        <section class="mv-slide-content">
+          <p class="mv-year-slide-year">Medieval Era</p>
+          <p class="mv-year-slide-era">c. 500–1400</p>
+          <p class="mv-year-slide-text">The Medieval Era marked the beginning of written Western music. Most music was created for churches and consisted of simple vocal chants, although instruments gradually became more common. Music during this period focused on religious worship and storytelling.</p>
         </section>
       </section>
-
+ 
       <section class="carousel-item" style="background-image: url('../docs/Renaissance.png'); background-size: cover; background-position: center;">
-        <section class="slide-content">
-          <p class="year-slide-year">Renaissance Era</p>
-          <p class="year-slide-era">c. 1400–1600</p>
-          <p class="year-slide-text">The Renaissance Era brought greater creativity and harmony to music. Composers wrote more complex pieces with multiple vocal parts, and instruments became increasingly important. Music expanded beyond churches into royal courts and public celebrations.</p>
+        <section class="mv-slide-content">
+          <p class="mv-year-slide-year">Renaissance Era</p>
+          <p class="mv-year-slide-era">c. 1400–1600</p>
+          <p class="mv-year-slide-text">The Renaissance Era brought greater creativity and harmony to music. Composers wrote more complex pieces with multiple vocal parts, and instruments became increasingly important. Music expanded beyond churches into royal courts and public celebrations.</p>
         </section>
       </section>
-
+ 
       <section class="carousel-item" style="background-image: url('../docs/barouqe.png'); background-size: cover; background-position: center;">
-        <section class="slide-content">
-          <p class="year-slide-year">Baroque Era</p>
-          <p class="year-slide-era">c. 1600–1750</p>
-          <p class="year-slide-text">The Baroque Era was known for its dramatic style and rich ornamentation. This period saw the birth of opera, concerto, and many orchestral forms. Famous composers such as Johann Sebastian Bach and George Frideric Handel created works that are still widely performed today.</p>
+        <section class="mv-slide-content">
+          <p class="mv-year-slide-year">Baroque Era</p>
+          <p class="mv-year-slide-era">c. 1600–1750</p>
+          <p class="mv-year-slide-text">The Baroque Era was known for its dramatic style and rich ornamentation. This period saw the birth of opera, concerto, and many orchestral forms. Famous composers such as Johann Sebastian Bach and George Frideric Handel created works that are still widely performed today.</p>
         </section>
       </section>
-
+ 
       <section class="carousel-item" style="background-image: url('../docs/Classical.png'); background-size: cover; background-position: center;">
-        <section class="slide-content">
-          <p class="year-slide-year">Classical Era</p>
-          <p class="year-slide-era">c. 1750–1820</p>
-          <p class="year-slide-text">The Classical Era emphasized balance, clarity, and structure. Music became more elegant and easier to follow, with the piano becoming a popular instrument. Composers like Wolfgang Amadeus Mozart and Joseph Haydn shaped many of the musical forms still used today.</p>
+        <section class="mv-slide-content">
+          <p class="mv-year-slide-year">Classical Era</p>
+          <p class="mv-year-slide-era">c. 1750–1820</p>
+          <p class="mv-year-slide-text">The Classical Era emphasized balance, clarity, and structure. Music became more elegant and easier to follow, with the piano becoming a popular instrument. Composers like Wolfgang Amadeus Mozart and Joseph Haydn shaped many of the musical forms still used today.</p>
         </section>
       </section>
-
+ 
       <section class="carousel-item" style="background-image: url('../docs/Romanric.png'); background-size: cover; background-position: center;">
-        <section class="slide-content">
-          <p class="year-slide-year">Romantic Era</p>
-          <p class="year-slide-era">c. 1820–1910</p>
-          <p class="year-slide-text">The Romantic Era focused on emotion, imagination, and personal expression. Composers created larger orchestras and more expressive melodies to tell stories and convey powerful feelings. Music became more dramatic and emotionally rich.</p>
+        <section class="mv-slide-content">
+          <p class="mv-year-slide-year">Romantic Era</p>
+          <p class="mv-year-slide-era">c. 1820–1910</p>
+          <p class="mv-year-slide-text">The Romantic Era focused on emotion, imagination, and personal expression. Composers created larger orchestras and more expressive melodies to tell stories and convey powerful feelings. Music became more dramatic and emotionally rich.</p>
         </section>
       </section>
-
-
-
+ 
+ 
+ 
       <section class="carousel-item" style="background-image: url('../docs/modern.png'); background-size: cover; background-position: center;">
-        <section class="slide-content">
-          <p class="year-slide-year">Modern / 20th Century Era</p>
-          <p class="year-slide-era">c. 1900–2000</p>
-          <p class="year-slide-text">The Modern Era introduced many new styles as technology and culture evolved. Genres such as jazz, blues, rock and roll, pop, country, hip-hop, and electronic music emerged and spread worldwide through radio, records, television, and later the internet.</p>
+        <section class="mv-slide-content">
+          <p class="mv-year-slide-year">Modern / 20th Century Era</p>
+          <p class="mv-year-slide-era">c. 1900–2000</p>
+          <p class="mv-year-slide-text">The Modern Era introduced many new styles as technology and culture evolved. Genres such as jazz, blues, rock and roll, pop, country, hip-hop, and electronic music emerged and spread worldwide through radio, records, television, and later the internet.</p>
         </section>
       </section>
-
+ 
       <section class="carousel-item" style="background-image: url('../docs/contemporary.png'); background-size: cover; background-position: center;">
-        <section class="slide-content">
-          <p class="year-slide-year">Contemporary Era</p>
-          <p class="year-slide-era">c. 2000–Present</p>
-            <p class="year-slide-text">The Contemporary Era is defined by digital technology and global connectivity. Music is created, shared, and streamed online, allowing artists to reach worldwide audiences instantly. Genres continue to blend, and platforms such as streaming services and social media have transformed how people discover and enjoy music.</p>
+        <section class="mv-slide-content">
+          <p class="mv-year-slide-year">Contemporary Era</p>
+          <p class="mv-year-slide-era">c. 2000–Present</p>
+            <p class="mv-year-slide-text">The Contemporary Era is defined by digital technology and global connectivity. Music is created, shared, and streamed online, allowing artists to reach worldwide audiences instantly. Genres continue to blend, and platforms such as streaming services and social media have transformed how people discover and enjoy music.</p>
             </section>
       </section>
-
-
+ 
+ 
     </section>
-
-    <button class="carousel-control-prev" type="button" data-bs-target="#yearCarousel" data-bs-slide="prev">
+ 
+    <button class="carousel-control-prev" type="button" data-bs-target="#mvYearCarousel" data-bs-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Previous</span>
     </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#yearCarousel" data-bs-slide="next">
+    <button class="carousel-control-next" type="button" data-bs-target="#mvYearCarousel" data-bs-slide="next">
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Next</span>
     </button>
-
+ 
   </article>
 </section>
-
-<section class="purpose-section py-5">
+ 
+<!-- EVOLUTION OF SOUND: text-only flow, click an instrument to jump the carousel below to it -->
+<section class="mv-evolution-section">
+  <section class="mv-evolution-card">
+    <h3>The Evolution of Sound</h3>
+    <nav class="mv-evolution-flow" aria-label="Jump to instrument">
+      <button class="mv-evolution-item active" data-instrument-slide="0">Lute</button>
+      <span class="mv-evolution-arrow">&#8594;</span>
+      <button class="mv-evolution-item" data-instrument-slide="1">Harpsichord</button>
+      <span class="mv-evolution-arrow">&#8594;</span>
+      <button class="mv-evolution-item" data-instrument-slide="2">Piano</button>
+      <span class="mv-evolution-arrow">&#8594;</span>
+      <button class="mv-evolution-item" data-instrument-slide="3">Violin</button>
+      <span class="mv-evolution-arrow">&#8594;</span>
+      <button class="mv-evolution-item" data-instrument-slide="4">Electric Guitar</button>
+      <span class="mv-evolution-arrow">&#8594;</span>
+      <button class="mv-evolution-item" data-instrument-slide="5">Synthesizer</button>
+    </nav>
+  </section>
+</section>
+ 
+<!-- INSTRUMENT CAROUSEL: half text / half photo, auto-transitions every 7s -->
+<section class="mv-instrument-carousel-section">
+  <article id="mvInstrumentCarousel" class="carousel mv-instrument-carousel" data-bs-ride="carousel" data-bs-interval="7000" data-bs-wrap="true">
+ 
+    <section class="carousel-inner">
+ 
+      <section class="carousel-item active">
+        <section class="mv-instrument-slide">
+          <section class="mv-instrument-text">
+            <p class="mv-instrument-era-label">Medieval &amp; Renaissance</p>
+            <h3 class="mv-instrument-title">The Lute</h3>
+            <p class="mv-instrument-desc">A pear-shaped, plucked string instrument, the lute was the go-to companion for accompanying songs and courtly dances for centuries before the guitar took its place.</p>
+          </section>
+          <section class="mv-instrument-photo">
+            <img src="../docs/lute.png" alt="A lute, a pear-shaped plucked string instrument">
+          </section>
+        </section>
+      </section>
+ 
+      <section class="carousel-item">
+        <section class="mv-instrument-slide">
+          <section class="mv-instrument-text">
+            <p class="mv-instrument-era-label">Baroque</p>
+            <h3 class="mv-instrument-title">The Harpsichord</h3>
+            <p class="mv-instrument-desc">Plucking its strings rather than striking them, the harpsichord defined the crisp, ornamented sound of Baroque music, laying the groundwork for the piano that followed.</p>
+          </section>
+          <section class="mv-instrument-photo">
+            <img src="../docs/Harpsichord.png" alt="A harpsichord keyboard instrument">
+          </section>
+        </section>
+      </section>
+ 
+      <section class="carousel-item">
+        <section class="mv-instrument-slide">
+          <section class="mv-instrument-text">
+            <p class="mv-instrument-era-label">Classical</p>
+            <h3 class="mv-instrument-title">The Piano</h3>
+            <p class="mv-instrument-desc">Capable of both soft and loud dynamics, the piano's expressive range made it the star instrument of the Classical era and remains central to music today.</p>
+          </section>
+          <section class="mv-instrument-photo">
+            <img src="../docs/piano.png" alt="A grand piano">
+          </section>
+        </section>
+      </section>
+ 
+      <section class="carousel-item">
+        <section class="mv-instrument-slide">
+          <section class="mv-instrument-text">
+            <p class="mv-instrument-era-label">Romantic</p>
+            <h3 class="mv-instrument-title">The Violin</h3>
+            <p class="mv-instrument-desc">Front and center in Romantic orchestras, the violin carried the soaring, emotional melodies composers of the era were known for.</p>
+          </section>
+          <section class="mv-instrument-photo">
+            <img src="../docs/violin.png" alt="A violin">
+          </section>
+        </section>
+      </section>
+ 
+      <section class="carousel-item">
+        <section class="mv-instrument-slide">
+          <section class="mv-instrument-text">
+            <p class="mv-instrument-era-label">Modern / 20th Century</p>
+            <h3 class="mv-instrument-title">The Electric Guitar</h3>
+            <p class="mv-instrument-desc">Amplified and endlessly adaptable, the electric guitar powered the rise of rock and roll and shaped nearly every genre that followed it.</p>
+          </section>
+          <section class="mv-instrument-photo">
+            <img src="../docs/elecguitar.png" alt="An electric guitar">
+          </section>
+        </section>
+      </section>
+ 
+      <section class="carousel-item">
+        <section class="mv-instrument-slide">
+          <section class="mv-instrument-text">
+            <p class="mv-instrument-era-label">Contemporary</p>
+            <h3 class="mv-instrument-title">The Synthesizer</h3>
+            <p class="mv-instrument-desc">Generating entirely electronic sounds, the synthesizer opened the door to the layered, experimental production heard across contemporary music.</p>
+          </section>
+          <section class="mv-instrument-photo">
+            <img src="../docs/synthesizer.png" alt="A synthesizer keyboard">
+          </section>
+        </section>
+      </section>
+ 
+    </section>
+ 
+    <button class="carousel-control-prev" type="button" data-bs-target="#mvInstrumentCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#mvInstrumentCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+ 
+  </article>
+</section>
+ 
+<!-- LIFE STORIES: one notable figure per era, with space for a photo -->
+<section class="mv-stories-section">
   <section class="container">
-    <h2 class="section-title mb-4">Music Through the Decades</h2>
+    <h2>Voices Through Time</h2>
+    <p class="mv-stories-subtitle">One figure from every era who helped shape the sound of their time</p>
+ 
+    <section class="mv-stories-grid">
+ 
+      <section class="mv-story-card">
+        <section class="mv-story-photo">
+          <img src="../docs/hildegard.jpg" alt="Hildegard von Bingen">
+        </section>
+        <section class="mv-story-info">
+          <p class="mv-story-era-label">Medieval Era</p>
+          <h3 class="mv-story-name">Hildegard von Bingen</h3>
+          <p class="mv-story-years">1098–1179</p>
+          <p class="mv-story-bio">A German abbess, composer, writer, and philosopher, Hildegard created hundreds of religious songs and is one of the earliest composers whose music and life are well documented.</p>
+        </section>
+      </section>
+ 
+      <section class="mv-story-card">
+        <section class="mv-story-photo">
+          <img src="../docs/josquin.jpg" alt="Josquin des Prez">
+        </section>
+        <section class="mv-story-info">
+          <p class="mv-story-era-label">Renaissance Era</p>
+          <h3 class="mv-story-name">Josquin des Prez</h3>
+          <p class="mv-story-years">c. 1450–1521</p>
+          <p class="mv-story-bio">A Franco-Flemish composer who became one of the most influential musicians of the Renaissance, known for expressive melodies, careful harmony, and sophisticated vocal arrangements.</p>
+        </section>
+      </section>
+ 
+      <section class="mv-story-card">
+        <section class="mv-story-photo">
+          <img src="../docs/bach.jpg" alt="Johann Sebastian Bach">
+        </section>
+        <section class="mv-story-info">
+          <p class="mv-story-era-label">Baroque Era</p>
+          <h3 class="mv-story-name">Johann Sebastian Bach</h3>
+          <p class="mv-story-years">1685–1750</p>
+          <p class="mv-story-bio">A German composer and musician whose works became some of the most important pieces of the Baroque period, famous for his complex counterpoint and mastery of the organ and keyboard.</p>
+        </section>
+      </section>
+ 
+      <section class="mv-story-card">
+        <section class="mv-story-photo">
+          <img src="../docs/mozart.jpg" alt="Wolfgang Amadeus Mozart">
+        </section>
+        <section class="mv-story-info">
+          <p class="mv-story-era-label">Classical Era</p>
+          <h3 class="mv-story-name">Wolfgang Amadeus Mozart</h3>
+          <p class="mv-story-years">1756–1791</p>
+          <p class="mv-story-bio">An Austrian composer who showed extraordinary talent from childhood, composing operas, symphonies, concertos, and chamber music that made him one of the most celebrated composers in history.</p>
+        </section>
+      </section>
+ 
+      <section class="mv-story-card">
+        <section class="mv-story-photo">
+          <img src="../docs/chopin.jpg" alt="Frédéric Chopin">
+        </section>
+        <section class="mv-story-info">
+          <p class="mv-story-era-label">Romantic Era</p>
+          <h3 class="mv-story-name">Frédéric Chopin</h3>
+          <p class="mv-story-years">1810–1849</p>
+          <p class="mv-story-bio">A Polish-French composer and pianist famous for expressive piano compositions that emphasized emotion, creativity, and technical skill, making him one of the era's most influential piano composers.</p>
+        </section>
+      </section>
+ 
+      <section class="mv-story-card">
+        <section class="mv-story-photo">
+          <img src="../docs/armstrong.jpg" alt="Louis Armstrong">
+        </section>
+        <section class="mv-story-info">
+          <p class="mv-story-era-label">Modern / 20th Century Era</p>
+          <h3 class="mv-story-name">Louis Armstrong</h3>
+          <p class="mv-story-years">1901–1971</p>
+          <p class="mv-story-bio">An American trumpeter and singer who became one of the most influential figures in jazz, helping bring the genre to audiences around the world through his distinctive playing and singing.</p>
+        </section>
+      </section>
+ 
+      <section class="mv-story-card">
+        <section class="mv-story-photo">
+          <img src="../docs/beyonce.jpg" alt="Beyoncé">
+        </section>
+        <section class="mv-story-info">
+          <p class="mv-story-era-label">Contemporary Era</p>
+          <h3 class="mv-story-name">Beyoncé</h3>
+          <p class="mv-story-years">1981–</p>
+          <p class="mv-story-bio">An American singer, songwriter, and performer with a major influence on contemporary pop and R&amp;B, known for powerful vocals, performances, and visual albums.</p>
+        </section>
+      </section>
+ 
+    </section>
+  </section>
+</section>
+ 
+<section class="mv-purpose-section py-5">
+  <section class="container">
+    <h2 class="mv-section-title mb-4">Music Through the Decades</h2>
     <p>
       Music has always been more than just entertainment. It is a reflection of human history, culture, emotions, and creativity. From the simple chants of the Medieval Era to the expressive compositions of the Romantic Era, and from the revolutionary sounds of rock and roll in the 1950s to today's digital streaming platforms, every generation has shaped music in its own unique way. As societies changed, music evolved alongside them, adapting to new technologies, cultural movements, and artistic ideas while continuing to bring people together.
-
+ 
 Throughout history, each musical era introduced new styles, instruments, and ways of expressing emotion. The Renaissance expanded harmony and creativity, the Baroque Era emphasized drama and grandeur, the Classical Era focused on balance and structure, while the Romantic Era celebrated passion and individuality. The Modern and Contemporary eras then transformed the music industry through recording technology, radio, television, the internet, and streaming services, making music more accessible than ever before. These developments allowed artists from different backgrounds and cultures to reach audiences across the globe.
-
+ 
 Today, music continues to evolve at an incredible pace. Genres blend together, artists experiment with new sounds, and technology allows anyone to create, share, and discover music from almost anywhere in the world. Despite these changes, the purpose of music remains the same—to tell stories, express emotions, preserve culture, and connect people regardless of language, age, or background.
     </p>
   </section>
 </section>
-
-<footer class="site-footer container-fluid px-4 px-md-5 py-4 mt-auto mb-4 mx-auto rounded-4 text-light">
+ 
+<footer class="mv-site-footer container-fluid px-4 px-md-5 py-4 mt-auto mb-4 mx-auto rounded-4 text-light">
     <section class="row gy-4 align-items-center">
-
+ 
         <section class="col-12 col-md-4 d-flex justify-content-center justify-content-md-start align-items-center gap-3">
             <a href="#" class="text-decoration-none d-flex align-items-center gap-2">
                 <span class="fs-4 text-warning">▼</span>
-                <img src="../docs/Logo.jpeg" alt="Music Vault Logo" class="footer-logo">
+                <img src="../docs/Logo.jpeg" alt="Music Vault Logo" class="mv-footer-logo">
             </a>
         </section>
-
+ 
         <section class="col-12 col-md-4 text-center d-flex flex-column align-items-center gap-2">
             <blockquote class="fst-italic fs-6 mb-1 text-light opacity-75">"Music is beautiful, expressive, and inherently timeless. -Jason Lim"</blockquote>
             <button onclick="scrollToTop()" class="btn custom-btn rounded-pill px-4 py-1 fw-semibold">Back to top</button>
         </section>
-
+ 
         <section class="col-12 col-md-4 d-flex justify-content-center justify-content-md-end">
             <aside class="d-flex flex-column align-items-center align-items-md-end gap-3">
-
-                <ul class="icon-grid list-unstyled mb-0">
+ 
+                <ul class="mv-icon-grid list-unstyled mb-0">
                     <li><a href="#" class="text-warning text-decoration-none"><i class="fa-brands fa-square-instagram"></i></a></li>
                     <li><a href="#" class="text-warning text-decoration-none"><i class="fa-brands fa-facebook"></i></a></li>
                     <li><a href="#" class="text-warning text-decoration-none"><i class="fa-brands fa-twitter"></i></a></li>
@@ -383,46 +892,86 @@ Today, music continues to evolve at an incredible pace. Genres blend together, a
                     <li><a href="#" class="text-warning text-decoration-none"><i class="fa-brands fa-youtube"></i></a></li>
                     <li><a href="#" class="text-warning text-decoration-none"><i class="fa-brands fa-square-reddit"></i></a></li>
                 </ul>
-
+ 
                 <a href="#newsletter" class="newsletter-link text-warning text-decoration-none border-bottom border-warning pb-1 fs-5 fw-medium">newsletter</a>
-
+ 
             </aside>
         </section>
-
+ 
     </section>
 </footer>
-
+ 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script>
-  var carousel = new bootstrap.Carousel(document.getElementById('yearCarousel'), {
+  var carousel = new bootstrap.Carousel(document.getElementById('mvYearCarousel'), {
     interval: 4000,
     wrap: true,
     ride: 'carousel'
   });
-
+ 
+  var instrumentCarouselEl = document.getElementById('mvInstrumentCarousel');
+  var instrumentCarousel = new bootstrap.Carousel(instrumentCarouselEl, {
+    interval: 7000,
+    wrap: true,
+    ride: 'carousel'
+  });
+ 
+  // Evolution-of-Sound buttons jump the instrument carousel to that slide
+  var evolutionItems = document.querySelectorAll('.mv-evolution-item');
+ 
+  evolutionItems.forEach(function(item) {
+    item.addEventListener('click', function() {
+      var index = parseInt(item.getAttribute('data-instrument-slide'), 10);
+      instrumentCarousel.to(index);
+    });
+  });
+ 
+  // Keep the clicked/current instrument highlighted as the carousel advances
+  instrumentCarouselEl.addEventListener('slide.bs.carousel', function(e) {
+    evolutionItems.forEach(function(item) {
+      item.classList.remove('active');
+    });
+    evolutionItems[e.to].classList.add('active');
+  });
+ 
   function scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 </script>
 <script>
-  let touchStartX = 0;
-  let touchEndX = 0;
-
-  const carouselEl = document.getElementById('yearCarousel');
-
+  var touchStartX = 0;
+  var touchEndX = 0;
+  var carouselEl = document.getElementById('mvYearCarousel');
+ 
+  // Array of objects: each swipe direction paired with its action
+  var swipes = [
+    { check: function(d) { return d > 50; }, action: function() { carousel.next(); } },
+    { check: function(d) { return d < -50; }, action: function() { carousel.prev(); } }
+  ];
+ 
   carouselEl.addEventListener('touchstart', function(e) {
     touchStartX = e.changedTouches[0].screenX;
   });
-
+ 
   carouselEl.addEventListener('touchend', function(e) {
     touchEndX = e.changedTouches[0].screenX;
-    if (touchStartX - touchEndX > 50) {
-      carousel.next();
-    }
-    if (touchEndX - touchStartX > 50) {
-      carousel.prev();
+    var diff = touchStartX - touchEndX;
+ 
+    for (var i = 0; i < swipes.length; i++) {
+      if (swipes[i].check(diff)) swipes[i].action();
     }
   });
 </script>
 </body>
 </html>
+ 
+
+
+
+
+
+
+
+
+
+
