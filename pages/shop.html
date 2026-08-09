@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Vault | Shop</title>  
+    <script src="https://kit.fontawesome.com/b71d6a20e5.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/MAINCSS.css">
+    
+    <style>
+        html, body {
+            overflow-x: hidden;
+            max-width: 100%;
+        }
+        body {
+            background: linear-gradient(rgba(15, 15, 15, 0.88), rgba(15, 15, 15, 0.88)), 
+                        url('../assets/images/shop/shopback.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+        .shop-card {
+            min-height: 320px;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0.92;
+        }
+
+        .simple-calendar-table {
+            table-layout: fixed;
+            width: 100%;
+        }
+        .simple-calendar-table th, 
+        .simple-calendar-table td {
+            border: 1px dotted #a0a0a0;
+            vertical-align: top;
+            font-size: 0.7rem;
+            padding: 3px 2px !important;
+            word-break: break-word;
+            overflow-wrap: break-word;
+        }
+        .simple-calendar-table thead th {
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            border-bottom: 2px solid #333;
+            font-weight: bold;
+        }
+        .faq-accordion .accordion-button:not(.collapsed) {
+            background-color: transparent;
+            color: #ffc107;
+            box-shadow: none;
+        }
+        .faq-accordion .accordion-button::after {
+            filter: invert(1);
+        }
+    </style>
+</head>
+
+<body id="top" class="text-light m-0 p-0">
+<!-- Header -->
+<header class="site-header sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom container-fluid px-3 px-md-4 px-lg-5">
+        <a class="navbar-brand brand-logo d-flex align-items-center" href="../index.html">
+            <img src="../assets/images/Logo.jpeg" alt="Logo" class="logo-img">
+            <span class="logo-symbol me-2">♪</span>
+            Music Vault
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <section class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto ms-lg-4">
+                <li class="nav-item">
+                    <a class="nav-link" href="../index.html">Home</a>
+                </li>
+            </ul>
+
+            <ul class="navbar-nav gap-2 gap-lg-4">
+                <li class="nav-item dropdown">
+                    <a class="nav-drop active" href="#" role="button" data-bs-toggle="dropdown">
+                        Discover
+                    </a>
+
+                    <ul class="dropdown-menu dropdown-menu-dark shadow-sm">
+                        <li><a class="dropdown-item active" href="./pages/About Music.html">About Music</a></li>
+                        <li><a class="dropdown-item" href="#">Anatomy of Sound</a></li>
+                        <li><a class="dropdown-item" href="#">Anatomy of Sound</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-drop" href="#" role="button" data-bs-toggle="dropdown">
+                        Genres
+                    </a>
+
+                    <ul class="dropdown-menu dropdown-menu-dark shadow-sm">
+                        <li><a class="dropdown-item" href="./pages/genres.html">All Genres</a></li>
+                        <li><a class="dropdown-item" href="#">Mood Mixer</a></li>
+                        <li><a class="dropdown-item" href="#">Mood Mixer</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-drop" href="#" role="button" data-bs-toggle="dropdown">
+                        Community
+                    </a>
+
+                    <ul class="dropdown-menu dropdown-menu-dark shadow-sm">
+                        <li><a class="dropdown-item" href="#">Featured Audio</a></li>
+                        <li><a class="dropdown-item" href="#">Events</a></li>
+                        <li><a class="dropdown-item" href="#">Events</a></li>
+                        <li><a class="dropdown-item" href="#">Events</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+    </nav>
+</header>
+<main class="container py-5">
+<section class="mb-5">
+      <h2 class="h4 text-warning mb-4 fw-bold text-center">Welcome to our shop! Want to buy any instruments? 🎸🎹</h2>
+      
+      <section class="row g-4">
+        <article class="col-12 col-sm-6 col-lg-3">
+          <section class="card shop-card border border-warning rounded-3 text-light p-4 d-flex flex-column justify-content-between" 
+               style="background: linear-gradient(rgba(15, 15, 15, 0.82), rgba(15, 15, 15, 0.88)), url('../assets/images/shop/fenderguitar.jpg') no-repeat center center; background-size: cover;">
+            <section>
+              <span class="fs-2 fw-bold text-white-50 d-block mb-1">01</span>
+              <h3 class="h5 card-title text-warning fw-bold mb-2">Fender Guitar</h3>
+              <p class="small text-light opacity-75 mb-3">Electric precision crafted for rich tones and iconic stage performance.</p>
+            </section>
+            <footer class="d-flex align-items-baseline mt-auto pt-2 border-top border-secondary border-opacity-25">
+              <span class="text-decoration-line-through text-white-50 me-2 small">$1,500</span>
+              <span class="fw-bold text-warning fs-5">$1,200</span>
+            </footer>
+          </section>
+        </article>
+        <article class="col-12 col-sm-6 col-lg-3">
+          <section class="card shop-card border border-warning rounded-3 text-light p-4 d-flex flex-column justify-content-between" 
+               style="background: linear-gradient(rgba(15, 15, 15, 0.82), rgba(15, 15, 15, 0.88)), url('../assets/images/shop/yamahapiano.jpg') no-repeat center center; background-size: cover;">
+            <section>
+              <span class="fs-2 fw-bold text-white-50 d-block mb-1">02</span>
+              <h3 class="h5 card-title text-warning fw-bold mb-2">Yamaha Piano</h3>
+              <p class="small text-light opacity-75 mb-3">Grand concert acoustic sound with expressive touch dynamic action.</p>
+            </section>
+            <footer class="d-flex align-items-baseline mt-auto pt-2 border-top border-secondary border-opacity-25">
+              <span class="text-decoration-line-through text-white-50 me-2 small">$4,200</span>
+              <span class="fw-bold text-warning fs-5">$3,500</span>
+            </footer>
+          </section>
+        </article>
+        <article class="col-12 col-sm-6 col-lg-3">
+          <section class="card shop-card border border-warning rounded-3 text-light p-4 d-flex flex-column justify-content-between" 
+               style="background: linear-gradient(rgba(15, 15, 15, 0.82), rgba(15, 15, 15, 0.88)), url('../assets/images/shop/salamahersaxaphone.jpg') no-repeat center center; background-size: cover;">
+            <section>
+              <span class="fs-2 fw-bold text-white-50 d-block mb-1">03</span>
+              <h3 class="h5 card-title text-warning fw-bold mb-2">Selmer Saxophone</h3>
+              <p class="small text-light opacity-75 mb-3">Warm brass resonance designed for jazz soloists and ensemble performance.</p>
+            </section>
+            <footer class="d-flex align-items-baseline mt-auto pt-2 border-top border-secondary border-opacity-25">
+              <span class="text-decoration-line-through text-white-50 me-2 small">$2,200</span>
+              <span class="fw-bold text-warning fs-5">$1,800</span>
+            </footer>
+          </section>
+        </article>
+        <article class="col-12 col-sm-6 col-lg-3">
+          <section class="card shop-card border border-warning rounded-3 text-light p-4 d-flex flex-column justify-content-between" 
+               style="background: linear-gradient(rgba(15, 15, 15, 0.82), rgba(15, 15, 15, 0.88)), url('../assets/images/shop/drumkit.jpg') no-repeat center center; background-size: cover;">
+            <section>
+              <span class="fs-2 fw-bold text-white-50 d-block mb-1">04</span>
+              <h3 class="h5 card-title text-warning fw-bold mb-2">Drum Kit</h3>
+              <p class="small text-light opacity-75 mb-3">Complete studio-grade acoustic percussion set with heavy-duty hardware.</p>
+            </section>
+            <footer class="d-flex align-items-baseline mt-auto pt-2 border-top border-secondary border-opacity-25">
+              <span class="text-decoration-line-through text-white-50 me-2 small">$2,600</span>
+              <span class="fw-bold text-warning fs-5">$2,100</span>
+            </footer>
+          </section>
+        </article>
+
+      </section>
+    </section>
+<section class="row g-4 mb-5 align-items-stretch">
+<article class="col-12 col-lg-7 d-flex flex-column">
+
+        <form id="orderForm" class="p-4 border border-warning rounded-3 bg-dark h-100" novalidate>
+          <h2 class="h4 text-warning mb-4">Instrument Order Form</h2>
+
+          <section class="mb-3">
+            <label for="name" class="form-label small">Full Name</label>
+            <input type="text" id="name" name="name" class="form-control" placeholder="e.g. John Doe" pattern="[A-Za-z ]+" title="Name can only contain alphabets and spaces" required>
+          </section>
+
+          <section class="mb-3">
+            <label for="email" class="form-label small">Email Address</label>
+            <input type="email" id="email" name="email" class="form-control" placeholder="name@example.com" required>
+          </section>
+          
+          <section class="p-3 border border-secondary rounded mb-3 bg-black bg-opacity-50">
+            <label class="form-label small text-warning fw-bold mb-2">Select & Add Instruments</label>
+            <section class="row g-2 align-items-center">
+              <section class="col-7 col-md-7">
+                <select id="instrumentSelect" class="form-select form-select-sm">
+                  <option value="">Choose an instrument:</option>
+                  <option value="Fender Guitar">Fender Guitar ($1,200)</option>
+                  <option value="Yamaha Piano">Yamaha Piano ($3,500)</option>
+                  <option value="Selmer Saxophone">Selmer Saxophone ($1,800)</option>
+                  <option value="Drum Kit">Drum Kit ($2,100)</option>
+                </select>
+              </section>
+              <section class="col-3 col-md-3">
+                <input type="number" id="itemQty" class="form-control form-control-sm" value="1" min="1" max="10">
+              </section>
+              <section class="col-2 col-md-2">
+                <button id="addButton" type="button" class="btn btn-warning btn-sm w-100 fw-bold">Add</button>
+              </section>
+            </section>
+          </section>
+
+          <section class="mb-3 p-3 border border-warning rounded bg-black">
+            <h3 class="h6 text-warning mb-2 d-flex justify-content-between align-items-center">
+              <span>Selected Items Cart</span>
+              <span id="itemCountBadge" class="badge bg-warning text-dark">0 items</span>
+            </h3>
+
+            <figure class="table-responsive mb-2">
+              <table class="table table-dark table-sm table-borderless text-light align-middle mb-0" style="font-size: 0.85rem;">
+                <thead class="border-bottom border-secondary text-secondary">
+                  <tr>
+                    <th>Item</th>
+                    <th class="text-center">Qty</th>
+                    <th class="text-end">Subtotal</th>
+                    <th class="text-center">Action</th>
+                  </tr>
+                </thead>
+                <tbody id="cartTableBody">
+                  <tr>
+                    <td colspan="4" class="text-secondary text-center py-3">No instruments added yet. Select items above!</td>
+                  </tr>
+                </tbody>
+              </table>
+            </figure>
+
+            <footer class="d-flex justify-content-between align-items-center pt-2 border-top border-secondary">
+              <span class="fw-bold small text-light">Grand Total:</span>
+              <output id="totalCost" class="fw-bold text-warning fs-4">$0.00</output>
+            </footer>
+          </section>
+
+          <fieldset class="mb-3 border border-secondary p-3 rounded">
+            <legend class="h6 text-warning mb-2 float-none w-auto px-2 fs-6">Payment Method</legend>
+            <section class="form-check mb-2">
+              <input class="form-check-input" type="radio" name="paymentMethod" id="paynow" value="PayNow" checked>
+              <label class="form-check-label small text-light" for="paynow">
+                <i class="fa-solid fa-qrcode me-1 text-warning"></i> PayNow (QR Code / Transfer)
+              </label>
+            </section>
+            <section class="form-check mb-2">
+              <input class="form-check-input" type="radio" name="paymentMethod" id="creditCard" value="Credit Card">
+              <label class="form-check-label small text-light" for="creditCard">
+                <i class="fa-solid fa-credit-card me-1 text-warning"></i> Credit / Debit Card (Visa, Mastercard)
+              </label>
+            </section>
+            <section class="form-check">
+              <input class="form-check-input" type="radio" name="paymentMethod" id="cod" value="Cash on Delivery">
+              <label class="form-check-label small text-light" for="cod">
+                <i class="fa-solid fa-truck-ramp-box me-1 text-warning"></i> Cash on Delivery
+              </label>
+            </section>
+          </fieldset>
+
+          <section class="row mb-3">
+            <section class="col-md-6">
+              <label for="country" class="form-label small">Country</label>
+              <select id="country" name="country" class="form-select">
+                <option value="">Select...</option>
+                <option value="Singapore">Singapore</option>
+                <option value="America">America</option>
+                <option value="UK">United Kingdom</option>
+              </select>
+            </section>
+            <section class="col-md-6 mt-3 mt-md-0">
+              <label for="postalCode" class="form-label small">Postal Code</label>
+              <input type="text" id="postalCode" name="postalCode" class="form-control" placeholder="e.g. 530123" pattern="[0-9]+" title="Postal code can only contain numbers" required>
+            </section>
+          </section>
+
+          <section class="mb-3">
+            <label for="address" class="form-label small">Delivery Address</label>
+            <input type="text" id="address" name="address" class="form-control" placeholder="Street name, unit number">
+          </section>
+
+          <section class="mb-3">
+            <label for="deliveryDate" class="form-label small">Preferred Delivery Date</label>
+            <input type="date" id="deliveryDate" name="deliveryDate" class="form-control">
+          </section>
+
+          <section class="mb-4">
+            <label for="feedback" class="form-label small">Any Feedback?<span class="text-secondary">(Optional)</span></label>
+            <textarea id="feedback" name="feedback" class="form-control" rows="3" placeholder="Any special requests or feedback for us?"></textarea>
+          </section>
+
+          <p id="errorMsg" class="text-danger fw-bold small mb-3" style="display: none;"></p>
+
+          <button type="submit" class="btn btn-warning w-100 fw-bold fs-5">Submit Order & Pay</button>
+        </form>
+      </article>
+
+<aside class="col-12 col-lg-5 d-flex flex-column">
+<article class="p-4 mb-4 border border-warning rounded-3 bg-dark">
+          <h3 class="h5 text-warning mb-3">Please Note:</h3>
+          <p class="small text-secondary mb-2">• Orders take 1 to 3 business days to deliver.</p>
+          <p class="small text-secondary mb-0">• High traffic expected on the weekends..</p>
+        </article>
+<article class="p-3 p-sm-4 mb-4 border border-warning rounded-3 bg-dark">
+          <h3 class="h5 text-warning mb-3">Delivery Calendar</h3>
+          
+          <section class="bg-white text-dark p-2 p-sm-3 rounded">
+            <figure class="table-responsive mb-0">
+              <table class="table table-borderless text-center align-middle m-0 simple-calendar-table">
+                <thead>
+                  <tr class="text-dark">
+                    <th>SUN</th><th>MON</th><th>TUE</th><th>WED</th><th>THU</th><th>FRI</th><th>SAT</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td></td><td></td><td></td><td></td><td></td><td></td>
+                    <td>1<br><span class="text-secondary">High<br>traffic*</span></td>
+                  </tr>
+                  <tr>
+                    <td>2<br><span class="text-secondary">Not<br>free!</span></td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td>
+                    <td>8<br><span class="text-secondary">High<br>traffic*</span></td>
+                  </tr>
+                  <tr>
+                    <td>9<br><span class="text-secondary">Not<br>free!</span></td>
+                    <td>10</td>
+                    <td>11</td>
+                    <td>12</td>
+                    <td>13</td>
+                    <td>14</td>
+                    <td>15<br><span class="text-secondary">High<br>traffic*</span></td>
+                  </tr>
+                  <tr>
+                    <td>16<br><span class="text-secondary">Not<br>free!</span></td>
+                    <td>17</td>
+                    <td>18</td>
+                    <td>19</td>
+                    <td>20</td>
+                    <td>21</td>
+                    <td>22<br><span class="text-secondary">High<br>traffic*</span></td>
+                  </tr>
+                  <tr>
+                    <td>23<br><span class="text-secondary">Not<br>free!</span></td>
+                    <td>24</td>
+                    <td>25</td>
+                    <td>26</td>
+                    <td>27</td>
+                    <td>28</td>
+                    <td>29<br><span class="text-secondary">High<br>traffic*</span></td>
+                  </tr>
+                  <tr>
+                    <td>30<br><span class="text-secondary">Not<br>free!</span></td>
+                    <td>31</td>
+                    <td></td><td></td><td></td><td></td><td></td>
+                  </tr>
+                </tbody>
+              </table>
+            </figure>
+            <p class="text-secondary small mt-3 mb-0 fw-bold">August 2026</p>
+          </section>
+        </article>
+<article class="p-4 mb-4 border border-warning rounded-3 bg-dark">
+          <h3 class="h5 text-warning mb-3 d-flex align-items-center gap-2">
+            <i class="fa-solid fa-circle-question"></i> Quick FAQs
+          </h3>
+
+          <div class="accordion accordion-flush faq-accordion" id="faqAccordion">
+            <div class="accordion-item bg-dark border-bottom border-secondary border-opacity-50">
+              <h4 class="accordion-header" id="faqHeadingOne">
+                <button class="accordion-button collapsed bg-dark text-warning shadow-none p-2 fs-6 fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseOne" aria-expanded="false" aria-controls="faqCollapseOne">
+                  Can I try the instrument in-store before delivery?
+                </button>
+              </h4>
+              <div id="faqCollapseOne" class="accordion-collapse collapse" aria-labelledby="faqHeadingOne" data-bs-parent="#faqAccordion">
+                <div class="accordion-body text-light opacity-75 small p-2 pt-0">
+                    Please do come down to our physical store if you'd like to!
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item bg-dark border-bottom border-secondary border-opacity-50">
+              <h4 class="accordion-header" id="faqHeadingTwo">
+                <button class="accordion-button collapsed bg-dark text-warning shadow-none p-2 fs-6 fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseTwo" aria-expanded="false" aria-controls="faqCollapseTwo">
+                  How are fragile instruments packed?
+                </button>
+              </h4>
+              <div id="faqCollapseTwo" class="accordion-collapse collapse" aria-labelledby="faqHeadingTwo" data-bs-parent="#faqAccordion">
+                <div class="accordion-body text-light opacity-75 small p-2 pt-0">
+                    They are double wrapped, put in safe packaging, and taken care of with the upmost respect. 
+              </div>
+            </div>
+            <div class="accordion-item bg-dark border-bottom border-secondary border-opacity-50">
+              <h4 class="accordion-header" id="faqHeadingThree">
+                <button class="accordion-button collapsed bg-dark text-warning shadow-none p-2 fs-6 fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseThree" aria-expanded="false" aria-controls="faqCollapseThree">
+                  Are instruments tuned before shipping?
+                </button>
+              </h4>
+              <div id="faqCollapseThree" class="accordion-collapse collapse" aria-labelledby="faqHeadingThree" data-bs-parent="#faqAccordion">
+                <div class="accordion-body text-light opacity-75 small p-2 pt-0">
+                  Every instrument is throughly inspected before shipping, to ensure you get the best quality.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item bg-dark">
+              <h4 class="accordion-header" id="faqHeadingFour">
+                <button class="accordion-button collapsed bg-dark text-warning shadow-none p-2 fs-6 fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseFour" aria-expanded="false" aria-controls="faqCollapseFour">
+                  What payment options do you accept?
+                </button>
+              </h4>
+              <div id="faqCollapseFour" class="accordion-collapse collapse" aria-labelledby="faqHeadingFour" data-bs-parent="#faqAccordion">
+                <div class="accordion-body text-light opacity-75 small p-2 pt-0">
+                    We accept cash on delivery, however it has to be exact change, PayNow, or Credit/Debit cards.
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </article>
+<article class="p-3 mb-3 border border-warning rounded-3 bg-dark text-center">
+          <p class="h6 text-warning mb-1 fw-bold">
+            <i class="fa-solid fa-shield-halved me-2"></i>2-3 Year Warranty Guaranteed
+          </p>
+          <p class="small text-secondary mb-0">
+            All instruments bought from our website come with a 2-3 year warranty guaranteed
+          </p>
+        </article>
+<article class="p-4 border border-warning rounded-3 bg-dark text-center d-flex flex-column justify-content-center flex-grow-1">
+          <h3 class="h4 text-warning mb-2 fw-bold">
+            <i class="fa-solid fa-heart me-2"></i>Thank You for Choosing Music Vault!
+          </h3>
+          <p class="small text-secondary mb-0">
+             <i class="fa-solid fa-hand-holding-heart me-2"></i>20% Given Back to Charity
+          </p>
+        </article>
+
+      </aside>
+    </section>
+</main>
+
+
+<!-- Footer -->
+<footer class="site-footer overflow-hidden py-4 px-3 px-md-5">
+    <section class="container-fluid">
+        
+
+        <section class="row align-items-center gy-4 text-center text-md-start">
+            
+    
+            <article class="col-12 col-md-3 d-flex justify-content-center justify-content-md-start">
+                <a href="#top" class="footer-logo-link d-flex flex-column align-items-center gap-1 text-decoration-none">
+                    <span class="arrow text-gold fs-6">▼</span>
+                    <img src="../assets/images/Logo.jpeg" alt="Music Vault Logo" class="footer-logo">
+                </a>
+            </article>
+
+
+            <article class="col-12 col-md-6 text-center">
+                
+
+                <nav class="footer-nav d-flex flex-wrap justify-content-center gap-3 gap-md-4 mb-3">
+                    <a href="../index.html" class="text-light text-decoration-none opacity-75 hover-gold small">Home</a>
+                    <a href="./pages/aboutmusic.html" class="text-light text-decoration-none opacity-75 hover-gold small">About Music</a>
+                    <a href="./pages/genres.html" class="text-light text-decoration-none opacity-75 hover-gold small">Genres</a>
+                    <a href="#featured-audio" class="text-light text-decoration-none opacity-75 hover-gold small">Featured</a>
+                </nav>
+
+
+                <blockquote class="footer-quote mb-3 italic">
+                    "Expressive, calming and beautiful, that's what music is." — Mark Y.
+                </blockquote>
+
+                <button id="backToTop" class="top-btn btn" onclick="scrollToTop()">
+                    Back to Top
+                </button>
+            </article>
+
+  
+            <article class="col-12 col-md-3 d-flex flex-column align-items-center align-items-md-end">
+                
+    
+                <ul class="social-grid list-unstyled m-0 p-0 mb-2">
+                    <li><a href="#" aria-label="Instagram"><i class="fa-brands fa-square-instagram"></i></a></li>
+                    <li><a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a></li>
+                    <li><a href="#" aria-label="Email"><i class="fa-solid fa-envelopes-bulk"></i></a></li>
+                    <li><a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a></li>
+                    <li><a href="#" aria-label="Reddit"><i class="fa-brands fa-square-reddit"></i></a></li>
+                </ul>
+
+      
+                <a href="./pages/shop.html" class="newsletter-link text-gold text-center text-md-end w-100">
+                    Shop
+                </a>
+            </article>
+
+        </section>
+
+  
+        <hr class="border-secondary opacity-25 my-4">
+
+        <section class="row">
+            <footer class="col-12 text-center">
+                <p class="text-light opacity-50 small mb-0">
+                    &copy; 2026 Music Vault. All rights reserved. Property of Singapore Polytechnic. 
+                </p>
+            </footer>
+        </section>
+
+    </section>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../assets/js/shop.js"></script>
+
+</body>
+</html>
