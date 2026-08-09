@@ -1,5 +1,3 @@
-
-
 const navLinks = document.querySelectorAll(".navbar__link");
 
 navLinks.forEach(link => {
@@ -127,6 +125,18 @@ const albumDetails = {
     "Discovery": {
         blurb:"A shift from underground house into shimmering, sample-heavy disco-pop that would go on to influence a generation of producers.",
         tracklist:["One More Time","Aerodynamic","Digital Love","Harder, Better, Faster, Stronger","Something About Us"]
+    },
+    "After Hours":{
+        blurb:"A dark and atmospheric blend of R&B, pop and 80s-inspired synths, exploring heartbreak, loneliness and excess.",
+        tracklist:["Blinding Light","Save Your Tears","After Hours","In Your Eyes","Heartless","Faith","Too Late"]
+    },
+    "SOS":{
+        blurb:"A genre-blending R&B album exploring love, heartbreak, self-discovery and complicated relationships.",
+        tracklist:["Kill Bill","Snooze","Nobody Gets Me","Shirt","I Hate You","Good Days","Blind"]
+    },
+    "Freudian":{
+        blurb:"A soulful R&B album exploring love, relationships, vulnerability and the complexities of growing up.",
+        tracklist:["Get You","Best Part","Japanese Denim","We Find Love","Blessed","Hold Me Down","Freudian"]
     }
 
 };
@@ -286,14 +296,39 @@ function openAlbumModal(card){
     const title = card.dataset.title;
     const artist = card.dataset.artist;
     const year = card.dataset.year;
-    const genreLabel = card.querySelector(".album-card__tag").textContent;
-    const initials = card.querySelector(".album-card__initials").textContent;
-    const hue = card.querySelector(".album-card__cover").dataset.hue;
+    const genreLabel = card.querySelector(".album-card__tag") ? card.querySelector(".album-card__tag").textContent : "";
+    
+    const cardImg = card.querySelector("img");
+    
+    const initialsEl = card.querySelector(".album-card__initials");
+    const initials = initialsEl ? initialsEl.textContent : "";
+    
+    const coverEl = card.querySelector(".album-card__cover");
+    const hue = coverEl ? coverEl.dataset.hue : "";
 
     const details = albumDetails[title] || { blurb:"", tracklist:[] };
 
-    modalCover.dataset.hue = hue;
-    modalInitials.textContent = initials;
+    let modalImg = modalCover.querySelector("img");
+    if (!modalImg) {
+        modalImg = document.createElement("img");
+        modalCover.appendChild(modalImg);
+    }
+
+    if (cardImg && cardImg.src) {
+        modalImg.src = cardImg.src;
+        modalImg.alt = cardImg.alt || title;
+        modalImg.style.display = "block";
+        if (modalInitials) modalInitials.style.display = "none";
+    } else {
+        modalImg.style.display = "none";
+        modalImg.src = "";
+        if (modalInitials) {
+            modalInitials.style.display = "block";
+            modalInitials.textContent = initials;
+        }
+    }
+
+    if (hue) modalCover.dataset.hue = hue;
     modalGenre.textContent = genreLabel;
     modalTitle.textContent = title;
     modalArtist.textContent = `${artist} · ${year}`;
@@ -395,3 +430,24 @@ sortableHeaders.forEach(header => {
 
 
 applyAlbumFilters();
+
+const featuredLinks = document.querySelectorAll(".featured__link");
+
+featuredLinks.forEach(link => {
+
+    link.addEventListener("click", (e) => {
+        e.preventDefault();
+
+        const card = link.closest(".featured__card");
+        const targetTitle = card ? card.dataset.album : null;
+        const targetCard = albumCards.find(c => c.dataset.title === targetTitle);
+
+        if(targetCard){
+            openAlbumModal(targetCard);
+        }else{
+            console.warn(`Featured Record: no album card found matching "${targetTitle}". Check that data-album on the .featured__card matches a data-title on an .album-card exactly.`);
+        }
+
+    });
+
+});
