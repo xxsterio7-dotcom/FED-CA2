@@ -26,51 +26,51 @@ document.addEventListener("click", (e) => {
 
 const festivals = {
     tomorrowland: {
-        image: "../images/tomorrowland.jpg",
+        image: "../assets/image/tomorrowland2.jpg",
         year: "2005",
         name: "Tomorrowland",
         location: "Boom, Belgium",
         genre: "Electronic Dance Music (EDM)",
         date: "July",
         artists: "Martin Garrix, Dimitri Vegas & Like Mike, Armin van Buuren",
-        trailer: "https://www.youtube.com/embed/cuhg9ZxbDGc",
+        trailer: "../assets/video/tomorrowland.mp4",
         website: "https://www.tomorrowland.com"
     },
 
     coachella: {
-        image: "../images/coachella.jpg",
+        image: "../assets/image/coachella2.jpg",
         year: "1999",
         name: "Coachella",
         location: "California, USA",
         genre: "Pop, Rock, Hip-Hop",
         date: "April",
         artists: "Lady Gaga, Travis Scott, BLACKPINK",
-        trailer: "https://www.youtube.com/embed/jjwilAja7Lc",
+        trailer: "../assets/video/coachella.mp4",
         website: "https://www.coachella.com"
     },
 
     ultra: {
-        image: "../images/ultra.jpg",
+        image: "../assets/image/ultra2.jpg",
         year: "1999",
         name: "Ultra Music Festival",
         location: "Miami, USA",
         genre: "Electronic Dance Music",
         date: "March",
         artists: "Hardwell, Tiesto, David Guetta",
-        trailer: "https://www.youtube.com/embed/JM6iP0FhN4Q",
+        trailer: "../assets/video/ultra.mp4",
         website: "https://ultramusicfestival.com"
     },
 
     woodstock: {
-        image: "../images/woodstock.jpg",
+        image: "../assets/image/woodstock2.png",
         year: "1969",
         name: "Woodstock",
         location: "New York, USA",
         genre: "Rock",
         date: "August 1969",
         artists: "Jimi Hendrix, Santana, Janis Joplin",
-        trailer: "https://www.youtube.com/embed/TUbIJB3Ng4Y",
-        website: "https://en.wikipedia.org/wiki/Woodstock"
+        trailer: "../assets/video/woodstock.mp4",
+        website: "https://woodstock.com/"
     }
 };
 
@@ -97,6 +97,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const trailer = document.getElementById("recordTrailer");
 
+    const videoSource = document.getElementById("recordVideoSource");
+
     const website = document.getElementById("recordWebsite");
 
     function loadFestival(id) {
@@ -116,7 +118,12 @@ document.addEventListener("DOMContentLoaded", () => {
         date.textContent = fest.date;
         artists.textContent = fest.artists;
 
-        trailer.src = fest.trailer;
+        videoSource.src = fest.trailer;
+
+console.log("Festival:", fest.name);
+console.log("Video:", fest.trailer);
+console.log("Video URL:", videoSource.src);
+        trailer.load();
         website.href = fest.website;
 
         record.classList.remove("show");
