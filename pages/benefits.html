@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Music Vault</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../assets/css/MAINCSS.css" rel="stylesheet">
+    <link href="main.css" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -72,29 +72,28 @@
                 rgba(8, 11, 9, 0.15) 70%,
                 var(--green-dark) 100%),
                 url(https://upload.wikimedia.org/wikipedia/commons/3/32/4th_Australian_Jazz_Convention_-_Melbourne_1949_Rex_Stewart_%26_Graeme_Bell_Jazz_Band.jpg?_=20250220132633);"
-                class="w-100 d-flex flex-column justify-content-center align-items-center" id="benefitsHero">
-        <h1 class="display-1 fw-medium">Benefits of Music</h1>
+                class="w-100 d-flex flex-column justify-content-center align-items-center text-center" id="benefitsHero">
+        <h1 class="display-1 fw-medium text-gold">Benefits of Music</h1>
         <h2 class="py-4">How music benefits us physically, mentally, and as a society</h2>
     </section>
 
-    <section class="p-5 d-flex justify-content-center flex-column flex-md-row"
+    <section class="row justify-content-center g-4 p-5 m-0"
          id="benefitsIntro"
          style="background-color: var(--green-dark);">
 
     <div id="benefitsIntroText" class="col-12 col-md-5">
         <h2 class="text-gold">Listening with your body</h2>
         <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Praesent non euismod est, sed tincidunt nisl. Duis eu diam
-            at nibh suscipit aliquet. Nunc nec sapien nec nisl imperdiet
-            tincidunt ut ac tellus. Donec molestie aliquam aliquet.
-            Aliquam ultricies sapien sed vestibulum cursus. Suspendisse
-            sagittis nibh et mi auctor imperdiet. Aliquam erat volutpat.
+            Did you know that listening to a song can bring a back a memory you haven't thought about in years? This happens bacause music constantly engages areas of the brain tied with memory, emotion and attention? <br><br>
+            But other than evoke a nostalgic moment, Scientists would say music does more to our body than we know. From casually bumping a playlist on the train, to studying with it in the background, there's more going on benathe the surface than we realise. <br><br>
+            Scroll down to explore the differemt benefits of music!
+
         </p>
     </div>
 
     <iframe
         id="benefitsVideo"
+        class="col-12 col-md-5"
         src="https://www.youtube.com/embed/s19Fr-_WaXo?si=FwddZ-olDNa--GNQ"
         title="YouTube video player"
         frameborder="0"
@@ -112,14 +111,7 @@
             <article class="col-12 col-md-3">
                 <button class="benefitsCard w-100 h-100 border-0 p-0" type="button">
                     <article class="position-relative d-block w-100 h-100 benefitsCard-inner" style="color: var(--cream);">
-                        <h2 class="benefitsCard-front" 
-                        style="background-image: linear-gradient(rgba(29, 77, 54, 0.45), rgba(29, 77, 54, 0.45)), 
-                        url(https://images.pexels.com/photos/15096222/pexels-photo-15096222.jpeg);
-                        width: 100%;
-                        background-repeat: no-repeat; 
-                        background-size: cover;
-                        background-position: center;
-                        color: var(--cream);">Strings</h2>
+                        <h2 class="benefitsCard-front" color: var(--cream);">Strings</h2>
 
                         <span class="benefitsCard-back" style="color: var(--cream);">
                             <a target="_blank" href="https://icons8.com/icon/K4oUzt50ROd5/violin"><img width=17% height=22% src="https://img.icons8.com/pieces/64/violin.png" alt="violin"/></a>
@@ -136,21 +128,14 @@
                 <button class="benefitsCard w-100 h-100 border-0 p-0" type="button">
                     <article class="position-relative d-block w-100 h-100 benefitsCard-inner" style="color: var(--cream);">
                         //Planning to move inline styles to main.css
-                        <h2 class="benefitsCard-front" 
-                        style="background-image: linear-gradient(rgba(29, 77, 54, 0.45), rgba(29, 77, 54, 0.45)),
-                        url(https://images.pexels.com/photos/6449867/pexels-photo-6449867.jpeg);
-                        width: 100%;
-                        background-repeat: no-repeat; 
-                        background-size: cover;
-                        background-position: center;
-                        color: var(--cream);">Percussion</h2>
+                        <h2 class="benefitsCard-front" color: var(--cream);>Memory</h2>
 
                         <span class="benefitsCard-back p-4"> <!--Find replacement for span tag-->
                             <a target="_blank" href="https://icons8.com/icon/wbBDdYcGUPnm/tabla"><img width=18% height=22% src="https://img.icons8.com/pieces/64/tabal.png" alt="tabal"/></a> 
                             <h1>Percussion</h1>
-                            <p class="p-5 pb-3 pt-2 fs-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent non euismod est, sed tincidunt nisl. Duis eu diam at nibh suscipit aliquet.</p>
-                            <h1>Examples</h1>
-                            <p class="p-1 pt-2 pb-0 fs-4">Drums, Cymbals, Maracas</p>
+                            <p class="p-5 pb-3 pt-2 fs-4">
+                                Music can help strengthen memory by using rhythm, repetition and emotional associations. These cues can make information easier for the brain to **store and recall**, which is why music is often used to help memorise information.
+                            </p>
                         </span>
                     </article>
                 </button>
@@ -159,21 +144,11 @@
             <article class="col-12 col-md-3">
                 <button class="benefitsCard w-100 h-100 border-0 p-0" type="button">
                     <article class="position-relative d-block w-100 h-100 benefitsCard-inner">
-                        <h2 class="benefitsCard-front" 
-                        style="background-image: linear-gradient(rgba(29, 77, 54, 0.45), rgba(29, 77, 54, 0.45)), 
-                        url(https://images.pexels.com/photos/18860920/pexels-photo-18860920.jpeg);
-                        width: 100%;
-                        background-repeat: no-repeat; 
-                        background-size: cover;
-                        background-position: center;
-                        color: var(--cream);">Woodwind</h2>
-
+                        <h2 class="benefitsCard-front color: var(--cream);">Heart Health</h2>
                         <span class="benefitsCard-back" style="color: var(--cream);">
                             <a target="_blank" href="https://icons8.com/icon/15p9BikO32T4/bassoon"><img width=17% height=21% src="https://img.icons8.com/pieces/64/bassoon.png" alt="bassoon"/></a> 
-                            <h1>Woodwinds</h1>
-                            <p class="p-5 pb-3 pt-2 fs-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent non euismod est, sed tincidunt nisl. Duis eu diam at nibh suscipit aliquet.</p>
-                            <h1>Examples</h1>
-                            <p class="p-5 pt-2 pb-0 fs-4">Oboe, Bassoon, Flute</p>
+                            <h1>The Heart</h1>
+                            <p class="p-5 pb-3 pt-2 fs-4">Calming music can help lower your heart rate and blood pressure, which ultimately reduces stress on the cardiovascular system</p>
                         </span>
                     </article>
                 </button>
@@ -183,20 +158,12 @@
                 <button class="benefitsCard w-100 h-100 border-0 p-0" type="button">
                     <article class="position-relative d-block w-100 h-100 benefitsCard-inner">
                         <h2 class="benefitsCard-front" 
-                        style="background-image: linear-gradient(rgba(29, 77, 54, 0.45), rgba(29, 77, 54, 0.45)), 
-                        url(https://images.pexels.com/photos/8884257/pexels-photo-8884257.jpeg);
-                        width: 100%;
-                        background-repeat: no-repeat; 
-                        background-size: cover;
-                        background-position: center;
-                        color: var(--cream);">Brass</h2>
+                        color: var(--cream);></h2>
 
                         <span class="benefitsCard-back" style="color: var(--cream);">
                             <a target="_blank" href="https://icons8.com/icon/cehlV2NqUbmZ/sax"><img width=16% height=21% src="https://img.icons8.com/pieces/64/alto-saxophone.png" alt="alto-saxophone"/></a> 
-                            <h1>Brass</h1>
+                            <h1>Immune system</h1>
                             <p class="p-5 pb-3 pt-2 fs-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent non euismod est, sed tincidunt nisl. Duis eu diam at nibh suscipit aliquet.</p>
-                            <h1>Examples</h1>
-                            <p class="p-5 pt-2 pb-0 fs-4">Trumpet, Saxophone, Tuba, Trombone</p>
                         </span>
                     </article>
                 </button>
@@ -235,6 +202,6 @@
 </svg>
  correct sign-->
 
-    <script src="../assets/js/benefits.js"></script>   
+    <script src="benefits.js"></script>   
 </body>
 </html>
