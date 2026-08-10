@@ -8,61 +8,69 @@
      <link href="../assets/css/MAINCSS.css" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-light p-3" style="background-color: var(--black-soft);">
-            <div class="container-fluid">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="filter: invert(1);">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+    <!-- Header -->
+<header class="site-header sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom container-fluid px-3 px-md-4 px-lg-5">
+        <a class="navbar-brand brand-logo d-flex align-items-center" href="../index.html">
+            <img src="../assets/images/Logo.jpeg" alt="Logo" class="logo-img">
+            <span class="logo-symbol me-2">♪</span>
+            Music Vault
+        </a>
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active navbar-brand mb-0 h1 fs-4" aria-current="page" href="#" style="color: var(--cream) !important;">
-                                <img src="https://i.imgur.com/V5YSKrI.png" alt="Music Vault logo">
-                            </a>
-                        </li>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle mb-0 h1 fs-5" href="#" id="navbarDropdown1" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: var(--cream) !important;">
-                                Dropdown
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li><hr class="dropdown-divider"></li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                            </ul>
-                        </li>
+        <section class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto ms-lg-4">
+                <li class="nav-item">
+                    <a class="nav-link" href="../index.html">Home</a>
+                </li>
+            </ul>
 
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle mb-0 h1 fs-5" href="#" id="navbarDropdown2" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: var(--cream) !important;">
-                                Dropdown
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown2">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li><hr class="dropdown-divider"></li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                            </ul>
-                        </li>
+            <ul class="navbar-nav gap-2 gap-lg-4">
+                <li class="nav-item dropdown">
+                    <a class="nav-drop active" href="#" role="button" data-bs-toggle="dropdown">
+                        Discover
+                    </a>
 
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle mb-0 h1 fs-5" href="#" id="navbarDropdown3" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: var(--cream) !important;">
-                                Dropdown
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown3">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li><hr class="dropdown-divider"></li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                            </ul>
-                        </li>
+                    <ul class="dropdown-menu dropdown-menu-dark shadow-sm">
+                        <li><a class="dropdown-item active" href="About Music.html">About Music</a></li>
+                        <li><a class="dropdown-item" href="whoweare.html">Who We Are</a></li>
+                        <li><a class="dropdown-item" href="history.html">History of Music</a></li>
+                        <li><a class="dropdown-item" href="benefits.html">Benefits of Music</a></li>
                     </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-drop" href="#" role="button" data-bs-toggle="dropdown">
+                        Explore
+                    </a>
+
+                    <ul class="dropdown-menu dropdown-menu-dark shadow-sm">
+                        <li><a class="dropdown-item" href="genres.html">All Genres</a></li>
+                        <li><a class="dropdown-item" href="instruments.html">Instruments</a></li>
+                        <li><a class="dropdown-item" href="musicTechnology.html">Music Technology</a></li>
+                        <li><a class="dropdown-item" href="shop.html">Shop</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-drop" href="#" role="button" data-bs-toggle="dropdown">
+                        Community
+                    </a>
+
+                    <ul class="dropdown-menu dropdown-menu-dark shadow-sm">
+                        <li><a class="dropdown-item" href="famousartists.html">Famous Artists</a></li>
+                        <li><a class="dropdown-item" href="albums.html">Top Albums</a></li>
+                        <li><a class="dropdown-item" href="concert.html">Concerts</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+    </nav>
+</header>
+
 
     <!--Intro Banner-->
     <!--Planning to shift inline styles to main.css-->
