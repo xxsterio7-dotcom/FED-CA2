@@ -1,4 +1,7 @@
- var carousel = new bootstrap.Carousel(document.getElementById('mvYearCarousel'), {
+ function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+}
+var carousel = new bootstrap.Carousel(document.getElementById('mvYearCarousel'), {
     interval: 4000,
     wrap: true,
     ride: 'carousel'
