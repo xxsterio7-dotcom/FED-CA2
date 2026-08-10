@@ -14,8 +14,9 @@
     <link rel="stylesheet" href="../assets/css/MAINCSS.css">
 </head>
 
-<body>
+<body class="bg-black text-light">
 
+<!-- Header -->
 <header class="site-header sticky-top">
     <nav class="navbar navbar-expand-lg navbar-dark navbar-custom container-fluid px-3 px-md-4 px-lg-5">
         <a class="navbar-brand brand-logo d-flex align-items-center" href="../index.html">
@@ -42,10 +43,10 @@
                     </a>
 
                     <ul class="dropdown-menu dropdown-menu-dark shadow-sm">
-                        <li><a class="dropdown-item active" href="../pages/About Music.html">About Music</a></li>
-                        <li><a class="dropdown-item" href="../pages/whoweare.html">Who We Are</a></li>
-                        <li><a class="dropdown-item" href="../pages/history.html">History of Music</a></li>
-                        <li><a class="dropdown-item" href="../pages/benefits.html">Benefits of Music</a></li>
+                        <li><a class="dropdown-item active" href="About Music.html">About Music</a></li>
+                        <li><a class="dropdown-item" href="whoweare.html">Who We Are</a></li>
+                        <li><a class="dropdown-item" href="history.html">History of Music</a></li>
+                        <li><a class="dropdown-item" href="benefits.html">Benefits of Music</a></li>
                     </ul>
                 </li>
 
@@ -55,9 +56,10 @@
                     </a>
 
                     <ul class="dropdown-menu dropdown-menu-dark shadow-sm">
-                        <li><a class="dropdown-item" href="../pages/genres.html">All Genres</a></li>
-                        <li><a class="dropdown-item" href="../pages/instruments.html">Instruments</a></li>
-                        <li><a class="dropdown-item" href="../pages/musicTechnology.html">Music Technology</a></li>
+                        <li><a class="dropdown-item" href="genres.html">All Genres</a></li>
+                        <li><a class="dropdown-item" href="instruments.html">Instruments</a></li>
+                        <li><a class="dropdown-item" href="musicTechnology.html">Music Technology</a></li>
+                        <li><a class="dropdown-item" href="shop.html">Shop</a></li>
                     </ul>
                 </li>
 
@@ -67,9 +69,9 @@
                     </a>
 
                     <ul class="dropdown-menu dropdown-menu-dark shadow-sm">
-                        <li><a class="dropdown-item" href="../pages/famousartists.html">Famous Artists</a></li>
-                        <li><a class="dropdown-item" href="../pages/albums.html">Top Albums</a></li>
-                        <li><a class="dropdown-item" href="../pages/concert.html">Concerts</a></li>
+                        <li><a class="dropdown-item" href="famousartists.html">Famous Artists</a></li>
+                        <li><a class="dropdown-item" href="albums.html">Top Albums</a></li>
+                        <li><a class="dropdown-item" href="concert.html">Concerts</a></li>
                     </ul>
                 </li>
             </ul>
@@ -77,124 +79,174 @@
     </nav>
 </header>
 
-<main>
-    <section class="team" id="team">
 
-        <header class="team__header scroll-animate">
-            <p class="team__tag section-label">THE PEOPLE BEHIND THE VAULT</p>
-            <h1 class="team__title section-title">Who Are We</h1>
-            <p class="team__subtitle">
-                A small team of students who wanted music history, culture and discovery
-                to live in one place — built, designed and researched from the ground up.
+<main class="py-5">
+
+    <section class="container bg-dark bg-opacity-50 border border-warning border-opacity-25 rounded-4 p-4 p-md-5 my-4 text-center shadow-lg scroll-animate">
+        <header class="mx-auto" style="max-width: 800px;">
+            <p class="text-warning small text-uppercase fw-bold mb-1" style="letter-spacing: 0.12em;">Why?</p>
+            <h2 class="display-6 fw-bold text-light mb-3">Why We Built Music Vault</h2>
+            <p class="text-light opacity-75 fs-5">
+                Music Vault exists because 4 kids with a passion for audio and music wanted to 
+                help boost community awareness about music, its history, its beauty, the technology
+                and instruments that make the musical masterpieces today, and the artists that bring 
+                people together. We built this site because we want a one-stop-shop for everyone to explore,
+                learn and rediscover why music matters, in the hope that more people become passionate about it, 
+                sharing their passion, culture and loving music together.
             </p>
         </header>
 
-        <section class="team__grid">
+        <aside class="bg-black bg-opacity-60 border border-warning border-opacity-25 rounded-4 p-4 my-4 text-center">
+            <h3 class="text-warning fs-5 mb-1"><i class="fa-solid fa-sliders me-2"></i> The difference We made:</h3>
+            <p class="text-light opacity-75 small mx-auto mb-4" style="max-width: 600px;">
+                Hear how compressed MP3 audio cuts fine frequencies compared to Music Vault Lossless Audio.
+            </p>
 
-            <article class="team-card scroll-animate">
-                <figure class="team-card__photo">
-                    <img src="../assets/images/whoweare/rahul.jpeg" alt="Team member photo">
-                    <i class="team-card__placeholder"></i>
-                </figure>
-                <h3 class="team-card__name">Rahul</h3>
-                <p class="team-card__role">Leader</p>
-                <p class="team-card__desc">
-                   Drives team strategy, manages deadlines, and facilitates communication to keep the project on target.
-                </p>
+            <audio id="audio-sample" src="https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf07a.mp3?filename=lofi-study-112191.mp3" loop crossorigin="anonymous"></audio>
+
+            <section class="d-flex flex-wrap justify-content-center align-items-center gap-3 mb-3">
+                <button id="btn-play" class="btn btn-warning rounded-pill px-4 fw-bold shadow-sm" onclick="togglePlay()">
+                    <i class="fa-solid fa-play me-1"></i> Play Sample
+                </button>
+
+                <nav class="btn-group" aria-label="Audio Quality Switcher">
+                    <button id="btn-compressed" class="btn btn-warning btn-sm fw-semibold active" onclick="setQuality('compressed')">
+                        Standard (Compressed)
+                    </button>
+                    <button id="btn-lossless" class="btn btn-outline-warning text-light btn-sm fw-semibold" onclick="setQuality('lossless')">
+                        Music Vault (Lossless)
+                    </button>
+                </nav>
+            </section>
+
+            <output id="audio-status" class="text-warning small opacity-75 d-block">
+                <i class="fa-solid fa-circle-info me-1"></i> Standard Output: High-frequency response cut off at 3.5kHz.
+            </output>
+        </aside>
+
+        <section class="row row-cols-1 row-cols-md-2 g-4 text-start mt-2 pt-4 border-top border-warning border-opacity-25">
+            <article class="col">
+                <section class="bg-black bg-opacity-40 p-4 rounded-3 border border-warning border-opacity-10 h-100 d-flex flex-column">
+                    <h3 class="text-warning h5 fw-bold mb-2">Why Was It Made?</h3>
+                    <p class="text-light opacity-75 mb-0 flex-grow-1">
+                        It was made to solve a common problem; that being there is no place where one can get all the information on 
+                        music that they need. They are often through multiple disconnected websites, all having only bits and pieces 
+                        of information. Music Vault brings everything together into a website that teaches you not just from boring words 
+                        but how your mind was made to learn, by playing around. 
+                    </p>
+                </section>
             </article>
 
-            <article class="team-card scroll-animate">
-                <figure class="team-card__photo">
-                    <img src="../assets/images/whoweare/marco.jpeg" alt="Team member photo">
-                    <i class="team-card__placeholder"></i>
-                </figure>
-                <h3 class="team-card__name">Marco</h3>
-                <p class="team-card__role">Design Lead</p>
-                <p class="team-card__desc">
-                    Crafts intuitive user experiences, establishes visual identity, and ensures an engaging design across all interfaces.
-                </p>
+            <article class="col">
+                <section class="bg-black bg-opacity-40 p-4 rounded-3 border border-warning border-opacity-10 h-100 d-flex flex-column">
+                    <h3 class="text-warning h5 fw-bold mb-2">When Was It Made?</h3>
+                    <p class="text-light opacity-75 mb-0 flex-grow-1">
+                        Designed and built in 2026 as an interactive Web Development project for Singapore Polytechnic.
+                        But, we have always wanted to build something from the start, we just had no knowledge.
+                    </p>
+                </section>
             </article>
 
-            <article class="team-card scroll-animate">
-                <figure class="team-card__photo">
-                    <img src="../assets/images/whoweare/muhsin.jpeg" alt="Team member photo">
-                    <i class="team-card__placeholder"></i>
-                </figure>
-                <h3 class="team-card__name">Muhsin</h3>
-                <p class="team-card__role">Technical Support</p>
-                <p class="team-card__desc">
-                    Provides core troubleshooting, manages data flows, and assists in integrating technical features efficiently.
-                </p>
+            <article class="col">
+                <section class="bg-black bg-opacity-40 p-4 rounded-3 border border-warning border-opacity-10 h-100 d-flex flex-column">
+                    <h3 class="text-warning h5 fw-bold mb-2">Who Was It Meant For?</h3>
+                    <p class="text-light opacity-75 mb-0 flex-grow-1">
+                        Short and Sweet: Everyone. Whether you're a casual listener wanting to discover a new genre, 
+                        a student researching music history for a late-night project, or a simple fan, Music Vault is for you. 
+                    </p>
+                </section>
             </article>
 
-            <article class="team-card scroll-animate">
-                <figure class="team-card__photo">
-                    <img src="../assets/images/whoweare/munyu.jpeg" alt="Team member photo">
-                    <i class="team-card__placeholder"></i>
-                </figure>
-                <h3 class="team-card__name">Mun Yu</h3>
-                <p class="team-card__role">Technical Support</p>
-                <p class="team-card__desc">
-                   Focuses on code optimization, bug fixing, and ensuring reliable technical operations throughout execution.
-                </p>
+            <article class="col">
+                <section class="bg-black bg-opacity-40 p-4 rounded-3 border border-warning border-opacity-10 h-100 d-flex flex-column">
+                    <h3 class="text-warning h5 fw-bold mb-2">What You'll Find Here</h3>
+                    <p class="text-light opacity-75 mb-0 flex-grow-1">
+                        Deep dives into genres, equipment breakdowns, artist archives, and a curated album ranking, Music
+                        Vault offers a space for you to truly and thoroughly learn and appreciate the art of sound.
+                    </p>
+                </section>
             </article>
-
         </section>
-
     </section>
-<section class="zv-purpose scroll-animate">
-    <header class="zv-purpose__header">
-        <p class="zv-purpose__tag section-label">OUR PURPOSE</p>
-        <h2 class="zv-purpose__title">Why We Built Music Vault</h2>
-        <p class="zv-purpose__text">
-            Music Vault exists to help boost community awareness about music — its history,
-            its genres, the instruments and technology behind it, and the artists and festivals
-            that bring people together around it. We built this site as a single place to
-            explore, learn and rediscover why music matters, in the hope that it gets more
-            people talking about it, sharing it, and paying attention to the culture around them.
-        </p>
-    </header>
 
-    <section class="zv-purpose__details">
-        
-        <article class="zv-purpose__item">
-            <h3 class="zv-purpose__subtitle">Why Was It Made?</h3>
-            <p class="zv-purpose__subtext">
-                It was created to solve a common problem: music history, facts, and technology are often scattered across disconnected websites. Music Vault brings everything together into an interactive, beautifully designed central hub where anyone can explore music culture effortlessly.
-            </p>
-        </article>
+    <section class="bg-team-image py-5 my-5 border-top border-bottom border-warning border-opacity-25" id="team">
+        <section class="container">
+            <header class="text-center mx-auto mb-5 scroll-animate" style="max-width: 700px;">
+                <p class="text-warning small text-uppercase fw-bold mb-1" style="letter-spacing: 0.12em;">THE PEOPLE BEHIND THE VAULT</p>
+                <h1 class="display-5 fw-bold text-light mb-3">Who Are We</h1>
+                <p class="text-light opacity-75 fs-6 mb-0">
+                    A small team of students who wanted music, history, culture & discovery to all be in one place, for 
+                    easy access by everyone and anyone, made locally, designed, built and researched with one goal in mind;
+                    accessibility for all.
+                </p>
+            </header>
 
-        <article class="zv-purpose__item">
-            <h3 class="zv-purpose__subtitle">When Was It Made?</h3>
-            <p class="zv-purpose__subtext">
-                Designed and built in 2026 as an interactive Web Development project for Singapore Polytechnic.
-            </p>
-        </article>
+            <section class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4">
+                
+                <article class="col scroll-animate">
+                    <section class="card bg-dark text-light border-warning border-opacity-25 rounded-4 p-3 text-center h-100 shadow-lg d-flex flex-column">
+                        <figure class="ratio ratio-1x1 rounded-3 overflow-hidden mb-3 bg-secondary">
+                            <img src="../assets/images/whoweare/rahul.jpeg" alt="Rahul - Leader" class="object-fit-cover w-100 h-100">
+                        </figure>
+                        <h3 class="card-title h5 mb-1">Rahul</h3>
+                        <p class="text-warning small text-uppercase fw-bold mb-2">Leader</p>
+                        <p class="card-text text-light opacity-75 small mb-0 flex-grow-1">
+                            Communication, Command, making sure work gets done, everything is done by him. He leads, guides and makes sure work gets done, so we can push our quality work on time.
+                        </p>
+                    </section>
+                </article>
 
-        <article class="zv-purpose__item">
-            <h3 class="zv-purpose__subtitle">Who Was It Meant For?</h3>
-            <p class="zv-purpose__subtext">
-                Music Vault is built for everyone — whether you are a casual listener wanting to discover new genres, a student researching music history and instruments, or a hardcore music fan looking to dive into iconic albums and concert culture.
-            </p>
-        </article>
+                <article class="col scroll-animate">
+                    <section class="card bg-dark text-light border-warning border-opacity-25 rounded-4 p-3 text-center h-100 shadow-lg d-flex flex-column">
+                        <figure class="ratio ratio-1x1 rounded-3 overflow-hidden mb-3 bg-secondary">
+                            <img src="../assets/images/whoweare/marco.jpeg" alt="Marco - Design Lead" class="object-fit-cover w-100 h-100">
+                        </figure>
+                        <h3 class="card-title h5 mb-1">Marco</h3>
+                        <p class="text-warning small text-uppercase fw-bold mb-2">Design Lead</p>
+                        <p class="card-text text-light opacity-75 small mb-0 flex-grow-1">
+                            User experience, crafting visual identity, ensuring an engaging design across all interfaces, all done by him.
+                        </p>
+                    </section>
+                </article>
 
-        <article class="zv-purpose__item">
-            <h3 class="zv-purpose__subtitle">What You'll Find Here</h3>
-            <p class="zv-purpose__subtext">
-                From deep dives into musical genres and equipment breakdowns to curated album rankings and famous artist archives, Music Vault offers a comprehensive space to learn, test your knowledge, and appreciate the art of sound.
-            </p>
-        </article>
+                <article class="col scroll-animate">
+                    <section class="card bg-dark text-light border-warning border-opacity-25 rounded-4 p-3 text-center h-100 shadow-lg d-flex flex-column">
+                        <figure class="ratio ratio-1x1 rounded-3 overflow-hidden mb-3 bg-secondary">
+                            <img src="../assets/images/whoweare/muhsin.jpeg" alt="Muhsin - Technical Support" class="object-fit-cover w-100 h-100">
+                        </figure>
+                        <h3 class="card-title h5 mb-1">Muhsin</h3>
+                        <p class="text-warning small text-uppercase fw-bold mb-2">Technical Support</p>
+                        <p class="card-text text-light opacity-75 small mb-0 flex-grow-1">
+                            Provides core troubleshooting, manages data flows, and assists in integrating technical features, he is your guy.
+                        </p>
+                    </section>
+                </article>
 
+                <article class="col scroll-animate">
+                    <section class="card bg-dark text-light border-warning border-opacity-25 rounded-4 p-3 text-center h-100 shadow-lg d-flex flex-column">
+                        <figure class="ratio ratio-1x1 rounded-3 overflow-hidden mb-3 bg-secondary">
+                            <img src="../assets/images/whoweare/munyu.jpeg" alt="Mun Yu - Technical Support" class="object-fit-cover w-100 h-100">
+                        </figure>
+                        <h3 class="card-title h5 mb-1">Mun Yu</h3>
+                        <p class="text-warning small text-uppercase fw-bold mb-2">Technical Lead</p>
+                        <p class="card-text text-light opacity-75 small mb-0 flex-grow-1">
+                            Muhsin and Mun Yu work together, ensuring no bugs, optimizing the code, and ensuring reliable technical operations.
+                        </p>
+                    </section>
+                </article>
+
+            </section>
+        </section>
     </section>
-</section>
+
 </main>
-<footer class="site-footer overflow-hidden py-4 px-3 px-md-5">
+
+<!--Footer-->
+<footer class="site-footer overflow-hidden py-4 px-3 px-md-5 mb-0 mt-auto">
     <section class="container-fluid">
-        
 
         <section class="row align-items-center gy-4 text-center text-md-start">
             
-    
             <article class="col-12 col-md-3 d-flex justify-content-center justify-content-md-start">
                 <a href="#top" class="footer-logo-link d-flex flex-column align-items-center gap-1 text-decoration-none">
                     <span class="arrow text-gold fs-6">▼</span>
@@ -202,19 +254,15 @@
                 </a>
             </article>
 
-
             <article class="col-12 col-md-6 text-center">
-                
-
                 <nav class="footer-nav d-flex flex-wrap justify-content-center gap-3 gap-md-4 mb-3">
                     <a href="../index.html" class="text-light text-decoration-none opacity-75 hover-gold small">Home</a>
-                    <a href="../pages/About Music.html" class="text-light text-decoration-none opacity-75 hover-gold small">About Music</a>
-                    <a href="../pages/genres.html" class="text-light text-decoration-none opacity-75 hover-gold small">Genres</a>
+                    <a href="About Music.html" class="text-light text-decoration-none opacity-75 hover-gold small">About Music</a>
+                    <a href="genres.html" class="text-light text-decoration-none opacity-75 hover-gold small">Genres</a>
                 </nav>
 
-
                 <blockquote class="footer-quote mb-3 italic">
-                    "Expressive, calming and beautiful, that's what music is." — Mark Y.
+                    “You have to play a long time to be able to play like yourself.” — Miles Davis
                 </blockquote>
 
                 <button class="top-btn btn" onclick="scrollToTop()">
@@ -222,10 +270,7 @@
                 </button>
             </article>
 
-  
             <article class="col-12 col-md-3 d-flex flex-column align-items-center align-items-md-end">
-                
-    
                 <ul class="social-grid list-unstyled m-0 p-0 mb-2">
                     <li><a href="#" aria-label="Instagram"><i class="fa-brands fa-square-instagram"></i></a></li>
                     <li><a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a></li>
@@ -235,23 +280,21 @@
                     <li><a href="#" aria-label="Reddit"><i class="fa-brands fa-square-reddit"></i></a></li>
                 </ul>
 
-      
-                <a href="../pages/shop.html" class="newsletter-link text-gold text-center text-md-end w-100">
+                <a href="shop.html" class="newsletter-link text-gold text-center text-md-end w-100">
                     Shop
                 </a>
             </article>
 
         </section>
 
-  
         <hr class="border-secondary opacity-25 my-4">
 
         <section class="row">
-            <footer class="col-12 text-center">
+            <div class="col-12 text-center">
                 <p class="text-light opacity-50 small mb-0">
                     &copy; 2026 Music Vault. All rights reserved. Property of Singapore Polytechnic. 
                 </p>
-            </footer>
+            </div>
         </section>
 
     </section>
@@ -262,3 +305,9 @@
 
 </body>
 </html>
+
+<!--References
+
+Photo by Zonghao Feng from Pexels: https://www.pexels.com/photo/vibrant-japanese-lanterns-at-night-festival-38034360/ (background)
+
+-->
