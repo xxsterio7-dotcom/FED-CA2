@@ -7,11 +7,12 @@
     <title>Music Vault | About Music</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/b71d6a20e5.js" crossorigin="anonymous"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
             crossorigin="anonymous"></script>
 
-    <script src="../assets/js/instruments.js" defer></script>
+    <script src="../assets/js/inst.js" defer></script>
 
     <link rel="stylesheet" href="../assets/css/MAINCSS.css">
 </head>
@@ -79,15 +80,11 @@
         </section>
     </nav>
 </header>
-<!-- SECTION 1: HERO -->
-<section class="mv-hero">
-  <section class="container">
-    <h1>Instruments</h1>
-    <p>From the earliest drums to modern synthesizers, explore the tools musicians have used to shape sound across history.</p>
-  </section>
-</section>
+
+
+
  
-<!-- SECTION 2: BRIEF HISTORY -->
+<!-- SECTION 1: BRIEF HISTORY -->
 <section class="mv-history-section">
   <section class="mv-history-wrap">
     <section class="mv-history-text">
@@ -97,12 +94,12 @@
       <p>By the time of the Renaissance and Baroque eras, instrument-making had become its own craft, with families of strings, brass, woodwind, and keyboard instruments each evolving their own traditions. That same family structure is still how we organize and understand instruments now.</p>
     </section>
     <section class="mv-history-photo">
-      <img src="../docs/instruments-history.jpg" alt="A collection of historical instruments">
+      <img src="../assets/images/Instrunments/Historical_instruments.jpg" alt="A collection of historical instruments">
     </section>
   </section>
 </section>
  
-<!-- SECTION 3: EXPLORE BY FAMILY (interactive filter + lightbox) -->
+<!-- SECTION 2: EXPLORE BY FAMILY (interactive filter + lightbox) -->
 <section class="mv-family-section">
   <h2>Explore by Family</h2>
   <p class="mv-family-subtitle">Click a family to filter, then click any instrument for more detail</p>
@@ -119,8 +116,8 @@
  
   <section class="mv-instr-grid" id="mvInstrGrid">
  
-    <section class="mv-instr-card" data-family="strings" onclick="openLightbox('../docs/violin.png','Violin','Strings','A bowed string instrument known for its bright, expressive tone. Held under the chin and played with a horsehair bow, the violin has been central to Western orchestras since the Baroque era and remains one of the most technically demanding instruments to master.')">
-      <section class="mv-instr-photo"><img src="../docs/violin.png" alt="Violin"></section>
+    <section class="mv-instr-card" data-family="strings" onclick="openLightbox('../assets/images/Instrunments/violin.avif','Violin','Strings','A bowed string instrument known for its bright, expressive tone. Held under the chin and played with a horsehair bow, the violin has been central to Western orchestras since the Baroque era and remains one of the most technically demanding instruments to master.')">
+      <section class="mv-instr-photo"><img src="../assets/images/Instrunments/Violin.avif" alt="Violin"></section>
       <section class="mv-instr-info">
         <p class="mv-instr-family-tag">Strings</p>
         <h3 class="mv-instr-name">Violin</h3>
@@ -128,8 +125,8 @@
       </section>
     </section>
  
-    <section class="mv-instr-card" data-family="strings" onclick="openLightbox('../docs/guitar.png','Guitar','Strings','A plucked string instrument that became central to nearly every popular genre from folk to rock. Its six strings and frets make it relatively approachable for beginners while still offering huge depth for advanced players.')">
-      <section class="mv-instr-photo"><img src="../docs/guitar.png" alt="Guitar"></section>
+    <section class="mv-instr-card" data-family="strings" onclick="openLightbox('../assets/images/Instrunments/Guitar.jpg','Guitar','Strings','A plucked string instrument that became central to nearly every popular genre from folk to rock. Its six strings and frets make it relatively approachable for beginners while still offering huge depth for advanced players.')">
+      <section class="mv-instr-photo"><img src="../assets/images/Instrunments/Guitar.jpg" alt="Guitar"></section>
       <section class="mv-instr-info">
         <p class="mv-instr-family-tag">Strings</p>
         <h3 class="mv-instr-name">Guitar</h3>
@@ -137,8 +134,8 @@
       </section>
     </section>
  
-    <section class="mv-instr-card" data-family="strings" onclick="openLightbox('../docs/harp.png','Harp','Strings','One of the oldest string instruments in the world, plucked directly by hand across a full set of vertical strings. Modern concert harps use foot pedals to change key mid-performance.')">
-      <section class="mv-instr-photo"><img src="../docs/harp.png" alt="Harp"></section>
+    <section class="mv-instr-card" data-family="strings" onclick="openLightbox('../assets/images/Instrunments/Harp.jpg','Harp','Strings','One of the oldest string instruments in the world, plucked directly by hand across a full set of vertical strings. Modern concert harps use foot pedals to change key mid-performance.')">
+      <section class="mv-instr-photo"><img src="../assets/images/Instrunments/Harp.jpg" alt="Harp"></section>
       <section class="mv-instr-info">
         <p class="mv-instr-family-tag">Strings</p>
         <h3 class="mv-instr-name">Harp</h3>
@@ -146,8 +143,8 @@
       </section>
     </section>
  
-    <section class="mv-instr-card" data-family="woodwind" onclick="openLightbox('../docs/flute.png','Flute','Woodwind','Played by blowing air across an opening rather than through a reed, producing a light, airy tone. Despite its name, modern concert flutes are usually made of metal rather than wood.')">
-      <section class="mv-instr-photo"><img src="../docs/flute.png" alt="Flute"></section>
+    <section class="mv-instr-card" data-family="woodwind" onclick="openLightbox('../assets/images/Instrunments/Flute.jpg','Flute','Woodwind','Played by blowing air across an opening rather than through a reed, producing a light, airy tone. Despite its name, modern concert flutes are usually made of metal rather than wood.')">
+      <section class="mv-instr-photo"><img src="../assets/images/Instrunments/Flute.jpg" alt="Flute"></section>
       <section class="mv-instr-info">
         <p class="mv-instr-family-tag">Woodwind</p>
         <h3 class="mv-instr-name">Flute</h3>
@@ -155,8 +152,8 @@
       </section>
     </section>
  
-    <section class="mv-instr-card" data-family="woodwind" onclick="openLightbox('../docs/clarinet.png','Clarinet','Woodwind','A single-reed woodwind with a warm, versatile tone that spans classical orchestras, jazz combos, and folk traditions. Its wide range lets it move between deep, mellow lows and bright, piercing highs.')">
-      <section class="mv-instr-photo"><img src="../docs/clarinet.png" alt="Clarinet"></section>
+    <section class="mv-instr-card" data-family="woodwind" onclick="openLightbox('../assets/images/Instrunments/Clarinet.png','Clarinet','Woodwind','A single-reed woodwind with a warm, versatile tone that spans classical orchestras, jazz combos, and folk traditions. Its wide range lets it move between deep, mellow lows and bright, piercing highs.')">
+      <section class="mv-instr-photo"><img src="../assets/images/Instrunments/Clarinet.png" alt="Clarinet"></section>
       <section class="mv-instr-info">
         <p class="mv-instr-family-tag">Woodwind</p>
         <h3 class="mv-instr-name">Clarinet</h3>
@@ -164,8 +161,8 @@
       </section>
     </section>
  
-    <section class="mv-instr-card" data-family="brass" onclick="openLightbox('../docs/trumpet.png','Trumpet','Brass','A bright, powerful brass instrument central to orchestras, jazz bands, and fanfare music alike. Sound is produced by buzzing the lips into a mouthpiece, with three valves controlling pitch.')">
-      <section class="mv-instr-photo"><img src="../docs/trumpet.png" alt="Trumpet"></section>
+    <section class="mv-instr-card" data-family="brass" onclick="openLightbox('../assets/images/Instrunments/Trumpet.jpg','Trumpet','Brass','A bright, powerful brass instrument central to orchestras, jazz bands, and fanfare music alike. Sound is produced by buzzing the lips into a mouthpiece, with three valves controlling pitch.')">
+      <section class="mv-instr-photo"><img src="../assets/images/Instrunments/Trumpet.jpg" alt="Trumpet"></section>
       <section class="mv-instr-info">
         <p class="mv-instr-family-tag">Brass</p>
         <h3 class="mv-instr-name">Trumpet</h3>
@@ -173,8 +170,8 @@
       </section>
     </section>
  
-    <section class="mv-instr-card" data-family="brass" onclick="openLightbox('../docs/french-horn.png','French Horn','Brass','Known for its warm, mellow tone, the French horn adds depth to orchestral brass sections. Its long, coiled tubing and funnel-shaped bell give it a rounder sound than other brass instruments.')">
-      <section class="mv-instr-photo"><img src="../docs/french-horn.png" alt="French Horn"></section>
+    <section class="mv-instr-card" data-family="brass" onclick="openLightbox('../assets/images/Instrunments/FrenchHorn.jpg','French Horn','Brass','Known for its warm, mellow tone, the French horn adds depth to orchestral brass sections. Its long, coiled tubing and funnel-shaped bell give it a rounder sound than other brass instruments.')">
+      <section class="mv-instr-photo"><img src="../assets/images/Instrunments/FrenchHorn.jpg" alt="French Horn"></section>
       <section class="mv-instr-info">
         <p class="mv-instr-family-tag">Brass</p>
         <h3 class="mv-instr-name">French Horn</h3>
@@ -182,8 +179,8 @@
       </section>
     </section>
  
-    <section class="mv-instr-card" data-family="percussion" onclick="openLightbox('../docs/drums.png','Drum Kit','Percussion','A collection of drums and cymbals arranged for one player, providing the rhythmic backbone of modern bands. Most kits combine a bass drum, snare, toms, hi-hat, and cymbals played together with hands and feet.')">
-      <section class="mv-instr-photo"><img src="../docs/drums.png" alt="Drum Kit"></section>
+    <section class="mv-instr-card" data-family="percussion" onclick="openLightbox('../assets/images/Instrunments/DrumSet.png','Drum Kit','Percussion','A collection of drums and cymbals arranged for one player, providing the rhythmic backbone of modern bands. Most kits combine a bass drum, snare, toms, hi-hat, and cymbals played together with hands and feet.')">
+      <section class="mv-instr-photo"><img src="../assets/images/Instrunments/DrumSet.png" alt="Drum Kit"></section>
       <section class="mv-instr-info">
         <p class="mv-instr-family-tag">Percussion</p>
         <h3 class="mv-instr-name">Drum Kit</h3>
@@ -191,8 +188,8 @@
       </section>
     </section>
  
-    <section class="mv-instr-card" data-family="percussion" onclick="openLightbox('../docs/xylophone.png','Xylophone','Percussion','Wooden bars of different lengths struck with mallets, each tuned to a specific pitch. Its bright, resonant tone has made it a staple in both orchestral and educational music settings.')">
-      <section class="mv-instr-photo"><img src="../docs/xylophone.png" alt="Xylophone"></section>
+    <section class="mv-instr-card" data-family="percussion" onclick="openLightbox('../assets/images/Instrunments/Xylophone.png','Xylophone','Percussion','Wooden bars of different lengths struck with mallets, each tuned to a specific pitch. Its bright, resonant tone has made it a staple in both orchestral and educational music settings.')">
+      <section class="mv-instr-photo"><img src="../assets/images/Instrunments/Xylophone.png" alt="Xylophone"></section>
       <section class="mv-instr-info">
         <p class="mv-instr-family-tag">Percussion</p>
         <h3 class="mv-instr-name">Xylophone</h3>
@@ -200,8 +197,8 @@
       </section>
     </section>
  
-    <section class="mv-instr-card" data-family="keyboard" onclick="openLightbox('../docs/piano.png','Piano','Keyboard','A percussive-string hybrid capable of both delicate melodies and powerful chords. Pressing a key causes a felt-covered hammer to strike a string, giving the piano more dynamic range than earlier keyboard instruments.')">
-      <section class="mv-instr-photo"><img src="../docs/piano.png" alt="Piano"></section>
+    <section class="mv-instr-card" data-family="keyboard" onclick="openLightbox('../assets/images/Instrunments/piano.png','Piano','Keyboard','A percussive-string hybrid capable of both delicate melodies and powerful chords. Pressing a key causes a felt-covered hammer to strike a string, giving the piano more dynamic range than earlier keyboard instruments.')">
+      <section class="mv-instr-photo"><img src="../assets/images/Instrunments/piano.png" alt="Piano"></section>
       <section class="mv-instr-info">
         <p class="mv-instr-family-tag">Keyboard</p>
         <h3 class="mv-instr-name">Piano</h3>
@@ -209,8 +206,8 @@
       </section>
     </section>
  
-    <section class="mv-instr-card" data-family="electronic" onclick="openLightbox('../docs/synthesizer.png','Synthesizer','Electronic','Generates and shapes electronic sound using oscillators, filters, and envelopes rather than physical vibration. Synthesizers have powered decades of pop, electronic, and film music, from analog classics to modern software instruments.')">
-      <section class="mv-instr-photo"><img src="../docs/synthesizer.png" alt="Synthesizer"></section>
+    <section class="mv-instr-card" data-family="electronic" onclick="openLightbox('../assets/images/Instrunments/synthesizer.png','Synthesizer','Electronic','Generates and shapes electronic sound using oscillators, filters, and envelopes rather than physical vibration. Synthesizers have powered decades of pop, electronic, and film music, from analog classics to modern software instruments.')">
+      <section class="mv-instr-photo"><img src="../assets/images/Instrunments/synthesizer.png" alt="Synthesizer"></section>
       <section class="mv-instr-info">
         <p class="mv-instr-family-tag">Electronic</p>
         <h3 class="mv-instr-name">Synthesizer</h3>
@@ -218,8 +215,8 @@
       </section>
     </section>
  
-    <section class="mv-instr-card" data-family="electronic" onclick="openLightbox('../docs/turntable.png','Turntable','Electronic','Originally built for playback, the turntable was turned into a performance instrument through scratching, beat-juggling, and mixing — techniques pioneered in hip-hop culture starting in the 1970s.')">
-      <section class="mv-instr-photo"><img src="../docs/turntable.png" alt="Turntable"></section>
+    <section class="mv-instr-card" data-family="electronic" onclick="openLightbox('../assets/images/Instrunments/Turntable.png','Turntable','Electronic','Originally built for playback, the turntable was turned into a performance instrument through scratching, beat-juggling, and mixing — techniques pioneered in hip-hop culture starting in the 1970s.')">
+      <section class="mv-instr-photo"><img src="../assets/images/Instrunments/Turntable.png" alt="Turntable"></section>
       <section class="mv-instr-info">
         <p class="mv-instr-family-tag">Electronic</p>
         <h3 class="mv-instr-name">Turntable</h3>
@@ -230,15 +227,15 @@
   </section>
 </section>
  
-<!-- SECTION 4: INSTRUMENTS AROUND THE WORLD (interactive lightbox) -->
+<!-- SECTION 3: INSTRUMENTS AROUND THE WORLD (interactive lightbox) -->
 <section class="mv-world-section">
   <h2>Instruments Around the World</h2>
   <p class="mv-world-subtitle">Click an instrument to learn where it comes from</p>
  
   <section class="mv-world-grid">
  
-    <section class="mv-instr-card" onclick="openLightbox('../docs/sitar.png','Sitar','Origin: India','A long-necked string instrument famous for its buzzing, resonant tone, produced partly by a set of sympathetic strings that vibrate along with the ones being played. Central to Hindustani classical music for centuries.')">
-      <section class="mv-instr-photo"><img src="../docs/sitar.png" alt="Sitar"></section>
+    <section class="mv-instr-card" onclick="openLightbox('../assets/images/Instrunments/Sitar.jpg','Sitar','Origin: India','A long-necked string instrument famous for its buzzing, resonant tone, produced partly by a set of sympathetic strings that vibrate along with the ones being played. Central to Hindustani classical music for centuries.')">
+      <section class="mv-instr-photo"><img src="../assets/images/Instrunments/Sitar.jpg" alt="Sitar"></section>
       <section class="mv-instr-info">
         <p class="mv-instr-family-tag">Origin: India</p>
         <h3 class="mv-instr-name">Sitar</h3>
@@ -246,8 +243,8 @@
       </section>
     </section>
  
-    <section class="mv-instr-card" onclick="openLightbox('../docs/djembe.png','Djembe','Origin: West Africa','A rope-tuned, goblet-shaped hand drum capable of a wide range of tones depending on where and how its struck. Traditionally used in West African communities for celebrations, ceremonies, and storytelling.')">
-      <section class="mv-instr-photo"><img src="../docs/djembe.png" alt="Djembe"></section>
+    <section class="mv-instr-card" onclick="openLightbox('../assets/images/Instrunments/Djembe.png','Djembe','Origin: West Africa','A rope-tuned, goblet-shaped hand drum capable of a wide range of tones depending on where and how its struck. Traditionally used in West African communities for celebrations, ceremonies, and storytelling.')">
+      <section class="mv-instr-photo"><img src="../assets/images/Instrunments/Djembe.png" alt="Djembe"></section>
       <section class="mv-instr-info">
         <p class="mv-instr-family-tag">Origin: West Africa</p>
         <h3 class="mv-instr-name">Djembe</h3>
@@ -255,8 +252,8 @@
       </section>
     </section>
  
-    <section class="mv-instr-card" onclick="openLightbox('../docs/koto.png','Koto','Origin: Japan','A long, plucked string instrument with movable bridges that let players adjust each strings pitch individually. Its Japans national instrument and remains central to traditional Japanese court and folk music.')">
-      <section class="mv-instr-photo"><img src="../docs/koto.png" alt="Koto"></section>
+    <section class="mv-instr-card" onclick="openLightbox('../assets/images/Instrunments/Koto.png','Koto','Origin: Japan','A long, plucked string instrument with movable bridges that let players adjust each strings pitch individually. Its Japans national instrument and remains central to traditional Japanese court and folk music.')">
+      <section class="mv-instr-photo"><img src="../assets/images/Instrunments/Koto.png" alt="Koto"></section>
       <section class="mv-instr-info">
         <p class="mv-instr-family-tag">Origin: Japan</p>
         <h3 class="mv-instr-name">Koto</h3>
@@ -264,8 +261,8 @@
       </section>
     </section>
  
-    <section class="mv-instr-card" onclick="openLightbox('../docs/bagpipes.png','Bagpipes','Origin: Scotland','A wind instrument that uses a constant supply of air from a squeezed bag to sustain continuous, droning notes while the players fingers work a separate melody pipe. Closely tied to Scottish and Irish musical tradition.')">
-      <section class="mv-instr-photo"><img src="../docs/bagpipes.png" alt="Bagpipes"></section>
+    <section class="mv-instr-card" onclick="openLightbox('../assets/images/Instrunments/Bgapipe.webp','Bagpipes','Origin: Scotland','A wind instrument that uses a constant supply of air from a squeezed bag to sustain continuous, droning notes while the players fingers work a separate melody pipe. Closely tied to Scottish and Irish musical tradition.')">
+      <section class="mv-instr-photo"><img src="../assets/images/Instrunments/Bgapipe.webp" alt="Bagpipes"></section>
       <section class="mv-instr-info">
         <p class="mv-instr-family-tag">Origin: Scotland</p>
         <h3 class="mv-instr-name">Bagpipes</h3>
@@ -273,8 +270,8 @@
       </section>
     </section>
  
-    <section class="mv-instr-card" onclick="openLightbox('../docs/didgeridoo.png','Didgeridoo','Origin: Australia','One of the oldest wind instruments in the world, made from a hollowed-out branch or trunk. Played using a technique called circular breathing, allowing performers to sustain a continuous drone indefinitely.')">
-      <section class="mv-instr-photo"><img src="../docs/didgeridoo.png" alt="Didgeridoo"></section>
+    <section class="mv-instr-card" onclick="openLightbox('../assets/images/Instrunments/digeridoo.jpg','Didgeridoo','Origin: Australia','One of the oldest wind instruments in the world, made from a hollowed-out branch or trunk. Played using a technique called circular breathing, allowing performers to sustain a continuous drone indefinitely.')">
+      <section class="mv-instr-photo"><img src="../assets/images/Instrunments/digeridoo.jpg" alt="Didgeridoo"></section>
       <section class="mv-instr-info">
         <p class="mv-instr-family-tag">Origin: Australia</p>
         <h3 class="mv-instr-name">Didgeridoo</h3>
@@ -282,8 +279,8 @@
       </section>
     </section>
  
-    <section class="mv-instr-card" onclick="openLightbox('../docs/kalimba.png','Kalimba','Origin: Africa','Also known as a thumb piano, the kalimba is played by plucking a row of metal tines with the thumbs. Small, portable, and gentle in tone, versions of it have been played across Africa for over a thousand years.')">
-      <section class="mv-instr-photo"><img src="../docs/kalimba.png" alt="Kalimba"></section>
+    <section class="mv-instr-card" onclick="openLightbox('../assets/images/Instrunments/Kalimba.jpg','Kalimba','Origin: Africa','Also known as a thumb piano, the kalimba is played by plucking a row of metal tines with the thumbs. Small, portable, and gentle in tone, versions of it have been played across Africa for over a thousand years.')">
+      <section class="mv-instr-photo"><img src="../assets/images/Instrunments/Kalimba.jpg" alt="Kalimba"></section>
       <section class="mv-instr-info">
         <p class="mv-instr-family-tag">Origin: Africa</p>
         <h3 class="mv-instr-name">Kalimba</h3>
@@ -307,49 +304,7 @@
   </section>
 </section>
  
-<!-- SECTION 5: DID YOU KNOW (interactive expand) -->
-<section class="mv-facts-section">
-  <h2>Did You Know?</h2>
-  <p class="mv-facts-subtitle">Click a card to learn more</p>
- 
-  <section class="mv-facts-grid">
- 
-    <button class="mv-fact-card" type="button">
-      <span class="mv-fact-icon">🎻</span>
-      <h3 class="mv-fact-title">The world's oldest instrument</h3>
-      <p class="mv-fact-hint">Click to learn more</p>
-      <p class="mv-fact-more">A flute carved from bone, discovered in a cave in Germany, is believed to be around 40,000 years old — making it one of the oldest known musical instruments ever found.</p>
-    </button>
- 
-    <button class="mv-fact-card" type="button">
-      <span class="mv-fact-icon">🎹</span>
-      <h3 class="mv-fact-title">The piano's original name</h3>
-      <p class="mv-fact-hint">Click to learn more</p>
-      <p class="mv-fact-more">The piano was first called "pianoforte," meaning "soft-loud," because it was one of the first keyboard instruments able to play both quiet and loud notes depending on how hard a key was pressed.</p>
-    </button>
- 
-    <button class="mv-fact-card" type="button">
-      <span class="mv-fact-icon">🥁</span>
-      <h3 class="mv-fact-title">A universal language</h3>
-      <p class="mv-fact-hint">Click to learn more</p>
-      <p class="mv-fact-more">Percussion instruments in some form appear in nearly every culture on Earth, often independently developed — making rhythm one of the most universal elements of human music.</p>
-    </button>
- 
-  </section>
-</section>
- 
 <!-- FOOTER -->
-<footer class="mv-site-footer py-4">
-  <section class="container d-flex flex-wrap align-items-center justify-content-between gap-3">
-    <img src="../docs/Logo.jpeg" alt="Logo" class="mv-footer-logo">
-    <p class="mb-0">&copy; 2026 Music Vault. All rights reserved.</p>
-    <section class="mv-icon-grid">
-      <a href="#" aria-label="Facebook">FB</a>
-      <a href="#" aria-label="Instagram">IG</a>
-      <a href="#" aria-label="Twitter">TW</a>
-    </section>
-  </section>
-    <!--Footer-->
 <footer class="site-footer overflow-hidden py-4 px-3 px-md-5 mb-0 mt-auto">
     <section class="container-fluid">
 
@@ -407,3 +362,16 @@
 
     </section>
 </footer>
+</body>
+</html>
+
+<!--References
+https://unsplash.com/photos/a-close-up-of-a-piano-with-a-person-in-the-background-8QrPJ3Kfie4 
+https://en.wikipedia.org/wiki/Musical_instrument 
+https://en.wikipedia.org/wiki/Guitar
+https://www.amazon.sg/Gemeinhardt-2SP-Flute/dp/B0002F5IW
+https://www.essentiallystrings.com.sg/product-page/vl80-samuel-eastman-violin 
+https://musicelements.com.sg/products/yamaha-yx-500f 
+https://www.gandharvaloka.ca/didgeridoo/ 
+Wikiepdia
+ChatGPT-->
