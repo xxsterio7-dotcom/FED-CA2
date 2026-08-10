@@ -26,7 +26,7 @@ document.addEventListener("click", (e) => {
 
 const festivals = {
     tomorrowland: {
-        image: "../assets/image/tomorrowland2.jpg",
+        image: "../assets/images/concert/tomorrowland2.jpg",
         year: "2005",
         name: "Tomorrowland",
         location: "Boom, Belgium",
@@ -38,7 +38,7 @@ const festivals = {
     },
 
     coachella: {
-        image: "../assets/image/coachella2.jpg",
+        image: "../assets/images/concert/coachella2.jpg",
         year: "1999",
         name: "Coachella",
         location: "California, USA",
@@ -50,7 +50,7 @@ const festivals = {
     },
 
     ultra: {
-        image: "../assets/image/ultra2.jpg",
+        image: "../assets/images/concert/ultra2.jpg",
         year: "1999",
         name: "Ultra Music Festival",
         location: "Miami, USA",
@@ -62,7 +62,7 @@ const festivals = {
     },
 
     woodstock: {
-        image: "../assets/image/woodstock2.png",
+        image: "../assets/images/concert/woodstock2.png",
         year: "1969",
         name: "Woodstock",
         location: "New York, USA",
