@@ -49,3 +49,7 @@ const observer = new IntersectionObserver((entries) => {
 }, observerOptions);
 
 steps.forEach(step => observer.observe(step));
+
+function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+}
