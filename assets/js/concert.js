@@ -240,3 +240,7 @@ if(year){
     year.textContent=new Date().getFullYear();
 
 }
+
+function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+}
