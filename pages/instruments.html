@@ -1,234 +1,409 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Music Vault</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../assets/css/main-(marco).css" rel="stylesheet">
+    <title>Music Vault | About Music</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            crossorigin="anonymous"></script>
+
+    <script src="../assets/js/inst.js" defer></script>
+
+    <link rel="stylesheet" href="../assets/css/MAINCSS.css">
 </head>
 
-<body class="bg-primary">
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-dark p-3">
-            <div class="container-fluid">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="filter: invert(1);">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+<body>
+<!-- Header -->
+<header class="site-header sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom container-fluid px-3 px-md-4 px-lg-5">
+        <a class="navbar-brand brand-logo d-flex align-items-center" href="../index.html">
+            <img src="../assets/images/Logo.jpeg" alt="Logo" class="logo-img">
+            <span class="logo-symbol me-2">♪</span>
+            Music Vault
+        </a>
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active navbar-brand mb-0 h1 text-white fs-4" aria-current="page" href="#">
-                                <img src="https://i.imgur.com/V5YSKrI.png" alt="Music Vault logo">
-                            </a>
-                        </li>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle mb-0 h1 text-white fs-5" href="#" id="navbarDropdown1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Dropdown
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li><hr class="dropdown-divider"></li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                            </ul>
-                        </li>
+        <section class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto ms-lg-4">
+                <li class="nav-item">
+                    <a class="nav-link" href="../index.html">Home</a>
+                </li>
+            </ul>
 
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle mb-0 h1 text-white fs-5" href="#" id="navbarDropdown2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Dropdown
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown2">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li><hr class="dropdown-divider"></li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                            </ul>
-                        </li>
+            <ul class="navbar-nav gap-2 gap-lg-4">
+                <li class="nav-item dropdown">
+                    <a class="nav-drop active" href="#" role="button" data-bs-toggle="dropdown">
+                        Discover
+                    </a>
 
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle mb-0 h1 text-white fs-5" href="#" id="navbarDropdown3" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Dropdown
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown3">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li><hr class="dropdown-divider"></li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                            </ul>
-                        </li>
+                    <ul class="dropdown-menu dropdown-menu-dark shadow-sm">
+                        <li><a class="dropdown-item active" href="About Music.html">About Music</a></li>
+                        <li><a class="dropdown-item" href="whoweare.html">Who We Are</a></li>
+                        <li><a class="dropdown-item" href="history.html">History of Music</a></li>
+                        <li><a class="dropdown-item" href="benefits.html">Benefits of Music</a></li>
                     </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-    <section style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-                    url(https://upload.wikimedia.org/wikipedia/commons/3/32/4th_Australian_Jazz_Convention_-_Melbourne_1949_Rex_Stewart_%26_Graeme_Bell_Jazz_Band.jpg?_=20250220132633);
-                    width: 100%;
-                    background-repeat: no-repeat; 
-                    background-size: 105%;
-                    background-position: center 5%;
-                    height: 70vh;"
-                    class="w-100 d-flex flex-column text-white justify-content-center align-items-center">
-        <h1 class="display-1 fw-medium">Instruments</h1>
-        <h2 class="py-4">The tools of sound</h2>
-    </section>
-    <main class="container-fluid min-vh-100 py-4 m-5">
-        <section class="row g-4 h-100">
+                </li>
 
-            <article class="col-12 col-md-6">
-                <button class="instrCard w-100 h-100 border-0 p-0" type="button">
-                    <article class="position-relative d-block w-100 h-100 instrCard-inner text-white">
-                        <h2 class="instrCard-front text-white" 
-                        style="background-image: linear-gradient(rgba(168, 74, 50, 0.45), rgba(168, 74, 50, 0.45)), 
-                        url(https://images.pexels.com/photos/15096222/pexels-photo-15096222.jpeg);
-                        width: 100%;
-                        background-repeat: no-repeat; 
-                        background-size: cover;
-                        background-position: center;">Strings</h2>
-                        <span class="instrCard-back text-white">
-                            <a target="_blank" href="https://icons8.com/icon/K4oUzt50ROd5/violin"><img width=17% height=22% src="https://img.icons8.com/pieces/64/violin.png" alt="violin"/></a>
-                            <h1>String Instruments</h1>
-                            <p class="p-5 pb-3 pt-2 fs-4">Produces sound through vibrating strings when they are striked, plucked, or strummed. The sound is often then amplified through a hollow body</p>
-                            <h1>Examples</h1>
-                            <p class="p-5 pt-2 pb-0 fs-4">Violins, Harps, Guitars</p>
-                        </span>
-                    </article>
-                </button>
-            </article>
+                <li class="nav-item dropdown">
+                    <a class="nav-drop" href="#" role="button" data-bs-toggle="dropdown">
+                        Explore
+                    </a>
 
-            <article class="col-12 col-md-6">
-            <button class="instrCard w-100 h-100 border-0 p-0" type="button">
-                    <article class="position-relative d-block w-100 h-100 instrCard-inner text-white">
-                        <h2 class="instrCard-front text-white" 
-                        style="background-image: linear-gradient(rgba(168, 74, 50, 0.45), rgba(168, 74, 50, 0.45)), 
-                        url(https://images.pexels.com/photos/6449867/pexels-photo-6449867.jpeg);
-                        width: 100%;
-                        background-repeat: no-repeat; 
-                        background-size: cover;
-                        background-position: center;">Percussion</h2>
-                        <span class="instrCard-back p-4">
-                            <a target="_blank" href="https://icons8.com/icon/wbBDdYcGUPnm/tabla"><img width=18% height=22% src="https://img.icons8.com/pieces/64/tabal.png" alt="tabal"/></a> 
-                            <h1>Percussion</h1>
-                            <p class="p-5 pb-3 pt-2 fs-4">Produces sound by being struck or scrapped. Despite the lack of muscial notes, it is essential in establishing rhythm, tempo and texture</p>
-                            <h1>Examples</h1>
-                            <p class="p-1 pt-2 pb-0 fs-4">Drums, Cymbals, Maracas</p>
-                        </span>
-                    </article>
-                </button>
-            </article>
+                    <ul class="dropdown-menu dropdown-menu-dark shadow-sm">
+                        <li><a class="dropdown-item" href="genres.html">All Genres</a></li>
+                        <li><a class="dropdown-item" href="instruments.html">Instruments</a></li>
+                        <li><a class="dropdown-item" href="musicTechnology.html">Music Technology</a></li>
+                        <li><a class="dropdown-item" href="shop.html">Shop</a></li>
+                    </ul>
+                </li>
 
-            <article class="col-12 col-md-6">
-                <button class="instrCard w-100 h-100 border-0 p-0" type="button">
-                    <article class="position-relative d-block w-100 h-100 instrCard-inner">
-                        <h2 class="instrCard-front text-white" 
-                        style="background-image: linear-gradient(rgba(168, 74, 50, 0.45), rgba(168, 74, 50, 0.45)), 
-                        url(https://images.pexels.com/photos/18860920/pexels-photo-18860920.jpeg);
-                        width: 100%;
-                        background-repeat: no-repeat; 
-                        background-size: cover;
-                        background-position: center;">Woodwind</h2>
-                        <span class="instrCard-back text-white">
-                            <a target="_blank" href="https://icons8.com/icon/15p9BikO32T4/bassoon"><img width=17% height=21% src="https://img.icons8.com/pieces/64/bassoon.png" alt="bassoon"/></a> 
-                            <h1>Woodwinds</h1>
-                            <p class="p-5 pb-3 pt-2 fs-4">Falls under the greater category on wind instruments. Produces sound by splitting air on a sharp edge, or a coupled oscillation of reeds and an air column</p>
-                            <h1>Examples</h1>
-                            <p class="p-5 pt-2 pb-0 fs-4">Oboe, Bassoon, Flute</p>
-                        </span>
-                    </article>
-                </button>
-            </article>
+                <li class="nav-item dropdown">
+                    <a class="nav-drop" href="#" role="button" data-bs-toggle="dropdown">
+                        Community
+                    </a>
 
-            <article class="col-12 col-md-6">
-                <button class="instrCard w-100 h-100 border-0 p-0" type="button">
-                    <article class="position-relative d-block w-100 h-100 instrCard-inner">
-                        <h2 class="instrCard-front text-white" 
-                        style="background-image: linear-gradient(rgba(168, 74, 50, 0.45), rgba(168, 74, 50, 0.45)), 
-                        url(https://images.pexels.com/photos/8884257/pexels-photo-8884257.jpeg);
-                        width: 100%;
-                        background-repeat: no-repeat; 
-                        background-size: cover;
-                        background-position: center;">Brass</h2>
-                        <span class="instrCard-back text-white">
-                            <a target="_blank" href="https://icons8.com/icon/cehlV2NqUbmZ/sax"><img width=16% height=21% src="https://img.icons8.com/pieces/64/alto-saxophone.png" alt="alto-saxophone"/></a> 
-                            <h1>Brass</h1>
-                            <p class="p-5 pb-3 pt-2 fs-4">Similar to a woodwind, but requires the buzzing of lips into a mouthpiece to produce sound. Known for its powerful, ringing tone</p>
-                            <h1>Examples</h1>
-                            <p class="p-5 pt-2 pb-0 fs-4">Trumpet, Saxophone, Tuba, Trombone</p>
-                        </span>
-                    </article>
-                </button>
-            </article>
+                    <ul class="dropdown-menu dropdown-menu-dark shadow-sm">
+                        <li><a class="dropdown-item" href="famousartists.html">Famous Artists</a></li>
+                        <li><a class="dropdown-item" href="albums.html">Top Albums</a></li>
+                        <li><a class="dropdown-item" href="concert.html">Concerts</a></li>
+                    </ul>
+                </li>
+            </ul>
         </section>
-    </main>
+    </nav>
+</header>
+<!-- SECTION 1: HERO -->
+<section class="mv-hero">
+  <section class="container">
+    <h1>Instruments</h1>
+    <p>From the earliest drums to modern synthesizers, explore the tools musicians have used to shape sound across history.</p>
+  </section>
+</section>
+ 
+<!-- SECTION 2: BRIEF HISTORY -->
+<section class="mv-history-section">
+  <section class="mv-history-wrap">
+    <section class="mv-history-text">
+      <h2>A Brief History of Instruments</h2>
+      <p>Long before written music existed, early humans were already shaping sound — striking hollow logs, stretching animal skin over frames, and carving simple flutes from bone. These first instruments weren't built for concerts; they were built for ritual, storytelling, and communication.</p>
+      <p>As civilizations grew, so did the instruments themselves. Stringed instruments like the lyre and lute appeared in ancient Egypt and Mesopotamia, while early forms of brass and woodwind instruments developed in parallel across different cultures. Each new material and technique — metalworking, tuning systems, keyed mechanisms — pushed instruments further from simple tools toward the precise, expressive machines musicians use today.</p>
+      <p>By the time of the Renaissance and Baroque eras, instrument-making had become its own craft, with families of strings, brass, woodwind, and keyboard instruments each evolving their own traditions. That same family structure is still how we organize and understand instruments now.</p>
+    </section>
+    <section class="mv-history-photo">
+      <img src="../docs/instruments-history.jpg" alt="A collection of historical instruments">
+    </section>
+  </section>
+</section>
+ 
+<!-- SECTION 3: EXPLORE BY FAMILY (interactive filter + lightbox) -->
+<section class="mv-family-section">
+  <h2>Explore by Family</h2>
+  <p class="mv-family-subtitle">Click a family to filter, then click any instrument for more detail</p>
+ 
+  <nav class="mv-family-filters" aria-label="Filter instruments by family">
+    <button class="mv-family-filter-btn active" data-family="all">All</button>
+    <button class="mv-family-filter-btn" data-family="strings">Strings</button>
+    <button class="mv-family-filter-btn" data-family="woodwind">Woodwind</button>
+    <button class="mv-family-filter-btn" data-family="brass">Brass</button>
+    <button class="mv-family-filter-btn" data-family="percussion">Percussion</button>
+    <button class="mv-family-filter-btn" data-family="keyboard">Keyboard</button>
+    <button class="mv-family-filter-btn" data-family="electronic">Electronic</button>
+  </nav>
+ 
+  <section class="mv-instr-grid" id="mvInstrGrid">
+ 
+    <section class="mv-instr-card" data-family="strings" onclick="openLightbox('../docs/violin.png','Violin','Strings','A bowed string instrument known for its bright, expressive tone. Held under the chin and played with a horsehair bow, the violin has been central to Western orchestras since the Baroque era and remains one of the most technically demanding instruments to master.')">
+      <section class="mv-instr-photo"><img src="../docs/violin.png" alt="Violin"></section>
+      <section class="mv-instr-info">
+        <p class="mv-instr-family-tag">Strings</p>
+        <h3 class="mv-instr-name">Violin</h3>
+        <p class="mv-instr-desc">A bowed string instrument known for its bright, expressive tone.</p>
+      </section>
+    </section>
+ 
+    <section class="mv-instr-card" data-family="strings" onclick="openLightbox('../docs/guitar.png','Guitar','Strings','A plucked string instrument that became central to nearly every popular genre from folk to rock. Its six strings and frets make it relatively approachable for beginners while still offering huge depth for advanced players.')">
+      <section class="mv-instr-photo"><img src="../docs/guitar.png" alt="Guitar"></section>
+      <section class="mv-instr-info">
+        <p class="mv-instr-family-tag">Strings</p>
+        <h3 class="mv-instr-name">Guitar</h3>
+        <p class="mv-instr-desc">A plucked string instrument central to nearly every popular genre.</p>
+      </section>
+    </section>
+ 
+    <section class="mv-instr-card" data-family="strings" onclick="openLightbox('../docs/harp.png','Harp','Strings','One of the oldest string instruments in the world, plucked directly by hand across a full set of vertical strings. Modern concert harps use foot pedals to change key mid-performance.')">
+      <section class="mv-instr-photo"><img src="../docs/harp.png" alt="Harp"></section>
+      <section class="mv-instr-info">
+        <p class="mv-instr-family-tag">Strings</p>
+        <h3 class="mv-instr-name">Harp</h3>
+        <p class="mv-instr-desc">One of the oldest string instruments, plucked by hand.</p>
+      </section>
+    </section>
+ 
+    <section class="mv-instr-card" data-family="woodwind" onclick="openLightbox('../docs/flute.png','Flute','Woodwind','Played by blowing air across an opening rather than through a reed, producing a light, airy tone. Despite its name, modern concert flutes are usually made of metal rather than wood.')">
+      <section class="mv-instr-photo"><img src="../docs/flute.png" alt="Flute"></section>
+      <section class="mv-instr-info">
+        <p class="mv-instr-family-tag">Woodwind</p>
+        <h3 class="mv-instr-name">Flute</h3>
+        <p class="mv-instr-desc">Played by blowing air across an opening for a light, airy tone.</p>
+      </section>
+    </section>
+ 
+    <section class="mv-instr-card" data-family="woodwind" onclick="openLightbox('../docs/clarinet.png','Clarinet','Woodwind','A single-reed woodwind with a warm, versatile tone that spans classical orchestras, jazz combos, and folk traditions. Its wide range lets it move between deep, mellow lows and bright, piercing highs.')">
+      <section class="mv-instr-photo"><img src="../docs/clarinet.png" alt="Clarinet"></section>
+      <section class="mv-instr-info">
+        <p class="mv-instr-family-tag">Woodwind</p>
+        <h3 class="mv-instr-name">Clarinet</h3>
+        <p class="mv-instr-desc">A single-reed woodwind with a warm, versatile tone.</p>
+      </section>
+    </section>
+ 
+    <section class="mv-instr-card" data-family="brass" onclick="openLightbox('../docs/trumpet.png','Trumpet','Brass','A bright, powerful brass instrument central to orchestras, jazz bands, and fanfare music alike. Sound is produced by buzzing the lips into a mouthpiece, with three valves controlling pitch.')">
+      <section class="mv-instr-photo"><img src="../docs/trumpet.png" alt="Trumpet"></section>
+      <section class="mv-instr-info">
+        <p class="mv-instr-family-tag">Brass</p>
+        <h3 class="mv-instr-name">Trumpet</h3>
+        <p class="mv-instr-desc">A bright, powerful brass instrument used across many genres.</p>
+      </section>
+    </section>
+ 
+    <section class="mv-instr-card" data-family="brass" onclick="openLightbox('../docs/french-horn.png','French Horn','Brass','Known for its warm, mellow tone, the French horn adds depth to orchestral brass sections. Its long, coiled tubing and funnel-shaped bell give it a rounder sound than other brass instruments.')">
+      <section class="mv-instr-photo"><img src="../docs/french-horn.png" alt="French Horn"></section>
+      <section class="mv-instr-info">
+        <p class="mv-instr-family-tag">Brass</p>
+        <h3 class="mv-instr-name">French Horn</h3>
+        <p class="mv-instr-desc">Known for its warm, mellow tone in orchestral brass sections.</p>
+      </section>
+    </section>
+ 
+    <section class="mv-instr-card" data-family="percussion" onclick="openLightbox('../docs/drums.png','Drum Kit','Percussion','A collection of drums and cymbals arranged for one player, providing the rhythmic backbone of modern bands. Most kits combine a bass drum, snare, toms, hi-hat, and cymbals played together with hands and feet.')">
+      <section class="mv-instr-photo"><img src="../docs/drums.png" alt="Drum Kit"></section>
+      <section class="mv-instr-info">
+        <p class="mv-instr-family-tag">Percussion</p>
+        <h3 class="mv-instr-name">Drum Kit</h3>
+        <p class="mv-instr-desc">Drums and cymbals forming the rhythmic backbone of a band.</p>
+      </section>
+    </section>
+ 
+    <section class="mv-instr-card" data-family="percussion" onclick="openLightbox('../docs/xylophone.png','Xylophone','Percussion','Wooden bars of different lengths struck with mallets, each tuned to a specific pitch. Its bright, resonant tone has made it a staple in both orchestral and educational music settings.')">
+      <section class="mv-instr-photo"><img src="../docs/xylophone.png" alt="Xylophone"></section>
+      <section class="mv-instr-info">
+        <p class="mv-instr-family-tag">Percussion</p>
+        <h3 class="mv-instr-name">Xylophone</h3>
+        <p class="mv-instr-desc">Wooden bars struck with mallets for bright, pitched tones.</p>
+      </section>
+    </section>
+ 
+    <section class="mv-instr-card" data-family="keyboard" onclick="openLightbox('../docs/piano.png','Piano','Keyboard','A percussive-string hybrid capable of both delicate melodies and powerful chords. Pressing a key causes a felt-covered hammer to strike a string, giving the piano more dynamic range than earlier keyboard instruments.')">
+      <section class="mv-instr-photo"><img src="../docs/piano.png" alt="Piano"></section>
+      <section class="mv-instr-info">
+        <p class="mv-instr-family-tag">Keyboard</p>
+        <h3 class="mv-instr-name">Piano</h3>
+        <p class="mv-instr-desc">A percussive-string hybrid with wide dynamic range.</p>
+      </section>
+    </section>
+ 
+    <section class="mv-instr-card" data-family="electronic" onclick="openLightbox('../docs/synthesizer.png','Synthesizer','Electronic','Generates and shapes electronic sound using oscillators, filters, and envelopes rather than physical vibration. Synthesizers have powered decades of pop, electronic, and film music, from analog classics to modern software instruments.')">
+      <section class="mv-instr-photo"><img src="../docs/synthesizer.png" alt="Synthesizer"></section>
+      <section class="mv-instr-info">
+        <p class="mv-instr-family-tag">Electronic</p>
+        <h3 class="mv-instr-name">Synthesizer</h3>
+        <p class="mv-instr-desc">Generates and shapes electronic sound with oscillators and filters.</p>
+      </section>
+    </section>
+ 
+    <section class="mv-instr-card" data-family="electronic" onclick="openLightbox('../docs/turntable.png','Turntable','Electronic','Originally built for playback, the turntable was turned into a performance instrument through scratching, beat-juggling, and mixing — techniques pioneered in hip-hop culture starting in the 1970s.')">
+      <section class="mv-instr-photo"><img src="../docs/turntable.png" alt="Turntable"></section>
+      <section class="mv-instr-info">
+        <p class="mv-instr-family-tag">Electronic</p>
+        <h3 class="mv-instr-name">Turntable</h3>
+        <p class="mv-instr-desc">Originally a playback device, turned into a performance instrument.</p>
+      </section>
+    </section>
+ 
+  </section>
+</section>
+ 
+<!-- SECTION 4: INSTRUMENTS AROUND THE WORLD (interactive lightbox) -->
+<section class="mv-world-section">
+  <h2>Instruments Around the World</h2>
+  <p class="mv-world-subtitle">Click an instrument to learn where it comes from</p>
+ 
+  <section class="mv-world-grid">
+ 
+    <section class="mv-instr-card" onclick="openLightbox('../docs/sitar.png','Sitar','Origin: India','A long-necked string instrument famous for its buzzing, resonant tone, produced partly by a set of sympathetic strings that vibrate along with the ones being played. Central to Hindustani classical music for centuries.')">
+      <section class="mv-instr-photo"><img src="../docs/sitar.png" alt="Sitar"></section>
+      <section class="mv-instr-info">
+        <p class="mv-instr-family-tag">Origin: India</p>
+        <h3 class="mv-instr-name">Sitar</h3>
+        <p class="mv-instr-desc">A resonant string instrument central to Hindustani classical music.</p>
+      </section>
+    </section>
+ 
+    <section class="mv-instr-card" onclick="openLightbox('../docs/djembe.png','Djembe','Origin: West Africa','A rope-tuned, goblet-shaped hand drum capable of a wide range of tones depending on where and how its struck. Traditionally used in West African communities for celebrations, ceremonies, and storytelling.')">
+      <section class="mv-instr-photo"><img src="../docs/djembe.png" alt="Djembe"></section>
+      <section class="mv-instr-info">
+        <p class="mv-instr-family-tag">Origin: West Africa</p>
+        <h3 class="mv-instr-name">Djembe</h3>
+        <p class="mv-instr-desc">A hand drum used in celebrations, ceremonies, and storytelling.</p>
+      </section>
+    </section>
+ 
+    <section class="mv-instr-card" onclick="openLightbox('../docs/koto.png','Koto','Origin: Japan','A long, plucked string instrument with movable bridges that let players adjust each strings pitch individually. Its Japans national instrument and remains central to traditional Japanese court and folk music.')">
+      <section class="mv-instr-photo"><img src="../docs/koto.png" alt="Koto"></section>
+      <section class="mv-instr-info">
+        <p class="mv-instr-family-tag">Origin: Japan</p>
+        <h3 class="mv-instr-name">Koto</h3>
+        <p class="mv-instr-desc">Japan's national instrument, central to traditional court music.</p>
+      </section>
+    </section>
+ 
+    <section class="mv-instr-card" onclick="openLightbox('../docs/bagpipes.png','Bagpipes','Origin: Scotland','A wind instrument that uses a constant supply of air from a squeezed bag to sustain continuous, droning notes while the players fingers work a separate melody pipe. Closely tied to Scottish and Irish musical tradition.')">
+      <section class="mv-instr-photo"><img src="../docs/bagpipes.png" alt="Bagpipes"></section>
+      <section class="mv-instr-info">
+        <p class="mv-instr-family-tag">Origin: Scotland</p>
+        <h3 class="mv-instr-name">Bagpipes</h3>
+        <p class="mv-instr-desc">A droning wind instrument tied to Scottish musical tradition.</p>
+      </section>
+    </section>
+ 
+    <section class="mv-instr-card" onclick="openLightbox('../docs/didgeridoo.png','Didgeridoo','Origin: Australia','One of the oldest wind instruments in the world, made from a hollowed-out branch or trunk. Played using a technique called circular breathing, allowing performers to sustain a continuous drone indefinitely.')">
+      <section class="mv-instr-photo"><img src="../docs/didgeridoo.png" alt="Didgeridoo"></section>
+      <section class="mv-instr-info">
+        <p class="mv-instr-family-tag">Origin: Australia</p>
+        <h3 class="mv-instr-name">Didgeridoo</h3>
+        <p class="mv-instr-desc">One of the oldest wind instruments in the world.</p>
+      </section>
+    </section>
+ 
+    <section class="mv-instr-card" onclick="openLightbox('../docs/kalimba.png','Kalimba','Origin: Africa','Also known as a thumb piano, the kalimba is played by plucking a row of metal tines with the thumbs. Small, portable, and gentle in tone, versions of it have been played across Africa for over a thousand years.')">
+      <section class="mv-instr-photo"><img src="../docs/kalimba.png" alt="Kalimba"></section>
+      <section class="mv-instr-info">
+        <p class="mv-instr-family-tag">Origin: Africa</p>
+        <h3 class="mv-instr-name">Kalimba</h3>
+        <p class="mv-instr-desc">A gentle thumb piano played across Africa for centuries.</p>
+      </section>
+    </section>
+ 
+  </section>
+</section>
+ 
+<!-- LIGHTBOX -->
+<section class="mv-lightbox-overlay" id="lightbox" onclick="closeLightbox(event)">
+  <button class="mv-lightbox-close" onclick="closeLightbox()">&times;</button>
+  <section class="mv-lightbox-box">
+    <img class="mv-lightbox-image" id="lightbox-img" src="" alt="">
+    <section class="mv-lightbox-info">
+      <h2 id="lightbox-name"></h2>
+      <p class="mv-lightbox-era" id="lightbox-era"></p>
+      <p id="lightbox-bio"></p>
+    </section>
+  </section>
+</section>
+ 
+<!-- SECTION 5: DID YOU KNOW (interactive expand) -->
+<section class="mv-facts-section">
+  <h2>Did You Know?</h2>
+  <p class="mv-facts-subtitle">Click a card to learn more</p>
+ 
+  <section class="mv-facts-grid">
+ 
+    <button class="mv-fact-card" type="button">
+      <span class="mv-fact-icon">🎻</span>
+      <h3 class="mv-fact-title">The world's oldest instrument</h3>
+      <p class="mv-fact-hint">Click to learn more</p>
+      <p class="mv-fact-more">A flute carved from bone, discovered in a cave in Germany, is believed to be around 40,000 years old — making it one of the oldest known musical instruments ever found.</p>
+    </button>
+ 
+    <button class="mv-fact-card" type="button">
+      <span class="mv-fact-icon">🎹</span>
+      <h3 class="mv-fact-title">The piano's original name</h3>
+      <p class="mv-fact-hint">Click to learn more</p>
+      <p class="mv-fact-more">The piano was first called "pianoforte," meaning "soft-loud," because it was one of the first keyboard instruments able to play both quiet and loud notes depending on how hard a key was pressed.</p>
+    </button>
+ 
+    <button class="mv-fact-card" type="button">
+      <span class="mv-fact-icon">🥁</span>
+      <h3 class="mv-fact-title">A universal language</h3>
+      <p class="mv-fact-hint">Click to learn more</p>
+      <p class="mv-fact-more">Percussion instruments in some form appear in nearly every culture on Earth, often independently developed — making rhythm one of the most universal elements of human music.</p>
+    </button>
+ 
+  </section>
+</section>
+ 
+<!-- FOOTER -->
+<footer class="mv-site-footer py-4">
+  <section class="container d-flex flex-wrap align-items-center justify-content-between gap-3">
+    <img src="../docs/Logo.jpeg" alt="Logo" class="mv-footer-logo">
+    <p class="mb-0">&copy; 2026 Music Vault. All rights reserved.</p>
+    <section class="mv-icon-grid">
+      <a href="#" aria-label="Facebook">FB</a>
+      <a href="#" aria-label="Instagram">IG</a>
+      <a href="#" aria-label="Twitter">TW</a>
+    </section>
+  </section>
+    <!--Footer-->
+<footer class="site-footer overflow-hidden py-4 px-3 px-md-5 mb-0 mt-auto">
+    <section class="container-fluid">
 
-    <section id="instrEvolution" class="carousel slide carousel-dark bg-red-light" data-bs-wrap="false">
-    <h1 class="text-center pt-5">Evolution</h1>
-    <section class="carousel-inner" id="luteEvol">
-        <article class="carousel-item active align-content-center">
-            <section class="d-flex align-items-center w-75 mx-auto">
-                <img src="/Images/lute.png" alt="Lute" style="width:25%" class="">
-                <section>
-                    <h1>Lute</h1>
-                    <p class="fs-4"> Earliest form of a guitar, with a pear-shaped body, round back and curved neck. Popular in europe during reneissance and Baroque eras.</p>
-                </section>
+        <section class="row align-items-center gy-4 text-center text-md-start">
+            
+            <article class="col-12 col-md-3 d-flex justify-content-center justify-content-md-start">
+                <a href="#top" class="footer-logo-link d-flex flex-column align-items-center gap-1 text-decoration-none">
+                    <span class="arrow text-gold fs-6">▼</span>
+                    <img src="../assets/images/Logo.jpeg" alt="Music Vault Logo" class="footer-logo">
+                </a>
+            </article>
 
-            </section>
-        </article>
+            <article class="col-12 col-md-6 text-center">
+                <nav class="footer-nav d-flex flex-wrap justify-content-center gap-3 gap-md-4 mb-3">
+                    <a href="../index.html" class="text-light text-decoration-none opacity-75 hover-gold small">Home</a>
+                    <a href="About Music.html" class="text-light text-decoration-none opacity-75 hover-gold small">About Music</a>
+                    <a href="genres.html" class="text-light text-decoration-none opacity-75 hover-gold small">Genres</a>
+                </nav>
 
-        <article class="carousel-item align-content-center">
-            <section class="d-flex align-items-center w-75 mx-auto">
-                <img src="/Images/Vihuela.png" alt="Lute" style="width:25%" class="">
-                <section>
-                    <h1>Vihuela</h1>
-                    <p class="fs-4"> Earliest form of a guitar, with a pear-shaped body, round back and curved neck. Popular in europe during reneissance and Baroque eras.</p>
-                </section>
+                <blockquote class="footer-quote mb-3 italic">
+                    "Found my new favourite genre!" — Jason Todd
+                </blockquote>
 
-            </section>
-        </article>
+                <button class="top-btn btn" onclick="scrollToTop()">
+                    Back to Top
+                </button>
+            </article>
 
-        <article class="carousel-item align-content-center">
-            <section class="d-flex align-items-center w-75 mx-auto">
-                <img src="/Images/classical-guitar.png" alt="Lute" style="width:25%" class="">
-                <section>
-                    <h1>Classical Guitar</h1>
-                    <p class="fs-4"> Earliest form of a guitar, with a pear-shaped body, round back and curved neck. Popular in europe during reneissance and Baroque eras.</p>
-                </section>
+            <article class="col-12 col-md-3 d-flex flex-column align-items-center align-items-md-end">
+                <ul class="social-grid list-unstyled m-0 p-0 mb-2">
+                    <li><a href="#" aria-label="Instagram"><i class="fa-brands fa-square-instagram"></i></a></li>
+                    <li><a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a></li>
+                    <li><a href="#" aria-label="Email"><i class="fa-solid fa-envelopes-bulk"></i></a></li>
+                    <li><a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a></li>
+                    <li><a href="#" aria-label="Reddit"><i class="fa-brands fa-square-reddit"></i></a></li>
+                </ul>
 
-            </section>
-        </article>
+                <a href="shop.html" class="newsletter-link text-gold text-center text-md-end w-100">
+                    Shop
+                </a>
+            </article>
 
-        <article class="carousel-item align-content-center">
-            <section class="d-flex align-items-center w-75 mx-auto">
-                <img src="/Images/electric-guitar.png" alt="Lute" style="width:25%" class="">
-                <section>
-                    <h1>Electric Guitar</h1>
-                    <p class="fs-4"> Earliest form of a guitar, with a pear-shaped body, round back and curved neck. Popular in europe during reneissance and Baroque eras.</p>
-                </section>
+        </section>
 
-            </section>
-        </article>
+        <hr class="border-secondary opacity-25 my-4">
+
+        <section class="row">
+            <div class="col-12 text-center">
+                <p class="text-light opacity-50 small mb-0">
+                    &copy; 2026 Music Vault. All rights reserved. Property of Singapore Polytechnic. 
+                </p>
+            </div>
+        </section>
 
     </section>
-        <button class="carousel-control-prev top-50 translate-middle-y"
-                type="button"
-                data-bs-target="#instrEvolution"
-                data-bs-slide="prev">
-            <span class="carousel-control-prev-icon"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-    
-        <button class="carousel-control-next top-50 translate-middle-y"
-                type="button"
-                data-bs-target="#instrEvolution"
-                data-bs-slide="next">
-            <span class="carousel-control-next-icon"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-    </section>
-<script src="../assets/js/instruments.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+</footer>
