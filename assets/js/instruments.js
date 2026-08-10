@@ -1,10 +1,9 @@
-// ==========================================
-// INTERACTIVE #1: FILTER INSTRUMENT CARDS
-// ==========================================
+
 
 document.addEventListener('DOMContentLoaded', function () {
 
-    const instrCards = document.querySelectorAll('.mv-instr-card');
+  
+    const instrCards = document.querySelectorAll('#mvInstrGrid .mv-instr-card');
     const filterButtons = document.querySelectorAll('.mv-family-filter-btn');
 
     filterButtons.forEach(function (button) {
@@ -13,15 +12,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
             const family = button.getAttribute('data-family');
 
-            // Remove active from all buttons
+            
             filterButtons.forEach(function (btn) {
                 btn.classList.remove('active');
             });
 
-            // Add active to clicked button
+            
             button.classList.add('active');
 
-            // Filter cards
+            
             instrCards.forEach(function (card) {
 
                 if (
@@ -40,9 +39,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
 
-    // ==========================================
-    // INTERACTIVE #3: EXPAND FACT CARDS
-    // ==========================================
+   
 
     const factCards = document.querySelectorAll('.mv-fact-card');
 
@@ -59,11 +56,6 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-// ==========================================
-// INTERACTIVE #2: LIGHTBOX
-// These MUST be outside DOMContentLoaded
-// because your HTML uses onclick="openLightbox(...)"
-// ==========================================
 
 function openLightbox(img, name, tag, bio) {
 
@@ -83,9 +75,7 @@ function openLightbox(img, name, tag, bio) {
 }
 
 
-// ==========================================
-// CLOSE LIGHTBOX
-// ==========================================
+
 
 function closeLightbox(event) {
 
@@ -98,8 +88,7 @@ function closeLightbox(event) {
         return;
     }
 
-    // Only close when clicking the dark background
-    // or the X button
+  
     if (
         event.target === lightbox ||
         event.target.classList.contains('mv-lightbox-close')
@@ -113,9 +102,6 @@ function closeLightbox(event) {
 }
 
 
-// ==========================================
-// CLOSE LIGHTBOX WITH ESCAPE
-// ==========================================
 
 document.addEventListener('keydown', function (event) {
 
