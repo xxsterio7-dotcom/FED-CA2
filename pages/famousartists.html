@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -10,13 +10,14 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
             crossorigin="anonymous"></script>
+ <script src="https://kit.fontawesome.com/b71d6a20e5.js" crossorigin="anonymous"></script>
 
     <script src="../assets/js/famousartist.js" defer></script>
 
     <link rel="stylesheet" href="../assets/css/MAINCSS.css">
 </head>
 
-<body>
+<body class ="mv-page mv-body-artists">
 <!-- Header -->
 <header class="site-header sticky-top">
     <nav class="navbar navbar-expand-lg navbar-dark navbar-custom container-fluid px-3 px-md-4 px-lg-5">
@@ -44,7 +45,7 @@
                     </a>
 
                     <ul class="dropdown-menu dropdown-menu-dark shadow-sm">
-                        <li><a class="dropdown-item active" href="aboutMusic.html">About Music</a></li>
+                        <li><a class="dropdown-item active" href="About Music.html">About Music</a></li>
                         <li><a class="dropdown-item" href="whoweare.html">Who We Are</a></li>
                         <li><a class="dropdown-item" href="history.html">History of Music</a></li>
                         <li><a class="dropdown-item" href="benefits.html">Benefits of Music</a></li>
@@ -79,317 +80,518 @@
         </section>
     </nav>
 </header>
+
+
+<!-- HERO -->
 <section class="mv-hero">
-  <section class="container">
-    <h1>Famous Artists</h1>
-    <p>Click on any artist to discover their story, era, and legacy in the world of music.</p>
-  </section>
+    <section class="container">
+        <h1>Famous Artists</h1>
+        <p>Click on any artist to discover their story, era, and legacy in the world of music.</p>
+    </section>
 </section>
- 
+
+
 <!-- ARTIST GRID -->
 <section class="mv-artists-section">
-  <section class="mv-artist-grid">
- 
-    <!-- Artist 1 -->
-    <section class="mv-artist-card" onclick="openLightbox(
-      '../docs/AG.jpg',
-      'Artist Name',
-      'Era — Genre',
-      'Write your biography about this artist here.',
-      '🎵 Famous Songs: Song 1, Song 2, Song 3'
-    )">
-      <img src="../docs/AG.jpg" alt="Artist Name">
-      <section class="mv-artist-card-overlay">
-        <h3>Ariana Grande</h3>
-        <p>2010s — Pop</p>
-        <span>Click to learn more</span>
-      </section>
+    <section class="mv-artist-grid">
+
+        <!-- Artist 1 - Ariana Grande -->
+        <section class="mv-artist-card" onclick="openLightbox(
+            '../assets/images/FamousArtists/Ariana.avif',
+            'Ariana Grande',
+            '2010s–Present — Pop / R&B',
+            'Ariana Grande is an American singer and actress who rose to fame through television before becoming one of the biggest pop stars of her generation. Known for her powerful vocals and wide vocal range, she has influenced modern pop and R&B.',
+            '🎵 Famous Songs: Problem, Thank U, Next, 7 Rings | 💿 Albums: My Everything, Dangerous Woman, Thank U, Next'
+        )">
+
+            <img src="../assets/images/FamousArtists/Ariana.avif" alt="Ariana Grande">
+
+            <section class="mv-artist-card-overlay">
+                <h3>Ariana Grande</h3>
+                <p>2010s–Present — Pop / R&B</p>
+                <span>Click to learn more</span>
+            </section>
+
+        </section>
+
+
+        <!-- Artist 2 - Michael Jackson -->
+        <section class="mv-artist-card" onclick="openLightbox(
+            '../assets/images/FamousArtists/MJ.webp',
+            'Michael Jackson',
+            '1970s–2000s — Pop / R&B',
+            'Michael Jackson was an American singer, dancer and songwriter known as the King of Pop. He became a global superstar through his music, groundbreaking music videos and unforgettable performances.',
+            '🎵 Famous Songs: Billie Jean, Thriller, Beat It | 💿 Albums: Off the Wall, Thriller, Bad'
+        )">
+
+            <img src="../assets/images/FamousArtists/MJ.webp" alt="Michael Jackson">
+
+            <section class="mv-artist-card-overlay">
+                <h3>Michael Jackson</h3>
+                <p>1970s–2000s — Pop / R&B</p>
+                <span>Click to learn more</span>
+            </section>
+
+        </section>
+
+
+        <!-- Artist 3 - Tupac Shakur -->
+        <section class="mv-artist-card" onclick="openLightbox(
+            '../assets/images/FamousArtists/2pac.webp',
+            'Tupac Shakur',
+            '1990s — Hip-Hop / Rap',
+            'Tupac Shakur was an American rapper, actor and activist who became one of the most influential figures in hip-hop. His music often explored poverty, inequality, violence and life in disadvantaged communities.',
+            '🎵 Famous Songs: California Love, Changes, Dear Mama | 💿 Albums: 2Pacalypse Now, Me Against the World, All Eyez on Me'
+        )">
+
+            <img src="../assets/images/FamousArtists/2pac.webp" alt="Tupac Shakur">
+
+            <section class="mv-artist-card-overlay">
+                <h3>Tupac Shakur</h3>
+                <p>1990s — Hip-Hop / Rap</p>
+                <span>Click to learn more</span>
+            </section>
+
+        </section>
+
+
+        <!-- Artist 4 - Freddie Mercury -->
+        <section class="mv-artist-card" onclick="openLightbox(
+            '../assets/images/FamousArtists/Fred.avif',
+            'Freddie Mercury',
+            '1970s–1980s — Rock',
+            'Freddie Mercury was the lead singer of Queen and one of rock music’s most famous performers. He was celebrated for his extraordinary voice, theatrical performances and songwriting.',
+            '🎵 Famous Songs: Bohemian Rhapsody, We Will Rock You, Somebody to Love | 💿 Albums: A Night at the Opera, News of the World, The Game'
+        )">
+
+            <img src="../assets/images/FamousArtists/Fred.avif" alt="Freddie Mercury">
+
+            <section class="mv-artist-card-overlay">
+                <h3>Freddie Mercury</h3>
+                <p>1970s–1980s — Rock</p>
+                <span>Click to learn more</span>
+            </section>
+
+        </section>
+
+
+        <!-- Artist 5 - Taylor Swift -->
+        <section class="mv-artist-card" onclick="openLightbox(
+            '../assets/images/FamousArtists/TS.webp',
+            'Taylor Swift',
+            '2000s–Present — Pop / Country',
+            'Taylor Swift is an American singer-songwriter who began her career in country music before becoming one of the world’s biggest pop artists. She is known for her storytelling, songwriting and ability to reinvent her musical style.',
+            '🎵 Famous Songs: Love Story, Blank Space, Anti-Hero | 💿 Albums: Fearless, 1989, Midnights'
+        )">
+
+            <img src="../assets/images/FamousArtists/TS.webp" alt="Taylor Swift">
+
+            <section class="mv-artist-card-overlay">
+                <h3>Taylor Swift</h3>
+                <p>2000s–Present — Pop / Country</p>
+                <span>Click to learn more</span>
+            </section>
+
+        </section>
+
+
+        <!-- Artist 6 - Elvis Presley -->
+        <section class="mv-artist-card" onclick="openLightbox(
+            '../assets/images/FamousArtists/Elvis.webp',
+            'Elvis Presley',
+            '1950s–1970s — Rock and Roll',
+            'Elvis Presley was an American singer and actor who helped bring rock and roll into the mainstream. His energetic performances and distinctive style made him one of the most influential entertainers of the 20th century.',
+            '🎵 Famous Songs: Hound Dog, Jailhouse Rock, Can’t Help Falling in Love | 💿 Albums: Elvis Presley, Elvis, From Elvis in Memphis'
+        )">
+
+            <img src="../assets/images/FamousArtists/Elvis.webp" alt="Elvis Presley">
+
+            <section class="mv-artist-card-overlay">
+                <h3>Elvis Presley</h3>
+                <p>1950s–1970s — Rock and Roll</p>
+                <span>Click to learn more</span>
+            </section>
+
+        </section>
+
+
+        <!-- Artist 7 - Bob Marley -->
+        <section class="mv-artist-card" onclick="openLightbox(
+            '../assets/images/FamousArtists/Bob.webp',
+            'Bob Marley',
+            '1970s — Reggae',
+            'Bob Marley was a Jamaican singer and songwriter who helped bring reggae music to audiences around the world. His songs often promoted peace, unity, love and social justice.',
+            '🎵 Famous Songs: One Love, Three Little Birds, Redemption Song | 💿 Albums: Catch a Fire, Exodus, Legend'
+        )">
+
+            <img src="../assets/images/FamousArtists/Bob.webp" alt="Bob Marley">
+
+            <section class="mv-artist-card-overlay">
+                <h3>Bob Marley</h3>
+                <p>1970s — Reggae</p>
+                <span>Click to learn more</span>
+            </section>
+
+        </section>
+
+
+        <!-- Artist 8 - Beyoncé -->
+        <section class="mv-artist-card" onclick="openLightbox(
+            '../assets/images/FamousArtists/Beyonce.jpg',
+            'Beyoncé',
+            '2000s–Present — Pop / R&B',
+            'Beyoncé is an American singer, songwriter and performer who first gained fame as a member of Destiny’s Child before becoming a successful solo artist. She is known for her powerful vocals, performances and cultural influence.',
+            '🎵 Famous Songs: Crazy in Love, Halo, Single Ladies | 💿 Albums: Dangerously in Love, Beyoncé, Lemonade'
+        )">
+
+            <img src="../assets/images/FamousArtists/Beyonce.jpg" alt="Beyoncé">
+
+            <section class="mv-artist-card-overlay">
+                <h3>Beyoncé</h3>
+                <p>2000s–Present — Pop / R&B</p>
+                <span>Click to learn more</span>
+            </section>
+
+        </section>
+
+
+        <!-- Artist 9 - Eminem -->
+        <section class="mv-artist-card" onclick="openLightbox(
+            '../assets/images/FamousArtists/Eminem.webp',
+            'Eminem',
+            '1990s–Present — Hip-Hop / Rap',
+            'Eminem is an American rapper and songwriter who became one of the most successful artists in hip-hop. He is known for his complex lyrics, rapid delivery and personal storytelling.',
+            '🎵 Famous Songs: Lose Yourself, Without Me, Stan | 💿 Albums: The Slim Shady LP, The Marshall Mathers LP, Recovery'
+        )">
+
+            <img src="../assets/images/FamousArtists/Eminem.webp" alt="Eminem">
+
+            <section class="mv-artist-card-overlay">
+                <h3>Eminem</h3>
+                <p>1990s–Present — Hip-Hop / Rap</p>
+                <span>Click to learn more</span>
+            </section>
+
+        </section>
+
+
+        <!-- Artist 10 - The Beatles -->
+        <section class="mv-artist-card" onclick="openLightbox(
+            '../assets/images/FamousArtists/TB.jpg',
+            'The Beatles',
+            '1960s — Rock / Pop',
+            'The Beatles were an English rock band made up of John Lennon, Paul McCartney, George Harrison and Ringo Starr. They transformed popular music and became one of the most influential bands in history.',
+            '🎵 Famous Songs: Hey Jude, Let It Be, Yesterday | 💿 Albums: Sgt. Pepper’s Lonely Hearts Club Band, Abbey Road, Revolver'
+        )">
+
+            <img src="../assets/images/FamousArtists/TB.jpg" alt="The Beatles">
+
+            <section class="mv-artist-card-overlay">
+                <h3>The Beatles</h3>
+                <p>1960s — Rock / Pop</p>
+                <span>Click to learn more</span>
+            </section>
+
+        </section>
+
+
+        <!-- Artist 11 - Whitney Houston -->
+        <section class="mv-artist-card" onclick="openLightbox(
+            '../assets/images/FamousArtists/WH.JPEG',
+            'Whitney Houston',
+            '1980s–2000s — Pop / R&B',
+            'Whitney Houston was an American singer and actress famous for her incredibly powerful voice. Her success helped establish her as one of the most influential vocalists in popular music.',
+            '🎵 Famous Songs: I Wanna Dance with Somebody, Greatest Love of All, I Will Always Love You | 💿 Albums: Whitney Houston, Whitney, My Love Is Your Love'
+        )">
+
+            <img src="../assets/images/FamousArtists/WH.JPEG" alt="Whitney Houston">
+
+            <section class="mv-artist-card-overlay">
+                <h3>Whitney Houston</h3>
+                <p>1980s–2000s — Pop / R&B</p>
+                <span>Click to learn more</span>
+            </section>
+
+        </section>
+
+
+        <!-- Artist 12 - David Bowie -->
+        <section class="mv-artist-card" onclick="openLightbox(
+            '../assets/images/FamousArtists/David.jpg',
+            'David Bowie',
+            '1970s–2000s — Rock / Glam Rock',
+            'David Bowie was an English singer, songwriter and actor known for constantly reinventing his sound and appearance. His creativity and experimental approach made him one of the most influential artists in modern music.',
+            '🎵 Famous Songs: Heroes, Space Oddity, Life on Mars? | 💿 Albums: The Rise and Fall of Ziggy Stardust, Heroes, Let’s Dance'
+        )">
+
+            <img src="../assets/images/FamousArtists/David.jpg" alt="David Bowie">
+
+            <section class="mv-artist-card-overlay">
+                <h3>David Bowie</h3>
+                <p>1970s–2000s — Rock / Glam Rock</p>
+                <span>Click to learn more</span>
+            </section>
+
+        </section>
+
     </section>
- 
-    <!-- Artist 2 -->
-    <section class="mv-artist-card" onclick="openLightbox(
-      '../docs/mj.jpg',
-      'Artist Name',
-      'Era — Genre',
-      'Write your biography about this artist here.',
-      '🎵 Famous Songs: Song 1, Song 2, Song 3'
-    )">
-      <img src="../docs/mj.jpg" alt="Artist Name">
-      <section class="mv-artist-card-overlay">
-        <h3>Michael Jackson</h3>
-        <p>1970s — Pop</p>
-        <span>Click to learn more</span>
-      </section>
-    </section>
- 
-    <!-- Artist 3 -->
-    <section class="mv-artist-card" onclick="openLightbox(
-      '../docs/tupac.jpg',
-      'Artist Name',
-      'Era — Genre',
-      'Write your biography about this artist here.',
-      '🎵 Famous Songs: Song 1, Song 2, Song 3'
-    )">
-      <img src="../docs/tupac.jpg" alt="Artist Name">
-      <section class="mv-artist-card-overlay">
-        <h3>Tupac Shakur</h3>
-        <p>1990s — Hip-Hop</p>
-        <span>Click to learn more</span>
-      </section>
-    </section>
- 
-    <!-- Artist 4 -->
-    <section class="mv-artist-card" onclick="openLightbox(
-      'your-image-url-here.jpg',
-      'Artist Name',
-      'Era — Genre',
-      'Write your biography about this artist here.',
-      '🎵 Famous Songs: Song 1, Song 2, Song 3'
-    )">
-      <img src="your-image-url-here.jpg" alt="Artist Name">
-      <section class="mv-artist-card-overlay">
-        <h3>Artist Name</h3>
-        <p>Era — Genre</p>
-        <span>Click to learn more</span>
-      </section>
-    </section>
- 
-    <!-- Artist 5 -->
-    <section class="mv-artist-card" onclick="openLightbox(
-      'your-image-url-here.jpg',
-      'Artist Name',
-      'Era — Genre',
-      'Write your biography about this artist here.',
-      '🎵 Famous Songs: Song 1, Song 2, Song 3'
-    )">
-      <img src="your-image-url-here.jpg" alt="Artist Name">
-      <section class="mv-artist-card-overlay">
-        <h3>Artist Name</h3>
-        <p>Era — Genre</p>
-        <span>Click to learn more</span>
-      </section>
-    </section>
- 
-    <!-- Artist 6 -->
-    <section class="mv-artist-card" onclick="openLightbox(
-      'your-image-url-here.jpg',
-      'Artist Name',
-      'Era — Genre',
-      'Write your biography about this artist here.',
-      '🎵 Famous Songs: Song 1, Song 2, Song 3'
-    )">
-      <img src="your-image-url-here.jpg" alt="Artist Name">
-      <section class="mv-artist-card-overlay">
-        <h3>Artist Name</h3>
-        <p>Era — Genre</p>
-        <span>Click to learn more</span>
-      </section>
-    </section>
- 
-    <!-- Artist 7 -->
-    <section class="mv-artist-card" onclick="openLightbox(
-      'your-image-url-here.jpg',
-      'Artist Name',
-      'Era — Genre',
-      'Write your biography about this artist here.',
-      '🎵 Famous Songs: Song 1, Song 2, Song 3'
-    )">
-      <img src="your-image-url-here.jpg" alt="Artist Name">
-      <section class="mv-artist-card-overlay">
-        <h3>Artist Name</h3>
-        <p>Era — Genre</p>
-        <span>Click to learn more</span>
-      </section>
-    </section>
- 
-    <!-- Artist 8 -->
-    <section class="mv-artist-card" onclick="openLightbox(
-      'your-image-url-here.jpg',
-      'Artist Name',
-      'Era — Genre',
-      'Write your biography about this artist here.',
-      '🎵 Famous Songs: Song 1, Song 2, Song 3'
-    )">
-      <img src="your-image-url-here.jpg" alt="Artist Name">
-      <section class="mv-artist-card-overlay">
-        <h3>Artist Name</h3>
-        <p>Era — Genre</p>
-        <span>Click to learn more</span>
-      </section>
-    </section>
- 
-    <!-- Artist 9 -->
-    <section class="mv-artist-card" onclick="openLightbox(
-      'your-image-url-here.jpg',
-      'Artist Name',
-      'Era — Genre',
-      'Write your biography about this artist here.',
-      '🎵 Famous Songs: Song 1, Song 2, Song 3'
-    )">
-      <img src="your-image-url-here.jpg" alt="Artist Name">
-      <section class="mv-artist-card-overlay">
-        <h3>Artist Name</h3>
-        <p>Era — Genre</p>
-        <span>Click to learn more</span>
-      </section>
-    </section>
- 
-    <!-- Artist 10 -->
-    <section class="mv-artist-card" onclick="openLightbox(
-      'your-image-url-here.jpg',
-      'Artist Name',
-      'Era — Genre',
-      'Write your biography about this artist here.',
-      '🎵 Famous Songs: Song 1, Song 2, Song 3'
-    )">
-      <img src="your-image-url-here.jpg" alt="Artist Name">
-      <section class="mv-artist-card-overlay">
-        <h3>Artist Name</h3>
-        <p>Era — Genre</p>
-        <span>Click to learn more</span>
-      </section>
-    </section>
- 
-    <!-- Artist 11 -->
-    <section class="mv-artist-card" onclick="openLightbox(
-      'your-image-url-here.jpg',
-      'Artist Name',
-      'Era — Genre',
-      'Write your biography about this artist here.',
-      '🎵 Famous Songs: Song 1, Song 2, Song 3'
-    )">
-      <img src="your-image-url-here.jpg" alt="Artist Name">
-      <section class="mv-artist-card-overlay">
-        <h3>Artist Name</h3>
-        <p>Era — Genre</p>
-        <span>Click to learn more</span>
-      </section>
-    </section>
- 
-    <!-- Artist 12 -->
-    <section class="mv-artist-card" onclick="openLightbox(
-      'your-image-url-here.jpg',
-      'Artist Name',
-      'Era — Genre',
-      'Write your biography about this artist here.',
-      '🎵 Famous Songs: Song 1, Song 2, Song 3'
-    )">
-      <img src="your-image-url-here.jpg" alt="Artist Name">
-      <section class="mv-artist-card-overlay">
-        <h3>Artist Name</h3>
-        <p>Era — Genre</p>
-        <span>Click to learn more</span>
-      </section>
-    </section>
- 
-  </section>
 </section>
- 
+
+
 <!-- LIGHTBOX -->
 <section class="mv-lightbox-overlay" id="lightbox" onclick="closeLightbox(event)">
-  <button class="mv-lightbox-close" onclick="closeLightbox()">&times;</button>
-  <section class="mv-lightbox-box">
-    <img class="mv-lightbox-image" id="lightbox-img" src="" alt="">
-    <section class="mv-lightbox-info">
-      <h2 id="lightbox-name"></h2>
-      <p class="mv-lightbox-era" id="lightbox-era"></p>
-      <p id="lightbox-bio"></p>
-      <section class="mv-lightbox-songs" id="lightbox-songs"></section>
+
+    <button class="mv-lightbox-close" onclick="closeLightbox()">
+        &times;
+    </button>
+
+    <section class="mv-lightbox-box">
+
+        <img class="mv-lightbox-image" id="lightbox-img" src="" alt="">
+
+        <section class="mv-lightbox-info">
+
+            <h2 id="lightbox-name"></h2>
+
+            <p class="mv-lightbox-era" id="lightbox-era"></p>
+
+            <p id="lightbox-bio"></p>
+
+            <section class="mv-lightbox-songs" id="lightbox-songs"></section>
+
+        </section>
+
     </section>
-  </section>
+
 </section>
- 
+
+
 <!-- LIFE STORIES -->
 <section class="mv-stories-section">
-  <section class="container">
-    <h2>Life Stories</h2>
-    <p class="mv-section-subtitle">The journeys behind the music</p>
- 
-    <!-- Story 1 -->
-    <section class="mv-story-card">
-      <h3>Artist Name</h3>
-      <span class="mv-story-era">Era — Genre</span>
-      <p>Write the life story of this artist here. Talk about where they grew up, how they got into music, their struggles, their rise to fame, and their lasting legacy.</p>
+
+    <section class="container">
+
+        <h2>Life Stories</h2>
+
+        <p class="mv-section-subtitle">
+            The journeys behind the music
+        </p>
+
+
+        <!-- Story 1 -->
+        <section class="mv-story-card">
+
+            <h3>Michael Jackson</h3>
+
+           
+
+            <p>
+                Michael Jackson began performing as a child with the Jackson 5 before
+                becoming a global solo superstar. His albums, music videos and performances
+                changed pop music forever, earning him the title "King of Pop" and leaving
+                a lasting legacy.
+            </p>
+
+        </section>
+
+
+        <!-- Story 2 -->
+        <section class="mv-story-card">
+
+            <h3>Tupac Shakur</h3>
+
+            
+
+            <p>
+                Tupac Shakur grew from a young performer into one of hip-hop's most
+                influential voices. His music combined personal experiences with powerful
+                messages about inequality, violence and society, making his work influential
+                long after his death.
+            </p>
+
+        </section>
+
+
+        <!-- Story 3 -->
+        <section class="mv-story-card">
+
+            <h3>Freddie Mercury</h3>
+
+            
+            <p>
+                Freddie Mercury became famous as the frontman of Queen. His extraordinary
+                voice, theatrical stage presence and songwriting helped create some of
+                rock's most memorable performances, making him an icon of music history.
+            </p>
+
+        </section>
+
+
+        <!-- Story 4 -->
+        <section class="mv-story-card">
+
+            <h3>Taylor Swift</h3>
+
+           
+            <p>
+                Taylor Swift started as a teenage country singer before evolving into a
+                global pop superstar. Her personal songwriting and changing musical styles
+                have helped her connect with millions of listeners around the world.
+            </p>
+
+        </section>
+
     </section>
- 
-    <!-- Story 2 -->
-    <section class="mv-story-card">
-      <h3>Artist Name</h3>
-      <span class="mv-story-era">Era — Genre</span>
-      <p>Write the life story of this artist here. Talk about where they grew up, how they got into music, their struggles, their rise to fame, and their lasting legacy.</p>
-    </section>
- 
-    <!-- Story 3 -->
-    <section class="mv-story-card">
-      <h3>Artist Name</h3>
-      <span class="mv-story-era">Era — Genre</span>
-      <p>Write the life story of this artist here. Talk about where they grew up, how they got into music, their struggles, their rise to fame, and their lasting legacy.</p>
-    </section>
- 
-    <!-- Story 4 -->
-    <section class="mv-story-card">
-      <h3>Artist Name</h3>
-      <span class="mv-story-era">Era — Genre</span>
-      <p>Write the life story of this artist here. Talk about where they grew up, how they got into music, their struggles, their rise to fame, and their lasting legacy.</p>
-    </section>
- 
-  </section>
+
 </section>
-<!--Footer-->
+
+
+<!-- Footer -->
 <footer class="site-footer overflow-hidden py-4 px-3 px-md-5 mb-0 mt-auto">
+
     <section class="container-fluid">
 
         <section class="row align-items-center gy-4 text-center text-md-start">
-            
+
             <article class="col-12 col-md-3 d-flex justify-content-center justify-content-md-start">
-                <a href="#top" class="footer-logo-link d-flex flex-column align-items-center gap-1 text-decoration-none">
+
+                <a href="#top"
+                   class="footer-logo-link d-flex flex-column align-items-center gap-1 text-decoration-none">
+
                     <span class="arrow text-gold fs-6">▼</span>
-                    <img src="../assets/images/Logo.jpeg" alt="Music Vault Logo" class="footer-logo">
+
+                    <img src="../assets/images/Logo.jpeg"
+                         alt="Music Vault Logo"
+                         class="footer-logo">
+
                 </a>
+
             </article>
 
+
             <article class="col-12 col-md-6 text-center">
+
                 <nav class="footer-nav d-flex flex-wrap justify-content-center gap-3 gap-md-4 mb-3">
-                    <a href="../index.html" class="text-light text-decoration-none opacity-75 hover-gold small">Home</a>
-                    <a href="aboutMusic.html" class="text-light text-decoration-none opacity-75 hover-gold small">About Music</a>
-                    <a href="genres.html" class="text-light text-decoration-none opacity-75 hover-gold small">Genres</a>
+
+                    <a href="../index.html"
+                       class="text-light text-decoration-none opacity-75 hover-gold small">
+                        Home
+                    </a>
+
+                    <a href="About Music.html"
+                       class="text-light text-decoration-none opacity-75 hover-gold small">
+                        About Music
+                    </a>
+
+                    <a href="genres.html"
+                       class="text-light text-decoration-none opacity-75 hover-gold small">
+                        Genres
+                    </a>
+
                 </nav>
+
 
                 <blockquote class="footer-quote mb-3 italic">
                     "Found my new favourite genre!" — Jason Todd
                 </blockquote>
 
+
                 <button class="top-btn btn" onclick="scrollToTop()">
                     Back to Top
                 </button>
+
             </article>
 
+
             <article class="col-12 col-md-3 d-flex flex-column align-items-center align-items-md-end">
+
                 <ul class="social-grid list-unstyled m-0 p-0 mb-2">
-                    <li><a href="#" aria-label="Instagram"><i class="fa-brands fa-square-instagram"></i></a></li>
-                    <li><a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a></li>
-                    <li><a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a></li>
-                    <li><a href="#" aria-label="Email"><i class="fa-solid fa-envelopes-bulk"></i></a></li>
-                    <li><a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a></li>
-                    <li><a href="#" aria-label="Reddit"><i class="fa-brands fa-square-reddit"></i></a></li>
+
+                    <li>
+                        <a href="#" aria-label="Instagram">
+                            <i class="fa-brands fa-square-instagram"></i>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" aria-label="Facebook">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" aria-label="Twitter">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" aria-label="Email">
+                            <i class="fa-solid fa-envelopes-bulk"></i>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" aria-label="YouTube">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" aria-label="Reddit">
+                            <i class="fa-brands fa-square-reddit"></i>
+                        </a>
+                    </li>
+
                 </ul>
 
-                <a href="shop.html" class="newsletter-link text-gold text-center text-md-end w-100">
+
+                <a href="shop.html"
+                   class="newsletter-link text-gold text-center text-md-end w-100">
                     Shop
                 </a>
+
             </article>
 
         </section>
+
 
         <hr class="border-secondary opacity-25 my-4">
 
+
         <section class="row">
+
             <div class="col-12 text-center">
+
                 <p class="text-light opacity-50 small mb-0">
-                    &copy; 2026 Music Vault. All rights reserved. Property of Singapore Polytechnic. 
+                    &copy; 2026 Music Vault. All rights reserved.
+                    Property of Singapore Polytechnic.
                 </p>
+
             </div>
+
         </section>
 
     </section>
+
 </footer>
+
+</body>
+
+</html>
+
+<!--References
+
+https://michael-jackson.fandom.com/wiki/Michael_Jackson?file=Michael_Jackson_2007.jpg
+https://tvtropes.org/pmwiki/pmwiki.php/Music/TupacShakur
+https://www.eonline.com/ca/news/982896/the-truth-about-freddie-mercury-s-incredibly-complicated-life-is-guaranteed-to-blow-your-mind
+https://en.wikipedia.org/wiki/Taylor_Swift
+https://www.graceland.com/biography
+https://www.britannica.com/biography/Bob-Marley
+https://en.wikipedia.org/wiki/Beyonc%C3%A9
+https://rutles.fandom.com/wiki/Eminem?file=Eminem.png
+https://simple.wikipedia.org/wiki/The_Beatles
+https://en.wikipedia.org/wiki/Whitney_Houston
+https://en.wikipedia.org/wiki/David_Bowie
+https://stagemasters.bg/gallery/concerts-tours/
+-->
