@@ -4152,4 +4152,340 @@ h1, h2, h3, h4, h5 {
         gap: 1.25rem;
     }
 }
+article {
+    min-height: 70vh;
+}
 
+#benefitsIntro{
+    padding-top:7%;
+    padding-bottom:7%
+}
+
+#benefitsIntroText {
+    padding-right: 7%
+}
+
+#benefitsIntroText > p{
+    font-size: xx-large;
+}
+
+#benefitsIntroText > h2{
+    font-size: 3.5rem;
+}
+
+#benefitsVideo {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    height: auto;
+}
+
+@media (min-width: 768px) {
+    #benefitsVideo {
+        width: 41.66666667%;
+    }
+}
+
+.benefitsCard {
+    background: none;
+    perspective: 1700px;
+    cursor: pointer;
+}
+
+.benefitsCard-inner {
+    aspect-ratio: 4/3;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.benefitsCard.flipped .benefitsCard-inner {
+    transform: rotateY(180deg);
+}
+
+#benefitsHero {
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: 105%;
+    background-position: center 5%;
+    height: 70vh;
+    color: var(--cream);
+}
+
+.benefitsCard-front {
+    background-color: var(--green-dark);
+    color: var(--cream);
+    border: 1px solid var(--gold);
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.5rem;
+    backface-visibility: hidden;
+}
+
+.benefitsCard-back {
+    background-color: var(--green);
+    color: var(--cream);
+    border: 1px solid var(--gold);
+    transform: rotateY(180deg);
+    position: absolute;
+    inset: 0;
+    justify-content: center;
+    align-content: center;
+    border-radius: 0.5rem;
+    backface-visibility: hidden;
+}
+
+/* Quiz for benefits of music */
+#quiz{
+    min-height: 80vh;
+    background-color: var(--green);
+}
+
+#choices{
+    min-height: 18rem;
+}
+
+
+#quizIntro,
+#quiz,
+#quizEnd {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 0;
+    padding: 3rem;
+
+    background-color: var(--green-dark);
+}
+
+#quizIntro, #quizEnd{
+    min-height: 70vh;
+}
+#QnNo {
+    font-size: 3.5rem;
+}
+
+#question {
+    font-size: 3.3rem;
+    min-height: 8rem;
+}
+
+#choices {
+    width: 100%;
+}
+
+#choices > button,
+#nextBtn,
+#startBtn, #retryBtn {
+    background-color: var(--green);
+    color: var(--cream);
+    border: 2px solid var(--gold);
+    border-radius: 8px;
+    padding: 0.75rem 1.25rem;
+    font-size: 2.5rem;
+}
+
+#choices > button:hover,
+#nextBtn:hover,
+#startBtn:hover,
+#retryBtn:hover {
+    background-color: #1d4d36;
+}
+
+#choices > button {
+    width: 70%;
+}
+
+#result {
+    font-size: 3.4rem;
+    min-height: 5rem;
+}
+
+/* Technology page — relies on Bootstrap utilities for layout/spacing.
+   Only the shared-palette recoloring lives here. main.css must load first. */
+
+#techHero {
+    background: linear-gradient(160deg, var(--black) 0%, var(--green-dark) 55%, var(--green) 100%);
+    color: var(--cream);
+}
+
+#techHero h1 {
+    color: var(--gold-light);
+}
+
+#techIntro {
+    background-color: var(--cream);
+    color: var(--black);
+}
+
+.tech-stat {
+    border-left: 3px solid var(--gold);
+    padding-left: 1.2rem;
+    margin: 0;
+}
+
+.tech-stat h3 {
+    color: var(--gold);
+}
+
+#techCards {
+    background-color: var(--black);
+}
+
+#techCards h1 {
+    color: var(--gold-light);
+}
+
+.techCard-icon {
+    font-size: 2.5rem;
+    color: var(--gold);
+    margin-bottom: 0.5rem;
+}
+
+.text-gold { color: var(--gold); }
+.text-gold-light { color: var(--gold-light); }
+.text-muted-custom { color: var(--text-muted); }
+.bg-gold { background-color: var(--gold); }
+.text-black { color: var(--black) !important; }
+.border-gold { border: 1px solid var(--green-light); }
+
+/* Central Spine */
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 10px;
+  width: 4px;
+  background-color: var(--green);
+}
+
+/* Mobile Layout */
+.timeline-item {
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: 3px;
+  top: 6px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: var(--gold);
+  border: 4px solid var(--black-soft);
+  z-index: 2;
+}
+
+.timeline-item time {
+  font-family: system-ui, sans-serif;
+  font-weight: 600;
+  padding: 6px 14px;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.timeline-item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+#ipod-img{
+    width:80%
+}
+
+/* Desktop Grid Layout (768px+) */
+@media (min-width: 768px) {
+  .timeline::before,
+  .timeline-item::before {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .timeline-item {
+    padding-left: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+  }
+
+  /* Text Left, Image Right */
+  .timeline-left header {
+    grid-column: 1;
+    text-align: right;
+  }
+  .timeline-left img {
+    grid-column: 2;
+  }
+
+  /* Image Left, Text Right */
+  .timeline-right header {
+    grid-column: 2;
+    text-align: left;
+  }
+  .timeline-right img {
+    grid-column: 1;
+    grid-row: 1;
+  }
+}
+
+.scroll-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.sticky-text {
+  transition: opacity 0.3s ease;
+}
+
+.media-step {
+  margin: 0 0 50vh 0;
+  opacity: 0.25;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.media-step:last-child {
+  margin-bottom: 0;
+}
+
+.media-step.active {
+  opacity: 1;
+  transform: scale(1.02);
+}
+
+.media-step img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+}
+
+@media (min-width: 768px) {
+  .scroll-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  .sticky-text {
+    position: sticky;
+    top: 35%;
+  }
+}
+
+.scroll-media{
+    padding-bottom: 47vh
+}
