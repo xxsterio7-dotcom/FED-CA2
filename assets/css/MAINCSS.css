@@ -4152,10 +4152,6 @@ h1, h2, h3, h4, h5 {
         gap: 1.25rem;
     }
 }
-article {
-    min-height: 70vh;
-}
-
 #benefitsIntro{
     padding-top:7%;
     padding-bottom:7%
