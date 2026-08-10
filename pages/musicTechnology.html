@@ -10,43 +10,34 @@
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../assets/css/musicTech.css" rel="stylesheet">
-    <link href="../assets/css/main-(marco).css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="main.css" rel="stylesheet">
+    <link href="technology.css" rel="stylesheet">
 </head>
 <body>
 
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light p-3" style="background-color: var(--black-soft);">
+        <nav class="navbar navbar-expand-lg navbar-light p-3 navbar-custom">
             <div class="container-fluid">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="filter: invert(1);">
+                <button class="navbar-toggler navbar-toggler-invert" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link navbar-brand mb-0 h1 fs-4" href="index.html" style="color: var(--cream) !important;">
+                            <a class="nav-link navbar-brand mb-0 h1 fs-4" href="index.html">
                                 <img src="https://i.imgur.com/V5YSKrI.png" alt="Music Vault logo">
                             </a>
                         </li>
-
                         <li class="nav-item">
-                            <a class="nav-link mb-0 h1 fs-5" href="benefits.html" style="color: var(--cream) !important;">
-                                Benefits of Music
-                            </a>
+                            <a class="nav-link mb-0 h1 fs-5" href="benefits.html">Benefits of Music</a>
                         </li>
-
                         <li class="nav-item">
-                            <a class="nav-link mb-0 h1 fs-5" href="albums.html" style="color: var(--cream) !important;">
-                                Top Albums &amp; Songs
-                            </a>
+                            <a class="nav-link mb-0 h1 fs-5" href="albums.html">Top Albums &amp; Songs</a>
                         </li>
-
                         <li class="nav-item">
-                            <a class="nav-link active mb-0 h1 fs-5" aria-current="page" href="technology.html" style="color: var(--gold) !important;">
-                                Technology in Music
-                            </a>
+                            <a class="nav-link active mb-0 h1 fs-5 text-gold" aria-current="page" href="technology.html">Technology in Music</a>
                         </li>
                     </ul>
                 </div>
@@ -55,60 +46,79 @@
     </header>
 
     <!-- Hero -->
-    <section id="techHero">
+    <section id="techHero" class="d-flex flex-column justify-content-center align-items-center text-center py-5">
         <h1 class="display-2 fw-medium">How Technology Changed Music</h1>
-        <p class="fs-4 py-3">From the synthesiser to the streaming platform — how innovation reshaped the way music is made, sold, and heard.</p>
+        <p class="fs-4 py-3 col-11 col-md-7">From the synthesiser to the streaming platform — how innovation reshaped the way music is made, sold, and heard.</p>
     </section>
 
     <!-- Intro -->
-    <section class="p-5 d-flex justify-content-center flex-column flex-md-row" id="techIntro">
+    <section id="techIntro" class="row p-5 g-4">
 
         <div id="techIntroText" class="col-12 col-md-6">
             <h2>An industry rebuilt by its tools</h2>
-            <p>
+            <p class="fs-3 fw-light">
                 Every era of music has been shaped by the technology available to it.
                 Synthesisers gave artists entirely new sounds to work with, digital
                 production software put a studio on every laptop, and streaming
-                platforms rewrote how audiences discover and pay for music. This page
-                traces that shift — the instruments, the software, and the platforms
-                that changed the industry.
+                platforms rewrote how audiences discover and pay for music.
             </p>
         </div>
 
-        <div class="col-12 col-md-6 d-flex flex-column justify-content-center gap-4">
-            <div class="tech-stat">
-                <h3>1980s</h3>
-                <p>Affordable synthesisers like the Yamaha DX7 bring electronic sound into the mainstream.</p>
-            </div>
-            <div class="tech-stat">
-                <h3>2008</h3>
-                <p>Spotify launches, kicking off the shift from ownership to on-demand streaming.</p>
-            </div>
-            <div class="tech-stat">
-                <h3>Today</h3>
-                <p>AI-assisted production tools are changing how songs are written, mixed, and mastered.</p>
-            </div>
-        </div>
+        <aside class="col-12 col-md-6 d-flex flex-column justify-content-center gap-4">
+            <blockquote class="tech-stat">
+                <h3 class="display-6">1980s</h3>
+                <p class="mb-0">Affordable synthesisers like the Yamaha DX7 bring electronic sound into the mainstream.</p>
+            </blockquote>
+            <blockquote class="tech-stat">
+                <h3 class="display-6">2008</h3>
+                <p class="mb-0">Spotify launches, kicking off the shift from ownership to on-demand streaming.</p>
+            </blockquote>
+            <blockquote class="tech-stat">
+                <h3 class="display-6">Today</h3>
+                <p class="mb-0">AI-assisted production tools are changing how songs are written, mixed, and mastered.</p>
+            </blockquote>
+        </aside>
 
     </section>
-
-    <!-- Topic cards -->
-    <main id="techCards" class="py-5">
-        <section class="row g-4 p-5">
-            <h1 class="text-center display-4 mb-4">Key Shifts in the Industry</h1>
+    <main class="container-fluid min-vh-100 py-4 ">
+        <section class="row g-4 p-5 ">
+            <h1 class="text-center display-3 mt-5 text-gold">Key Inventions</h1>
 
             <article class="col-12 col-md-3">
                 <button class="benefitsCard w-100 h-100 border-0 p-0" type="button">
-                    <article class="position-relative d-block w-100 h-100 benefitsCard-inner">
-                        <h2 class="benefitsCard-front d-flex flex-column">
-                            <i class="fa-solid fa-headphones techCard-icon"></i>
-                            Streaming Platforms
-                        </h2>
-                        <span class="benefitsCard-back p-4">
-                            <h1>Streaming Platforms</h1>
-                            <p class="p-4 pb-3 pt-2 fs-5">Services like Spotify, Apple Music, and YouTube Music replaced physical sales and downloads with instant, on-demand access — changing how artists earn money and how listeners discover new music.</p>
+                    <article class="position-relative d-block w-100 h-100 benefitsCard-inner" style="color: var(--cream);">
+                        <h1 class="benefitsCard-front">Strings</h2>
+
+                        <span class="benefitsCard-back" style="color: var(--cream);">
+                            <a target="_blank" href="https://icons8.com/icon/K4oUzt50ROd5/violin"><img width=17% height=22% src="https://img.icons8.com/pieces/64/violin.png" alt="violin"/></a>
+                            <h1>String benefitsuments</h1>
+                            <p class="p-5 pb-3 pt-2 fs-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent non euismod est, sed tincidunt nisl. Duis eu diam at nibh suscipit aliquet.</p>
                             <h1>Examples</h1>
-                            <p class="p-4 pt-2 pb-0 fs-5">Spotify, Apple Music, YouTube Music</p>
+                            <p class="p-5 pt-2 pb-0 fs-4">Violins, Harps, Guitars</p>
+                        </span>
+                    </article>
+                </button>
+            </article>
+
+            <article class="col-12 col-md-3">
+                <button class="benefitsCard w-100 h-100 border-0 p-0" type="button">
+                    <article class="position-relative d-block w-100 h-100 benefitsCard-inner" style="color: var(--cream);">
+                        //Planning to move inline styles to main.css
+                        <h2 class="benefitsCard-front" 
+                        style="background-image: linear-gradient(rgba(29, 77, 54, 0.45), rgba(29, 77, 54, 0.45)),
+                        url(https://images.pexels.com/photos/6449867/pexels-photo-6449867.jpeg);
+                        width: 100%;
+                        background-repeat: no-repeat; 
+                        background-size: cover;
+                        background-position: center;
+                        color: var(--cream);">Percussion</h2>
+
+                        <span class="benefitsCard-back p-4"> <!--Find replacement for span tag-->
+                            <a target="_blank" href="https://icons8.com/icon/wbBDdYcGUPnm/tabla"><img width=18% height=22% src="https://img.icons8.com/pieces/64/tabal.png" alt="tabal"/></a> 
+                            <h1>Percussion</h1>
+                            <p class="p-5 pb-3 pt-2 fs-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent non euismod est, sed tincidunt nisl. Duis eu diam at nibh suscipit aliquet.</p>
+                            <h1>Examples</h1>
+                            <p class="p-1 pt-2 pb-0 fs-4">Drums, Cymbals, Maracas</p>
                         </span>
                     </article>
                 </button>
@@ -117,15 +127,21 @@
             <article class="col-12 col-md-3">
                 <button class="benefitsCard w-100 h-100 border-0 p-0" type="button">
                     <article class="position-relative d-block w-100 h-100 benefitsCard-inner">
-                        <h2 class="benefitsCard-front d-flex flex-column">
-                            <i class="fa-solid fa-wave-square techCard-icon"></i>
-                            Synthesisers
-                        </h2>
-                        <span class="benefitsCard-back p-4">
-                            <h1>Synthesisers</h1>
-                            <p class="p-4 pb-3 pt-2 fs-5">Electronic instruments that generate and shape sound gave musicians access to entirely new timbres, defining genres from disco to synth-pop to modern electronic music.</p>
+                        <h2 class="benefitsCard-front" 
+                        style="background-image: linear-gradient(rgba(29, 77, 54, 0.45), rgba(29, 77, 54, 0.45)), 
+                        url(https://images.pexels.com/photos/18860920/pexels-photo-18860920.jpeg);
+                        width: 100%;
+                        background-repeat: no-repeat; 
+                        background-size: cover;
+                        background-position: center;
+                        color: var(--cream);">Woodwind</h2>
+
+                        <span class="benefitsCard-back" style="color: var(--cream);">
+                            <a target="_blank" href="https://icons8.com/icon/15p9BikO32T4/bassoon"><img width=17% height=21% src="https://img.icons8.com/pieces/64/bassoon.png" alt="bassoon"/></a> 
+                            <h1>Woodwinds</h1>
+                            <p class="p-5 pb-3 pt-2 fs-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent non euismod est, sed tincidunt nisl. Duis eu diam at nibh suscipit aliquet.</p>
                             <h1>Examples</h1>
-                            <p class="p-4 pt-2 pb-0 fs-5">Moog, Yamaha DX7, Roland Juno</p>
+                            <p class="p-5 pt-2 pb-0 fs-4">Oboe, Bassoon, Flute</p>
                         </span>
                     </article>
                 </button>
@@ -134,32 +150,21 @@
             <article class="col-12 col-md-3">
                 <button class="benefitsCard w-100 h-100 border-0 p-0" type="button">
                     <article class="position-relative d-block w-100 h-100 benefitsCard-inner">
-                        <h2 class="benefitsCard-front d-flex flex-column">
-                            <i class="fa-solid fa-sliders techCard-icon"></i>
-                            Production Software
-                        </h2>
-                        <span class="benefitsCard-back p-4">
-                            <h1>Production Software</h1>
-                            <p class="p-4 pb-3 pt-2 fs-5">Digital Audio Workstations turned professional recording studios into software anyone can run on a laptop, lowering the barrier to producing and releasing music.</p>
-                            <h1>Examples</h1>
-                            <p class="p-4 pt-2 pb-0 fs-5">Ableton Live, Logic Pro, FL Studio</p>
-                        </span>
-                    </article>
-                </button>
-            </article>
+                        <h2 class="benefitsCard-front" 
+                        style="background-image: linear-gradient(rgba(29, 77, 54, 0.45), rgba(29, 77, 54, 0.45)), 
+                        url(https://images.pexels.com/photos/8884257/pexels-photo-8884257.jpeg);
+                        width: 100%;
+                        background-repeat: no-repeat; 
+                        background-size: cover;
+                        background-position: center;
+                        color: var(--cream);">Brass</h2>
 
-            <article class="col-12 col-md-3">
-                <button class="benefitsCard w-100 h-100 border-0 p-0" type="button">
-                    <article class="position-relative d-block w-100 h-100 benefitsCard-inner">
-                        <h2 class="benefitsCard-front d-flex flex-column">
-                            <i class="fa-solid fa-robot techCard-icon"></i>
-                            AI &amp; Machine Learning
-                        </h2>
-                        <span class="benefitsCard-back p-4">
-                            <h1>AI &amp; Machine Learning</h1>
-                            <p class="p-4 pb-3 pt-2 fs-5">AI tools now assist with mastering, mixing, stem separation, and even composition — raising new questions about authorship and creativity in music.</p>
+                        <span class="benefitsCard-back" style="color: var(--cream);">
+                            <a target="_blank" href="https://icons8.com/icon/cehlV2NqUbmZ/sax"><img width=16% height=21% src="https://img.icons8.com/pieces/64/alto-saxophone.png" alt="alto-saxophone"/></a> 
+                            <h1>Brass</h1>
+                            <p class="p-5 pb-3 pt-2 fs-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent non euismod est, sed tincidunt nisl. Duis eu diam at nibh suscipit aliquet.</p>
                             <h1>Examples</h1>
-                            <p class="p-4 pt-2 pb-0 fs-5">LANDR, Suno, iZotope Ozone</p>
+                            <p class="p-5 pt-2 pb-0 fs-4">Trumpet, Saxophone, Tuba, Trombone</p>
                         </span>
                     </article>
                 </button>
@@ -169,58 +174,120 @@
     </main>
 
     <!-- Timeline -->
-    <section class="py-5" style="background-color: var(--cream);">
-        <h1 class="text-center display-5 mb-5" style="color: var(--black);">A Timeline of Change</h1>
+   <section class="container py-5">
+  <h2 class="text-center text-gold mb-5 display-1">How listening to music evolved</h2>
 
-        <div class="tech-timeline">
+  <div class="timeline position-relative">
 
-            <div class="tech-timeline__item">
-                <div class="tech-timeline__marker"></div>
-                <p class="tech-timeline__year">1970s</p>
-                <div class="tech-timeline__content">
-                    <p class="mb-0">Analog synthesisers become widely available, giving rise to entirely new genres.</p>
-                </div>
-            </div>
+    <!-- Item 1: Text Left, Image Right -->
+    <article class="timeline-item timeline-left">
+      <header>
+        <time class="badge bg-gold text-black mb-2 fs-1">1940s-1970s</time>
+        <h3 class="text-gold-light fs-1">Vinyl Records</h3>
+        <p class="mb-0 text-muted-custom fs-3">Vinyl manufacturers would press a long winding groove around a small plastic disc, known as a vinyl. Listeners would then purchase these vinyl records and play them using a turntable, or even collect them as rare collectibles</p>
+      </header>
+      <img src="Images/vinyl.png" alt="A turntable" class="img-fluid rounded">
+    </article>
 
-            <div class="tech-timeline__item">
-                <div class="tech-timeline__marker"></div>
-                <p class="tech-timeline__year">1990s</p>
-                <div class="tech-timeline__content">
-                    <p class="mb-0">The MP3 format compresses audio files small enough to share online, laying the groundwork for digital music.</p>
-                </div>
-            </div>
+    <!-- Item 2: Image Left, Text Right -->
+    <article class="timeline-item timeline-right">
+      <header>
+        <time class="badge bg-gold text-black mb-2 fs-1">1970s-1980s</time>
+        <h3 class="text-gold-light fs-1">Cassette Tapes</h3>
+        <p class="mb-0 text-muted-custom fs-3">Cassette tapes became a much more portable and popular option to the vinyl tape. These compact strips of black tape could be played on the go with casette players such as the Walkman</p>
+      </header>
+      <img src="Images/cassette.png" alt="Digital Audio Player" class="img-fluid rounded">
+    </article>
 
-            <div class="tech-timeline__item">
-                <div class="tech-timeline__marker"></div>
-                <p class="tech-timeline__year">2001</p>
-                <div class="tech-timeline__content">
-                    <p class="mb-0">iTunes launches, offering legal digital downloads and reshaping music retail.</p>
-                </div>
-            </div>
+    <!-- Item 3: Text Left, Image Right -->
+    <article class="timeline-item timeline-left">
+      <header>
+        <time class="badge bg-gold text-black mb-2 fs-1">1980s-2000s</time>
+        <h3 class="text-gold-light fs-1">Compact Discs</h3>
+        <p class="mb-0 text-muted-custom fs-3">Compact Discs, or better known as CDs, brought digital audio formats into the mainstream, by storing binary data as grooves on it's surface. CDs, compared to vinyl or cassette, offered clearer sound and were much more durable.
+        </p>
+      </header>
+      <img src="Images/CD.png" alt="Compact Disc" class="img-fluid rounded">
+    </article>
 
-            <div class="tech-timeline__item">
-                <div class="tech-timeline__marker"></div>
-                <p class="tech-timeline__year">2008</p>
-                <div class="tech-timeline__content">
-                    <p class="mb-0">Spotify brings streaming to the mainstream, shifting the industry from ownership to access.</p>
-                </div>
-            </div>
+    <!-- Item 4: Image Left, Text Right -->
+    <article class="timeline-item timeline-right">
+      <header>
+        <time class="badge bg-gold text-black mb-2 fs-1">2000s-2010s</time>
+        <h3 class="text-gold-light fs-1">MP3 players</h3>
+        <p class="mb-0 text-muted-custom fs-3">Portable MP3 players were a revolutionary step into the digital age of music. Consumers were able to store thousands of songs, curate playlists and search for individual tracks, all in a tiny little screen that they could slide into their pockets.</p>
+      </header>
+      <img src="Images/ipod.png" alt="Streaming App" class="img-fluid rounded" id="ipod-img">
+    </article>
 
-            <div class="tech-timeline__item">
-                <div class="tech-timeline__marker"></div>
-                <p class="tech-timeline__year">2020s</p>
-                <div class="tech-timeline__content">
-                    <p class="mb-0">AI-powered tools enter production workflows, from mastering to full track generation.</p>
-                </div>
-            </div>
+    <!-- Item 3: Text Left, Image Right -->
+    <article class="timeline-item timeline-left">
+      <header>
+        <time class="badge bg-gold text-black mb-2 fs-1">2010s-Now</time>
+        <h3 class="text-gold-light fs-1">Streaming Platforms</h3>
+        <p class="mb-0 text-muted-custom fs-3">Streaming now dominates how we listen to music today. Platforms, like Spotify and Apple Music, provide access to millions of songs and albums at the click of a button. Instead of a owned music collection, users instead gain access to an enormous library of music, shifting our perspective on how we interact with music
+        </p>
+      </header>
+      <img src="Images/streaming.png" alt="Compact Disc" class="img-fluid rounded">
+    </article>
 
-        </div>
-    </section>
+  </div>
+</section>
+<section class="container py-5 scroll-section">
+  
+  <header class="sticky-text">
+    <time id="active-year" class="badge bg-gold text-black mb-2 fs-5">1970s</time>
+    <h3 id="active-title" class="text-gold-light">Analog Synthesisers</h3>
+    <p id="active-desc" class="text-muted-custom mb-0">Analog synthesisers become widely available, giving rise to brand new electronic music genres.</p>
+  </header>
 
-    <footer class="text-center py-4" style="background-color: var(--black-soft); color: var(--cream);">
+  <aside class="scroll-media">
+
+    <figure class="media-step active" 
+            data-year="1970s" 
+            data-title="Analog Synthesisers" 
+            data-desc="Analog synthesisers become widely available, giving rise to brand new electronic music genres.">
+      <img src="synthesiser.jpg" alt="Analog Synthesiser" class="img-fluid rounded border-green">
+    </figure>
+
+    <figure class="media-step" 
+            data-year="1990s" 
+            data-title="MP3 &amp; Digital Audio" 
+            data-desc="The MP3 format compresses audio to share online, starting the digital music revolution.">
+      <img src="mp3-player.jpg" alt="Digital Audio Player" class="img-fluid rounded border-green">
+    </figure>
+
+    <figure class="media-step" 
+            data-year="2001" 
+            data-title="Digital Downloads" 
+            data-desc="iTunes launches, offering legal digital downloads and completely reshaping music retail.">
+      <img src="ipod.jpg" alt="Digital Downloads" class="img-fluid rounded border-green">
+    </figure>
+
+    <figure class="media-step" 
+            data-year="2008" 
+            data-title="Streaming Era" 
+            data-desc="Spotify brings streaming mainstream, shifting music from physical ownership to instant access.">
+      <img src="streaming.jpg" alt="Streaming App" class="img-fluid rounded border-green" id="streaming-img">
+    </figure>
+
+  </aside>
+
+</section>
+
+    <footer class="text-center py-4 navbar-custom">
         <p class="mb-0">&copy; 2026 Music Vault</p>
     </footer>
 
-    <script src="../assets/js/musicTech.js"></script>
+    <script src="technology.js"></script>
 </body>
 </html>
+
+<!--Image by Getty Images on Unsplash, “Collection of vintage turntables, speakers, compact cassettes and tape recorders” (2023).-->
+<!-- Image by Getty Images on Unsplash, “Vintage old audio compact cassette in front of a dark brown background” — Source: https://unsplash.com/photos/vintage-old-audio-compact-cassette-in-front-of-a-dark-brown-background-6XVp6N2ZJcA -->
+<!-- Image source: Wikimedia Commons — “CD-Scan 20210218” — Source: https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/CD-Scan_20210218.tif/lossy-page1-960px-CD-Scan_20210218.tif.jpg -->
+<!-- Image source: Wikimedia Commons — “iPod nano 3g black” — Source: https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/IPod_nano_3g_black.jpg/960px-IPod_nano_3g_black.jpg -->
+ <!-- Image source: Pexels — “YouTube Music stream songs and music videos app on the display of smartphone or tablet” — Source: https://www.pexels.com/photo/youtube-music-stream-songs-and-music-videos-app-on-the-display-of-smartphone-or-tablet-16587508/ -->
+
+
+
