@@ -3,13 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Music Vault  | Benefits</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../assets/css/MAINCSS.css" rel="stylesheet">
+    <title>Music Vault | Benefits of Music</title>
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome Icons -->
     <script src="https://kit.fontawesome.com/b71d6a20e5.js" crossorigin="anonymous"></script>
+    <link href="../assets/css/MAINCSS.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #0d130f;
+            color: #e0e6e2;
+        }
+        .text-gold {
+            color: #e5c158 !important;
+        }
+    
+        .benefits-hero {
+            background: radial-gradient(circle, rgba(30, 44, 34, 0.9) 0%, rgba(13, 19, 15, 1) 100%);
+            min-height: 30vh;
+            border-bottom: 1px solid rgba(229, 193, 88, 0.15);
+        }
+
+        .flip-card {
+            background-color: transparent;
+            height: 280px;
+            perspective: 1000px;
+            cursor: pointer;
+        }
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.6s ease-in-out;
+            transform-style: preserve-3d;
+        }
+        .flip-card:hover .flip-card-inner,
+        .flip-card:focus .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+        .flip-card-front, 
+        .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid rgba(229, 193, 88, 0.25);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+        }
+        .flip-card-front {
+            background-color: #162019;
+            color: #e5c158;
+        }
+        .flip-card-back {
+            background-color: #1e2c22;
+            color: #e0e6e2;
+            transform: rotateY(180deg);
+            overflow-y: auto;
+        }
+        .bg-quiz-card {
+            background-color: #162019;
+            border: 1px solid rgba(229, 193, 88, 0.3);
+        }
+    </style>
 </head>
-<body>
-    <header class="site-header sticky-top">
+<body class="d-flex flex-column min-vh-100">
+
+   <!-- Header -->
+<header class="site-header sticky-top">
     <nav class="navbar navbar-expand-lg navbar-dark navbar-custom container-fluid px-3 px-md-4 px-lg-5">
         <a class="navbar-brand brand-logo d-flex align-items-center" href="../index.html">
             <img src="../assets/images/Logo.jpeg" alt="Logo" class="logo-img">
@@ -70,173 +139,151 @@
         </section>
     </nav>
 </header>
-    <!--Intro Banner-->
-    <!--Planning to shift inline styles to main.css-->
-    <section style="background-image: linear-gradient(
-                to bottom,
-                rgba(8, 11, 9, 0.15) 55%,
-                rgba(8, 11, 9, 0.15) 70%,
-                var(--green-dark) 100%),
-                url(https://upload.wikimedia.org/wikipedia/commons/3/32/4th_Australian_Jazz_Convention_-_Melbourne_1949_Rex_Stewart_%26_Graeme_Bell_Jazz_Band.jpg?_=20250220132633);"
-                class="w-100 d-flex flex-column justify-content-center align-items-center text-center" id="benefitsHero">
-        <h1 class="display-1 fw-medium text-gold">Benefits of Music</h1>
-        <h2 class="py-4">How music benefits us physically, mentally, and as a society</h2>
+
+    <section class="benefits-hero d-flex flex-column justify-content-center align-items-center text-center p-4">
+        <h1 class="display-4 fw-bold text-gold mb-2">Benefits of Music</h1>
+        <p class="fs-5 text-light opacity-75 max-w-75">Discover how sound influences our mind, body, and memory.</p>
     </section>
 
-    <section class="row justify-content-center g-4 p-5 m-0"
-         id="benefitsIntro"
-         style="background-color: var(--green-dark);">
+    <section class="container py-5">
+        <section class="row align-items-center g-4">
+            <article class="col-12 col-lg-6">
+                <h2 class="text-gold fw-bold mb-3 fs-2">Listening With Your Body</h2>
+                <p class="text-light opacity-75 fs-6 leading-relaxed mb-3">
+                    Did you know that listening to a song can bring back memories you haven't thought about in years? Music constantly engages complex regions of the brain tied to memory, emotion, and attention.
+                </p>
+                <p class="text-light opacity-75 fs-6 leading-relaxed">
+                    Beyond nostalgia, scientists have proven that music produces tangible physiological responses. Flip the interactive cards below to learn the facts, then take the quiz!
+                </p>
+            </article>
+            
+            <figure class="col-12 col-lg-6 mb-0">
+                <section class="ratio ratio-16x9 rounded-3 shadow-lg overflow-hidden border border-secondary border-opacity-25">
+                    <iframe 
+                        src="https://www.youtube-nocookie.com/embed/s19Fr-_WaXo" 
+                        title="How Music Affects Your Brain" 
+                        allowfullscreen>
+                    </iframe>
+                </section>
+            </figure>
+        </section>
+    </section>
 
-    <div id="benefitsIntroText" class="col-12 col-md-5">
-        <h2 class="text-gold">Listening with your body</h2>
-        <p>
-            Did you know that listening to a song can bring a back a memory you haven't thought about in years? This happens bacause music constantly engages areas of the brain tied with memory, emotion and attention? <br><br>
-            But other than evoke a nostalgic moment, Scientists would say music does more to our body than we know. From casually bumping a playlist on the train, to studying with it in the background, there's more going on benathe the surface than we realise. <br><br>
-            Scroll down to explore the differemt benefits of music!
+    <hr class="container border-secondary opacity-25 my-2">
 
-        </p>
-    </div>
+    <main class="container py-5">
+        <header class="text-center mb-5">
+            <h2 class="text-gold display-6 fw-bold">4 Key Health Benefits</h2>
+            <p class="text-secondary fs-6">Hover or tap cards to reveal the details</p>
+        </header>
 
-    <iframe
-        id="benefitsVideo"
-        class="col-12 col-md-5"
-        src="https://www.youtube.com/embed/s19Fr-_WaXo?si=FwddZ-olDNa--GNQ"
-        title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin"
-        allowfullscreen>
-    </iframe>
+        <section class="row g-4">
 
+
+            <article class="col-12 col-sm-6 col-lg-3">
+                <section class="flip-card" tabindex="0">
+                    <section class="flip-card-inner">
+                        <section class="flip-card-front">
+                            <span class="fs-1 mb-3"><i class="fa-solid fa-dumbbell"></i></span>
+                            <h3 class="fs-4 fw-bold">Muscles</h3>
+                        </section>
+                        <section class="flip-card-back">
+                            <h4 class="text-gold fs-5 mb-2">Muscles</h4>
+                            <p class="fs-6 opacity-90 mb-0">
+                                Relaxing music calms the nervous system, helping to reduce physical tension caused by stress and loosen tight muscles.
+                            </p>
+                        </section>
+                    </section>
+                </section>
+            </article>
+
+            <article class="col-12 col-sm-6 col-lg-3">
+                <section class="flip-card" tabindex="0">
+                    <section class="flip-card-inner">
+                        <section class="flip-card-front">
+                            <span class="fs-1 mb-3"><i class="fa-solid fa-brain"></i></span>
+                            <h3 class="fs-4 fw-bold">Memory</h3>
+                        </section>
+                        <section class="flip-card-back">
+                            <h4 class="text-gold fs-5 mb-2">Memory</h4>
+                            <p class="fs-6 opacity-90 mb-0">
+                                Rhythm and melody create patterns that make information easier for the brain to organize, store, and recall later.
+                            </p>
+                        </section>
+                    </section>
+                </section>
+            </article>
+
+            <article class="col-12 col-sm-6 col-lg-3">
+                <section class="flip-card" tabindex="0">
+                    <section class="flip-card-inner">
+                        <section class="flip-card-front">
+                            <span class="fs-1 mb-3"><i class="fa-solid fa-heart-pulse"></i></span>
+                            <h3 class="fs-4 fw-bold">The Heart</h3>
+                        </section>
+                        <section class="flip-card-back">
+                            <h4 class="text-gold fs-5 mb-2">The Heart</h4>
+                            <p class="fs-6 opacity-90 mb-0">
+                                Slow, calming tempos help lower heart rate and blood pressure, reducing overall strain on your cardiovascular system.
+                            </p>
+                        </section>
+                    </section>
+                </section>
+            </article>
+
+
+            <article class="col-12 col-sm-6 col-lg-3">
+                <section class="flip-card" tabindex="0">
+                    <section class="flip-card-inner">
+                        <section class="flip-card-front">
+                            <span class="fs-1 mb-3"><i class="fa-solid fa-shield-halved"></i></span>
+                            <h3 class="fs-4 fw-bold">Immune System</h3>
+                        </section>
+                        <section class="flip-card-back">
+                            <h4 class="text-gold fs-5 mb-2">Immune System</h4>
+                            <p class="fs-6 opacity-90 mb-0">
+                                Listening to music lowers stress hormones (cortisol) and supports immune markers like immunoglobulin A.
+                            </p>
+                        </section>
+                    </section>
+                </section>
+            </article>
+        </section>
+    </main>
+
+<section class="quiz-section-bg py-5 mt-auto border-top border-secondary border-opacity-25" style="background-image: url(../assets/images/benefits/benefitsquizback.jpg); background-position: center; background-repeat: no-repeat; opacity: 0.85;">
+    <section class="container">
+        <section class="row justify-content-center">
+            <article class="col-12 col-md-10 col-lg-8">
+                
+
+                <article id="quizIntro" class="text-center py-4"> 
+                    <span class="badge bg-warning text-dark mb-3 px-3 py-2 fs-6">Knowledge Check</span>
+                    <h2 class="display-6 text-gold fw-bold mb-3">Benefits of Music Quiz</h2> 
+                    <p class="text-secondary fs-6 mb-4">Ready to test what you just read above?</p> 
+                    <button id="startBtn" type="button" class="btn btn-warning btn-lg px-5 py-2 fw-semibold">Start Quiz</button> 
+                </article>
+
+         
+                <article id="quiz" class="p-4 p-md-5 bg-quiz-card rounded-4 text-start shadow-lg" style="display: none;"> 
+                    <p id="QnNo" class="text-gold fw-bold fs-6 mb-2"></p> 
+                    <h3 id="question" class="fs-4 text-light mb-4"></h3> 
+                    <section id="choices" class="d-grid gap-3 mb-4"></section> 
+                    <p id="result" class="fw-bold mt-3 fs-5 text-center"></p> 
+                    <button id="nextBtn" class="btn btn-outline-warning w-100 mt-3 py-2" type="button" style="visibility: hidden;">Next Question</button> 
+                </article>
+
+                <article id="quizEnd" class="text-center py-4" style="display: none;">
+                    <h2 class="fs-3 text-light mb-4">Quiz Complete!</h2>
+                    <button id="retryBtn" class="btn btn-warning px-4 py-2">Try Again</button>
+                </article>
+
+            </article>
+        </section>
+    </section>
 </section>
 
-    <main class="container-fluid py-4">
-    <section class="row g-4 px-3 py-5 p-md-5">
 
-        <h1 class="text-center display-3 mt-5 text-gold">
-            Benefits to the Body
-        </h1>
-
-        <article class="col-12 col-md-6 col-xl-3">
-            <button class="benefitsCard w-100 h-100 border-0 p-0" type="button">
-                <article class="position-relative d-block w-100 h-100 benefitsCard-inner">
-                    <h2 class="benefitsCard-front">
-                        Muscles
-                    </h2>
-
-                    <span class="benefitsCard-back p-4">
-                        <h2>
-                            Muscles
-                        </h2>
-
-                        <p class="fs-5">
-                            Relaxing music can help calm the nervous system and encourage
-                            a more relaxed state, which can reduce physical tension caused
-                            by stress and loosen tense muscles.
-                        </p>
-                    </span>
-                </article>
-            </button>
-        </article>
-
-        <article class="col-12 col-md-6 col-xl-3">
-            <button class="benefitsCard w-100 h-100 border-0 p-0" type="button">
-                <article class="position-relative d-block w-100 h-100 benefitsCard-inner">
-                    <h2 class="benefitsCard-front">
-                        Memory
-                    </h2>
-
-                    <span class="benefitsCard-back p-4">
-                        <h2>
-                            Memory
-                        </h2>
-
-                        <p class="fs-5">
-                            Music can help strengthen memory by using rhythm, repetition
-                            and emotional associations. These cues can make information
-                            easier for the brain to store and recall, which is why music
-                            is often used to help memorise information.
-                        </p>
-                    </span>
-                </article>
-            </button>
-        </article>
-
-        <article class="col-12 col-md-6 col-xl-3">
-            <button class="benefitsCard w-100 h-100 border-0 p-0" type="button">
-                <article class="position-relative d-block w-100 h-100 benefitsCard-inner">
-                    <h2 class="benefitsCard-front">
-                        Heart
-                    </h2>
-
-                    <span class="benefitsCard-back p-4">
-                        <h2>
-                            The Heart
-                        </h2>
-
-                        <p class="fs-5">
-                            Calming music can help lower your heart rate and blood pressure,
-                            which ultimately reduces stress on the cardiovascular system.
-                        </p>
-                    </span>
-                </article>
-            </button>
-        </article>
-
-        <article class="col-12 col-md-6 col-xl-3">
-            <button class="benefitsCard w-100 h-100 border-0 p-0" type="button">
-                <article class="position-relative d-block w-100 h-100 benefitsCard-inner">
-                    <h2 class="benefitsCard-front">
-                        Immune System
-                    </h2>
-
-                    <span class="benefitsCard-back p-4">
-                        <h2>
-                            Immune System
-                        </h2>
-
-                        <p class="fs-5">
-                            Enjoyable music can help reduce the body's stress response
-                            and has been shown to support immune-related markers such as
-                            immunoglobulin A.
-                        </p>
-                    </span>
-                </article>
-            </button>
-        </article>
-
-    </section>
-</main>
-
-    <section id="quizIntro" class="text-center"> 
-        <h1 class="display-4 text-gold"> Benefits of Music Quiz </h1> 
-        <p class="fs-5"> Test your knowledge on how music affects the mind and body. </p> 
-        <button id="startBtn" type="button" class="btn btn-light mt-3 px-4 py-2"> Start Quiz </button> 
-    </section>
-
-    <section class="quiz-container mx-auto p-5" id="quiz"> 
-        <p id="QnNo" class="fw-bold text-center"></p> 
-        <h2 id="question" class="mb-4 text-center"></h2> 
-        <section id="choices" class="row g-3 fs-5 justify-content-center"> </section> 
-        <h2 id="result" class="fw-bold mt-4 text-center"></h2> 
-        <button id="nextBtn" class="btn btn-light mt-3 px-4 py-2" type="button"> Next Question </button> 
-    </section>
-
-    <section id="quizEnd" class="text-center py-5 my-auto">
-        <h2 class="display-6">Your score is:</h2>
-        <h1 id="scoreText" class="display-1 fw-bold"></h1>
-        <button id="retryBtn" class="justify-items-center mt-5">Retry quiz?</button>
-    </section>
-
-    <!--<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-</svg>
- wrong sign-->
-
- <!--<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-</svg>
- correct sign-->
 <!--Footer-->
 <footer class="site-footer overflow-hidden py-4 px-3 px-md-5 mb-0 mt-auto">
     <section class="container-fluid">
@@ -253,12 +300,12 @@
             <article class="col-12 col-md-6 text-center">
                 <nav class="footer-nav d-flex flex-wrap justify-content-center gap-3 gap-md-4 mb-3">
                     <a href="../index.html" class="text-light text-decoration-none opacity-75 hover-gold small">Home</a>
-                    <a href="aboutMusic.html" class="text-light text-decoration-none opacity-75 hover-gold small">About Music</a>
-                    <a href="genres.html" class="text-light text-decoration-none opacity-75 hover-gold small">Genres</a>
+                    <a href="../pages/aboutMusic.html" class="text-light text-decoration-none opacity-75 hover-gold small">About Music</a>
+                    <a href="../pages/genres.html" class="text-light text-decoration-none opacity-75 hover-gold small">Genres</a>
                 </nav>
 
                 <blockquote class="footer-quote mb-3 italic">
-                    “Music can change the world because it can change people.” — Bono
+                    “If I cannot fly, let me sing.” — Stephen Sondheim
                 </blockquote>
 
                 <button class="top-btn btn" onclick="scrollToTop()">
@@ -276,7 +323,7 @@
                     <li><a href="#" aria-label="Reddit"><i class="fa-brands fa-square-reddit"></i></a></li>
                 </ul>
 
-                <a href="shop.html" class="newsletter-link text-gold text-center text-md-end w-100">
+                <a href="../pages/shop.html" class="newsletter-link text-gold text-center text-md-end w-100">
                     Shop
                 </a>
             </article>
@@ -295,9 +342,13 @@
 
     </section>
 </footer>
-<script src="../assets/js/benefits.js"></script>   
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/benefits.js"></script> 
 </body>
 </html>
 
-<!-- Image source: Wikimedia Commons — “4th Australian Jazz Convention - Melbourne 1949 Rex Stewart & Graeme Bell Jazz Band” — Source: https://upload.wikimedia.org/wikipedia/commons/3/32/4th_Australian_Jazz_Convention_-_Melbourne_1949_Rex_Stewart_%26_Graeme_Bell_Jazz_Band.jpg -->
-
+<!-- References : 
+ Photo by Ruben Christen from Pexels: https://www.pexels.com/photo/ruelle-caen-16280154/ 
+ -->

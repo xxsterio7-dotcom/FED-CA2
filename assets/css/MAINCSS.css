@@ -28,7 +28,6 @@ h1, h2, h3, h4, h5 {
     font-family: Georgia, serif;
 }
 
-
 .text-gold { color: var(--gold) !important; }
 .text-gold-light { color: var(--gold-light) !important; }
 .section-space { padding: 110px 0; }
@@ -79,7 +78,6 @@ h1, h2, h3, h4, h5 {
 }
 
 /* Navbar */
-
 
 .site-header {
     background: var(--black);
@@ -140,7 +138,6 @@ h1, h2, h3, h4, h5 {
     background: var(--green-dark);
     color: var(--gold);
 }
-
 
 .btn-gold, 
 .custom-btn {
@@ -274,7 +271,6 @@ h1, h2, h3, h4, h5 {
 .card-bg-4 { background-image: linear-gradient(rgba(8,11,9,.45), rgba(8,11,9,.45)), url("../images/homepage/musicaroundtheworld.jpg"); }
 .card-bg-5 { background-image: linear-gradient(rgba(8,11,9,.45), rgba(8,11,9,.45)), url("../images/homepage/benefitsofmusic.jpg"); }
 .card-bg-6 { background-image: linear-gradient(rgba(8,11,9,.45), rgba(8,11,9,.45)), url("../images/homepage/musictech.jpg"); }
-
 
 #featured-audio {
     padding: 100px 0 80px;
@@ -623,7 +619,6 @@ h1, h2, h3, h4, h5 {
 .note-6 { top: 80%; right: 12%; animation-delay: 1.9s; }
 
 /* Cake */
-
 
 .cake-section {
     position: relative;
@@ -1221,9 +1216,6 @@ h1, h2, h3, h4, h5 {
         .faq-accordion .accordion-button::after {
             filter: invert(1);
         }
-
-
-
 
 /* History */
 .mv-page {
@@ -2521,7 +2513,6 @@ h1, h2, h3, h4, h5 {
     .mv-artist-grid { grid-template-columns: 1fr; }
 }
 
-
 /* Instruments */
 
 /* Body */
@@ -3564,7 +3555,6 @@ h1, h2, h3, h4, h5 {
     gap:12px;
 }
 
-
 /* Hero */
 
 .albums-hero{
@@ -4201,7 +4191,6 @@ h1, h2, h3, h4, h5 {
         font-size:33.6px;
     }
 
-
 }
 /* Responsive */
 
@@ -4260,7 +4249,6 @@ h1, h2, h3, h4, h5 {
     opacity: 1;
     transform: translateY(0);
 }
-
 
 .bg-team-image {
     background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.85)), 
