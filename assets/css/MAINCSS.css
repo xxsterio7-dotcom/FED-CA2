@@ -4467,13 +4467,14 @@ body {
 }
 
 #techHero {
-  background: linear-gradient(
+    background: linear-gradient(
     160deg,
     var(--black) 0%,
     var(--green-dark) 55%,
-    var(--green) 100%
-  );
-  color: var(--cream);
+    var(--green) 100%);
+    color: var(--cream);
+    min-height:70vh;
+    
 }
 
 #techHero h1 {
