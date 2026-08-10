@@ -2559,7 +2559,7 @@ h1, h2, h3, h4, h5 {
 /*Muhsin inst page*/
 
 /* Body */
-body {
+.mv-body {
     background-color: var(--mv-black, #080b09);
     background-image: 
         linear-gradient(rgba(8, 11, 9, 0.85), rgba(8, 11, 9, 0.85)),
