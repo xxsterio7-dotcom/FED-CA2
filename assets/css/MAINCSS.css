@@ -28,6 +28,7 @@ h1, h2, h3, h4, h5 {
     font-family: Georgia, serif;
 }
 
+
 .text-gold { color: var(--gold) !important; }
 .text-gold-light { color: var(--gold-light) !important; }
 .section-space { padding: 110px 0; }
@@ -78,6 +79,7 @@ h1, h2, h3, h4, h5 {
 }
 
 /* Navbar */
+
 
 .site-header {
     background: var(--black);
@@ -138,6 +140,7 @@ h1, h2, h3, h4, h5 {
     background: var(--green-dark);
     color: var(--gold);
 }
+
 
 .btn-gold, 
 .custom-btn {
@@ -271,6 +274,7 @@ h1, h2, h3, h4, h5 {
 .card-bg-4 { background-image: linear-gradient(rgba(8,11,9,.45), rgba(8,11,9,.45)), url("../images/homepage/musicaroundtheworld.jpg"); }
 .card-bg-5 { background-image: linear-gradient(rgba(8,11,9,.45), rgba(8,11,9,.45)), url("../images/homepage/benefitsofmusic.jpg"); }
 .card-bg-6 { background-image: linear-gradient(rgba(8,11,9,.45), rgba(8,11,9,.45)), url("../images/homepage/musictech.jpg"); }
+
 
 #featured-audio {
     padding: 100px 0 80px;
@@ -619,6 +623,7 @@ h1, h2, h3, h4, h5 {
 .note-6 { top: 80%; right: 12%; animation-delay: 1.9s; }
 
 /* Cake */
+
 
 .cake-section {
     position: relative;
@@ -1216,6 +1221,9 @@ h1, h2, h3, h4, h5 {
         .faq-accordion .accordion-button::after {
             filter: invert(1);
         }
+
+
+
 
 /* History */
 .mv-page {
@@ -2513,6 +2521,7 @@ h1, h2, h3, h4, h5 {
     .mv-artist-grid { grid-template-columns: 1fr; }
 }
 
+
 /* Instruments */
 
 /* Body */
@@ -3555,6 +3564,7 @@ h1, h2, h3, h4, h5 {
     gap:12px;
 }
 
+
 /* Hero */
 
 .albums-hero{
@@ -4191,6 +4201,7 @@ h1, h2, h3, h4, h5 {
         font-size:33.6px;
     }
 
+
 }
 /* Responsive */
 
@@ -4250,6 +4261,7 @@ h1, h2, h3, h4, h5 {
     transform: translateY(0);
 }
 
+
 .bg-team-image {
     background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.85)), 
                 url('../images/whoweare/whowearebackground.jpg') no-repeat center center / cover;
@@ -4268,29 +4280,14 @@ h1, h2, h3, h4, h5 {
   font-size: xx-large;
 }
 
+/* Intro & Hero */
 #benefitsIntroText > h2 {
-  font-size: 56px;
+  font-size: clamp(2rem, 4vw, 3rem); /* Scaled responsively so it doesn't break mobile */
 }
 
 #benefitsVideo {
   aspect-ratio: 16 / 9;
   height: auto;
-}
-
-.benefitsCard {
-  background: none;
-  perspective: 1700px;
-  cursor: pointer;
-}
-
-.benefitsCard-inner {
-  aspect-ratio: 4 / 3;
-  transition: transform 0.6s;
-  transform-style: preserve-3d;
-}
-
-.benefitsCard.flipped .benefitsCard-inner {
-  transform: rotateY(180deg);
 }
 
 #benefitsHero {
@@ -4302,28 +4299,62 @@ h1, h2, h3, h4, h5 {
   color: var(--cream);
 }
 
+.benefitsCard {
+  background: none;
+  perspective: 1700px;
+  cursor: pointer;
+}
+
+.benefitsCard-inner {
+  position: relative; 
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  transition: transform 0.6s ease-in-out;
+  transform-style: preserve-3d;
+}
+
+.benefitsCard.flipped .benefitsCard-inner,
+.benefitsCard:hover .benefitsCard-inner {
+  transform: rotateY(180deg);
+}
+
 .benefitsCard-front,
 .benefitsCard-back {
   position: absolute;
   inset: 0;
   border: 1px solid var(--gold);
   border-radius: 8px;
-  backface-visibility: hidden;
+  backface-visibility: hidden; 
   color: var(--cream);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0.75rem;
 }
 
 .benefitsCard-front {
   background-color: var(--green-dark);
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .benefitsCard-back {
   background-color: var(--green);
   transform: rotateY(180deg);
-  justify-content: center;
-  align-content: center;
+  overflow: hidden; 
+  font-size: 0.78rem; 
+  line-height: 1.35;
+}
+
+
+.benefitsCard-back p {
+  margin: 0;
+}
+
+.benefitsCard-back h3,
+.benefitsCard-back h4 {
+  font-size: 0.95rem;
+  margin-bottom: 0.25rem;
 }
 
 .percussion-card,

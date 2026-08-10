@@ -1,11 +1,11 @@
 const benefitsCards = document.querySelectorAll(".benefitsCard");
 
-benefitsCards.forEach(function(card) { //Loops through all 4 cards
-    card.addEventListener("mouseenter", function() { //Flip when hover
+benefitsCards.forEach(function(card) { 
+    card.addEventListener("mouseenter", function() { 
         card.classList.add("flipped");
     });
 
-    card.addEventListener("mouseleave", function() { //Remove flip effect when cursor leaves
+    card.addEventListener("mouseleave", function() { 
         card.classList.remove("flipped");
     });
 });
