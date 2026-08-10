@@ -144,7 +144,7 @@ let score = 0
 
 startBtn.addEventListener("click", function() {
     quizIntro.style.display = "none";
-    quizQuestions.style.display = "block";
+    quizQuestions.style.display = "flex";
     quizEnd.style.display = "none"
     showqn();
 });
