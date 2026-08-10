@@ -1,4 +1,4 @@
-/* CSS FILE */
+/* CSS */
 :root {
     --black: #080b09;
     --black-soft: #101512;
@@ -45,7 +45,7 @@ h1, h2, h3, h4, h5 {
     font-size: clamp(32px, 4vw, 48px);
 }
 
-/* Scroll Animations */
+/* Scroll */
 .scroll-animate {
     opacity: 0;
     transform: translateY(60px);
@@ -61,7 +61,7 @@ h1, h2, h3, h4, h5 {
 .delay-2 { transition-delay: .3s; }
 .delay-3 { transition-delay: .45s; }
 
-/* Keyframe Animations */
+/* Animations */
 @keyframes marquee {
     from { transform: translateX(0); }
     to { transform: translateX(-50%); }
@@ -78,7 +78,7 @@ h1, h2, h3, h4, h5 {
     100% { transform: translateY(6px) rotate(-6deg); }
 }
 
-/*navbar*/
+/* Navbar */
 
 
 .site-header {
@@ -170,7 +170,7 @@ h1, h2, h3, h4, h5 {
     color: var(--black);
 }
 
-/*home page hero */
+/* Hero */
 .hero {
     min-height: 100vh;
     display: flex;
@@ -340,7 +340,7 @@ h1, h2, h3, h4, h5 {
     outline: none;
 }
 
-/*testimonals */
+/* Testimonials */
 .testimonials {
     background: var(--black);
 }
@@ -398,7 +398,7 @@ h1, h2, h3, h4, h5 {
     margin: 0;
 }
 
-/* genres + albums floating thing  */
+/* Genres */
 .genres-hero {
     position: relative;
     overflow: hidden;
@@ -551,7 +551,7 @@ h1, h2, h3, h4, h5 {
     padding: 14px 16px;
 }
 
-/*about music */
+/* About */
 .about-hero {
     position: relative;
     overflow: hidden;
@@ -584,7 +584,7 @@ h1, h2, h3, h4, h5 {
     line-height: 1.6;
 }
 
-/* Floating Music Notes */
+/* Notes */
 .music-note {
     position: absolute;
     z-index: 10;
@@ -622,7 +622,7 @@ h1, h2, h3, h4, h5 {
 .note-5 { top: 78%; left: 14%; animation-delay: 1.2s; }
 .note-6 { top: 80%; right: 12%; animation-delay: 1.9s; }
 
-/* Cake Section */
+/* Cake */
 
 
 .cake-section {
@@ -715,7 +715,7 @@ h1, h2, h3, h4, h5 {
     transform: scale(1.2) rotate(8deg);
 }
 
-/* responsive part */
+/* Responsive */
 /* Modals */
 .modal-dialog {
     display: flex;
@@ -779,7 +779,7 @@ h1, h2, h3, h4, h5 {
     font-weight: bold;
 }
 
-/* Comparison Section */
+/* Compare */
 .comparison {
     background-color: #121212;
     background-image: linear-gradient(rgba(16,21,18,.88),rgba(16,21,18,.88)), url('../images/About Music/comparisonbackground.jpg');
@@ -915,7 +915,7 @@ h1, h2, h3, h4, h5 {
     margin-right: 6px;
 }
 
-/* Interactive Sheet Music */
+/* Sheet Music */
 .interactive-sheet-section {
     padding: 60px 20px;
     text-align: center;
@@ -998,7 +998,7 @@ h1, h2, h3, h4, h5 {
     background-color: var(--gold);
 }
 
-/* Style Mixer */
+/* Mixer */
 .mixer-section {
     background: var(--black-soft);
 }
@@ -1019,7 +1019,7 @@ h1, h2, h3, h4, h5 {
     margin: 0 auto;
 }
 
-/* FOOTERS */
+/* Footer */
 .footer {
     display: flex;
     flex-wrap: wrap;
@@ -1136,7 +1136,7 @@ h1, h2, h3, h4, h5 {
     color: #fff !important;
 }
 
-/*Responsive */
+/* Responsive */
 @media (max-width: 768px) {
     .site-footer {
         flex-direction: column;
@@ -1172,7 +1172,7 @@ h1, h2, h3, h4, h5 {
     }
 }
 
-/* SHOP */
+/* Shop */
 .form-control::placeholder {
     color: #6c757d;
 }
@@ -1201,7 +1201,7 @@ h1, h2, h3, h4, h5 {
         .simple-calendar-table td {
             border: 1px dotted #a0a0a0;
             vertical-align: top;
-            font-size: 0.7rem;
+            font-size: 11.2px;
             padding: 3px 2px !important;
             word-break: break-word;
             overflow-wrap: break-word;
@@ -1225,7 +1225,7 @@ h1, h2, h3, h4, h5 {
 
 
 
-/* Muhsin history css */
+/* History */
 .mv-page {
     --mv-black: #080b09;
     --mv-black-soft: #101512;
@@ -1251,7 +1251,7 @@ h1, h2, h3, h4, h5 {
 .mv-brand-logo {
     color: #f4f0ea !important;
     font-family: Georgia, serif;
-    font-size: 1.5rem;
+    font-size: 24px;
 }
  
 .mv-logo-symbol { color: var(--mv-gold); }
@@ -1292,7 +1292,7 @@ h1, h2, h3, h4, h5 {
     background: var(--mv-green-dark);
 }
  
-/* Scoped so this doesn't override every .carousel-item on the shared site */
+/* Scoped */
 .mv-year-carousel .carousel-item {
     min-height: 100vh;
     text-align: center;
@@ -1325,18 +1325,18 @@ h1, h2, h3, h4, h5 {
 }
  
 .mv-year-slide-year {
-    font-size: clamp(2.4rem, 5vw, 3.5rem);
+    font-size: clamp(38.4px, 5vw, 56px);
     color: var(--mv-gold);
-    margin-bottom: 0.5rem;
+    margin-bottom: 8px;
     font-family: Georgia, serif;
 }
  
 .mv-year-slide-era {
     color: var(--mv-gold-light);
-    font-size: 0.8rem;
+    font-size: 12.8px;
     letter-spacing: 2px;
     text-transform: uppercase;
-    margin-bottom: 1rem;
+    margin-bottom: 16px;
 }
  
 .mv-year-slide-text {
@@ -1383,12 +1383,7 @@ h1, h2, h3, h4, h5 {
  
 .mv-year-carousel .carousel-indicators .active { opacity: 1; }
  
-/* ============================================
-   Evolution of Sound
-   Text-only flow of instruments. Each item is
-   clickable and jumps the instrument carousel
-   below straight to that slide.
-   ============================================ */
+/* Evolution */
  
 .mv-evolution-section {
     background-color: var(--mv-black);
@@ -1412,7 +1407,7 @@ h1, h2, h3, h4, h5 {
 .mv-evolution-card h3 {
     text-align: center;
     color: var(--mv-gold);
-    font-size: clamp(1.3rem, 3vw, 1.8rem);
+    font-size: clamp(20.8px, 3vw, 28.8px);
     letter-spacing: 1px;
     text-transform: uppercase;
     margin-bottom: 30px;
@@ -1428,7 +1423,7 @@ h1, h2, h3, h4, h5 {
  
 .mv-evolution-item {
     color: var(--mv-gold-light);
-    font-size: 0.85rem;
+    font-size: 13.6px;
     letter-spacing: 0.5px;
     padding: 8px 16px;
     border: 1px solid var(--mv-gold);
@@ -1453,17 +1448,10 @@ h1, h2, h3, h4, h5 {
 .mv-evolution-arrow {
     color: var(--mv-gold);
     opacity: 0.6;
-    font-size: 1rem;
+    font-size: 16px;
 }
  
-/* ============================================
-   Instrument Carousel
-   Half text / half photo, auto-transitions
-   every 7 seconds. Scoped under
-   .mv-instrument-carousel so nothing here
-   touches the era carousel or any other
-   carousel on the shared site.
-   ============================================ */
+/* Instruments */
  
 .mv-instrument-carousel-section {
     background-color: var(--mv-black);
@@ -1501,7 +1489,7 @@ h1, h2, h3, h4, h5 {
  
 .mv-instrument-era-label {
     color: var(--mv-gold-light);
-    font-size: 0.8rem;
+    font-size: 12.8px;
     letter-spacing: 2px;
     text-transform: uppercase;
     margin-bottom: 12px;
@@ -1509,14 +1497,14 @@ h1, h2, h3, h4, h5 {
  
 .mv-instrument-title {
     color: var(--mv-gold);
-    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    font-size: clamp(28.8px, 4vw, 40px);
     margin-bottom: 16px;
 }
  
 .mv-instrument-desc {
     color: var(--mv-cream);
     line-height: 1.8;
-    font-size: 0.95rem;
+    font-size: 15.2px;
     opacity: 0.9;
 }
  
@@ -1568,12 +1556,7 @@ h1, h2, h3, h4, h5 {
     .mv-instrument-carousel .carousel-control-next { right: -18px; }
 }
  
-/* ============================================
-   Life Stories
-   One notable figure per era, with a photo slot.
-   Sits below the instrument carousel and above
-   the "Music Through the Decades" section.
-   ============================================ */
+/* Stories */
  
 .mv-stories-section {
     background-color: var(--mv-black-soft);
@@ -1583,7 +1566,7 @@ h1, h2, h3, h4, h5 {
 .mv-stories-section h2 {
     text-align: center;
     color: var(--mv-gold);
-    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    font-size: clamp(28.8px, 4vw, 41.6px);
     margin-bottom: 10px;
 }
  
@@ -1591,7 +1574,7 @@ h1, h2, h3, h4, h5 {
     text-align: center;
     color: var(--mv-cream);
     opacity: 0.7;
-    font-size: 0.95rem;
+    font-size: 15.2px;
     margin-bottom: 50px;
 }
  
@@ -1635,7 +1618,7 @@ h1, h2, h3, h4, h5 {
  
 .mv-story-era-label {
     color: var(--mv-gold-light);
-    font-size: 0.7rem;
+    font-size: 11.2px;
     letter-spacing: 1.5px;
     text-transform: uppercase;
     margin-bottom: 4px;
@@ -1643,21 +1626,21 @@ h1, h2, h3, h4, h5 {
  
 .mv-story-name {
     color: var(--mv-gold);
-    font-size: 1.15rem;
+    font-size: 18.4px;
     margin-bottom: 6px;
 }
  
 .mv-story-years {
     color: var(--mv-cream);
     opacity: 0.6;
-    font-size: 0.75rem;
+    font-size: 12px;
     margin-bottom: 10px;
 }
  
 .mv-story-bio {
     color: var(--mv-cream);
     line-height: 1.7;
-    font-size: 0.85rem;
+    font-size: 13.6px;
     opacity: 0.9;
     margin: 0;
 }
@@ -1672,7 +1655,7 @@ h1, h2, h3, h4, h5 {
  
 .mv-purpose-section { background-color: var(--mv-black-soft); }
  
-.mv-section-title { font-size: clamp(2rem, 4vw, 3rem); }
+.mv-section-title { font-size: clamp(32px, 4vw, 48px); }
  
 .mv-site-footer {
     background-color: #121212 !important;
@@ -1691,7 +1674,7 @@ h1, h2, h3, h4, h5 {
     display: grid;
     grid-template-columns: repeat(3, auto);
     gap: 12px;
-    font-size: 1.25rem;
+    font-size: 20px;
 }
  
 .mv-site-footer a { color: var(--mv-cream); transition: opacity 0.2s ease-in-out, color 0.2s ease-in-out; }
@@ -1734,7 +1717,7 @@ h1, h2, h3, h4, h5 {
 .mv-brand-logo {
     color: #f4f0ea !important;
     font-family: Georgia, serif;
-    font-size: 1.5rem;
+    font-size: 24px;
 }
  
 .mv-logo-symbol { color: var(--mv-gold); }
@@ -1775,7 +1758,7 @@ h1, h2, h3, h4, h5 {
     background: var(--mv-green-dark);
 }
  
-/* Scoped so this doesn't override every .carousel-item on the shared site */
+/* Scoped */
 .mv-year-carousel .carousel-item {
     min-height: 100vh;
     text-align: center;
@@ -1808,18 +1791,18 @@ h1, h2, h3, h4, h5 {
 }
  
 .mv-year-slide-year {
-    font-size: clamp(2.4rem, 5vw, 3.5rem);
+    font-size: clamp(38.4px, 5vw, 56px);
     color: var(--mv-gold);
-    margin-bottom: 0.5rem;
+    margin-bottom: 8px;
     font-family: Georgia, serif;
 }
  
 .mv-year-slide-era {
     color: var(--mv-gold-light);
-    font-size: 0.8rem;
+    font-size: 12.8px;
     letter-spacing: 2px;
     text-transform: uppercase;
-    margin-bottom: 1rem;
+    margin-bottom: 16px;
 }
  
 .mv-year-slide-text {
@@ -1866,12 +1849,7 @@ h1, h2, h3, h4, h5 {
  
 .mv-year-carousel .carousel-indicators .active { opacity: 1; }
  
-/* ============================================
-   Evolution of Sound
-   Text-only flow of instruments. Each item is
-   clickable and jumps the instrument carousel
-   below straight to that slide.
-   ============================================ */
+/* Evolution */
  
 .mv-evolution-section {
     background-color: var(--mv-black);
@@ -1895,7 +1873,7 @@ h1, h2, h3, h4, h5 {
 .mv-evolution-card h3 {
     text-align: center;
     color: var(--mv-gold);
-    font-size: clamp(1.3rem, 3vw, 1.8rem);
+    font-size: clamp(20.8px, 3vw, 28.8px);
     letter-spacing: 1px;
     text-transform: uppercase;
     margin-bottom: 30px;
@@ -1911,7 +1889,7 @@ h1, h2, h3, h4, h5 {
  
 .mv-evolution-item {
     color: var(--mv-gold-light);
-    font-size: 0.85rem;
+    font-size: 13.6px;
     letter-spacing: 0.5px;
     padding: 8px 16px;
     border: 1px solid var(--mv-gold);
@@ -1936,17 +1914,10 @@ h1, h2, h3, h4, h5 {
 .mv-evolution-arrow {
     color: var(--mv-gold);
     opacity: 0.6;
-    font-size: 1rem;
+    font-size: 16px;
 }
  
-/* ============================================
-   Instrument Carousel
-   Half text / half photo, auto-transitions
-   every 7 seconds. Scoped under
-   .mv-instrument-carousel so nothing here
-   touches the era carousel or any other
-   carousel on the shared site.
-   ============================================ */
+/* Instruments */
  
 .mv-instrument-carousel-section {
     background-color: var(--mv-black);
@@ -1984,7 +1955,7 @@ h1, h2, h3, h4, h5 {
  
 .mv-instrument-era-label {
     color: var(--mv-gold-light);
-    font-size: 0.8rem;
+    font-size: 12.8px;
     letter-spacing: 2px;
     text-transform: uppercase;
     margin-bottom: 12px;
@@ -1992,14 +1963,14 @@ h1, h2, h3, h4, h5 {
  
 .mv-instrument-title {
     color: var(--mv-gold);
-    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    font-size: clamp(28.8px, 4vw, 40px);
     margin-bottom: 16px;
 }
  
 .mv-instrument-desc {
     color: var(--mv-cream);
     line-height: 1.8;
-    font-size: 0.95rem;
+    font-size: 15.2px;
     opacity: 0.9;
 }
  
@@ -2051,12 +2022,7 @@ h1, h2, h3, h4, h5 {
     .mv-instrument-carousel .carousel-control-next { right: -18px; }
 }
  
-/* ============================================
-   Life Stories
-   One notable figure per era, with a photo slot.
-   Sits below the instrument carousel and above
-   the "Music Through the Decades" section.
-   ============================================ */
+/* Stories */
  
 .mv-stories-section {
     background-color: var(--mv-black-soft);
@@ -2066,7 +2032,7 @@ h1, h2, h3, h4, h5 {
 .mv-stories-section h2 {
     text-align: center;
     color: var(--mv-gold);
-    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    font-size: clamp(28.8px, 4vw, 41.6px);
     margin-bottom: 10px;
 }
  
@@ -2074,7 +2040,7 @@ h1, h2, h3, h4, h5 {
     text-align: center;
     color: var(--mv-cream);
     opacity: 0.7;
-    font-size: 0.95rem;
+    font-size: 15.2px;
     margin-bottom: 50px;
 }
  
@@ -2118,7 +2084,7 @@ h1, h2, h3, h4, h5 {
  
 .mv-story-era-label {
     color: var(--mv-gold-light);
-    font-size: 0.7rem;
+    font-size: 11.2px;
     letter-spacing: 1.5px;
     text-transform: uppercase;
     margin-bottom: 4px;
@@ -2126,21 +2092,21 @@ h1, h2, h3, h4, h5 {
  
 .mv-story-name {
     color: var(--mv-gold);
-    font-size: 1.15rem;
+    font-size: 18.4px;
     margin-bottom: 6px;
 }
  
 .mv-story-years {
     color: var(--mv-cream);
     opacity: 0.6;
-    font-size: 0.75rem;
+    font-size: 12px;
     margin-bottom: 10px;
 }
  
 .mv-story-bio {
     color: var(--mv-cream);
     line-height: 1.7;
-    font-size: 0.85rem;
+    font-size: 13.6px;
     opacity: 0.9;
     margin: 0;
 }
@@ -2155,7 +2121,7 @@ h1, h2, h3, h4, h5 {
  
 .mv-purpose-section { background-color: var(--mv-black-soft); }
  
-.mv-section-title { font-size: clamp(2rem, 4vw, 3rem); }
+.mv-section-title { font-size: clamp(32px, 4vw, 48px); }
  
 .mv-site-footer {
     background-color: #121212 !important;
@@ -2174,7 +2140,7 @@ h1, h2, h3, h4, h5 {
     display: grid;
     grid-template-columns: repeat(3, auto);
     gap: 12px;
-    font-size: 1.25rem;
+    font-size: 20px;
 }
  
 .mv-site-footer a { color: var(--mv-cream); transition: opacity 0.2s ease-in-out, color 0.2s ease-in-out; }
@@ -2193,7 +2159,7 @@ h1, h2, h3, h4, h5 {
     }
 }
 
-/* Muhsin FamousArtist */
+/* Artist */
 .mv-page {
     --mv-black: #080b09;
     --mv-black-soft: #101512;
@@ -2219,7 +2185,7 @@ h1, h2, h3, h4, h5 {
 .mv-brand-logo {
     color: #f4f0ea !important;
     font-family: Georgia, serif;
-    font-size: 1.5rem;
+    font-size: 24px;
 }
  
 .mv-logo-symbol { color: var(--mv-gold); }
@@ -2259,21 +2225,21 @@ h1, h2, h3, h4, h5 {
 }
  
 .mv-hero h1 {
-    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    font-size: clamp(24px, 3vw, 40px);
     color: var(--mv-gold);
-    margin-bottom: 0.5rem;
+    margin-bottom: 8px;
 }
  
 .mv-hero p {
     color: var(--mv-cream);
-    font-size: 0.95rem;
+    font-size: 15.2px;
     max-width: 600px;
     margin: 0 auto;
     line-height: 1.8;
     opacity: 0.85;
 }
  
-/* Artist Grid */
+/* Artists */
 .mv-artists-section {
     background-color: var(--mv-black);
     padding: 80px 0;
@@ -2331,7 +2297,7 @@ h1, h2, h3, h4, h5 {
     background: linear-gradient(transparent, rgba(0,0,0,0.9));
     padding: 40px 20px 20px;
     transition: opacity 0.3s ease;
-    z-index: 2;    /* add this so text sits above the overlay */
+    z-index: 2;    /* Overlay */
 }     
  
 .mv-artist-card-overlay {
@@ -2345,13 +2311,13 @@ h1, h2, h3, h4, h5 {
  
 .mv-artist-card-overlay h3 {
     color: var(--mv-gold);
-    font-size: 1.3rem;
+    font-size: 20.8px;
     margin: 0 0 4px;
 }
  
 .mv-artist-card-overlay p {
     color: var(--mv-cream);
-    font-size: 0.75rem;
+    font-size: 12px;
     letter-spacing: 1px;
     text-transform: uppercase;
     margin: 0 0 8px;
@@ -2360,7 +2326,7 @@ h1, h2, h3, h4, h5 {
  
 .mv-artist-card-overlay span {
     color: var(--mv-gold-light);
-    font-size: 0.75rem;
+    font-size: 12px;
     opacity: 0.8;
 }
  
@@ -2423,13 +2389,13 @@ h1, h2, h3, h4, h5 {
  
 .mv-lightbox-info h2 {
     color: var(--mv-gold);
-    font-size: 2rem;
+    font-size: 32px;
     margin-bottom: 6px;
 }
  
 .mv-lightbox-era {
     color: var(--mv-gold-light);
-    font-size: 0.75rem;
+    font-size: 12px;
     letter-spacing: 2px;
     text-transform: uppercase;
     margin-bottom: 20px;
@@ -2438,7 +2404,7 @@ h1, h2, h3, h4, h5 {
 .mv-lightbox-info p {
     color: var(--mv-cream);
     line-height: 1.8;
-    font-size: 0.95rem;
+    font-size: 15.2px;
     margin-bottom: 20px;
 }
  
@@ -2448,7 +2414,7 @@ h1, h2, h3, h4, h5 {
     border-radius: 8px;
     padding: 14px 18px;
     color: var(--mv-gold-light);
-    font-size: 0.85rem;
+    font-size: 13.6px;
     line-height: 1.8;
 }
  
@@ -2457,7 +2423,7 @@ h1, h2, h3, h4, h5 {
     top: 20px;
     right: 25px;
     color: var(--mv-cream);
-    font-size: 2rem;
+    font-size: 32px;
     cursor: pointer;
     background: none;
     border: none;
@@ -2469,7 +2435,7 @@ h1, h2, h3, h4, h5 {
     color: var(--mv-gold);
 }
  
-/* Life Stories */
+/* Stories */
 .mv-stories-section {
     background-color: var(--mv-black-soft);
     padding: 80px 0;
@@ -2477,7 +2443,7 @@ h1, h2, h3, h4, h5 {
  
 .mv-stories-section h2 {
     color: var(--mv-gold);
-    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    font-size: clamp(24px, 3vw, 40px);
     margin-bottom: 10px;
     text-align: center;
 }
@@ -2487,7 +2453,7 @@ h1, h2, h3, h4, h5 {
     color: var(--mv-cream);
     opacity: 0.7;
     margin-bottom: 50px;
-    font-size: 0.95rem;
+    font-size: 15.2px;
 }
  
 .mv-story-card {
@@ -2500,13 +2466,13 @@ h1, h2, h3, h4, h5 {
  
 .mv-story-card h3 {
     color: var(--mv-gold);
-    font-size: 1.4rem;
+    font-size: 22.4px;
     margin-bottom: 6px;
 }
  
 .mv-story-card .mv-story-era {
     color: var(--mv-gold-light);
-    font-size: 0.75rem;
+    font-size: 12px;
     letter-spacing: 2px;
     text-transform: uppercase;
     margin-bottom: 16px;
@@ -2538,7 +2504,7 @@ h1, h2, h3, h4, h5 {
     display: grid;
     grid-template-columns: repeat(3, auto);
     gap: 12px;
-    font-size: 1.25rem;
+    font-size: 20px;
 }
  
 .mv-site-footer a { color: var(--mv-cream); transition: opacity 0.2s ease-in-out, color 0.2s ease-in-out; }
@@ -2556,7 +2522,7 @@ h1, h2, h3, h4, h5 {
 }
 
 
-/*Muhsin inst page*/
+/* Instruments */
 
 /* Body */
 .mv-body {
@@ -2584,7 +2550,7 @@ h1, h2, h3, h4, h5 {
     overflow-x: hidden;
 }
 
-/* Typography */
+/* Type */
 .mv-page h1, .mv-page h2, .mv-page h3, .mv-page h4, .mv-page h5 {
     font-family: Georgia, "Times New Roman", serif;
 }
@@ -2624,7 +2590,7 @@ h1, h2, h3, h4, h5 {
     color: var(--mv-gold-light);
 }
 
-/* Hero Section */
+/* Hero */
 .mv-hero {
     background-color: var(--mv-green-dark);
     background-image:
@@ -2652,7 +2618,7 @@ h1, h2, h3, h4, h5 {
     opacity: 0.85;
 }
 
-/* History Section */
+/* History */
 .mv-history-section {
     background-color: transparent;
     padding: 80px 20px;
@@ -2702,7 +2668,7 @@ h1, h2, h3, h4, h5 {
     .mv-history-photo img { height: 240px; }
 }
 
-/* Family Section & Filters */
+/* Family */
 .mv-family-section {
     background-color: rgba(16, 21, 18, 0.6);
     padding: 80px 20px;
@@ -2754,7 +2720,7 @@ h1, h2, h3, h4, h5 {
     font-weight: 600;
 }
 
-/* Cards & Grid */
+/* Cards */
 .mv-instr-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -2828,7 +2794,7 @@ h1, h2, h3, h4, h5 {
     .mv-instr-grid { grid-template-columns: 1fr; }
 }
 
-/* World Section */
+/* World */
 .mv-world-section {
     background-color: transparent;
     padding: 80px 20px;
@@ -2865,8 +2831,8 @@ h1, h2, h3, h4, h5 {
     .mv-world-grid { grid-template-columns: 1fr; }
 }
 
-/* concert page css*/
-/*Hero section*/
+/* Concert */
+/* Hero */
 .zv-hero{
     position:relative;
     min-height:100vh;
@@ -2905,38 +2871,38 @@ h1, h2, h3, h4, h5 {
 
     text-align:center;
 
-    padding:2rem;
+    padding:32px;
 
     color:var(--cream);
 }
 
 .zv-hero::before{
-    margin-bottom:1rem;
+    margin-bottom:16px;
     color:var(--gold);
     text-transform:uppercase;
     letter-spacing:4px;
-    font-size:.9rem;
+    font-size:14.4px;
     font-weight:600;
 }
 
 .zv-hero__title{
-    margin-bottom:1.5rem;
+    margin-bottom:24px;
     color:var(--cream);
-    font-size:4.5rem;
+    font-size:72px;
 }
 
 .zv-hero__description{
     max-width:650px;
-    margin:0 auto 2.5rem;
+    margin:0 auto 40px;
     line-height:1.8;
     color:rgba(241,234,215,.85);
-    font-size:1.1rem;
+    font-size:17.6px;
 }
 
 .zv-hero__button{
     display:inline-block;
 
-    padding:1rem 2.4rem;
+    padding:16px 38.4px;
 
     border-radius:999px;
 
@@ -2953,12 +2919,12 @@ h1, h2, h3, h4, h5 {
     transform:translateY(-3px);
 }
 
-/*Overview section*/
+/* Overview */
 .overview{
     max-width:1100px;
     margin:0 auto;
 
-    padding:7rem 2rem;
+    padding:112px 32px;
 
     background:var(--black);
 }
@@ -2966,21 +2932,21 @@ h1, h2, h3, h4, h5 {
 .overview__header{
     text-align:center;
 
-    margin-bottom:3rem;
+    margin-bottom:48px;
 }
 
 .overview__tag{
-    margin-bottom:.8rem;
+    margin-bottom:12.8px;
     color:var(--gold);
     text-transform:uppercase;
     letter-spacing:3px;
     font-weight:600;
-    font-size:1.2rem;
+    font-size:19.2px;
 }
 
 .overview__title{
     color:var(--cream);
-    font-size:3rem;
+    font-size:48px;
 }
 
 .overview__card{
@@ -2988,7 +2954,7 @@ h1, h2, h3, h4, h5 {
 
     margin:0 auto;
 
-    padding:3rem;
+    padding:48px;
 
     background:var(--green-dark);
     border:1px solid rgba(213,169,79,.35);
@@ -2999,12 +2965,12 @@ h1, h2, h3, h4, h5 {
 .overview__card p{
     line-height:1.8;
     color:var(--cream);
-    font-size:1.2rem;
+    font-size:19.2px;
 }
 
 .overview__card p:not(:last-child){
-    margin-bottom:1.5rem;
-    font-size:1.2rem;
+    margin-bottom:24px;
+    font-size:19.2px;
 }
 /* Cards */
 .live-cards {
@@ -3034,24 +3000,24 @@ h1, h2, h3, h4, h5 {
     color: #d9a441;
     font-family: "Cinzel", serif;
     margin-bottom: 15px;
-    font-size:1.4rem;
+    font-size:22.4px;
 }
 
 .live-card p {
     line-height: 1.7;
     margin-bottom: 0;
-    font-size:1.05rem;
+    font-size:16.8px;
 }
 
-/*Timeline section*/
+/* Timeline */
 .zv-timeline{
-    padding:7rem 2rem;
+    padding:112px 32px;
     background:var(--black);
 }
 
 .timeline__header{
     max-width:700px;
-    margin:0 auto 5rem;
+    margin:0 auto 80px;
     text-align:center;
 }
 
@@ -3064,8 +3030,8 @@ h1, h2, h3, h4, h5 {
 
 .timeline__title{
     color:var(--cream);
-    font-size:2.8rem;
-    margin:.8rem 0;
+    font-size:44.8px;
+    margin:12.8px 0;
 }
 
 .timeline__subtitle{
@@ -3104,7 +3070,7 @@ h1, h2, h3, h4, h5 {
     position:relative;
     display:flex;
     width:100%;
-    margin-bottom:2rem;
+    margin-bottom:32px;
 }
 
 .timeline__item--left{
@@ -3150,15 +3116,15 @@ h1, h2, h3, h4, h5 {
 }
 
 .timeline__content{
-    padding:2rem;
+    padding:32px;
 }
 
 .timeline__year{
     display:inline-block;
-    padding:.35rem .9rem;
-    margin-bottom:1rem;
+    padding:5.6px 14.4px;
+    margin-bottom:16px;
     border-radius:999px;
-    font-size:.85rem;
+    font-size:13.6px;
     font-weight:700;
 
     background:var(--gold);
@@ -3166,23 +3132,23 @@ h1, h2, h3, h4, h5 {
 }
 
 .timeline__content h3{
-    margin-bottom:1rem;
+    margin-bottom:16px;
     color:var(--cream);
-    font-size: clamp(1.3rem, 4vw, 2.2rem);
+    font-size: clamp(20.8px, 4vw, 35.2px);
     word-break: break-word;
     overflow-wrap: break-word;
 }
 
 .timeline__content p{
     line-height:1.8;
-    margin-bottom:2rem;
+    margin-bottom:32px;
     color:rgba(241,234,215,.9);
 }
 
 .timeline__content a{
     display:inline-flex;
     align-items:center;
-    gap:.5rem;
+    gap:8px;
     font-weight:600;
     transition:.3s;
     color:var(--gold);
@@ -3201,22 +3167,22 @@ h1, h2, h3, h4, h5 {
     transform:scale(1.05);
 }
 
-/*World Map section*/
+/* Map */
 .map{
     max-width:1200px;
     margin:0 auto;
-    padding:7rem 2rem;
+    padding:112px 32px;
     background:var(--black);
 }
 
 .map__header{
     max-width:700px;
-    margin:0 auto 4rem;
+    margin:0 auto 64px;
     text-align:center;
 }
 
 .map__tag{
-    margin-bottom:.8rem;
+    margin-bottom:12.8px;
     color:var(--gold);
     text-transform:uppercase;
     letter-spacing:3px;
@@ -3224,9 +3190,9 @@ h1, h2, h3, h4, h5 {
 }
 
 .map__title{
-    margin-bottom:1rem;
+    margin-bottom:16px;
     color:var(--cream);
-    font-size:2.8rem;
+    font-size:44.8px;
 }
 
 .map__subtitle{
@@ -3235,7 +3201,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .map__container{
-    margin-bottom:3rem;
+    margin-bottom:48px;
 }
 
 .map__world{
@@ -3248,7 +3214,7 @@ h1, h2, h3, h4, h5 {
     border:2px solid rgba(213,169,79,.35);
     border-radius:18px;
     box-shadow:0 20px 45px rgba(0,0,0,.35);
-    padding:2rem;
+    padding:32px;
 }
 
 .map__world img{
@@ -3263,7 +3229,7 @@ h1, h2, h3, h4, h5 {
         saturate(.85);
 }
 
-/*Markers*/
+/* Markers */
 .map__marker{
     position:absolute;
     transform:translate(-50%,-50%);
@@ -3271,7 +3237,7 @@ h1, h2, h3, h4, h5 {
     transition:.3s;
     background:none;
     border:none;
-    font-size:1.8rem;
+    font-size:28.8px;
 
     color:var(--gold);
     text-shadow:0 0 10px rgba(213,169,79,.4);
@@ -3293,7 +3259,7 @@ h1, h2, h3, h4, h5 {
         0 0 35px rgba(213,169,79,.6);
 }
 
-/*Record section*/
+/* Records */
 .record{
     max-width:850px;
     margin:0 auto;
@@ -3312,7 +3278,7 @@ h1, h2, h3, h4, h5 {
 
 .record.show{
     max-height:1400px;
-    margin-top:3rem;
+    margin-top:48px;
     opacity:1;
     transform:translateY(0);
     animation:fadeUp .5s ease;
@@ -3327,19 +3293,19 @@ h1, h2, h3, h4, h5 {
     align-items:center;
     text-align:center;
 
-    padding:3rem;
+    padding:48px;
 
     color:var(--cream);
 }
 
 .record__placeholder i{
-    font-size:4rem;
+    font-size:64px;
     color:var(--gold);
-    margin-bottom:1rem;
+    margin-bottom:16px;
 }
 
 .record__placeholder h3{
-    margin:1rem 0;
+    margin:16px 0;
     color:var(--gold);
 }
 
@@ -3375,7 +3341,7 @@ h1, h2, h3, h4, h5 {
     left:0;
     width:100%;
     z-index:2;
-    padding:2rem;
+    padding:32px;
 }
 
 .record__title p{
@@ -3387,21 +3353,21 @@ h1, h2, h3, h4, h5 {
 
 .record__title h3{
     color:var(--cream);
-    font-size:2.4rem;
+    font-size:38.4px;
 }
 
 .record__details{
     display:grid;
     grid-template-columns:repeat(2,1fr);
-    gap:2rem;
+    gap:32px;
 
-    padding:0 2rem 2rem;
+    padding:0 32px 32px;
 
     background:var(--green-dark);
 }
 
 .record__info h4{
-    margin-bottom:.5rem;
+    margin-bottom:8px;
     color:var(--gold);
 }
 
@@ -3421,15 +3387,15 @@ h1, h2, h3, h4, h5 {
 }
 
 .record__footer{
-    padding:0 2rem 2rem;
+    padding:0 32px 32px;
 }
 
 .record__footer a{
     display:inline-flex;
     align-items:center;
-    gap:.5rem;
+    gap:8px;
 
-    padding:1rem 2rem;
+    padding:16px 32px;
     background:var(--gold);
     color:var(--black);
     border-radius:999px;
@@ -3463,12 +3429,12 @@ h1, h2, h3, h4, h5 {
 }
 
 }
-/* albums page css*/
+/* Albums */
 
 .featured{
     max-width:1200px;
     margin:0 auto;
-    padding:0 2rem 3rem;
+    padding:0 32px 48px;
 
     background:var(--black);
 }
@@ -3476,12 +3442,12 @@ h1, h2, h3, h4, h5 {
 .featured__grid{
     display:grid;
     grid-template-columns:repeat(auto-fit, minmax(320px, 1fr));
-    gap:1.5rem;
+    gap:24px;
 }
 
 .featured__card{
     position:relative;
-    padding:2.5rem;
+    padding:40px;
     border-radius:20px;
 
     background:var(--green-dark);
@@ -3492,24 +3458,24 @@ h1, h2, h3, h4, h5 {
 .featured__tag{
     display:inline-flex;
     align-items:center;
-    gap:.5rem;
+    gap:8px;
     letter-spacing:3px;
     text-transform:uppercase;
     font-weight:700;
-    font-size:.78rem;
-    margin-bottom:1.4rem;
+    font-size:12.48px;
+    margin-bottom:22.4px;
 
     color:var(--gold);
 }
 
 .featured__tag i{
-    font-size:.85rem;
+    font-size:13.6px;
 }
 
 .featured__headline{
-    font-size:2rem;
+    font-size:32px;
     line-height:1.3;
-    margin-bottom:2rem;
+    margin-bottom:32px;
 
     color:var(--cream);
 }
@@ -3517,7 +3483,7 @@ h1, h2, h3, h4, h5 {
 .featured__album{
     display:flex;
     align-items:center;
-    gap:2rem;
+    gap:32px;
 }
 
 .featured__cover{
@@ -3546,7 +3512,7 @@ h1, h2, h3, h4, h5 {
     z-index:2;
     font-family:"Georgia",serif;
     font-weight:700;
-    font-size:1.6rem;
+    font-size:25.6px;
 
     color:var(--gold-light);
 }
@@ -3554,11 +3520,11 @@ h1, h2, h3, h4, h5 {
 .featured__info{
     display:flex;
     flex-direction:column;
-    gap:.2rem;
+    gap:3.2px;
 }
 
 .featured__title{
-    font-size:1.5rem;
+    font-size:24px;
     font-weight:700;
     margin:0;
 
@@ -3566,15 +3532,15 @@ h1, h2, h3, h4, h5 {
 }
 
 .featured__artist{
-    font-size:1rem;
+    font-size:16px;
     margin:0;
 
     color:rgba(241,234,215,.75);
 }
 
 .featured__year{
-    font-size:.9rem;
-    margin:0 0 1rem;
+    font-size:14.4px;
+    margin:0 0 16px;
 
     color:var(--text-muted);
 }
@@ -3582,11 +3548,11 @@ h1, h2, h3, h4, h5 {
 .featured__link{
     display:inline-flex;
     align-items:center;
-    gap:.5rem;
+    gap:8px;
     width:fit-content;
 
     font-weight:600;
-    font-size:.92rem;
+    font-size:14.72px;
     text-decoration:none;
     transition:.25s;
 
@@ -3595,16 +3561,16 @@ h1, h2, h3, h4, h5 {
 
 .featured__link:hover{
     color:var(--gold-light);
-    gap:.75rem;
+    gap:12px;
 }
 
 
-/*Hero*/
+/* Hero */
 
 .albums-hero{
     max-width:800px;
     margin:0 auto;
-    padding:6rem 2rem 3rem;
+    padding:96px 32px 48px;
     text-align:center;
 
     background:var(--black);
@@ -3614,22 +3580,22 @@ h1, h2, h3, h4, h5 {
     letter-spacing:3px;
     text-transform:uppercase;
     font-weight:600;
-    font-size:.85rem;
-    margin-bottom:1rem;
+    font-size:13.6px;
+    margin-bottom:16px;
 
     color:var(--gold);
 }
 
 .albums-hero__title{
-    font-size:2.9rem;
-    margin-bottom:1.2rem;
+    font-size:46.4px;
+    margin-bottom:19.2px;
 
     color:var(--cream);
 }
 
 .albums-hero__subtitle{
     line-height:1.8;
-    font-size:1.05rem;
+    font-size:16.8px;
 
     color:var(--text-muted);
 }
@@ -3637,11 +3603,11 @@ h1, h2, h3, h4, h5 {
 .albums-controls{
     max-width:1200px;
     margin:0 auto;
-    padding:0 2rem 3rem;
+    padding:0 32px 48px;
 
     display:flex;
     flex-direction:column;
-    gap:1.5rem;
+    gap:24px;
 
     background:var(--black);
 }
@@ -3649,8 +3615,8 @@ h1, h2, h3, h4, h5 {
 .albums-search{
     display:flex;
     align-items:center;
-    gap:.8rem;
-    padding:.9rem 1.3rem;
+    gap:12.8px;
+    padding:14.4px 20.8px;
     border-radius:999px;
     max-width:480px;
 
@@ -3668,7 +3634,7 @@ h1, h2, h3, h4, h5 {
     outline:none;
     background:none;
     font:inherit;
-    font-size:.95rem;
+    font-size:15.2px;
 
     color:var(--cream);
 }
@@ -3680,15 +3646,15 @@ h1, h2, h3, h4, h5 {
 .albums-genres{
     display:flex;
     flex-wrap:wrap;
-    gap:.8rem;
+    gap:12.8px;
 }
 
 .albums-genre{
-    padding:.55rem 1.3rem;
+    padding:8.8px 20.8px;
     border-radius:999px;
     cursor:pointer;
     font:inherit;
-    font-size:.88rem;
+    font-size:14.08px;
     font-weight:600;
     transition:.25s;
 
@@ -3711,14 +3677,14 @@ h1, h2, h3, h4, h5 {
     display:flex;
     flex-wrap:wrap;
     align-items:center;
-    gap:1.5rem;
+    gap:24px;
 }
 
 .albums-select{
     display:flex;
     flex-direction:column;
-    gap:.35rem;
-    font-size:.8rem;
+    gap:5.6px;
+    font-size:12.8px;
     font-weight:600;
 }
 
@@ -3727,10 +3693,10 @@ h1, h2, h3, h4, h5 {
 }
 
 .albums-select select{
-    padding:.6rem .9rem;
+    padding:9.6px 14.4px;
     border-radius:8px;
     font:inherit;
-    font-size:.9rem;
+    font-size:14.4px;
     cursor:pointer;
 
     background:var(--green-dark);
@@ -3741,13 +3707,13 @@ h1, h2, h3, h4, h5 {
 .albums-picks{
     display:flex;
     align-items:center;
-    gap:.6rem;
-    padding:.6rem 1.2rem;
+    gap:9.6px;
+    padding:9.6px 19.2px;
     border-radius:999px;
     cursor:pointer;
     font:inherit;
     font-weight:600;
-    font-size:.9rem;
+    font-size:14.4px;
     margin-left:auto;
     transition:.25s;
 
@@ -3774,9 +3740,9 @@ h1, h2, h3, h4, h5 {
 .albums-picks__count{
     min-width:20px;
     height:20px;
-    padding:0 .35rem;
+    padding:0 5.6px;
     border-radius:999px;
-    font-size:.75rem;
+    font-size:12px;
     display:inline-flex;
     align-items:center;
     justify-content:center;
@@ -3790,15 +3756,15 @@ h1, h2, h3, h4, h5 {
     color:var(--gold);
 }
 
-/*Grid*/
+/* Grid */
 .albums-grid{
     max-width:1200px;
     margin:0 auto;
-    padding:0 2rem 2rem;
+    padding:0 32px 32px;
 
     display:grid;
     grid-template-columns:repeat(auto-fill,minmax(230px,1fr));
-    gap:2rem;
+    gap:32px;
 
     background:var(--black);
 }
@@ -3806,7 +3772,7 @@ h1, h2, h3, h4, h5 {
 .album-card{
     position:relative;
     border-radius:16px;
-    padding:1.5rem 1.5rem 1.8rem;
+    padding:24px 24px 28.8px;
     display:flex;
     flex-direction:column;
     transition:.3s;
@@ -3833,12 +3799,12 @@ h1, h2, h3, h4, h5 {
 
 .album-card__fav{
     position:absolute;
-    top:1.2rem;
-    right:1.2rem;
+    top:19.2px;
+    right:19.2px;
     border:none;
     background:none;
     cursor:pointer;
-    font-size:1.1rem;
+    font-size:17.6px;
     z-index:2;
     transition:.25s;
 
@@ -3857,7 +3823,7 @@ h1, h2, h3, h4, h5 {
     z-index:2;
     font-family:"Georgia",serif;
     font-weight:700;
-    font-size:1.6rem;
+    font-size:25.6px;
 
     color:var(--gold-light);
 }
@@ -3865,34 +3831,34 @@ h1, h2, h3, h4, h5 {
 .album-card__rank{
     font-family:"Georgia",serif;
     font-weight:700;
-    font-size:1.4rem;
-    margin-bottom:.4rem;
+    font-size:22.4px;
+    margin-bottom:6.4px;
 
     color:var(--gold);
 }
 
 .album-card__title{
-    font-size:1.15rem;
-    margin-bottom:.3rem;
+    font-size:18.4px;
+    margin-bottom:4.8px;
     line-height:1.3;
 
     color:var(--cream);
 }
 
 .album-card__artist{
-    font-size:.88rem;
-    margin-bottom:.9rem;
+    font-size:14.08px;
+    margin-bottom:14.4px;
 
     color:rgba(241,234,215,.7);
 }
 
 .album-card__tag{
     align-self:flex-start;
-    padding:.3rem .8rem;
+    padding:4.8px 12.8px;
     border-radius:999px;
-    font-size:.75rem;
+    font-size:12px;
     font-weight:700;
-    margin-bottom:1.2rem;
+    margin-bottom:19.2px;
 
     background:rgba(213,169,79,.15);
     color:var(--gold-light);
@@ -3901,13 +3867,13 @@ h1, h2, h3, h4, h5 {
 
 .album-card__view{
     margin-top:auto;
-    padding:.7rem;
+    padding:11.2px;
     border-radius:999px;
     border:none;
     cursor:pointer;
     font:inherit;
     font-weight:600;
-    font-size:.88rem;
+    font-size:14.08px;
     transition:.3s;
 
     background:var(--gold);
@@ -3922,45 +3888,45 @@ h1, h2, h3, h4, h5 {
 .albums-empty{
     max-width:1200px;
     margin:0 auto;
-    padding:0 2rem 4rem;
+    padding:0 32px 64px;
     text-align:center;
-    font-size:.95rem;
+    font-size:15.2px;
 
     color:var(--text-muted);
 }
-/*Tracks*/
+/* Tracks */
 .tracks{
     max-width:1000px;
     margin:0 auto;
-    padding:5rem 2rem 7rem;
+    padding:80px 32px 112px;
 
     background:var(--black);
 }
 
 .tracks__header{
     text-align:center;
-    margin-bottom:2.5rem;
+    margin-bottom:40px;
 }
 
 .tracks__tag{
     letter-spacing:3px;
     text-transform:uppercase;
     font-weight:600;
-    font-size:.8rem;
-    margin-bottom:.8rem;
+    font-size:12.8px;
+    margin-bottom:12.8px;
 
     color:var(--gold);
 }
 
 .tracks__title{
-    font-size:2.2rem;
-    margin-bottom:.8rem;
+    font-size:35.2px;
+    margin-bottom:12.8px;
 
     color:var(--cream);
 }
 
 .tracks__subtitle{
-    font-size:.92rem;
+    font-size:14.72px;
 
     color:var(--text-muted);
 }
@@ -3983,8 +3949,8 @@ h1, h2, h3, h4, h5 {
 .tracks__table th,
 .tracks__table td{
     text-align:left;
-    padding:1rem 1.3rem;
-    font-size:.92rem;
+    padding:16px 20.8px;
+    font-size:14.72px;
 }
 
 .tracks__table th{
@@ -4003,8 +3969,8 @@ h1, h2, h3, h4, h5 {
 }
 
 .tracks__table th i{
-    font-size:.7rem;
-    margin-left:.4rem;
+    font-size:11.2px;
+    margin-left:6.4px;
 }
 
 .tracks__table td{
@@ -4023,7 +3989,7 @@ h1, h2, h3, h4, h5 {
 .tracks__table tr.hide{
     display:none;
 }
-/*Modal*/
+/* Modal */
 .album-modal{
     position:fixed;
     inset:0;
@@ -4031,7 +3997,7 @@ h1, h2, h3, h4, h5 {
     display:none;
     align-items:center;
     justify-content:center;
-    padding:2rem;
+    padding:32px;
 
     background:rgba(8,11,9,.85);
 }
@@ -4049,8 +4015,8 @@ h1, h2, h3, h4, h5 {
     position:relative;
     display:grid;
     grid-template-columns:200px 1fr;
-    gap:2rem;
-    padding:2.5rem;
+    gap:32px;
+    padding:40px;
 
     background:var(--green-dark);
     border:1px solid rgba(213,169,79,.4);
@@ -4059,11 +4025,11 @@ h1, h2, h3, h4, h5 {
 
 .album-modal__close{
     position:absolute;
-    top:1.2rem;
-    right:1.4rem;
+    top:19.2px;
+    right:22.4px;
     background:none;
     border:none;
-    font-size:1.8rem;
+    font-size:28.8px;
     cursor:pointer;
     line-height:1;
 
@@ -4127,18 +4093,18 @@ h1, h2, h3, h4, h5 {
     z-index:2;
     font-family:"Georgia",serif;
     font-weight:700;
-    font-size:1.6rem;
+    font-size:25.6px;
 
     color:var(--gold-light);
 }
 
 .album-modal__tag{
     display:inline-block;
-    padding:.3rem .9rem;
+    padding:4.8px 14.4px;
     border-radius:999px;
-    font-size:.75rem;
+    font-size:12px;
     font-weight:700;
-    margin-bottom:1rem;
+    margin-bottom:16px;
 
     background:rgba(213,169,79,.15);
     color:var(--gold-light);
@@ -4146,23 +4112,23 @@ h1, h2, h3, h4, h5 {
 }
 
 .album-modal__title{
-    font-size:1.6rem;
-    margin-bottom:.4rem;
+    font-size:25.6px;
+    margin-bottom:6.4px;
 
     color:var(--cream);
 }
 
 .album-modal__artist{
-    font-size:.92rem;
-    margin-bottom:1.2rem;
+    font-size:14.72px;
+    margin-bottom:19.2px;
 
     color:rgba(241,234,215,.7);
 }
 
 .album-modal__blurb{
-    font-size:.92rem;
+    font-size:14.72px;
     line-height:1.75;
-    margin-bottom:1.6rem;
+    margin-bottom:25.6px;
 
     color:rgba(241,234,215,.85);
 }
@@ -4172,13 +4138,13 @@ h1, h2, h3, h4, h5 {
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:.9rem 1.1rem;
+    padding:14.4px 17.6px;
     border:none;
     border-radius:10px;
     cursor:pointer;
     font:inherit;
     font-weight:600;
-    font-size:.92rem;
+    font-size:14.72px;
 
     background:rgba(0,0,0,.2);
     color:var(--gold-light);
@@ -4201,17 +4167,17 @@ h1, h2, h3, h4, h5 {
     max-height:0;
     overflow:hidden;
     transition:max-height .35s ease;
-    padding-left:1.3rem;
+    padding-left:20.8px;
 }
 
 .album-modal__tracklist.open{
     max-height:400px;
-    padding-top:.9rem;
+    padding-top:14.4px;
 }
 
 .album-modal__tracklist li{
-    padding:.4rem 0;
-    font-size:.9rem;
+    padding:6.4px 0;
+    font-size:14.4px;
 
     color:rgba(241,234,215,.85);
     border-bottom:1px dashed rgba(213,169,79,.2);
@@ -4219,25 +4185,25 @@ h1, h2, h3, h4, h5 {
 @media(max-width:600px){
 
     .featured__card{
-        padding:1.8rem;
+        padding:28.8px;
     }
 
     .featured__headline{
-        font-size:1.6rem;
+        font-size:25.6px;
     }
 
     .featured__album{
         flex-direction:column;
         align-items:flex-start;
-        gap:1.2rem;
+        gap:19.2px;
     }
         .albums-hero__title{
-        font-size:2.1rem;
+        font-size:33.6px;
     }
 
 
 }
-/*Responsive*/
+/* Responsive */
 
 @media(max-width:900px){
 
@@ -4269,16 +4235,16 @@ h1, h2, h3, h4, h5 {
 @media(max-width:600px){
 
     .albums-hero__title{
-        font-size:2.1rem;
+        font-size:33.6px;
     }
 
 }
-/* whoarewe page css*/
+/* About */
 
 .team {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 7rem 2rem 2rem;
+    padding: 112px 32px 32px;
 }
 .card:hover {
     transform: translateY(-6px);
@@ -4315,7 +4281,7 @@ h1, h2, h3, h4, h5 {
 }
 
 #benefitsIntroText > h2 {
-  font-size: 3.5rem;
+  font-size: 56px;
 }
 
 #benefitsVideo {
@@ -4353,7 +4319,7 @@ h1, h2, h3, h4, h5 {
   position: absolute;
   inset: 0;
   border: 1px solid var(--gold);
-  border-radius: 0.5rem;
+  border-radius: 8px;
   backface-visibility: hidden;
   color: var(--cream);
 }
@@ -4405,7 +4371,7 @@ h1, h2, h3, h4, h5 {
 }
 
 #choices {
-  min-height: 18rem;
+  min-height: 288px;
 }
 
 #quizIntro,
@@ -4416,7 +4382,7 @@ h1, h2, h3, h4, h5 {
   justify-content: center;
   align-items: center;
   margin-bottom: 0;
-  padding: 3rem;
+  padding: 48px;
   background-color: var(--green-dark);
 }
 
@@ -4426,12 +4392,12 @@ h1, h2, h3, h4, h5 {
 }
 
 #QnNo {
-  font-size: 3.5rem;
+  font-size: 56px;
 }
 
 #question {
-  font-size: 3.3rem;
-  min-height: 8rem;
+  font-size: 52.8px;
+  min-height: 128px;
 }
 
 #choices {
@@ -4446,8 +4412,8 @@ h1, h2, h3, h4, h5 {
   color: var(--cream);
   border: 2px solid var(--gold);
   border-radius: 8px;
-  padding: 0.75rem 1.25rem;
-  font-size: 2.5rem;
+  padding: 12px 20px;
+  font-size: 40px;
 }
 
 #choices > button:hover,
@@ -4462,8 +4428,8 @@ h1, h2, h3, h4, h5 {
 }
 
 #result {
-  font-size: 3.4rem;
-  min-height: 5rem;
+  font-size: 54.4px;
+  min-height: 80px;
 }
 
 #techHero {
@@ -4488,7 +4454,7 @@ h1, h2, h3, h4, h5 {
 
 .tech-stat {
   border-left: 3px solid var(--gold);
-  padding-left: 1.2rem;
+  padding-left: 19.2px;
   margin: 0;
 }
 
@@ -4505,9 +4471,9 @@ h1, h2, h3, h4, h5 {
 }
 
 .techCard-icon {
-  font-size: 2.5rem;
+  font-size: 40px;
   color: var(--gold);
-  margin-bottom: 0.5rem;
+  margin-bottom: 8px;
 }
 
 .timeline {
