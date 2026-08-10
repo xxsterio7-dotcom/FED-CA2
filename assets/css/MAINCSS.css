@@ -2558,6 +2558,19 @@ h1, h2, h3, h4, h5 {
 
 /*Muhsin inst page*/
 
+/* Body */
+body {
+    background-color: var(--mv-black, #080b09);
+    background-image: 
+        linear-gradient(rgba(8, 11, 9, 0.85), rgba(8, 11, 9, 0.85)),
+        url('../images/Instrunments/BgImage.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    color: var(--mv-cream, #f1ead7);
+}
+
 .mv-page {
     --mv-black: #080b09;
     --mv-black-soft: #101512;
@@ -2571,10 +2584,12 @@ h1, h2, h3, h4, h5 {
     overflow-x: hidden;
 }
 
+/* Typography */
 .mv-page h1, .mv-page h2, .mv-page h3, .mv-page h4, .mv-page h5 {
     font-family: Georgia, "Times New Roman", serif;
 }
 
+/* Navbar */
 .mv-navbar {
     background-color: var(--mv-black);
     border-bottom: 1px solid var(--mv-gold);
@@ -2583,7 +2598,7 @@ h1, h2, h3, h4, h5 {
 .mv-brand-logo {
     color: #f4f0ea !important;
     font-family: Georgia, serif;
-    font-size: 1.5rem;
+    font-size: 24px;
 }
 
 .mv-logo-symbol { color: var(--mv-gold); }
@@ -2609,38 +2624,37 @@ h1, h2, h3, h4, h5 {
     color: var(--mv-gold-light);
 }
 
-/* ============================================
-   Section 1: Hero
-   ============================================ */
-
+/* Hero Section */
 .mv-hero {
     background-color: var(--mv-green-dark);
+    background-image:
+        linear-gradient(rgba(18, 37, 28, 0.85), rgba(18, 37, 28, 0.85)),
+        url('../images/Instrunments/instBg.jpg');
+    background-size: cover;
+    background-position: center;
     padding: 60px 0;
     text-align: center;
     border-bottom: 1px solid var(--mv-gold);
 }
 
 .mv-hero h1 {
-    font-size: clamp(2rem, 5vw, 3rem);
+    font-size: clamp(32px, 5vw, 48px);
     color: var(--mv-gold);
-    margin-bottom: 0.5rem;
+    margin-bottom: 8px;
 }
 
 .mv-hero p {
     color: var(--mv-cream);
-    font-size: 1rem;
+    font-size: 16px;
     max-width: 600px;
     margin: 0 auto;
     line-height: 1.8;
     opacity: 0.85;
 }
 
-/* ============================================
-   Section 2: Brief History
-   ============================================ */
-
+/* History Section */
 .mv-history-section {
-    background-color: var(--mv-black);
+    background-color: transparent;
     padding: 80px 20px;
 }
 
@@ -2658,14 +2672,14 @@ h1, h2, h3, h4, h5 {
 
 .mv-history-text h2 {
     color: var(--mv-gold);
-    font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+    font-size: clamp(25.6px, 3.5vw, 35.2px);
     margin-bottom: 18px;
 }
 
 .mv-history-text p {
     color: var(--mv-cream);
     line-height: 1.85;
-    font-size: 0.95rem;
+    font-size: 15.2px;
     opacity: 0.9;
     margin-bottom: 16px;
 }
@@ -2688,22 +2702,16 @@ h1, h2, h3, h4, h5 {
     .mv-history-photo img { height: 240px; }
 }
 
-/* ============================================
-   Section 3: Explore by Family (interactive)
-   Click a filter pill to show only that family
-   of instruments. Click a card to open it in
-   the lightbox for more detail.
-   ============================================ */
-
+/* Family Section & Filters */
 .mv-family-section {
-    background-color: var(--mv-black-soft);
+    background-color: rgba(16, 21, 18, 0.6);
     padding: 80px 20px;
 }
 
 .mv-family-section h2 {
     text-align: center;
     color: var(--mv-gold);
-    font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+    font-size: clamp(25.6px, 3.5vw, 35.2px);
     margin-bottom: 10px;
 }
 
@@ -2711,7 +2719,7 @@ h1, h2, h3, h4, h5 {
     text-align: center;
     color: var(--mv-cream);
     opacity: 0.7;
-    font-size: 0.9rem;
+    font-size: 14.4px;
     margin-bottom: 36px;
 }
 
@@ -2725,7 +2733,7 @@ h1, h2, h3, h4, h5 {
 
 .mv-family-filter-btn {
     color: var(--mv-gold-light);
-    font-size: 0.85rem;
+    font-size: 13.6px;
     letter-spacing: 0.5px;
     padding: 8px 18px;
     border: 1px solid var(--mv-gold);
@@ -2746,6 +2754,7 @@ h1, h2, h3, h4, h5 {
     font-weight: 600;
 }
 
+/* Cards & Grid */
 .mv-instr-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -2791,7 +2800,7 @@ h1, h2, h3, h4, h5 {
 
 .mv-instr-family-tag {
     color: var(--mv-gold-light);
-    font-size: 0.65rem;
+    font-size: 10.4px;
     letter-spacing: 1.5px;
     text-transform: uppercase;
     margin-bottom: 6px;
@@ -2799,13 +2808,13 @@ h1, h2, h3, h4, h5 {
 
 .mv-instr-name {
     color: var(--mv-gold);
-    font-size: 1.05rem;
+    font-size: 16.8px;
     margin-bottom: 6px;
 }
 
 .mv-instr-desc {
     color: var(--mv-cream);
-    font-size: 0.8rem;
+    font-size: 12.8px;
     line-height: 1.6;
     opacity: 0.85;
     margin: 0;
@@ -2819,22 +2828,16 @@ h1, h2, h3, h4, h5 {
     .mv-instr-grid { grid-template-columns: 1fr; }
 }
 
-/* ============================================
-   Section 4: Instruments Around the World
-   Same card + lightbox pattern as Section 3,
-   but a fixed set (no filters) highlighting
-   instruments from different cultures.
-   ============================================ */
-
+/* World Section */
 .mv-world-section {
-    background-color: var(--mv-black);
+    background-color: transparent;
     padding: 80px 20px;
 }
 
 .mv-world-section h2 {
     text-align: center;
     color: var(--mv-gold);
-    font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+    font-size: clamp(25.6px, 3.5vw, 35.2px);
     margin-bottom: 10px;
 }
 
@@ -2842,7 +2845,7 @@ h1, h2, h3, h4, h5 {
     text-align: center;
     color: var(--mv-cream);
     opacity: 0.7;
-    font-size: 0.9rem;
+    font-size: 14.4px;
     margin-bottom: 46px;
 }
 
@@ -2861,227 +2864,6 @@ h1, h2, h3, h4, h5 {
 @media (max-width: 480px) {
     .mv-world-grid { grid-template-columns: 1fr; }
 }
-
-/* ============================================
-   Section 5: Did You Know (interactive)
-   Click a card to expand it for more detail.
-   ============================================ */
-
-.mv-facts-section {
-    background-color: var(--mv-black-soft);
-    padding: 80px 20px;
-}
-
-.mv-facts-section h2 {
-    text-align: center;
-    color: var(--mv-gold);
-    font-size: clamp(1.6rem, 3.5vw, 2.2rem);
-    margin-bottom: 10px;
-}
-
-.mv-facts-subtitle {
-    text-align: center;
-    color: var(--mv-cream);
-    opacity: 0.7;
-    font-size: 0.9rem;
-    margin-bottom: 46px;
-}
-
-.mv-facts-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 22px;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.mv-fact-card {
-    background-color: var(--mv-green-dark);
-    border: 1px solid var(--mv-gold);
-    border-radius: 12px;
-    padding: 26px 22px;
-    cursor: pointer;
-    text-align: left;
-    transition: background-color 0.25s ease;
-}
-
-.mv-fact-card:hover {
-    background-color: rgba(213, 169, 79, 0.1);
-}
-
-.mv-fact-icon {
-    font-size: 1.6rem;
-    margin-bottom: 12px;
-    display: block;
-}
-
-.mv-fact-title {
-    color: var(--mv-gold);
-    font-size: 1rem;
-    margin-bottom: 10px;
-}
-
-.mv-fact-hint {
-    color: var(--mv-gold-light);
-    font-size: 0.7rem;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-    opacity: 0.75;
-}
-
-.mv-fact-more {
-    color: var(--mv-cream);
-    font-size: 0.85rem;
-    line-height: 1.7;
-    opacity: 0.9;
-    margin-top: 14px;
-    display: none;
-}
-
-.mv-fact-card.mv-expanded .mv-fact-hint {
-    display: none;
-}
-
-.mv-fact-card.mv-expanded .mv-fact-more {
-    display: block;
-}
-
-@media (max-width: 900px) {
-    .mv-facts-grid { grid-template-columns: 1fr; }
-}
-
-/* ============================================
-   Lightbox (shared component, same as the
-   Famous Artists page)
-   ============================================ */
-
-.mv-lightbox-overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.92);
-    z-index: 9999;
-    align-items: center;
-    justify-content: center;
-    animation: mv-fadeIn 0.3s ease;
-}
-
-.mv-lightbox-overlay.active {
-    display: flex;
-}
-
-@keyframes mv-fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-.mv-lightbox-box {
-    display: flex;
-    flex-direction: row;
-    width: 85%;
-    max-width: 900px;
-    max-height: 85vh;
-    border-radius: 16px;
-    overflow: hidden;
-    border: 1px solid var(--mv-gold);
-    animation: mv-slideUp 0.4s ease;
-}
-
-@keyframes mv-slideUp {
-    from { transform: translateY(30px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
-}
-
-.mv-lightbox-image {
-    width: 50%;
-    object-fit: cover;
-    display: block;
-}
-
-.mv-lightbox-info {
-    width: 50%;
-    background-color: var(--mv-green-dark);
-    padding: 40px;
-    overflow-y: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.mv-lightbox-info h2 {
-    color: var(--mv-gold);
-    font-size: 2rem;
-    margin-bottom: 6px;
-}
-
-.mv-lightbox-era {
-    color: var(--mv-gold-light);
-    font-size: 0.75rem;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-}
-
-.mv-lightbox-info p {
-    color: var(--mv-cream);
-    line-height: 1.8;
-    font-size: 0.95rem;
-    margin-bottom: 0;
-}
-
-.mv-lightbox-close {
-    position: absolute;
-    top: 20px;
-    right: 25px;
-    color: var(--mv-cream);
-    font-size: 2rem;
-    cursor: pointer;
-    background: none;
-    border: none;
-    line-height: 1;
-    transition: color 0.2s ease;
-}
-
-.mv-lightbox-close:hover {
-    color: var(--mv-gold);
-}
-
-@media (max-width: 768px) {
-    .mv-lightbox-box { flex-direction: column; width: 95%; max-height: 90vh; }
-    .mv-lightbox-image { width: 100%; height: 220px; }
-    .mv-lightbox-info { width: 100%; padding: 24px; }
-}
-
-/* ============================================
-   Footer
-   ============================================ */
-
-.mv-site-footer {
-    background-color: #121212 !important;
-    color: #f8f9fa;
-    border-top: 1px solid rgba(229, 185, 103, 0.3) !important;
-}
-
-.mv-footer-logo {
-    height: 65px;
-    width: 65px;
-    object-fit: cover;
-    border-radius: 4px;
-}
-
-.mv-icon-grid {
-    display: grid;
-    grid-template-columns: repeat(3, auto);
-    gap: 12px;
-    font-size: 1.25rem;
-}
-
-.mv-site-footer a { color: var(--mv-cream); transition: opacity 0.2s ease-in-out, color 0.2s ease-in-out; }
-.mv-site-footer a:hover { opacity: 0.85; color: #fff !important; }
-
 
 /* concert page css*/
 /*Hero section*/
