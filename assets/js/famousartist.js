@@ -1,4 +1,8 @@
-  function openLightbox(img, name, era, bio, songs) {
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+} 
+
+function openLightbox(img, name, era, bio, songs) {
     document.getElementById('lightbox-img').src = img;
     document.getElementById('lightbox-name').textContent = name;
     document.getElementById('lightbox-era').textContent = era;
